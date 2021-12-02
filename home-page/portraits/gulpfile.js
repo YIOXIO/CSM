@@ -77,14 +77,8 @@ const icons = () => {
 }
 
 const fonts = () => {
-	return src('src/assets/fonts/**/*')
-	.pipe(dest('dist/assets/fonts'))
-	.pipe(browserSync.stream())
-}
-
-const media = () => {
-	return src('src/assets/media/**/*')
-	.pipe(dest('dist/assets/media'))
+	return src('src/assetsfonts/**/*')
+	.pipe(dest('dist/assetsfonts'))
 	.pipe(browserSync.stream())
 }
 
@@ -99,10 +93,9 @@ const watcher = () => {
 	watch('src/assets/img/**/*', images)
 	watch('src/icons/**/*', icons)
 	watch('src/fonts/**/*', fonts)
-	watch('src/media/**/*', media)
 }
 
-const build = parallel(html, scripts, styles, images, icons, fonts, media, server, watcher, cleanscss)
+const build = parallel(html, scripts, styles, images, icons, fonts, server, watcher, cleanscss)
 
 exports.server    = server
 exports.watcher   = watcher
@@ -111,7 +104,6 @@ exports.scripts   = scripts
 exports.styles    = styles
 exports.images    = images
 exports.fonts     = fonts
-exports.media     = media
 exports.cleanscss = cleanscss
 exports.cleanimg  = cleanimg
 
