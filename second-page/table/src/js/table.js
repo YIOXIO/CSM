@@ -29,12 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
 
             <div class="footer__btns-item">
-                <button class="footer__btns-btn btn--large">
+                <button class="footer__btns-btn btn--large footer__btn_large">
                     <svg class="footer__btns-icon" width="10.677vw" height="3.438vw">
                         <use href="./assets/img/sprite.svg#footer-btn2"></use>
                     </svg>
 
-                    <span class="footer__btns-text">Трансляции экзаменов</span>
+                    <span class="footer__btns-text">Вузы Москвы COVID-19</span>
                 </button>
             </div>
         </div>
@@ -43,5 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     wrapper.append(footer)
     
+    document.querySelector('.footer__btn_large').addEventListener('click', () => {
+       // to table page
+    });
 });
 
