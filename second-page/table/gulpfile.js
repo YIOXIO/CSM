@@ -37,7 +37,7 @@ const html = () => {
 
 const scripts = () => {
 	return src([
-		'src/js/table.js'
+		'src/js/**.js'
 	])
 	.pipe(concat('table.js'))
 	.pipe(uglify())
