@@ -736,7 +736,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } 
             else {
                 
-                diagrAnimCounter = 0
+                publicationsDiagramCounter = 0
             }
             
             publicationsDiagramAnimation()
