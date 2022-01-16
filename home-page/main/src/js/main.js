@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //=================== финансы =====================
 
     const financeData = {
-        date: '15.01.2021',
+        date: '2021-10-02',
         total: 600000000,
         budgetResources: 1092045473,
         otherResources: 1572394226,
@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const internationalData = {
-        date: '07.10.2021',
+        date: '2021-01-31',
         foreignStudents: 1224,
         nonresidentStudents: 6556,
         partners: 'XX',
@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //=================== вакцинация =====================
 
     const vaccinationData = {
-        date: '01.10.2021',
+        date: '2021-10-02',
         total: 3345,
         vaccinated: 2457,
         unvaccinated: 887,
@@ -406,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //=================== наука =====================
 
     const scienceData = {
-        date: '21.11.2021',
+        date: '2021-10-02',
         plan: {
             currentPlan: 50000.6,
             currentReceipts: 199583.4,
@@ -655,7 +655,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const staffData = {
-        date: '2.10.2021',
+        date: '2021-12-01',
         employment: 91,
         load: {
             hours: 950537,
@@ -750,74 +750,181 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ======================= календарь ===============================
 
+    function calendar () {
 
-    function calendar(dateOfUpdate, isDouble, ...selectors) {
-        const array = dateOfUpdate.toString().split('.');
-        
-        const date = new Date();
-        const currentMonth = +array[1];
-        const year = new Date().getFullYear();
-        const minOpacity = 0.2;
-        const maxOpacity = 1;
-        const monthProgressBar = Array.from(document.querySelectorAll(`.${selectors[0]} path`));
-        let yearProgressBar = [];
-
-
-        const addZeroBeforeValue = val => val < 10 ? '0' + val : val;
-
-        const month = () => addZeroBeforeValue(currentMonth);
-        
-        const day = () => addZeroBeforeValue(+array[0]);
-        
-        const yearRatio = () => {
-            const dayFirst = new Date(date.getFullYear(), 0, 0);
-            const diff = new Date() - dayFirst;
-            const day = 1000 * 60 * 60 * 24;
-            const dayNum = Math.floor(diff / day);
-            const ratio =  Math.floor((dayNum / 365) * 100); 
+        const template = `
+          <div class="calendar_science">
+            <div class="calendar-unit">
+              <div class="value"></div>
+              <div class="calendar__month-progress-bar">
+                <svg class="calendar__month-progress-bar__science" width="100%" height="100%" viewBox="0 0 100 12" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 0H0.5L11.5 12H15.5L4.5 0Z" fill="#40394D" />
+                  <path d="M10.5 0H6.5L17.5 12H21.5L10.5 0Z" fill="#40394D" />
+                  <path d="M16.5 0H12.5L23.5 12H27.5L16.5 0Z" fill="#40394D" />
+                  <path d="M22.5 0H18.5L29.5 12H33.5L22.5 0Z" fill="#40394D" />
+                  <path d="M28.5 0H24.5L35.5 12H39.5L28.5 0Z" fill="#40394D" />
+                  <path d="M34.5 0H30.5L41.5 12H45.5L34.5 0Z" fill="#40394D" />
+                  <path d="M40.5 0H36.5L47.5 12H51.5L40.5 0Z" fill="#40394D" />
+                  <path d="M46.5 0H42.5L53.5 12H57.5L46.5 0Z" fill="#40394D" />
+                  <path d="M52.5 0H48.5L59.5 12H63.5L52.5 0Z" fill="#40394D" />
+                  <path d="M58.5 0H54.5L65.5 12H69.5L58.5 0Z" fill="#40394D" />
+                  <path d="M64.5 0H60.5L71.5 12H75.5L64.5 0Z" fill="#40394D" />
+                  <path d="M70.5 0H66.5L77.5 12H81.5L70.5 0Z" fill="#40394D" />
+                  <path d="M76.5 0H72.5L83.5 12H87.5L76.5 0Z" fill="#40394D" />
+                  <path d="M82.5 0H78.5L89.5 12H93.5L82.5 0Z" fill="#40394D" />
+                  <path d="M88.5 0H84.5L95.5 12H99.5L88.5 0Z" fill="#40394D" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        `
+      
+        const style = `
+          .calendar-unit {display: block;block;margin-top: 0.5vw;}
+          .right {text-align: right;}
+          .right svg {transform: scaleX(-1);}
+          .value {
+            font-family: 'Oswald', sans-serif;
+            /* text-align: left; */
+            font-weight: 400;
+            color: #FB9B2B;
+            font-size: 0.6vw;
+            line-height: 0.6vw;
+          }
+        `
+      
+        class HTMLElementExtended extends HTMLElement {
+          constructor(html, style, ...mixins) {
+            self = super();
+            this.constructor.setMixins(mixins);
+            const template = this.constructor.setTemplate(html, style);
+            this.$ = this.constructor.setShadowDOM(template);
+          }
+      
+          static setMixins (mixins) {
+            Object.assign(this.prototype, ...mixins);
+          }
+      
+          static setTemplate (html, style) {
+            const template = document.createElement('template');
+            template.innerHTML = html + `<style>${style}</style>`;
             
-            return ratio;
-        } 
+            return template;
+          }
+          
+          static setShadowDOM (template) {
+            const shadowRoot = self.attachShadow({ mode: 'open' });;
+            shadowRoot.appendChild(template.content.cloneNode(true));;
+            return shadowRoot;;
+          }
+        }
+      
+        window.HTMLElementExtended = HTMLElementExtended
+      
+        class Calendar extends HTMLElementExtended {
+          constructor() {
+            super(template, style);
+            this.render();
+          }
+      
+          set currentDate (str) {
+            this.date = new Date(str);
+          }
+            
+          get data () { return this.parentNode.getAttribute('data-date'); }
+          get bar () { return this.$.querySelector('svg').children; }
+          get dir () { return this.getAttribute('dir') === 'left' ? 'left' : 'right'; }
+          get diff () { return this.dayOfYear(this.date) / this.daysInYear(this.date); }
+      
+          get value () {
+            return {
+              'left' : this.date.toLocaleString('ru-Ru').split(',')[0],
+              'right': `год ${ Math.floor(this.diff * 100)}%`
+            }[this.dir];
+          }
+      
+          setProgressBar(bar, active, fill) {
+            active < 1 ? active = 1 : active;
+      
+            for (let i = 0; i < active; i++) {
+              bar[i].style.fill = fill;
+            }
+          }
+      
+          dayOfYear (date) {
+            const year = date.getFullYear();
+            return Math.floor((date - new Date(year, 0, 0)) / 1000 / 60 / 60 / 24);
+          }
+      
+          daysInYear (date) {
+            const year = date.getFullYear();
+            return ((year % 4 === 0 && year % 100 > 0) || year % 400 == 0) ? 366 : 365;
+          }
+      
+          lastDay (date) {
+            const year = date.getFullYear();
+            const month = date.getFullYear();
+            return new Date(year, month + 1, 0).getDate();
+          }
+      
+          calc (date, bar) {
+            const { length } = bar;
+            const left = Math.floor(length * (date.getDate() / this.lastDay(date)));
+            const right = Math.floor(length * this.diff);
+            return {
+              left,
+              right
+            };
+          }
+      
+          async render () {
+            this.currentDate = this.data;
+            
+            const active = this.calc(this.date, this.bar)[this.dir];
+            this.setProgressBar(this.bar, active, '#FB9B2B');
+            this.$.firstElementChild.classList.toggle(this.dir);
+            this.$.querySelector('.value').textContent = this.value;
+          }
+        }
 
-        function setCalendarProgressBar(progressBar, length, val) {
-            for (let i = 0; i < length; i++) {
-                progressBar[i].setAttribute('fill-opacity', val);
+        class CalendarSingle extends Calendar {
+            constructor () {
+                super()
+            }
+
+            calc (date, bar) {
+                const { length } = bar;
+                const left = Math.floor(length * (date.getDate() / this.lastDay(date)));
+                const right = Math.floor(length * this.diff);
+                return {
+                  left
+                };
+            }
+
+            async render () {
+                this.currentDate = this.data;
+                
+                const active = this.calc(this.date, this.bar)[this.dir];
+                this.setProgressBar(this.bar, active, '#FB9B2B');
+                this.$.firstElementChild.classList.toggle(this.dir);
+                this.$.querySelector('.value').textContent = this.value;
+                this.$.querySelector('.value').style = 'float: right';
+                this.$.querySelector('.left svg').style = 'transform: scaleX(-1)';
             }
         }
-
-        function setMonthProgressBar() {
-            const dayLast = new Date(year, currentMonth, 0).getDate();
-            const ratio = 15 / dayLast;
-            const progressLength =  Math.round(+array[0] * ratio); 
-            
-            setCalendarProgressBar(monthProgressBar, progressLength, maxOpacity);
-        }
-
-        if (isDouble) {
-            yearProgressBar = Array.from(document.querySelectorAll(`.${selectors[1]} path`));
-
-            function setYearProgressBar() {
-                const progressLength = Math.round((100 - yearRatio()) * 0.15);
-        
-                setCalendarProgressBar(yearProgressBar, progressLength, minOpacity);
-            }
-
-            setCalendarProgressBar(yearProgressBar, 15, maxOpacity);
-            insertToPage(`${selectors[1]}-value`, `${yearRatio()}% год`);
-            setYearProgressBar();
-        }
-
-        setCalendarProgressBar(monthProgressBar, 15, minOpacity);
-        setMonthProgressBar();
-        insertToPage(`${selectors[0]}-value`, `${day()}.${month()}.${year}`);
+      
+        customElements.get('basic-calendar') || customElements.define('basic-calendar', Calendar);
+        customElements.get('single-calendar') || customElements.define('single-calendar', CalendarSingle);
     }
-
-    calendar(financeData.date , true, 'calendar__month-progress-bar__finance', 'calendar__year-progress-bar__finance');
-    calendar(scienceData.date, true,'calendar__month-progress-bar__science', 'calendar__year-progress-bar__science');
-    calendar( vaccinationData.date , true,'calendar__month-progress-bar__vaccination', 'calendar__year-progress-bar__vaccination');
-    calendar( internationalData.date , true,'calendar__month-progress-bar__international', 'calendar__year-progress-bar__international');
-    calendar(staffData.date , false, 'calendar__month-progress-bar__students');
-
+      
+    document.querySelector('.calendar-finance').setAttribute('data-date', financeData.date);
+    document.querySelector('.calendar-science').setAttribute('data-date', scienceData.date);
+    document.querySelector('.calendar-international').setAttribute('data-date', internationalData.date);
+    document.querySelector('.calendar-vaccination').setAttribute('data-date', vaccinationData.date);
+    document.querySelector('.calendar-students').setAttribute('data-date', staffData.date);
+    
+    calendar();
 	
 
     //================== глобус =========================
@@ -1050,7 +1157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // =================== отображение месяца ================================
 
     function setMonth(date, selector) {
-        const array = date.split('.');
+        const array = date.split('-');
         const month = array[1]
         let str = ''
 
@@ -1098,7 +1205,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         insertToPage(selector, str)
     }
-
+    
     setMonth(staffData.date, 'students__diagram-month-text');  
     setMonth(scienceData.date, 'science__diagram-month-text');  
 

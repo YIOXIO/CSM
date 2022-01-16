@@ -1712,6 +1712,7 @@
 
 
 .calendar {
+    
     position: absolute;
     display: grid;
     gap: 11.8vw;
@@ -1725,26 +1726,31 @@
         align-self: flex-end;
     }
 
-    &_science, &_vaccination {
+    &-science {
+        gap: 10.6vw;
+        bottom: 0.8vw;
+    }
+
+    &-vaccination {
         gap: 10.8vw;
         bottom: 0.6vw;
     }
 
-    &_international {
-        gap: 10.6vw; 
-
+    &-international {
+        gap: 10.8vw; 
+        bottom: 0.1vw;
         .calendar__year {
             padding-bottom: 0;
         }
     }
 
-    &_students {
+    &-students {
         grid-template-columns: 5vw;
         gap: 0;
         bottom: 0.59vw;
         left: 92.8%;
 
-        .calendar__month-value {
+        .value {
             text-align: right;
         }
     }
@@ -1767,6 +1773,7 @@
             font-size: 0.4vw;
             color: #FB9B2B;
             padding: 0 0.2vw 0.1vw 0;
+            
         }
     }
 }
