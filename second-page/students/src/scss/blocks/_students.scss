@@ -47,9 +47,13 @@
         }
 
         &_date {
+            position: absolute;
             height: 5vw;
-            width: 93%;
+            width: 22%;
             margin-left: 0.9vw;
+            top: 4.5vw;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         &-date-wrap {
