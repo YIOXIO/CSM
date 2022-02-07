@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
             totalUnvaccinated: 185,
             totalrecovered: 54,
             totalUnsuitable: 100,
-            totalSick: 5
+            totalSick: 5,
+            date: '22.02.2022'
         },
         {
             branchName: 'Брянск',
@@ -265,6 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
         insertToPage('branches-vac__legend-data-value_unvaccinated', totalObj.totalUnvaccinated);
         insertToPage('branches-vac__legend-data-value_recovered', totalObj.totalrecovered);
         insertToPage('branches-vac__legend-data-value_unsuitable', totalObj.totalUnsuitable);
+        insertToPage('branches-vac__data-block-date-wrap p span', totalObj.date);
     }
 
     
