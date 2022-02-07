@@ -1,0 +1,334 @@
+.science {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 6.5vw 4.2vw 6vw 4vw;
+
+    &__title {
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.55vw;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+    }
+
+    &__wrap {
+        margin-top: 1.5vw;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 29.5vw 29.5vw auto;
+        grid-template-rows: 37.5vw;
+        gap: 1.2vw;
+    }
+
+    &__block {
+        position: relative;
+        z-index: 0;
+
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }     
+    }
+
+    &__logo {
+        position: absolute;
+        top: 48%;
+        left: 54%;
+        transform: translate(-50%, -50%);
+        width: 29vw;
+        height: 29vw;
+    }
+
+    &__data {
+        &-wrap {
+            padding: 3.2vw 1.8vw 0 1.8vw;
+        }
+
+        &-plan {
+            height:  7.5vw;
+           
+            &__point {
+                display: flex;
+                justify-content: space-between;
+
+                &-left, &-right {
+                    font-family: Oswald;
+                    font-weight: 400;
+                    font-size: 0.65vw;
+                    letter-spacing: 0.03em;
+                    color: #FFFFFF;
+                }
+            }
+            
+            &__progressbar {
+                margin-top: 0.3vw;
+                width: 100%;
+                height: 2vw;
+            }
+
+            &__info {
+                margin-top: 0.4vw;
+                display: flex;
+                justify-content: space-between;
+
+                &-right {
+                    text-align: right;
+                }
+
+                &-ratio {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 0.75vw;
+                    color: #FFFFFF;
+                }
+
+                &-sum {
+                    margin-top: 0.2vw;
+                    font-family: Montserrat;
+                    font-weight: 400;
+                    font-size: 0.65vw;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        &-diagram {
+            position: relative;
+
+            &:before {
+                width: 100%;
+                content: '';
+                position: absolute;
+                top: -40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-bottom: 0.1vw dashed rgba(33, 122, 255, 0.7);
+            }
+
+            &_scopus {
+                margin-top: 3.5vw;
+                height: 9vw;
+            }
+
+            &_wos {
+                margin-top: 4.1vw;
+                height: 7vw;
+
+                &:before {
+                    top: -45%;
+                }
+            }
+
+            &__legend {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                top: -2.2vw;
+                left: -0.5vw;
+
+                &-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                &-icon {
+                    width: 0.88vw;
+                    height: 0.86vw;
+                    align-items: center;
+                   
+                }
+
+                &-descr {
+                    margin-left: 0.3vw;
+                    font-family: Oswald;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 0.9vw;
+                    line-height: 1.2vw;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
+                    text-align: center;
+                    padding-bottom: 0.1vw;
+                }
+            }
+
+            &__wrap {
+                width: 100%;
+            }
+
+            &__item {
+
+                svg {
+
+                    text {
+                        font-family: Montserrat;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 1.2em;
+                        fill: #FFFFFF;
+                    }
+                }
+            }
+
+            &__months {
+                margin-top: 0.5vw;
+                padding: 0 0.45vw;
+                width: 100%;
+                display: grid;
+                height: 1vw;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 1vw;
+
+                span {
+                    text-align: center;
+                    font-family: Oswald;
+                    font-weight: 400;
+                    font-size: 0.65vw;
+                    letter-spacing: 0.03em;
+                    color: #FFFFFF;
+                }
+            }  
+        }
+    }
+
+    &__info {
+
+        &-wrap {
+            padding: 2vw 1.5vw 3.8vw 1.7vw;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        &-title {
+            font-family: Oswald;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.92vw;
+            line-height: 1.2vw;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+            width: 14.08vw;
+        }
+
+        &-body {
+            margin-top: 1.8vw;
+            width: 100%;
+            height: 94%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 9vw auto;
+            column-gap: 1.2vw;
+            row-gap: 1.4vw;
+        }
+
+        &-block {
+            position: relative;
+         
+            &_double {
+                padding: 0.9vw 0 3vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            &-wrap {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 1.4vw;
+
+                &_double { 
+                    height: 7.5vw;
+                }
+            }
+
+            &-icon {
+                width: 0.84vw;
+                height: 0.82vw;
+            }
+
+            &-sum {
+                display: flex;
+                align-items: center;
+            }
+
+            &-value {
+                font-family: Oswald;
+                font-weight: 500;
+                font-size: 1.85vw;
+                text-align: center;
+                color: #FFFFFF;
+
+                &_scoups, &_scoups_q1-q2, &_wos, &_wos_q1-q2 {
+                    font-size: 2.5vw;
+                }
+
+                &_scoups {
+                    color: #217AFF;
+                }
+
+                &_scoups_q1-q2 {
+                    color: #44BCFF;
+                }
+
+                &_wos {
+                    color: #FB9B2B;
+                }
+
+                &_wos_q1-q2 {
+                    color: #FFDD85;
+                }
+            }
+
+            &-subtitle {
+                margin-left: 0.3vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-family: Oswald;
+                font-weight: 500;
+                font-size: 0.8vw;
+                line-height: 1vw;
+                text-align: center;
+                color: #FFFFFF;
+            }
+
+            &-descr {
+                text-align: center;
+                width: 8vw;
+                font-family: Oswald;
+                font-weight: 400;
+                font-size: 0.7vw;
+                line-height: 0.9vw;
+                text-align: center;
+                letter-spacing: 0.03em;
+                color: #FFFFFF;
+
+                &_double {
+                    margin-top: 0.5vw;
+                }
+
+                &_expected-receipt {
+                    width: 10.1vw;
+                }
+            }
+        }
+    }
+} 
+    

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="bg"></div>
+	
+		<header class="header">
+			<form action="/" class="header__search">
+				<svg fill="none" xmlns="http://www.w3.org/2000/svg" class="header__search-bg">
+					<use href="./assets/img/sprite.svg#search-bg-icon"></use>
+				</svg>
+			
+				<div class="header__search-contains">
+					<button type="submit" class="header__search-submit">
+					<svg width="0.885vw" height="1.8vh">
+						<use href="./assets/img/sprite.svg#search-icon"></use>
+					</svg>
+					</button>
+					<input type="search" class="header__search-input" placeholder="Поиск" />
+				</div>
+			</form>
+		
+			<button class="header__link" id="rec_click" v-on:click="r_click">
+			<svg class="header__link-icon" width="1.042vw" height="3.2vh" fill="none">
+				<use href="./assets/img/sprite.svg#user-icon"></use>
+			</svg>
+		
+			<span class="header__link-text">ректор</span>
+		
+			<svg class="header__link-bg" fill="none">
+				<use href="./assets/img/sprite.svg#link-icon"></use>
+			</svg>
+			</button>
+		
+			<svg fill="none" xmlns="http://www.w3.org/2000/svg" class="header__bg" width="4.531vw" height="30.104vw">
+				<use href="./assets/img/sprite.svg#header-bg-icon"></use>
+			</svg>
+	</header>
+
+	<main class="layout">
+
+		<div class="top_pagination">
+			<div class="go_to_home">
+			  <svg width="8vw" height="2.4vw" viewBox="0 0 160 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0.5 38V38.2071L0.646447 38.3536L13.6464 51.3536L13.7929 51.5H14H158.5H159V51V11V10.7929L158.854 10.6464L148.854 0.646447L148.707 0.5H148.5H1H0.5V1V38Z" stroke="#217AFF" stroke-opacity="0.4"/>
+				<path d="M31.75 32.6518L21.7222 25.5L31.75 18.3482L31.75 32.6518Z" stroke="#217AFF" stroke-width="2"/>
+			  </svg>
+			  <span>
+				  На главную
+				</span>
+			</div>
+		</div>
+
+		<div class="science">
+
+			<div class="science__title">Научная деятельность</div>
+			
+			<div class="science__wrap">
+				<div class="science__block science__data">
+					<svg class="science__block-bg" viewBox="0 0 1210 1545" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2 71.3333V1506V1508.13L37.2 1543.33H233.467L251.6 1525.2H296.4L309.2 1539.07H389.2L413.733 1513.47H940.667L965.2 1539.07H1176.4L1208.4 1506V61.7333L1168.93 22.2667H531.067L510.8 2H107.6L87.3333 22.2667H51.0667L2 71.3333Z" fill="#112054" fill-opacity="0.68" stroke="#217AFF" stroke-opacity="0.4" stroke-width="2.13333"/>
+					</svg>
+					<div class="science__data-wrap">
+						<div class="science__data-plan">
+							<div class="science__data-plan__point">
+								<div class="science__data-plan__point-left">Выполнение плана</div>
+								<div class="science__data-plan__point-right">Годовой план</div>
+							</div>
+
+							<svg class="science__data-plan__progressbar" viewBox="0 0 1079 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.2074 0.126953H0.933418L40.1868 48.9997H54.4607L15.2074 0.126953Z" fill="#DDDFE7"/>
+								<path d="M36.1527 0.126953H21.8787L61.1321 48.9997H75.406L36.1527 0.126953Z" fill="#DDDFE7"/>
+								<path d="M57.0982 0.126953H42.8243L82.0776 48.9997H96.3516L57.0982 0.126953Z" fill="#DDDFE7"/>
+								<path d="M78.0435 0.126953H63.7696L103.023 48.9997H117.297L78.0435 0.126953Z" fill="#DDDFE7"/>
+								<path d="M98.9891 0.126953H84.7152L123.968 48.9997H138.242L98.9891 0.126953Z" fill="#DDDFE7"/>
+								<path d="M119.935 0.126953H105.661L144.914 48.9997H159.188L119.935 0.126953Z" fill="#DDDFE7"/>
+								<path d="M140.88 0.126953H126.606L165.859 48.9997H180.133L140.88 0.126953Z" fill="#DDDFE7"/>
+								<path d="M161.825 0.126953H147.551L186.805 48.9997H201.079L161.825 0.126953Z" fill="#DDDFE7"/>
+								<path d="M182.771 0.126953H168.497L207.75 48.9997H222.024L182.771 0.126953Z" fill="#DDDFE7"/>
+								<path d="M224.662 0.126953H210.388L249.641 48.9997H263.915L224.662 0.126953Z" fill="#DDDFE7"/>
+								<path d="M203.716 0.126953H189.443L228.696 48.9997H242.97L203.716 0.126953Z" fill="#DDDFE7"/>
+								<path d="M245.607 0.126953H231.333L270.587 48.9997H284.861L245.607 0.126953Z" fill="#DDDFE7"/>
+								<path d="M266.553 0.126953H252.279L291.532 48.9997H305.806L266.553 0.126953Z" fill="#DDDFE7"/>
+								<path d="M287.498 0.126953H273.224L312.478 48.9997H326.752L287.498 0.126953Z" fill="#DDDFE7"/>
+								<path d="M308.444 0.126953H294.17L333.423 48.9997H347.697L308.444 0.126953Z" fill="#DDDFE7"/>
+								<path d="M328.807 0.126953H314.533L353.787 48.9997H368.061L328.807 0.126953Z" fill="#DDDFE7"/>
+								<path d="M349.753 0.126953H335.479L374.732 48.9997H389.006L349.753 0.126953Z" fill="#DDDFE7"/>
+								<path d="M370.698 0.126953H356.424L395.678 48.9997H409.952L370.698 0.126953Z" fill="#DDDFE7"/>
+								<path d="M391.644 0.126953H377.37L416.623 48.9997H430.897L391.644 0.126953Z" fill="#DDDFE7"/>
+								<path d="M412.589 0.126953H398.315L437.569 48.9997H451.842L412.589 0.126953Z" fill="#DDDFE7"/>
+								<path d="M433.341 0.126953H419.067L458.32 48.9997H472.594L433.341 0.126953Z" fill="#DDDFE7"/>
+								<path d="M454.286 0.126953H440.012L479.266 48.9997H493.54L454.286 0.126953Z" fill="#DDDFE7"/>
+								<path d="M475.232 0.126953H460.958L500.211 48.9997H514.485L475.232 0.126953Z" fill="#DDDFE7"/>
+								<path d="M496.177 0.126953H481.903L521.157 48.9997H535.43L496.177 0.126953Z" fill="#DDDFE7"/>
+								<path d="M517.122 0.126953H502.849L542.102 48.9997H556.376L517.122 0.126953Z" fill="#DDDFE7"/>
+								<path d="M537.486 0.126953H523.212L562.466 48.9997H576.74L537.486 0.126953Z" fill="#DDDFE7"/>
+								<path d="M558.432 0.126953H544.158L583.411 48.9997H597.685L558.432 0.126953Z" fill="#DDDFE7"/>
+								<path d="M579.377 0.126953H565.103L604.357 48.9997H618.63L579.377 0.126953Z" fill="#DDDFE7"/>
+								<path d="M600.323 0.126953H586.049L625.302 48.9997H639.576L600.323 0.126953Z" fill="#DDDFE7"/>
+								<path d="M621.268 0.126953H606.994L646.247 48.9997H660.521L621.268 0.126953Z" fill="#DDDFE7"/>
+								<path d="M642.407 0.126953H628.133L667.387 48.9997H681.661L642.407 0.126953Z" fill="#DDDFE7"/>
+								<path d="M663.353 0.126953H649.079L688.332 48.9997H702.606L663.353 0.126953Z" fill="#DDDFE7"/>
+								<path d="M684.298 0.126953H670.024L709.278 48.9997H723.552L684.298 0.126953Z" fill="#DDDFE7"/>
+								<path d="M705.244 0.126953H690.97L730.223 48.9997H744.497L705.244 0.126953Z" fill="#DDDFE7"/>
+								<path d="M726.189 0.126953H711.915L751.169 48.9997H765.442L726.189 0.126953Z" fill="#DDDFE7"/>
+								<path d="M746.553 0.126953H732.279L771.532 48.9997H785.806L746.553 0.126953Z" fill="#DDDFE7"/>
+								<path d="M767.498 0.126953H753.225L792.478 48.9997H806.752L767.498 0.126953Z" fill="#DDDFE7"/>
+								<path d="M788.444 0.126953H774.17L813.423 48.9997H827.697L788.444 0.126953Z" fill="#DDDFE7"/>
+								<path d="M809.389 0.126953H795.115L834.369 48.9997H848.643L809.389 0.126953Z" fill="#DDDFE7"/>
+								<path d="M830.335 0.126953H816.061L855.314 48.9997H869.588L830.335 0.126953Z" fill="#DDDFE7"/>
+								<path d="M851.474 0.126953H837.2L876.453 48.9997H890.727L851.474 0.126953Z" fill="#DDDFE7"/>
+								<path d="M872.42 0.126953H858.146L897.399 48.9997H911.673L872.42 0.126953Z" fill="#DDDFE7"/>
+								<path d="M893.365 0.126953H879.091L918.344 48.9997H932.618L893.365 0.126953Z" fill="#DDDFE7"/>
+								<path d="M914.311 0.126953H900.037L939.29 48.9997H953.564L914.311 0.126953Z" fill="#DDDFE7"/>
+								<path d="M935.256 0.126953H920.982L960.235 48.9997H974.509L935.256 0.126953Z" fill="#DDDFE7"/>
+								<path d="M955.62 0.126953H941.346L980.599 48.9997H994.873L955.62 0.126953Z" fill="#DDDFE7"/>
+								<path d="M976.565 0.126953H962.291L1001.54 48.9997H1015.82L976.565 0.126953Z" fill="#DDDFE7"/>
+								<path d="M997.51 0.126953H983.236L1022.49 48.9997H1036.76L997.51 0.126953Z" fill="#DDDFE7"/>
+								<path d="M1018.46 0.126953H1004.18L1043.44 48.9997H1057.71L1018.46 0.126953Z" fill="#DDDFE7"/>
+								<path d="M1039.4 0.126953H1025.13L1064.38 48.9997H1078.65L1039.4 0.126953Z" fill="#DDDFE7"/>
+							</svg>
+
+							<div class="science__data-plan__info">
+								<div class="science__data-plan__info-left">
+									<div class="science__data-plan__info-ratio science__data-plan__info-ratio_fact"></div>
+									<div class="science__data-plan__info-sum">
+										<span class="science__data-plan__info-value science__data-plan__info-value_fact"></span>
+										<span>тыс. руб.</span>
+									</div>
+								</div>
+								
+								<div class="science__data-plan__info-right">
+									<div class="science__data-plan__info-ratio science__data-plan__info-ratio_planned">100%</div>
+									<div class="science__data-plan__info-sum">  
+										<span class="science__data-plan__info-value science__data-plan__info-value_planned"></span>
+										<span>тыс. руб.</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="science__data-diagram science__data-diagram_scopus">
+							<div class="science__data-diagram__legend">
+								<div class="science__data-diagram__legend-item">
+									<svg class="science__data-diagram__legend-icon" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="4.52548" y="15.085" width="14.9333" height="14.9333" transform="rotate(-45 4.52548 15.085)" stroke="#217AFF" stroke-width="6.4"/>
+									</svg>
+									<span class="science__data-diagram__legend-descr">Число публикаций Scopus,</span>
+								</div>
+
+								<div class="science__data-diagram__legend-item">
+									<svg class="science__data-diagram__legend-icon" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="4.52548" y="15.085" width="14.9333" height="14.9333" transform="rotate(-45 4.52548 15.085)" stroke="#44BCFF" stroke-width="6.4"/>
+									</svg>
+									<span class="science__data-diagram__legend-descr">в т.ч.: Q1-Q2</span>
+								</div>
+							</div>
+							
+							<svg class="science__data-diagram__wrap" viewBox="0 0 1079 258" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="science__data-diagram-scopus" width="100%" height="100%" y="-10" overflow="visible">
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus-q1-q2" width="64" height="100%" y="0%" x="86" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus-q1-q2" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus" width="64" height="100%" y="0%" x="22" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus-q1-q2" width="64" height="100%" y="0%" x="269" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus-q1-q2"x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus" width="64" height="100%" y="0%" x="205" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+									
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus-q1-q2" width="64" height="100%" y="0%" x="447" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus-q1-q2" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus" width="64" height="100%" y="0%" x="383" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus-q1-q2" width="64" height="100%" y="0%" x="630" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus-q1-q2" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus" width="64" height="100%" y="0%" x="566" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+									
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus-q1-q2" width="64" height="100%" y="0%" x="809" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus-q1-q2" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus" width="64" height="100%" y="0%" x="745" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+		
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus-q1-q2" width="64" height="100%" y="0%" x="993" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus-q1-q2" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-scopus" width="64" height="100%" y="0%" x="929" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-scopus" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+								</svg>
+								
+								<rect x="0.933105" y="245.6" width="1077.33" height="2.13333" fill="#B2CEF6"/>
+								<rect x="75.6001" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 75.6001 246.742)" fill="white"/>
+								<rect x="259.067" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 259.067 246.742)" fill="white"/>
+								<rect x="436.133" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 436.133 246.742)" fill="white"/>
+								<rect x="619.6" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 619.6 246.742)" fill="white"/>
+								<rect x="798.8" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 798.8 246.742)" fill="white"/>
+								<rect x="982.267" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 982.267 246.742)" fill="white"/>
+							</svg>
+
+							<div class="science__data-diagram__months science__data-diagram__months-scopus">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+
+						<div class="science__data-diagram science__data-diagram_wos">
+							<div class="science__data-diagram__legend">
+								<div class="science__data-diagram__legend-item">
+									<svg class="science__data-diagram__legend-icon" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="4.52548" y="15.085" width="14.9333" height="14.9333" transform="rotate(-45 4.52548 15.085)" stroke="#FB9B2B" stroke-width="6.4"/>
+									</svg>
+									<span class="science__data-diagram__legend-descr">Число публикаций WoS,</span>
+								</div>
+
+								<div class="science__data-diagram__legend-item">
+									<svg class="science__data-diagram__legend-icon" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="4.52548" y="15.085" width="14.9333" height="14.9333" transform="rotate(-45 4.52548 15.085)" stroke="#FFDD85" stroke-width="6.4"/>
+									</svg>
+									<span class="science__data-diagram__legend-descr">в т.ч.: Q1-Q2</span>
+								</div>
+							</div>
+
+							<svg class="science__data-diagram__wrap" viewBox="0 0 1079 258" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="science__data-diagram-wos" width="100%" height="100%" y="-10" overflow="visible">
+
+									<svg class="science__data-diagram__item science__data-diagram__item-wos-q1-q2" width="64" height="100%" y="0%" x="86" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos-q1-q2" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-wos" width="64" height="100%" y="0%" x="22" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-wos-q1-q2" width="64" height="100%" y="0%" x="269" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos-q1-q2"x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-wos" width="64" height="100%" y="0%" x="205" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+									
+									<svg class="science__data-diagram__item science__data-diagram__item-wos-q1-q2" width="64" height="100%" y="0%" x="447" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos-q1-q2" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-wos" width="64" height="100%" y="0%" x="383" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-wos-q1-q2" width="64" height="100%" y="0%" x="630" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos-q1-q2" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-wos" width="64" height="100%" y="0%" x="566" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+									
+									<svg class="science__data-diagram__item science__data-diagram__item-wos-q1-q2" width="64" height="100%" y="0%" x="809" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos-q1-q2" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-wos" width="64" height="100%" y="0%" x="745" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+		
+									<svg class="science__data-diagram__item science__data-diagram__item-wos-q1-q2" width="64" height="100%" y="0%" x="993" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos-q1-q2" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+
+									<svg class="science__data-diagram__item science__data-diagram__item-wos" width="64" height="100%" y="0%" x="929" overflow="visible">
+										<svg width="100%" height="70%" y="30%" overflow="visible">
+											<rect width="100%" height="100%" y="0"/>
+											<text class="science__data-diagram__item-value-wos" x="50%" y="-10"  text-anchor="middle"></text>
+										</svg>
+									</svg>
+								</svg>
+								
+								<rect x="0.933105" y="245.6" width="1077.33" height="2.13333" fill="#B2CEF6"/>
+								<rect x="75.6001" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 75.6001 246.742)" fill="white"/>
+								<rect x="259.067" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 259.067 246.742)" fill="white"/>
+								<rect x="436.133" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 436.133 246.742)" fill="white"/>
+								<rect x="619.6" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 619.6 246.742)" fill="white"/>
+								<rect x="798.8" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 798.8 246.742)" fill="white"/>
+								<rect x="982.267" y="246.742" width="14.9333" height="14.9333" transform="rotate(-45 982.267 246.742)" fill="white"/>
+							</svg>
+
+							<div class="science__data-diagram__months science__data-diagram__months-wos">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="science__block science__info">
+					<svg class="science__block-bg" viewBox="0 0 1210 1545" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2 71.3333V1506V1508.13L37.2 1543.33H233.467L251.6 1525.2H296.4L309.2 1539.07H389.2L413.733 1513.47H940.667L965.2 1539.07H1176.4L1208.4 1506V61.7333L1168.93 22.2667H531.067L510.8 2H107.6L87.3333 22.2667H51.0667L2 71.3333Z" fill="#112054" fill-opacity="0.68" stroke="#217AFF" stroke-opacity="0.4" stroke-width="2.13333"/>
+					</svg>	
+
+					<div class="science__info-wrap">
+						<div class="science__info-title">
+							<span> Значение показателя за 2021 год по состоянию на </span> 
+							<span class="science__info-title__date"></span> 
+						</div>
+
+						<div class="science__info-body">
+							<div class="science__info-block">
+								<img class="science__block-bg" src="./assets/img/science/grid-small.svg" alt="grid">
+
+								<div class="science__info-block-wrap">
+									<svg class="science__info-block-icon" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="4.99216" y="15.085" width="14.9333" height="14.9333" transform="rotate(-45 4.99216 15.085)" stroke="white" stroke-width="6.4"/>
+									</svg>
+									
+									<div class="science__info-block-sum">
+										<div class="science__info-block-value science__info-block-value_current-receipt"></div>
+										<div class="science__info-block-subtitle">
+											<span>тыс.</span>
+											<span>руб.</span>
+										</div>
+									</div>
+										
+									<div class="science__info-block-descr">Объём фактических поступлений денежных средств по НИР</div>
+								</div>
+							</div>
+							<div class="science__info-block">
+								<img class="science__block-bg" src="./assets/img/science/grid-small.svg" alt="grid">
+
+								<div class="science__info-block-wrap">
+									<svg class="science__info-block-icon" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="4.99216" y="15.085" width="14.9333" height="14.9333" transform="rotate(-45 4.99216 15.085)" stroke="white" stroke-width="6.4"/>
+									</svg>
+									
+									<div class="science__info-block-sum">
+										<div class="science__info-block-value science__info-block-value_expected-receipt"></div>
+										<div class="science__info-block-subtitle">
+											<span>тыс.</span>
+											<span>руб.</span>
+										</div>
+									</div>
+										
+									<div class="science__info-block-descr science__info-block-descr_expected-receipt">Объём ожидаемых поступлений по заключённым договорам на выполнение НИР до <span></span> г</div>
+								</div>
+							</div>
+							<div class="science__info-block science__info-block_double">
+								<img class="science__block-bg" src="./assets/img/science/grid-medium.svg" alt="grid">
+
+								<div class="science__info-block__item">
+									<div class="science__info-block-wrap science__info-block-wrap_double">
+										<svg class="science__info-block-icon" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="4.99216" y="15.085" width="14.9333" height="14.9333" transform="rotate(-45 4.99216 15.085)" stroke="#217AFF" stroke-width="6.4"/>
+										</svg>
+
+										<div class="science__info-block-value science__info-block-value_scoups scoups"></div>
+
+										<div class="science__info-block-descr science__info-block-descr_double">Число публикаций Scopus</div>
+									</div>
+								</div>
+
+								<div class="science__info-block__item">
+									<div class="science__info-block-wrap science__info-block-wrap_double">
+										<svg class="science__info-block-icon" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="4.99216" y="15.085" width="14.9333" height="14.9333" transform="rotate(-45 4.99216 15.085)" stroke="#44BCFF" stroke-width="6.4"/>
+										</svg>
+
+										<div class="science__info-block-value science__info-block-value_scoups_q1-q2 scoups_q1-q2"></div>
+										
+										<div class="science__info-block-descr science__info-block-descr_double">В том числе Q1-Q2</div>
+									</div>
+								</div>
+							</div>
+							<div class="science__info-block science__info-block_double">
+								<img class="science__block-bg" src="./assets/img/science/grid-medium.svg" alt="grid">
+
+								<div class="science__info-block__item">
+									<div class="science__info-block-wrap science__info-block-wrap_double">
+										<svg class="science__info-block-icon" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="4.99216" y="15.085" width="14.9333" height="14.9333" transform="rotate(-45 4.99216 15.085)" stroke="#FB9B2B" stroke-width="6.4"/>
+										</svg>
+
+										<div class="science__info-block-value science__info-block-value_wos wos"></div>
+
+										<div class="science__info-block-descr science__info-block-descr_double">Число публикаций WoS</div>
+									</div>
+								</div>
+
+								<div class="science__info-block__item">
+									<div class="science__info-block-wrap science__info-block-wrap_double">
+										<svg class="science__info-block-icon" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="4.99216" y="15.085" width="14.9333" height="14.9333" transform="rotate(-45 4.99216 15.085)" stroke="#FFDD85" stroke-width="6.4"/>
+										</svg>
+
+										<div class="science__info-block-value science__info-block-value_wos_q1-q2 wos_q1-q2"></div>
+										
+										<div class="science__info-block-descr science__info-block-descr_double">В том числе Q1-Q2</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="science__block">
+					<svg class="science__logo" width="1158" height="1179" viewBox="0 0 1158 1179" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g filter="url(#filter0_d_1627:1287)">
+							<path d="M766.054 605.042C766.054 755.513 745.621 891.717 712.599 990.287C696.087 1039.57 676.437 1079.42 654.641 1106.94C632.841 1134.47 608.952 1149.58 583.958 1149.58C558.965 1149.58 535.076 1134.47 513.276 1106.94C491.48 1079.42 471.829 1039.57 455.318 990.287C422.296 891.717 401.862 755.513 401.862 605.042C401.862 454.572 422.296 318.368 455.318 219.798C471.829 170.511 491.48 130.661 513.276 103.143C535.076 75.6192 558.965 60.5 583.958 60.5C608.952 60.5 632.841 75.6192 654.641 103.143C676.437 130.661 696.087 170.511 712.599 219.798C745.621 318.368 766.054 454.572 766.054 605.042Z" stroke="#44BCFF"/>
+						</g>
+						<g opacity="0.5" filter="url(#filter1_d_1627:1287)">
+							<circle cx="840" cy="32" r="1" fill="#44BCFF"/>
+						</g>
+						<g filter="url(#filter2_d_1627:1287)">
+							<path d="M583.958 787.138C433.487 787.138 297.283 766.705 198.713 733.683C149.426 717.171 109.576 697.521 82.0579 675.725C54.5344 653.925 39.4153 630.036 39.4153 605.042C39.4153 580.049 54.5344 556.16 82.0579 534.36C109.576 512.564 149.426 492.913 198.713 476.401C297.283 443.379 433.487 422.946 583.958 422.946C734.428 422.946 870.632 443.379 969.202 476.402C1018.49 492.913 1058.34 512.564 1085.86 534.36C1113.38 556.16 1128.5 580.049 1128.5 605.042C1128.5 630.036 1113.38 653.925 1085.86 675.725C1058.34 697.521 1018.49 717.171 969.202 733.683C870.632 766.705 734.428 787.138 583.958 787.138Z" stroke="#44BCFF"/>
+						</g>
+						<g filter="url(#filter3_d_1627:1287)">
+							<path d="M455.196 733.803C348.798 627.405 266.935 516.645 220.586 423.596C197.41 377.069 183.127 334.995 179.081 300.125C175.034 265.248 181.235 237.665 198.908 219.992C216.581 202.319 244.164 196.118 279.041 200.165C313.911 204.211 355.984 218.494 402.511 241.67C495.561 288.019 606.32 369.882 712.719 476.28C819.117 582.679 900.98 693.439 947.329 786.488C970.505 833.015 984.788 875.088 988.834 909.958C992.881 944.835 986.68 972.418 969.007 990.091C951.334 1007.76 923.751 1013.97 888.874 1009.92C854.004 1005.87 811.931 991.589 765.404 968.413C672.354 922.064 561.595 840.202 455.196 733.803Z" stroke="#44BCFF"/>
+						</g>
+						<g filter="url(#filter4_d_1627:1287)">
+							<path d="M712.719 733.804C606.321 840.202 495.561 922.065 402.512 968.414C355.985 991.59 313.912 1005.87 279.041 1009.92C244.164 1013.97 216.581 1007.77 198.908 990.092C181.235 972.419 175.034 944.836 179.081 909.959C183.127 875.089 197.41 833.016 220.586 786.489C266.935 693.439 348.798 582.68 455.197 476.281C561.595 369.883 672.355 288.02 765.404 241.671C811.931 218.495 854.004 204.212 888.874 200.166C923.751 196.119 951.334 202.32 969.007 219.993C986.68 237.666 992.882 265.249 988.835 300.126C984.789 334.996 970.505 377.069 947.33 423.596C900.98 516.646 819.118 627.405 712.719 733.804Z" stroke="#44BCFF"/>
+						</g>
+						<g filter="url(#filter5_d_1627:1287)">
+							<circle cx="581.67" cy="610.993" r="27.3305" fill="url(#paint0_radial_1627:1287)"/>
+						</g>
+						<g filter="url(#filter6_d_1627:1287)">
+							<circle cx="194.511" cy="224.748" r="13.489" fill="#44BCFF"/>
+						</g>
+						<g filter="url(#filter7_d_1627:1287)">
+							<circle cx="993.54" cy="273.259" r="22.4597" fill="#44BCFF"/>
+						</g>
+						<g filter="url(#filter8_d_1627:1287)">
+							<circle cx="53.5598" cy="646.688" r="5.44044" fill="#44BCFF"/>
+						</g>
+						<g opacity="0.5" filter="url(#filter9_d_1627:1287)">
+							<circle cx="193" cy="1115" r="1" fill="#44BCFF"/>
+						</g>
+						<g filter="url(#filter10_d_1627:1287)">
+							<circle cx="729.373" cy="947.374" r="12.6267" fill="#44BCFF"/>
+						</g>
+						<defs>
+							<filter id="filter0_d_1627:1287" x="372.989" y="31.6267" width="421.939" height="1146.83" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="0.915268" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1627:1287"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="13.729"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0.4875 0 0 0 0 0.90775 0 0 0 0 1 0 0 0 1 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1627:1287"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1627:1287" result="shape"/>
+							</filter>
+							<filter id="filter1_d_1627:1287" x="808" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="10" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1627:1287"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="10.5"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0.168627 0 0 0 0 0.83749 0 0 0 0 0.984314 0 0 0 0.84 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1627:1287"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1627:1287" result="shape"/>
+							</filter>
+							<filter id="filter2_d_1627:1287" x="10.542" y="394.073" width="1146.83" height="421.939" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="0.915268" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1627:1287"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="13.729"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0.4875 0 0 0 0 0.90775 0 0 0 0 1 0 0 0 1 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1627:1287"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1627:1287" result="shape"/>
+							</filter>
+							<filter id="filter3_d_1627:1287" x="149.018" y="170.102" width="869.879" height="869.878" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="0.915268" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1627:1287"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="13.729"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0.4875 0 0 0 0 0.90775 0 0 0 0 1 0 0 0 1 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1627:1287"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1627:1287" result="shape"/>
+							</filter>
+							<filter id="filter4_d_1627:1287" x="149.019" y="170.103" width="869.879" height="869.878" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="0.915268" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1627:1287"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="13.729"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0.4875 0 0 0 0 0.90775 0 0 0 0 1 0 0 0 1 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1627:1287"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1627:1287" result="shape"/>
+							</filter>
+							<filter id="filter5_d_1627:1287" x="459" y="488.323" width="245.339" height="245.339" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="31.7796" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1627:1287"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="31.7796"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0.168627 0 0 0 0 0.83749 0 0 0 0 0.984314 0 0 0 0.84 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1627:1287"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1627:1287" result="shape"/>
+							</filter>
+							<filter id="filter6_d_1627:1287" x="103.201" y="133.437" width="182.621" height="182.621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="25.9404" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1627:1287"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="25.9404"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0.168627 0 0 0 0 0.83749 0 0 0 0 0.984314 0 0 0 0.84 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1627:1287"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1627:1287" result="shape"/>
+							</filter>
+							<filter id="filter7_d_1627:1287" x="862.405" y="142.123" width="262.271" height="262.271" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="36.2253" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1627:1287"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="36.2253"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0.168627 0 0 0 0 0.83749 0 0 0 0 0.984314 0 0 0 0.84 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1627:1287"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1627:1287" result="shape"/>
+							</filter>
+								<filter id="filter8_d_1627:1287" x="0.115522" y="593.243" width="106.889" height="106.889" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="16.0013" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1627:1287"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="16.0013"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0.168627 0 0 0 0 0.83749 0 0 0 0 0.984314 0 0 0 0.84 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1627:1287"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1627:1287" result="shape"/>
+							</filter>
+							<filter id="filter9_d_1627:1287" x="161" y="1083" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="10" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1627:1287"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="10.5"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0.168627 0 0 0 0 0.83749 0 0 0 0 0.984314 0 0 0 0.84 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1627:1287"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1627:1287" result="shape"/>
+							</filter>
+							<filter id="filter10_d_1627:1287" x="655.649" y="873.65" width="147.448" height="147.448" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="20.3657" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1627:1287"/>
+								<feOffset/>
+								<feGaussianBlur stdDeviation="20.3657"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0.168627 0 0 0 0 0.83749 0 0 0 0 0.984314 0 0 0 0.84 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1627:1287"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1627:1287" result="shape"/>
+							</filter>
+							<radialGradient id="paint0_radial_1627:1287" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(581.67 610.993) rotate(90) scale(27.3305)">
+								<stop stop-color="#44BCFF"/>
+								<stop offset="1" stop-color="#44BCFF" stop-opacity="0"/>
+							</radialGradient>
+						</defs>
+					</svg>
+				</div>
+			</div>
+		</div>	
+	</main>
+
+	<footer class="footer">
+		<svg class="footer__img">
+			<use href="./assets/img/sprite.svg#footer-bg-icon"></use>
+		</svg>
+
+		<a href="/" class="footer__logo">
+			<img src="./assets/img/logo.svg" alt="" />
+		</a>
+
+		<div class="footer__btns">
+			<div class="footer__btns-item">
+				<button class="footer__btns-btn">
+					<svg class="footer__btns-icon" width="9.844vw" height="3.385vw">
+						<use href="./assets/img/sprite.svg#footer-btn1"></use>
+					</svg>
+
+					<span class="footer__btns-text">Проверки</span>
+
+					<span class="footer__btns-val">0</span>
+				</button>
+			</div>
+
+			<div class="footer__btns-item">
+				<button class="footer__btns-btn btn--large">
+					<svg class="footer__btns-icon" width="10.677vw" height="3.438vw">
+						<use href="./assets/img/sprite.svg#footer-btn2"></use>
+					</svg>
+
+					<span class="footer__btns-text">Трансляции экзаменов</span>
+				</button>
+			</div>
+		</div>
+	</footer>
+	</div>
+	
+
+	<script src="./js/science.js"></script>
+</body>
+</html>	
