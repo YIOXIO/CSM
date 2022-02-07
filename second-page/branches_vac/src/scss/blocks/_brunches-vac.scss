@@ -1,0 +1,309 @@
+.branches-vac {
+    position: relative;
+    width: 100%;
+    top: 6.4vw;
+    left: 6.2vw;
+
+    &__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5vw;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+    }
+
+    &__wrap {
+        display: flex;
+    }
+
+    &__info {
+        width: 58.5vw;
+        height: 40vw;
+    }
+
+    &__legend-info {
+        position: relative;
+        margin-top: 1.2vw;
+        width: 74%;
+        height: 7vw;
+
+        &-bg, &-wrap {
+            width: 100%;
+            height: 7vw;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        &-bg {
+            z-index: 1;
+        }
+
+        &-wrap {
+            padding: 1.1vw 1.7vw 0vw 1.5vw;
+            display: grid;
+            grid-template-columns: max-content max-content max-content;
+            grid-template-rows: repeat(2, 2vw);
+            grid-auto-flow: row;
+            column-gap: 3.3vw;
+            align-items:center;
+            z-index: 2;
+        }
+
+        &-item {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            &_center {
+                margin-left: 3.1vw;
+            }
+        }
+
+        &-mark {
+            display: block;
+            width: 0.8vw;
+            height: 0.8vw;
+        }
+
+        &-descr {
+            margin-left: 0.8vw;
+            font-family: Oswald;
+            font-weight: 400;
+            font-size: 0.8vw;
+            line-height: 0.8vw;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template: repeat(5, 1fr) / max-content max-content max-content;
+        grid-auto-flow: column;
+        column-gap: 1.8vw;
+        row-gap: 0.5vw;
+        margin-top: 2.4vw;
+        width: 51.9vw;
+        height: 29.3vw;
+        
+        &-item {
+            display: flex;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-title, &-value, &-descr {
+            font-family: Oswald;
+            font-weight: 400;
+            font-size: 1.2vw;
+            line-height: 1.2vw;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+        }
+
+        &-staff {
+            margin-top: 0.66vw;
+            display: flex;
+            align-items: center;
+        }
+
+        &-descr {
+            font-size: 0.7vw;
+            line-height: 0.7vw;
+            margin-left: 0.4vw;
+        }
+    }
+
+    &__graphiс {
+        padding-top: 0.5vw;
+        margin-left: 1.2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 10vw;
+        height: 4.6vw;
+
+        &-data {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        &-row, &-data {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-value {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.6em;
+            fill: #FFFFFF;
+            font-stretch: none;   
+        }
+    } 
+
+    &__data {
+        position: relative;
+        width: 27.4vw;
+        height: 39vw;
+    }
+
+    &__diagramm {
+        margin-top: 1vw;
+        width: auto;
+        height: 20.6vw;
+        position: relative;
+            
+        &-center {
+            position: relative;
+            top: 53%;
+            left: 46%;
+            transform: translate(-50%, -50%);
+            width: 13.5vw;
+            height: 13.5vw;
+        }
+
+        &-info {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-value {
+            font-family: Oswald;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 2.4vw;
+            color: #FFFFFF;
+        }
+
+        &-descr {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 0.7vw;
+            text-transform: uppercase;
+        }
+
+        &-ellipse {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+
+        &-data {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 30vw;
+            width: 30vw;
+        }
+    }
+
+    &__legend-data {
+        margin-top: 2.8vw;
+        width: 100%;
+        height: 14vw;
+        display: flex;
+        justify-content: space-between;
+
+        &-right, &-left {
+            width: 47%;
+            height: auto;
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &-block {
+            position: relative;
+            width: auto;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            svg {
+                position: absolute;
+                top: 0vw;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 6.4vw;
+                height: 1.2vw;
+            }
+        }
+
+        &-wrap {
+            width: 100%;
+            height: 100%;
+            padding: 0 0.5vw 0 0.8vw;   
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &_sick {
+                flex-direction: column;
+                padding: 0.6vw;
+            }
+        }
+
+        &-descr, &-value {
+            font-size: 0.7vw;
+            font-family: Oswald;
+            font-style: normal;
+            font-weight: 400;    
+            color: #FFFFFF;
+        }
+
+        &-descr {   
+            letter-spacing: 0.05em;
+
+            &_sick {
+                font-size: 0.7vw;
+                padding-left: 0.8vw;
+                text-align: center;
+            }
+        }
+
+        &-value {
+            opacity: 0.9;
+
+            &_sick {
+                font-size: 1.9vw;
+                color: #FD6A6A;
+            }
+        }
+
+        &-sick {
+            height: 6vw;
+        }
+
+        &-vaccinated {
+            height: 2.3vw;
+        }
+
+        &-unvaccinated, &-recovered, &-unsuitable {
+            height: 3.2vw;
+        } 
+    }    
+}
