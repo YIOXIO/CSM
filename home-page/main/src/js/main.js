@@ -206,11 +206,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const financeData = {
         date: '2021-10-02',
         total: 600000000,
-        budgetResources: 1092045473,
-        otherResources: 1572394226,
-        wageFund: 2664439699,
-        landTax: 20,
-        propertyTax: '0'
+        budgetResources: 200000000,
+        otherResources: 200000000,
+        wageFund: 200000000,
+        landTax: 1000000000,
+        propertyTax: '100000000'
     }
 
 
@@ -329,6 +329,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     financeDataOutput(financeData);
 
+    function setSpace(elem) {
+        let strLength = elem.textContent.length;
+
+        let position = 'right'
+
+        if (elem.classList.contains('finance__diagram-value_wage-fund') || elem.classList.contains('finance__diagram-value_other-resources')) {
+            position = 'left'
+        } 
+
+        if (strLength === 1) {
+            elem.style[position] = '1.6vw'
+        }
+    }
+
+    document.querySelectorAll('.finance__diagram-value').forEach(i => setSpace(i))
 
 
 
