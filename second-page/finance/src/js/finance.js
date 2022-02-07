@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
         cashbox: 3453022.70,
         interimOrder: 18522289.98,
         taxDate: '01.10.2021',
-        propertyTax: 45229727.32,
+        propertyTax: '0',
         transportTax: 1066069.043243,
-        landTax:65176613.51,
+        landTax: 65176613.51,
         budgetResources: 1016043100.08,
-        otherResources: 1481248680.16,
+        otherResources: 0,
         totalEstate: 6984734981.58,
-        realEstate: 4799811870.20,
+        realEstate: 0,
         personalEstate: 878448252.1,
         totalEstateInItems: 258479,
         realEstateInItems: 91,
@@ -38,10 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function progressLength(progressBar, data) {
         let currentValue;
 
+        
+
         if (data > 100) {
             currentValue = progressBar.length;
-        } else {
-            currentValue = Math.round((progressBar.length / 100) * data);
+        }
+        else {
+            currentValue = Math.round((progressBar.length / 100) * data );
         }
 
         return currentValue; 
@@ -50,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ф-ця закрашивающая элементы.
 
     function setProgressBar(progressBar, length, val) {
+    
         for (let i = 0; i < length; i++) {
             progressBar[i].style.fill = val;
         }
@@ -147,12 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // получаем сумму для каждой категории.
 
 
-        totalTax = data.propertyTax + data.landTax + data.transportTax;
-        totalResources = data.budgetResources + data.otherResources;
+        totalTax =  parseInt(data.propertyTax) + parseInt(data.landTax) + parseInt(data.transportTax);
+        totalResources = parseInt(data.budgetResources) + parseInt(data.otherResources);
        
-        totalEstate = data.totalEstate;
-        differenceEstate = data.totalEstate - (data.realEstate + data.personalEstate);
-        differenceEstateInItems = data.totalEstateInItems - (data.realEstateInItems + data.personalEstateInItems);
+        totalEstate = parseInt(data.totalEstate);
+        differenceEstate = parseInt(data.totalEstate) - (parseInt(data.realEstate) + parseInt(data.personalEstate));
+        differenceEstateInItems = parseInt(data.totalEstateInItems) - (parseInt(data.realEstateInItems) + parseInt(data.personalEstateInItems));
         
 
         

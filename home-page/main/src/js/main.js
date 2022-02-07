@@ -209,8 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
         budgetResources: 1092045473,
         otherResources: 1572394226,
         wageFund: 2664439699,
-        landTax: 65185520,
-        propertyTax: 75229727
+        landTax: 20,
+        propertyTax: '0'
     }
 
 
@@ -218,7 +218,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     wageFundDiagramData = Object.values(financeData).slice(2, 4);
     сostsDiagramData = Object.values(financeData).slice(4, 7).reverse();
-    
+
+    const getInt = (array)  => array.map( i => parseInt(i))
     
     class Diagram  {
         constructor (title, data, colors, parentSelector, isDecorated = false) {
@@ -242,9 +243,19 @@ document.addEventListener('DOMContentLoaded', () => {
             let max = Math.max(...array);
            
             if (this.isDecorated) {
-                array = array.map(i => i < 5 ? i + 10 : i)
+                array = array.map(i => {
+                    if (i === 0) {
+                        return 0
+                    } 
+                    else if (i < 5) {
+                        return 5
+                    }
+                    else {
+                        return i
+                    }
+                });
             }
-    
+
             const sumRatio = array.reduce((a, b) => a + b);
             const diff = sumRatio - 100;
     
@@ -303,8 +314,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     }
     
-    new Diagram('Фонд оплаты труда', wageFundDiagramData, ['#2BD6FB', '#217AFF'], 'finance__diagram_wage-fund', ).render()
-    new Diagram('Затраты', сostsDiagramData, ['#FFC01D',  '#FB9B2B', '#FD6A6A'], 'finance__diagram_сosts', true).render()
+    new Diagram('Фонд оплаты труда', getInt(wageFundDiagramData), ['#2BD6FB', '#217AFF'], 'finance__diagram_wage-fund', ).render()
+    new Diagram('Затраты', getInt(сostsDiagramData), ['#FFC01D',  '#FB9B2B', '#FD6A6A'], 'finance__diagram_сosts', true).render()
 
     function financeDataOutput(data) {
         insertToPage('finance__total-value', numDataOutput(data.total));
