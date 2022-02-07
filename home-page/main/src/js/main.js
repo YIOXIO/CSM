@@ -131,21 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
         quality: 55
     }
     
-    function performanceDiagram(absoluteValue, qualityValue, animationTime = 3200) {
+    function performanceDiagram(absoluteValue, animationTime = 6300) {
 
-        
-
-        const absoluteProgrssbar = Array.from(document.querySelectorAll('.absolute-progrss-bar'));
-        const qualityProgrssbar = Array.from(document.querySelectorAll('.quality-progrss-bar')).reverse();
+        const absoluteProgrssbar = Array.from(document.querySelectorAll('.absolute-progrss-bar path'));
 
         let absoluteLength = progressLength(absoluteProgrssbar, absoluteValue);
-        let qualityLength = progressLength(qualityProgrssbar, qualityValue);
-
+       
         setTimeout(() => {
             setProgressBar(absoluteProgrssbar, absoluteLength, '#FB9B2B');
-            setProgressBar(qualityProgrssbar, qualityLength, '#217AFF');
-           
-            
         }, animationTime)
         
         function progressLength(progressBar, data) {
@@ -166,15 +159,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }  
 
-        
-        document.querySelector('.performance-diagram-quality-value').textContent =  numDataOutput(qualityValue) + '%';
         document.querySelector('.performance-diagram-absolute-value').textContent = numDataOutput(absoluteValue) + '%';
-
     }
 
    
 
-    performanceDiagram(performanceData.absolute, performanceData.quality);
+    performanceDiagram(performanceData.absolute);
 
     //=================== центральный блок данных =====================
 
