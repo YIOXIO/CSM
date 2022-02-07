@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const scienceServerData = {
-        date: '21.10.2021',
+        date: '21.10.2022',
         currentPlan: 503760.6,
         expectedReceipts: {
-            date: '31.12.2021',
+            date: '31.12.2022',
             sum: 236166.5
         },
         currentReceipts: 40220.5,
@@ -185,8 +185,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ==================== вывод данных в блок science__info =================
 
-
+        
         insertToPage('science__info-title__date', data.date);
+        insertToPage('science__info-title__year', data.date.split('.')[2]);
         insertToPage('science__info-block-value_current-receipt', numDataOutput(data.currentReceipts));
         insertToPage('science__info-block-value_expected-receipt', numDataOutput(data.expectedReceipts.sum));
         insertToPage('science__info-block-descr_expected-receipt span', data.expectedReceipts.date);
