@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const studentsData = {
             date: '01.10.2021',
             employment: 91,
+            performanceData = {
+                absolute: 77,
+                quality: 55
+            },
             load: {
                 hours: 950537.84,
                 ratio: 6.7
@@ -390,10 +394,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         insertToPage('students__score-value', numDataOutput(data.score));
+
+        // ===================== успеваемость ============================
+
+        const absolutePerfomanceProgressbar = Array.from(document.querySelectorAll('.students__graphic-perfomance__progrssbar-absolute path'));
+        const qualityPerfomanceProgressbar = Array.from(document.querySelectorAll('.students__graphic-perfomance__progrssbar-quality path'));
+
+        const absolutePerfomanceProgressbarLength = progressLength(absolutePerfomanceProgressbar, data.performanceData.absolute);
+        const qualityPerfomanceProgressbarLength = progressLength(qualityPerfomanceProgressbar, data.performanceData.quality);
+
+        setProgressBar(absolutePerfomanceProgressbar, absolutePerfomanceProgressbarLength, '#FB9B2B');
+        setProgressBar(qualityPerfomanceProgressbar, qualityPerfomanceProgressbarLength, '#1F70EF');
+
+        insertToPage('students__graphic-total_absolute-perfomance', data.performanceData.absolute + '%');
+        insertToPage('students__graphic-total_quality-perfomance', data.performanceData.quality + '%');
+        
     }
 
     students(studentsData)
-
-    
-
 });

@@ -105,6 +105,23 @@
             height: 100%;
             z-index: -1;
         }
+
+        &-wrap {
+            &_perfomance {
+                width: 100%;
+                padding: 1vw 2.5vw;
+            }
+        }
+
+        &_perfomance {
+            margin-top: 1.3vw;
+            height: 7.4vw;
+            width: 100%;  
+        }
+
+        &_quality {
+            margin-left: -1vw;
+        }
     }
 
     &__diagram {
@@ -210,6 +227,14 @@
             font-weight: 400;
             font-size: 1.1vw;
             color: #FFFFFF;
+
+            &_absolute-perfomance {
+                color: #FB9B2B;
+            }
+
+            &_quality-perfomance {
+                color: #1F70EF;
+            }
         }
 
         &-body {
@@ -285,7 +310,23 @@
                 height: 0.25em;
                 stroke-width: 0.1em;
             }
-        }        
+
+        }    
+        
+        &-perfomance {
+            &__progrssbar {
+                margin-top: 0.4vw;
+            }
+            &__descr {
+                margin-top: 0.4vw;
+                font-family: Oswald;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 0.6vw;
+                letter-spacing: 0.03em;
+                color: #FFFFFF;
+            }
+        }
     }
 
     &__employment-progressbar {
