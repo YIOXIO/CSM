@@ -8,7 +8,7 @@ const rename       = require('gulp-rename')
 const concat       = require('gulp-concat')
 const uglify       = require('gulp-uglify-es').default
 const newer        = require('gulp-newer')
-const scss         = require('gulp-sass')
+const scss         = require('gulp-sass')(require('sass'))
 const del          = require('del')
 
 
@@ -36,9 +36,7 @@ const html = () => {
 }
 
 const scripts = () => {
-	return src([
-		'src/js/students.js'
-	])
+	return src('src/js/students.js')
 	.pipe(concat('students.js'))
 	.pipe(uglify())
 	.pipe(dest('dist/js'))
@@ -71,7 +69,7 @@ const cleanimg = () => {
 }
 
 const icons = () => {
-	return src('src/assets/icons/**/*')
+	return src('src/assetsicons/**/*')
 	.pipe(dest('dist/assets/icons'))
 	.pipe(browserSync.stream())
 }
@@ -91,8 +89,8 @@ const watcher = () => {
 	watch('src/scss/**/*.+(scss|sass|css)', series(styles, cleanscss))
 	watch(['src/**/*.js', '!src/**/*.min.js'], scripts)
 	watch('src/assets/img/**/*', images)
-	watch('src/assets/icons/**/*', icons)
-	watch('src/assets/fonts/**/*', fonts)
+	watch('src/icons/**/*', icons)
+	watch('src/fonts/**/*', fonts)
 }
 
 const build = parallel(html, scripts, styles, images, icons, fonts, server, watcher, cleanscss)
