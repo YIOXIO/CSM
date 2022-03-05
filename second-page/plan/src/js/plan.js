@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         },
         {
+            name: 'Нераспределенный между структурными подразделениями объем договоров (контрактов, соглашений) на выполнение НИР (реализацию гранта, оказание научных, научно-технических и консалтинговых услуг)',
+            plan: 34344.40,
+            fact: 70697.45
+        },
+        {
             name: 'Базовая кафедра «Экономические и правовые экспертизы» Союза судебных экспертов «Экспертный совет»',
             plan: 750,
             fact: 177.51
@@ -788,6 +793,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
 
+    
+
+
+
     function plan(data) {
         
         // ======== инициализация данных =======
@@ -796,7 +805,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let flag = true;
         let pagination = [];
         const itemsInPage = 15;
-        const sortData = data.slice(1, data.length + 1).sort((a, b) => b.fact - a.fact);
+        const sortData = data.slice(2, data.length + 1).sort((a, b) => b.fact - a.fact);
+        sortData.unshift(data[1])
         const pages = Math.ceil(sortData.length / itemsInPage);
         const sliceData = (arr, position, limit) => arr.slice(position, limit);
 
