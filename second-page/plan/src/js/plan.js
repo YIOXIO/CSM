@@ -1196,7 +1196,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="plan__tabcontent-block__value">${item.fact}%</div>
                         </div>
 
-                        ${this.progressbarr(Math.ceil(item.fact), `${this.modifier + '-' + index}`)}
+                        ${this.progressbarr(Math.ceil(item.fact), this.modifier + '-' + index)}
                         
                         <div class="plan__tabcontent-block__info plan__tabcontent-block__info_bottom">
 
@@ -1270,6 +1270,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     plan(serverData);
+
+
+    document.querySelector('#alarm_click').addEventListener('click', () => {
+        //...
+    })
 
 });
 

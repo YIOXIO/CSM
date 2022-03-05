@@ -29,6 +29,35 @@
   height: 100%;
 }
 
+.header__link-text {
+  font-family: Rubik;
+  font-weight: 700;
+  font-size: 0.625vw;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #217aff;
+
+  &_provost {
+    font-family: Oswald;
+    font-weight: bold;
+    font-size: 0.95vw;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #217AFF;
+  }
+
+  &_alarm {
+    font-size: 0.7vw;
+    margin-top: 0.8vw;
+    margin-left: -0.4vw;
+    font-weight: bold;
+    font-size: 0.8vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #112054;
+  }
+}
+
 .header__search {
   width: 50.833vw;
   margin: 0 auto;
@@ -86,6 +115,10 @@
   align-items: center;
   padding-left: 0.938vw;
   padding-bottom: 0.625vw;
+
+  &_alarm {
+    right: 18vw;
+  }
 }
 
 .header__bg {
