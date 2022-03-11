@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: 'Нераспределенный между структурными подразделениями объем договоров (контрактов, соглашений) на выполнение НИР (реализацию гранта, оказание научных, научно-технических и консалтинговых услуг)',
-            plan: 34344.40,
-            fact: 70697.45
+            plan: 0.00,
+            fact: 0.00
         },
         {
             name: 'Базовая кафедра «Экономические и правовые экспертизы» Союза судебных экспертов «Экспертный совет»',
@@ -793,10 +793,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
 
-    
-
-
-
     function plan(data) {
         
         // ======== инициализация данных =======
@@ -1282,8 +1278,26 @@ document.addEventListener('DOMContentLoaded', () => {
     plan(serverData);
 
 
+    const overlay = document.querySelector('.overlay');
+    const modal = document.querySelector('.modal');
+    const modalConfirm = modal.querySelector('.modal__btn_confirm');
+    const modalCancelled = modal.querySelector('.modal__btn_cancelled');
+
     document.querySelector('#alarm_click').addEventListener('click', () => {
+        overlay.classList.add('overlay_show');
+        modal.classList.add('modal_show');
+    })
+
+    modalCancelled.addEventListener('click', () => {
+        overlay.classList.remove('overlay_show');
+        modal.classList.remove('modal_show');
+    })
+
+    modalConfirm.addEventListener('click', () => {
         //...
+        
+        overlay.classList.remove('overlay_show');
+        modal.classList.remove('modal_show');
     })
 
 });
