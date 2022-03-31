@@ -1,0 +1,524 @@
+@mixin fade {
+    animation-name: fade;
+    animation-duration: 1.6s;
+}
+
+@keyframes fade { 
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.partners {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__tabheader {
+        position: absolute;
+        width: 15vw;
+        height: 2.4vw;
+        top: 2.8vw;
+        left: 12.5vw;
+        display: flex;
+        justify-content: space-between;
+
+        &-btns {
+            display: flex;
+            justify-content: space-evenly;
+            width: 10vw;
+
+        }
+    }
+
+    &__tabitem {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.4vw;
+        height: 100%;
+        cursor: pointer;
+        z-index: 1000;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            stroke-opacity: 0.4;
+            stroke-width: 2;
+            stroke: #217AFF;
+        }
+
+        &-value {
+            font-family: Oswald;
+            font-weight: 700;
+            font-size: 0.625vw;
+            color: #217AFF;
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        &_active {
+            svg {
+                stroke-opacity: 1;
+            }
+
+            .partners__tabitem-value {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__wrapper {
+        margin-top: 5.5vw;
+        width: 85.5vw;
+    }
+
+    &__header {
+        margin-left: 32%;
+        font-size: 1.5vw;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        @include fade;
+
+        &-subtitle {
+            margin-left: 1vw;
+            font-size: 0.8vw;
+            color: #217AFF;
+
+            span {
+                font-size: 1.5vw;
+                margin-right: 0.2vw;
+            }
+        }
+    }
+
+    &__tabcontainer {
+        margin-top: 2vw;
+        position: relative;
+        display: flex;
+    }
+
+    &__menu {
+        position: absolute;
+        width: 30.6%;
+  
+
+        &-block {
+            margin-top: 1vw;
+            height: 5rem;
+            position: relative;
+            width: auto;
+            cursor: pointer;
+        }
+
+        &-wrap {
+           margin-top: 0.5vw; 
+        }
+
+        &-descr {
+            font-family: Oswald;
+            font-weight: 400;    
+            color: #FFFFFF;
+        }
+
+        &-descr {   
+            font-size: 0.8vw;
+            letter-spacing: 0.05em;
+        }
+
+        &-title {
+            font-size: 1vw;
+            letter-spacing: 0.05em;
+            margin: 1vw 0 0vw;
+
+            &:nth-child(1) {
+                margin: 0 0 0vw;
+            }
+            
+        }
+    }
+
+    &__graphiс {
+        height: 0.6vw;
+        transition: all 1.5s;
+
+        rect {
+            transition: all 1.5s;
+        }
+
+        &-row, &-data {
+            height: 100%;
+        }
+
+        &-row {
+            height: 60%;
+        }
+
+        &-data {
+            overflow: visible;
+            width: 100%;
+        }
+
+        &-right-rect, &-left-rect {
+            transform-box: fill-box;
+            transform-origin: center;
+            transform: rotate(45deg);
+            width: 0.2em;
+            height: 0.2em;
+            stroke-width: 0.1em;
+        }
+
+        &-left-rect {
+            overflow: hidden;
+        }         
+    }    
+
+    &__tabcontent {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        height: 100%;
+
+        &-wrap {
+            width: 68%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: max-content;
+            grid-column-gap: 1.2vw;
+            position: relative;
+
+        }
+
+        &-element {
+            position: relative;
+        }
+
+        &-block {
+            position: relative;
+            width: 100%;
+            height: max-content;
+            
+           &_p1-l {
+            overflow: hidden;
+           }
+
+            &__bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+            }
+
+            &__wrap {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                padding: 2vw 1.6vw;
+                display: flex;
+                justify-content: start;
+                flex-direction: column;
+
+                &_menu {
+                    top: 1vw;
+                    height: 95%;
+                    padding: 0.5vw 1.6vw 1.3vw;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                    overflow-y: scroll;
+        
+                    &::-webkit-scrollbar {
+                        width: 0;
+                        height: 0;
+                    }
+                }
+            }
+
+            &__item {
+                margin-top: 1vw;
+                position: relative;
+                width: 100%;
+
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
+            }
+
+            &__info {
+                width: 100%;
+                display: flex;
+                justify-content: start;
+                align-items: start;
+                cursor: pointer;
+                @include fade;
+
+                &_bottom {
+                    height: 1vw;
+                }
+            }
+
+            &__descr {
+                margin-left: 1vw;
+                font-family: Oswald;
+                font-weight: 400;
+                font-size: 0.9vw;
+                letter-spacing: 0.03em;
+                color: #FFFFFF;
+                line-height: 1.2vw;
+
+                &_mt {
+                    margin-top: 0.5vw;
+                }
+            }
+
+            &__icon {
+                width: 2vw;
+                height: auto;
+            }
+
+            &__mark {
+                position: absolute;
+                top: 1.8vw;
+                left: 2.8%;
+                rect {
+                    transform-box: fill-box;
+                    transform-origin: center;
+                    transform: rotate(45deg);
+                    width: 0.2em;
+                    height: 0.2em;
+                    stroke-width: 0.1em;
+                    
+                }
+            }
+        }
+    }   
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #112054;
+    opacity: 0.9;
+    z-index: -1;
+
+    &_show {
+        z-index: 2000;
+    }
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    width: 90vw;
+    height: 50vw;
+    padding: 4.5vw 2vw;
+    display: none;
+    transition: ease-in 1.5s;
+
+    &-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__wrapper {
+        padding: 1vw;
+        position: relative;
+        z-index: 2000;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__header {
+        height: 8vw;
+        display: grid; 
+        grid-template-columns: 8vw 1fr;
+    }
+
+    &__icon {   
+        height: 100%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__info {
+        padding: 1.5vw 2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-family: 'Oswald';
+        font-weight: 500;
+        font-size: 1.6vw;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+    }
+
+    &__subtitle {
+        margin-top: 0.5vw;
+        position: relative;
+    }
+
+    &__partner-name {
+        margin-left: 2vw;
+        font-family: 'Oswald';
+        font-weight: 300;
+        font-size: 1.1vw;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+    }
+
+    &__mark {
+        position: absolute;
+        top: -1.6vw;
+        transform: translateY(50%);
+        width: 2vw;
+        height: 2vw;
+        rect {
+            transform-box: fill-box;
+            transform-origin: center;
+            transform: rotate(45deg);
+            width: 4em;
+            height: 4em;
+            stroke-width: 1em;   
+        }
+    }
+
+    &__body {
+        position: relative;
+        margin-top: 2vw;
+        height: 25vw;
+        width: 100%;
+        display: flex;
+    }
+
+    &__block {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &_right {
+            margin-left: 10vw;
+        }
+
+        &-item {
+            margin-left: 1.2vw;
+            position: relative;
+
+            &__title {
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1vw;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+            }
+
+            &__descr {
+                margin-top: 0.2vw;
+                font-family: 'Oswald';
+                font-weight: 300;
+                font-size: 0.8vw;
+                letter-spacing: 0.05em;
+                color: #FFFFFF; 
+            }
+
+            &__phone {
+                color: #FB9B2B;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                left: -1.2vw;
+                width: 0.2vw;
+                height: 100%;
+                background: #FB9B2B;
+            }
+        }
+    }
+
+    &__contract {
+        position: absolute;
+        right: -1vw;
+        bottom: 1vw;
+
+        &-date, &-type {
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 0.8vw;
+            letter-spacing: 0.05em;
+        }
+
+        &-date span, &-type span {
+            color: #FB9B2B;
+        }
+
+        &-type {
+            margin-top: 0.35vw;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        width: 2vw;
+        height: 2vw;
+        top: 5.5vw;
+        right: 1.5vw;
+        cursor: pointer;
+        z-index: 2001;
+    }
+
+    &_show {
+        display: block;
+    }
+}
+
