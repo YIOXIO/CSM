@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             occupation: 'Туризм',
                             interests:'Наука/образование',
                             interaction: {
-                                internships: 11,
-                                employment: 3,
+                               
                                 activity: 'наука/образование'
                             },
                             preparation: '43.03.02 Туризм',
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             level: 'Высший орган',
                             contacts: 'Лысенкова Елена Вячеславовн - заместитель руководителя Федерального агентства по туризму (Ростуризм)',
                             curator: 'Васякин Богдан Сергеевич - заведующий кафедрой психологии',
-                            phone: '89035494458',
+                            
                             contractConclusionDate: '23.12.2022',
                             contractType:'бессрочный'
                         },
@@ -1517,6 +1516,10 @@ document.addEventListener('DOMContentLoaded', () => {
    
     // Модальное окно.
 
+    const modalField = item =>  {
+        return item ? item : ''
+    }
+
     //Ф-ия для гинирации модального окна.
     function setModal(item) {
         const {
@@ -1547,12 +1550,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="./assets/img/partners-icons/${icon ? icon : 'default-icon.svg'}" alt="icon">
                 </div>
                 <div class="modal__info">
-                    <div class="modal__title">${name}</div>
+                    <div class="modal__title">${modalField(name)}</div>
                     <div class="modal__subtitle">
                         <svg class="modal__mark" width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect stroke="${color}" x="0" y="0" fill="white"/>
+                            <rect stroke="${modalField(color)}" x="0" y="0" fill="white"/>
                         </svg>
-                        <div class="modal__partner-name">${alias}</div> 
+                        <div class="modal__partner-name">${modalField(alias)}</div> 
                     </div>
                 </div>
             </div>
@@ -1560,54 +1563,54 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="modal__block modal__block_left">
                     <div class="modal__block-item">
                         <div class="modal__block-item__title">Сфера деятельности</div>
-                        <div class="modal__block-item__descr">${occupation}</div>
+                        <div class="modal__block-item__descr">${modalField(occupation)}</div>
                     </div>
                     <div class="modal__block-item">
                         <div class="modal__block-item__title">Интересы в области</div>
-                        <div class="modal__block-item__descr">${interests}</div>
+                        <div class="modal__block-item__descr">${modalField(interests)}</div>
                     </div>
                     <div class="modal__block-item">
                         <div class="modal__block-item__title">Формы взаимодействия</div>
-                        <div class="modal__block-item__descr">Практики/стажировки: <span>${interaction.internships}</span></div>
-                        <div class="modal__block-item__descr">Трудоустройство: <span>${interaction.employment}</span></div>
-                        <div class="modal__block-item__descr">По выбору (образовательная деятельность, наука, дпо, и т.д.): <span>${interaction.activity}</span></div>
+                        <div class="modal__block-item__descr">Практики/стажировки: <span>${modalField(interaction.internships)}</span></div>
+                        <div class="modal__block-item__descr">Трудоустройство: <span>${modalField(interaction.employment)}</span></div>
+                        <div class="modal__block-item__descr">По выбору (образовательная деятельность, наука, дпо, и т.д.): <span>${modalField(interaction.activity)}</span></div>
                     </div>
                     <div class="modal__block-item">
                         <div class="modal__block-item__title">Направления подготовки</div>
-                        <div class="modal__block-item__descr">${preparation}</div>
+                        <div class="modal__block-item__descr">${modalField(preparation)}</div>
                     </div>
                     <div class="modal__block-item">
                         <div class="modal__block-item__title">Образовательные программы</div>
-                        <div class="modal__block-item__descr">${courses}</div>
+                        <div class="modal__block-item__descr">${modalField(courses)}</div>
                     </div>
                 </div>
                 <div class="modal__block modal__block_right">
                     <div class="modal__block-item">
                         <div class="modal__block-item__title">Генеральный директор</div>
-                        <div class="modal__block-item__descr">${director}</div>
+                        <div class="modal__block-item__descr">${modalField(director)}</div>
                     </div>
                     <div class="modal__block-item">
                         <div class="modal__block-item__title">Наличие корпоративного университета</div>
-                        <div class="modal__block-item__descr">${haveCorporateUniversity}</div>
+                        <div class="modal__block-item__descr">${modalField(haveCorporateUniversity)}</div>
                     </div>
                     <div class="modal__block-item">
                         <div class="modal__block-item__title">Уровень взаимодействия</div>
-                        <div class="modal__block-item__descr">${level}</div>
+                        <div class="modal__block-item__descr">${modalField(level)}</div>
                     </div>
                     <div class="modal__block-item">
                         <div class="modal__block-item__title">Контакты со стороны индустриального партнера</div>
-                        <div class="modal__block-item__descr">${contacts}</div>
+                        <div class="modal__block-item__descr">${modalField(contacts)}</div>
                     </div>
                     <div class="modal__block-item">
                         <div class="modal__block-item__title">Куратор взаимодействия со стороны Университета</div>
-                        <div class="modal__block-item__descr">${curator}</div>
-                        <div class="modal__block-item__descr">тел.: <span class="modal__block-item__phone">${transormPhoneNumber(phone)}</span></div>
+                        <div class="modal__block-item__descr">${modalField(curator)}</div>
+                        <div class="modal__block-item__descr">тел.: <span class="modal__block-item__phone">${transormPhoneNumber(modalField(phone))}</span></div>
                     </div>
                 </div>
                 </div>
                 <div class="modal__contract">
-                    <div class="modal__contract-date">Дата заключения договора: <span>${contractConclusionDate}</span></div>
-                    <div class="modal__contract-type">Период действия договора: <span>${contractType}</span></div>
+                    <div class="modal__contract-date">Дата заключения договора: <span>${modalField(contractConclusionDate)}</span></div>
+                    <div class="modal__contract-type">Период действия договора: <span>${modalField(contractType)}</span></div>
             </div>
             `
     } 
