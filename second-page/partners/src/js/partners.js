@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             curator: 'Васякин Богдан Сергеевич - заведующий кафедрой психологии',
                             
                             contractConclusionDate: '23.12.2022',
-                            contractType:'бессрочный'
+                            contractType:'бессрочный',
+                            dateOfUpdate: '15.04.2022'
                         },
                         {   
                             id: 12,
@@ -1539,7 +1540,8 @@ document.addEventListener('DOMContentLoaded', () => {
             curator,
             phone,
             contractConclusionDate,
-            contractType
+            contractType,
+            dateOfUpdate
         } = item 
 
         
@@ -1607,10 +1609,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="modal__block-item__descr">тел.: <span class="modal__block-item__phone">${transormPhoneNumber(modalField(phone))}</span></div>
                     </div>
                 </div>
-                </div>
-                <div class="modal__contract">
-                    <div class="modal__contract-date">Дата заключения договора: <span>${modalField(contractConclusionDate)}</span></div>
-                    <div class="modal__contract-type">Период действия договора: <span>${modalField(contractType)}</span></div>
+            </div>
+            <div class="modal__date">
+                <div class="modal__contract-date">Данные по состоянию на <span>${modalField(dateOfUpdate)}</span></div>
+            </div>
+            <div class="modal__contract">
+                <div class="modal__contract-date">Дата заключения договора: <span>${modalField(contractConclusionDate)}</span></div>
+                <div class="modal__contract-type">Период действия договора: <span>${modalField(contractType)}</span></div>
             </div>
             `
     } 
