@@ -1,6 +1,5 @@
 .footer {
 	position: relative;
-	z-index: 1;
 }
 
 .footer__btns-val {
@@ -42,9 +41,9 @@
 .footer__btns {
 	position: absolute;
 	bottom: 4vw;
-	right: 3.5vw;
+	right: 4vw;
 	display: flex;
-	z-index: 3000;
+	z-index: 1;
 }
 
 .footer__btns-item {
@@ -53,9 +52,9 @@
 
 .footer__btns-btn {
 	position: relative;
-	width: auto;
-	height: 3.385vw;
-	z-index: 3000;
+	width: 11vw;
+ height: 4vw;
+	z-index: 1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -64,22 +63,20 @@
 }
 
 .btn--large {
-	width: 15.677vw;
+	width: 10.677vw;
 	height: 3.438vw;
 
 	.footer__btns-text {
 		position: relative;
+		left: 0.5vw;
 	}
 }
 
 .footer__btns-text {
-	font-family: 'Oswald';
-	font-size: 0.95vw;
-	color: #fb9b2b;
+	font-weight: 700;
+	font-size: 0.521vw;
+	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	font-weight: 400;
-	letter-spacing: 0.05em;
-	margin-left: -1vw;
 }
 
 .footer__btns-icon {

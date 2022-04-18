@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //============== переход на второстепенные страницы ==========
     
     document.querySelector('.footer__btns').addEventListener('click', () => {
-        
+
     });
 
     document.querySelector('#plugLeft').addEventListener('click', () => {
@@ -1225,4 +1225,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setMonth(staffData.date, 'students__diagram-month-text');  
     setMonth(scienceData.date, 'science__diagram-month-text');  
 
+
+
+    // =================== индустриальные партнеры ================================
+
+    const partnersData = {
+        count: 1001
+    }
+
+    insertToPage('footer__btns-val', numDataOutput(partnersData.count));
 })
