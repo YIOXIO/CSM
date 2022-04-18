@@ -1,6 +1,6 @@
 .topnav__btn {
   position: absolute;
-  top: 2.2vw;
+  top: 1.8vw;
   width: 8.781vw;
   height: 2.4vw;
   display: flex;
@@ -9,18 +9,24 @@
   z-index: 100;
 
   &_portraits {
-    left: 10vw;
+    left: 5vw;
   }
 
   &_priority {
-    left: 18.2vw;
+    left: 13vw;
+  }
+
+  &_covid {
+    right: 16vw;
+    height: 4vw;
+    width: 11vw;
+    top: 1vw;
   }
 
   &_to-website {
     top: 9.5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
   }
 
   &-border {
@@ -28,14 +34,23 @@
     width: 8.781vw;
     height: 2.708vw;
     position: absolute;
+
+    &_covid {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &-text {
     font-size: 0.95vw;
-    color: #fb9b2b;
+    color: #217AFF;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 0.05em;
+
+    &_orange {
+      color: #fb9b2b;
+    }
   }
 }
 
@@ -142,13 +157,6 @@
       text-transform: uppercase;
       color: #217AFF;
     }
-
-    &_covid {
-      font-size: 0.7vw;
-      margin-top: 0.8vw;
-      margin-left: -0.4vw;
-      font-weight: bold;
-    }
   }
   
   .header__link-icon {
@@ -215,7 +223,7 @@
   .header__link {
     position: absolute;
     right: 4.479vw;
-    top: 2.188vw;
+    top: 1.4vw;
     width: 10.781vw;
     height: 7vh;
     display: flex;
@@ -223,9 +231,6 @@
     padding-left: 0.938vw;
     padding-bottom: 0.625vw;
 
-    &_covid {
-      right: 18vw;
-    }
   }
   
   .header__bg {
@@ -240,14 +245,14 @@
 
   .layout-link {
     position: absolute;
-    top: 2.188vw;
+    top: 1.8vw;
     left: 2.188vw;
     display: flex;
     align-items: center;
     margin: -0.781vw;
 
     &_home {
-        top: 2.18vw;
+        top: 1.7vw;
         left: 2.9vw;
 
     }

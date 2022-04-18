@@ -1,16 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     //============== переход на второстепенные страницы ==========
-
-    document.querySelector('#plugLeft').addEventListener('click', () => {
+    
+    document.querySelector('.footer__btns').addEventListener('click', () => {
         
     });
 
-    document.querySelector('#plugRight').addEventListener('click', () => {
-        
+    document.querySelector('#plugLeft').addEventListener('click', () => {
+       
     });
 
     document.querySelector('#portraits').addEventListener('click', () => {
+
         
     });
 
@@ -399,7 +400,6 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.add('vaccination__graphiс');
 
             element.innerHTML = `
-
                 ${setLine(data.vaccinated,'#217AFF')}
                 ${setLine(data.unvaccinated, '#6C38FF')}
                 ${setLine(data.recovered, '#A7EB17')}
@@ -1226,5 +1226,3 @@ document.addEventListener('DOMContentLoaded', () => {
     setMonth(scienceData.date, 'science__diagram-month-text');  
 
 })
-
-
