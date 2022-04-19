@@ -253,7 +253,7 @@
                     -ms-overflow-style: none;
                     scrollbar-width: none;
                     overflow-y: scroll;
-        
+                    justify-content: start;
                     &::-webkit-scrollbar {
                         width: 0;
                         height: 0;
