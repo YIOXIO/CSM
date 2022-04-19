@@ -21,6 +21,7 @@
     height: 4vw;
     width: 11vw;
     top: 1vw;
+    cursor: pointer;
   }
 
   &_to-website {
@@ -252,9 +253,10 @@
     margin: -0.781vw;
 
     &_home {
-        top: 1.7vw;
-        left: 2.9vw;
-
+      top: 1.7vw;
+      left: 2.9vw;
+      z-index: 1;
+      cursor: pointer;
     }
 }
   

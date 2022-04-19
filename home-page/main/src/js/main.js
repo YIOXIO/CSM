@@ -2,12 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //============== переход на второстепенные страницы ==========
     
+
+    document.querySelector('#covid_click').addEventListener('click', () => {
+       
+    });
+
     document.querySelector('.footer__btns').addEventListener('click', () => {
 
     });
 
     document.querySelector('#plugLeft').addEventListener('click', () => {
-       
+        
     });
 
     document.querySelector('#portraits').addEventListener('click', () => {
