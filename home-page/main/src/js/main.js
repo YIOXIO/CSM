@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
     });
 
-    document.querySelector('#staff').addEventListener('click', () => {
-        
+    document.querySelector('#students').addEventListener('click', () => {
+    
     });
 
     document.querySelector('#finance').addEventListener('click', () => {
