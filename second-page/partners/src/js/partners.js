@@ -1086,7 +1086,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="modal__header">
                 <div class="modal__icon">
-                    <img src="./assets/img/partners-icons/${icon ? icon : 'default-icon.svg'}" alt="icon">
+                    <img src="./assets/partners/dist/img/partners-icons/${icon ? icon : 'default-icon.svg'}" alt="icon">
                 </div>
                 <div class="modal__info">
                     <div class="modal__title">${modalField(name)}</div>
