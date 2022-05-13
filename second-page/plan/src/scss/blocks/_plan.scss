@@ -1,3 +1,28 @@
+@mixin fade {
+    animation-name: fade;
+    animation-duration: 1.6s;
+}
+
+@mixin slash {
+    content: '';
+    position: absolute;
+    background-color: #217AFF;
+    bottom: 0.1vw;
+    width: 0.1vw;
+    transform: rotate(28deg);
+    left: -0.8vw;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .plan {
     position: absolute;
     width: 100%;
@@ -9,7 +34,7 @@
         position: absolute;
         width: 15vw;
         height: 2.4vw;
-        top: 2vw;
+        top: 2.8vw;
         left: 12.5vw;
         display: flex;
         justify-content: space-between;
@@ -18,7 +43,6 @@
             display: flex;
             justify-content: space-evenly;
             width: 10vw;
-
         }
     }
 
@@ -66,34 +90,225 @@
         }
     }
 
-    &__tabcontainer {
-        margin-top: 5.4vw;
+    &__wrapper {
+        margin-top: 4.5vw;
         width: 85.5vw;
+        position: relative;
+    }
+
+    &__header {
+        position: absolute;
+        top: 1vw;
+        margin-left: 30%;
+        font-size: 1.5vw;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+        &-subtitle {
+            position: relative;
+            margin-left: 2vw;
+            font-size: 0.8vw;
+            color: #217AFF;
+
+            &::before {
+                @include slash();
+                height: 1.7vw; 
+            }
+
+            span {
+                font-size: 1.5vw;
+                margin-right: 0.2vw;
+            }
+        }
+    }
+
+    &__tabcontainer {
+        margin-top: 4vw;
+        position: relative;
+        display: flex;
+    }
+
+    &__menu {
+        position: absolute;
+        top: -3vw;
+        left: -4vw;
+        width: 33%;
+        height: 46.5vw;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        &-block {
+            height: 3.6vw;
+            position: relative;
+            width: auto;
+            cursor: pointer;
+            border: 1px solid #217AFF;
+            padding: 0 1.5vw;
+
+            &:nth-child(1) {
+                margin-top: 1vw;
+            }
+
+            &__wrap {
+                margin-top: 0.1vw;
+            }
+
+            &__descr {
+                font-family: Oswald;
+                font-weight: 400;
+                color: #FFFFFF;
+                font-size: 0.8vw;
+                letter-spacing: 0.05em;
+            }
+
+            &__title {
+                font-size: 1vw;
+                letter-spacing: 0.05em;
+                margin: 1vw 0 0vw;
+
+                &:nth-child(1) {
+                    margin: 0 0 0vw;
+                }
+            }
+
+            &__info {
+                display: flex;
+                margin-top: 0.2vw;
+                align-items: center;
+            }
+
+            &__indicators {
+                margin-left: 1vw;
+                display: grid;
+                grid-template-columns: 3vw 1fr;
+                gap: 0.8vw;
+            }
+
+            &__value {
+                margin-top: -0.4vw;
+                font-size: 1.2vw;
+            }
+
+            &__current-plan {
+                position: relative;
+                margin-top: 0.2vw;
+
+                &::before {
+                    @include slash();
+                    height: 1.2vw;
+                }
+            }
+
+            &__current-plan-value,
+            &__current-plan-descr {
+                font-family: 400;
+                font-weight: 500;
+                font-size: 0.7vw;
+                color: #217AFF;
+            }
+
+            &__alarm {
+                display: block;
+                width: 2vw;
+                height: 2vw;
+                position: absolute;
+                top: 1.7vw;
+                transform: translate(-50%, -50%);
+                right: -0.5vw;
+            }
+
+            &_opened {
+                height: 10.5vw;
+                background: rgba(26, 53, 143, 0.98);
+                border: 0.15vw solid #FFFFFF;
+            }
+        }
+    }
+
+    &__graphiс {
+        top: -0.25vw;
+        left: -0.7vw;
+        position: relative;
+        height: 0.6vw;
+        transition: all 1.5s;
+
+        rect {
+            transition: all 1.5s;
+        }
+
+        &-row,
+        &-data {
+            height: 100%;
+        }
+
+        &-row {
+            height: 60%;
+        }
+
+        &-data {
+            overflow: visible;
+            width: 100%;
+        }
+
+        &-right-rect,
+        &-left-rect {
+            transform-box: fill-box;
+            transform-origin: center;
+            transform: rotate(45deg);
+            width: 0.2em;
+            height: 0.2em;
+            stroke-width: 0.1em;
+        }
+
+        &-left-rect {
+            overflow: hidden;
+        }
+    }
+
+    &__progressbar {
+        margin-top: 0.2;
+        width: 100%;
+        height: 2vw;
+
+        &_menu {
+            margin-top: -0.3vw;
+            width: 52%;
+            height: 20%;
+        }
     }
 
     &__tabcontent {
+        display: flex;
+        justify-content: end;
         width: 100%;
-        height: 100%;
 
         &-wrap {
-            width: 100%;
+            width: 70%;
             height: 100%;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: max-content;
-            grid-column-gap: 2vw;
+            grid-column-gap: 1.2vw;
             position: relative;
         }
 
         &-element {
             position: relative;
+            height: 100%;
         }
 
         &-block {
             position: relative;
             width: 100%;
             height: max-content;
-           
+
+            &_p1-l {
+                overflow: hidden;
+                height: 100%;
+            }
+
             &__bg {
                 position: absolute;
                 top: 0;
@@ -114,27 +329,33 @@
                 z-index: 2;
                 width: 100%;
                 height: 100%;
-                padding: 1.2vw 1.6vw 1.3vw;
+                padding: 2vw 1.5vw 2vw 3vw;
                 display: flex;
                 justify-content: space-between;
                 flex-direction: column;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                overflow-y: scroll;
 
-                &_total {
-                    padding: 0.5vw 1.6vw 3.3vw;
+                &::-webkit-scrollbar {
+                    width: 0;
+                    height: 0;
                 }
 
-                &_include-two-items {
-                    justify-content: start;
-
-                    .plan__tabcontent-block__item {
-                        margin-bottom: 1vw;
-                    }
+                &_menu {
+                    height: 95%;
+                    padding: 0;
                 }
             }
 
             &__item {
+                margin-top: 1vw;
                 position: relative;
                 width: 100%;
+
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
             }
 
             &__info {
@@ -142,9 +363,10 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
+                cursor: pointer;
 
                 &_bottom {
-                    height: 1vw;
+                    height: 1.2vw
                 }
             }
 
@@ -154,16 +376,11 @@
                 font-size: 0.9vw;
                 letter-spacing: 0.03em;
                 color: #FFFFFF;
-                line-height: 1.2vw;
-                max-width: 17vw;
+                line-height: 1.1vw;
+                max-width: 70%;
 
-                &_total {
-                    font-family: Oswald;
-                    font-weight: 400;
-                    font-size: 1.9vw;
-                    letter-spacing: 0.03em;
-                    text-transform: uppercase;
-                    color: #FB9B2B;
+                &_mt {
+                    margin-top: 0.5vw;
                 }
             }
 
@@ -175,33 +392,60 @@
                 text-align: right;
             }
 
-            &__progressbar {
-                margin-top: 0.1vw;
-                width: 100%;
-                height: 1.8vw;
-            }
-
             &__divider {
-                width: 18.5vw;
-                height: 1vw;
+                width: 60%;
+                height: 1.2vw;
             }
 
-            &__current-plan {
-                &-value, &-descr {
-                    font-family: 400;
-                    font-weight: 500;
-                    font-size: 0.6vw;
-                    color: #FFFFFF;
-                    text-align: right;
+            &__current-plan-value,
+            &__current-plan-descr {
+                font-family: 400;
+                font-weight: 500;
+                font-size: 0.7vw;
+                color: #FFFFFF;
+                text-align: right;
+            }
+
+            &__icon {
+                width: 2vw;
+                height: auto;
+            }
+
+            &__bg {
+                position: absolute;
+                top: -2vw;
+                left: -3vw;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                width: 29.3vw;
+                height: auto;
+
+                &_down {
+                    top: -1vw;
+                }
+
+                &_middle {
+                    top: -1.4vw;
                 }
             }
 
-            &_total {
-                margin: 3vw 0 1vw;
-                height: 7vw;
+            &__mark {
+                position: absolute;
+                top: 0.5vw;
+                left: -1.7vw;
+
+                rect {
+                    transform-box: fill-box;
+                    transform-origin: center;
+                    transform: rotate(45deg);
+                    width: 0.2em;
+                    height: 0.2em;
+                    stroke-width: 0.1em;
+                }
             }
         }
-    }   
+    }
 }
 
 .hide {
@@ -210,20 +454,6 @@
 
 .show {
     display: block;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade { 
-    from {
-        opacity: 0.1;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .overlay {
@@ -304,7 +534,6 @@
             top: 50%;
             transform: translate(-50%, -50%);
             font-weight: 600;
-           
         }
     }
 
@@ -312,4 +541,3 @@
         display: block;
     }
 }
-

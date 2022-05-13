@@ -38,7 +38,6 @@ const html = () => {
 const scripts = () => {
 	return src('src/js/plan.js')
 	.pipe(concat('plan.js'))
-	.pipe(uglify())
 	.pipe(dest('dist/js'))
 	.pipe(browserSync.stream())
 }
