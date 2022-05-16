@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             items: [
                 {
                     id: 31,
-                    name: 'Базовая кафедра «Экономические и правовые экспертизы»',
+                    name: 'Базовая кафедра «Экономические и правовые экспертизы» Базовая кафедра «Экономические и правовые экспертизы»',
                     fact: 130,
                     plan: 10000,
                     isIncrease: true,
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 {
                     id: 33,
-                    name: 'Базовая кафедра «Экономические и правовые экспертизы»',
+                    name: 'Базовая кафедра',
                     fact: 130,
                     plan: 10000,
                     isIncrease: true,
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // *** Заголовок ***
+    // *** ЗАГОЛОВОК ***
 
     // ф-ия для установки заголовка.
     const setTitle = title => document.querySelector('.plan__header-title').textContent = title
@@ -305,12 +305,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const setSubtitle = num => document.querySelector('.plan__header-subtitle span').textContent = num
 
     // Установка заголовка по умолчанию.
-    const defaultTitle = 'Индустриальные партнеры'
+    const defaultTitle = 'План выполнения поступлений денежных средств по НИР'
     setTitle(defaultTitle)
 
 
 
-    // *** Прогрессбар ***
+    // *** ПРОГРЕССБАР ***
 
     // ф-ия создающая прогрессбара. 
     const setProgressbar = (id, fact, isIcrease, modifier='list') => {
@@ -521,11 +521,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuItem = item => {
         const { name, color, id, plan, fact, isIcrease } = item
 
-        const colorSettings = {
-            icrease: '<stop stop-color="#4CD380"/><stop offset="1" stop-color="#217AFF"/>',
-            decline: '<stop offset="0.05" stop-color="#217AFF"/><stop offset="1" stop-color="#FD6A6A"/>',
-        }
-
         return `
             <div class="plan__menu-block" data-id=${id}>
                 <svg class="plan__graphiс" width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -553,7 +548,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <div class="diagram-box_menu"></div>
             </div>
-
         `
     }
     
@@ -668,7 +662,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // *** Сортировка ***
+    // *** СОРТИРОВКА ***
 
     let sortData = []
 
@@ -685,7 +679,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Сортировка при выборе категории в меню.
         if (id !== undefined) {
-
             data.find(partner => {
                 if (partner.items && partner.id == id) {
                     search(partner)
@@ -708,7 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // *** Элемент списка ***
+    // *** ЭЛЕМЕНТ СПИСКА ***
 
     // Класс генерирующий отдельный блок контента со списком элементов выбранной категории. 
     class Partner {
@@ -733,12 +726,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (index > 0 && index < 3) {
                 bgOffsetModifier = 'middle'
             } 
-            else if (index === 3) {
-                bgOffsetModifier = 'down'
-            }
-            else {
-                bgOffsetModifier = 'top'
-            }
  
             return `
                 <svg class="plan__tabcontent-block__bg plan__tabcontent-block__bg_${bgOffsetModifier} hide" viewBox="0 0 1269 675" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -764,7 +751,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </svg>
             `
         }
-
+        
         // Mетод создающий отдельный элемент списка.
         createBlockItem(item, index) {
 
@@ -878,7 +865,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `
     }
 
-    // *** Пагинация ***
+    // *** ПАГИНАЦИЯ ***
 
     // Инициализация кнопок-переключателей.
     const btn = num => {
@@ -910,7 +897,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     `
 
-    // *** Контент и логика при его изменении ***
+    // *** КОНТЕНТ ***
 
     // Ф-ия выполняет отрисовку контента на странице.
     function setContent(data) {
@@ -1092,7 +1079,7 @@ document.addEventListener('DOMContentLoaded', () => {
            
             if (elem =='plan__wrapper' || elem =='plan__tabcontent-wrap' || elem == 'plan__tabcontent-block__wrap plan__tabcontent-block__wrap_min-content' || elem == 'plan__header-title' || elem == 'plan__header' || elem == 'subtitle' || elem == 'plan__tabcontent plan__tabcontent_p1') {
                 listItemBgs.forEach(bg => bg.classList.remove('show'))
-                diagramBoxes.forEach(b => b.innerHTML = '')
+                listDiagramBoxes.forEach(b => b.innerHTML = '')
             }
         })
     }
