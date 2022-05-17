@@ -1396,6 +1396,37 @@
     &__right {
         flex: 1;
         padding-top: 2.5vw;
+        position: relative;
+
+        .study {
+            position: absolute;
+            width: 22.8vw;
+            height: 3vw;
+            top: 0vw;
+            left: 50%;
+            transform: translate(-56%,-50%);
+            display: flex;
+            justify-content: space-between;
+
+            &__link {
+                position: relative;
+                height: 100%;
+                width: 48%; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+            span {
+                font-family: 'Oswald';
+                font-weight: 500;
+                font-size: .55vw;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+        }
 
         .international {
             position: relative;
