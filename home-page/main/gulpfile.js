@@ -36,8 +36,7 @@ const html = () => {
 }
 
 const scripts = () => {
-	return src('src/js/main.js')
-	.pipe(concat('main.js'))
+	return src('src/js/**/*.js')
 	.pipe(uglify())
 	.pipe(dest('dist/js'))
 	.pipe(browserSync.stream())
