@@ -113,7 +113,7 @@
 
             &::before {
                 @include slash();
-                height: 1.7vw; 
+                height: 1.7vw;
             }
 
             span {
@@ -479,10 +479,26 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 2000;
-    width: 27vw;
-    height: 15vw;
     padding: 4.5vw 1.5vw 3vw;
     display: none;
+
+    &_small {
+        width: 27vw;
+        height: 15vw;
+    }
+
+    &_medium {
+        width: 45vw;
+        height: 20vw;
+        padding: 4vw;
+        top: 40%;
+    }
+
+    &_large {
+        width: 67vw;
+        height: 40vw;
+        padding: 4vw;
+    }
 
     &-bg {
         position: absolute;
@@ -494,13 +510,257 @@
         right: 0;
     }
 
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__select {
+        z-index: 2001;
+        margin: 0 0 1.5vw;
+        width: 7vw;
+        height: 3vw;
+        color: #FFFF;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        &-btn {
+            width: 3vw;
+            height: 3vw;
+        }
+    }
+
+    &__control {
+        margin-top: 1.5vw;
+        display: grid;
+        grid-template-columns: 20vw 20vw 15vw;
+        gap: 3vw;
+        height: 100%;
+
+        &-item {
+            z-index: 2001;
+            position: relative;
+        }
+    }
+
+    &__place {
+        height: 12vw;
+        position: relative;
+
+        &-wrapper {
+            width: 100%;
+            height: 100%;
+            padding: 1.5vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-item {
+            position: relative;
+            width: 12vw;
+            text-align: center;
+            z-index: 2002;
+            cursor: pointer;
+
+            span {
+                font-family: 'Oswald';
+                font-weight: 400;
+                font-size: 1vw;
+                letter-spacing: 0.1em;
+                color: rgba(255, 255, 255, 0.5);
+                z-index: 2001;
+            }
+
+            &__frame {
+                position: absolute;
+                z-index: 2001;
+                width: 12vw;
+                height: 2.2vw;
+                top: -.3vw;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                display: none;
+            }
+
+            &_active {
+                span {
+                    color: #FFFFFF;
+                    position: relative;
+                    z-index: 2001;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &__timetable {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        &-wrapper {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            padding: 1.5vw;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(17, 1fr);
+        }
+
+        &-item {
+            text-align: center;
+            cursor: pointer;
+            z-index: 2001;
+            position: relative;
+
+            span {
+                font-family: 'Oswald';
+                font-weight: 400;
+                font-size: .65vw;
+                letter-spacing: 0.1em;
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            &__frame {
+                position: absolute;
+                z-index: 2001;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                display: none;
+            }
+
+            &_active {
+                span {
+                    color: #FFFFFF;
+                    position: relative;
+                    z-index: 2001;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &__calendar {
+        box-sizing: border-box;
+        width: 100%;
+        height: 18vw;
+        position: relative;
+
+        &-wrapper {
+            padding: 1.5vw;
+            width: 100%;
+            position: relative;
+            z-index: 2001;
+            display: flex;
+        }
+
+        &-month,
+        &-year {
+            font-family: 'Oswald';
+            font-weight: 500;
+            font-size: 1vw;
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #217AFF;
+        }
+
+        td {
+            text-align: center;
+            width: 2.5vw;
+            height: 2vw;
+        }
+
+        &-table {
+            height: 10vw;
+            width: 100%;
+        }
+
+        &-arrow__btn {
+            margin: 0 auto;
+            height: 1vw;
+            cursor: pointer;
+        }
+
+        &-days {
+            font-family: 'Oswald';
+            font-weight: 500;
+            font-size: 1vw;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        .today {
+
+            span {
+                font-family: 'Oswald';
+                font-weight: 500;
+                color: #FFFFFF;
+            }
+
+            .modal__calendar-item__frame {
+                display: block;
+            }
+        }
+
+        .day-cell {
+            position: relative;
+            font-family: 'Oswald';
+            font-weight: 400;
+            font-size: 1vw;
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+
+        &-item__frame {
+            position: absolute;
+            z-index: 2002;
+            width: 100%;
+            height: 100%;
+            top: -.2vw;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: none;
+        }
+    }
+
+    &__submit {
+        margin-top: 2vw;
+        width: 100%;
+
+        svg {
+            width: 100%;
+        }
+
+        div {
+            font-size: 1.1vw;
+        }
+
+    }
+
     &__title {
         z-index: 2001;
         position: relative;
         font-family: Oswald;
         font-weight: 500;
         font-size: 0.9vw;
-        text-align: center;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: #FFFFFF;
@@ -511,6 +771,10 @@
         text-align: center;
         display: flex;
         justify-content: space-between;
+
+        &_medium {
+            width: 24vw;
+        }
     }
 
     &__btn {
