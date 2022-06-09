@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // *** ПРОГРЕССБАР ***
 
     // ф-ия создающая прогрессбара. 
-    const setProgressbar = (id, fact, isIcrease, modifier='list') => {
+    const setProgressbar = (id, fact, isIcrease, modifier = 'list') => {
         const colorSettings = {
             icrease: '<stop stop-color="#4CD380"/><stop offset="1" stop-color="#217AFF"/>',
             decline: '<stop offset="0.05" stop-color="#217AFF"/><stop offset="1" stop-color="#FD6A6A"/>',
@@ -398,10 +398,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const setMonthsLine = (mounths, position) => {
         let start = mounths.slice(position - 1, mounths.length)
         let end = mounths.slice(0, position - 1)
-    
+
         return [...start, ...end]
     }
-    
+
     const diagramMounths = [
         'Янв',
         'Фев',
@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Ноя',
         'Дек'
     ]
-    
+
 
     // Конфигурация диаграммы. 
     const diagramOptions = {
@@ -425,7 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scales: {
             x: {
                 ticks: {
-                color: '#FFFFFF',
+                    color: '#FFFFFF',
                 },
                 grid: {
                     display: false,
@@ -438,7 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ticks: {
                     stepSize: 100,
                     color: '#FFFFFF',
-                    callback: function(tick) {
+                    callback: function (tick) {
                         return tick.toString() + '%'
                     }
                 },
@@ -454,13 +454,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    
+
     Chart.defaults.font.size = 12
-    
+
     // ф-ия создает диаграмму. 
-    function createChart (selector, props, options, mounths) {
+    function createChart(selector, props, options, mounths) {
         const labels = setMonthsLine(mounths, props.currentMonth)
-        
+
         const data = {
             labels: labels,
             datasets: [{
@@ -469,49 +469,441 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: props.annualStatistics
             }]
         }
-        
+
         const config = {
             type: 'line',
             data: data,
             options: options
         }
-        
+
         const ctx = document.querySelector(`.${selector}`).getContext('2d')
         new Chart(ctx, config)
     }
 
     // ф-ия отображает диаграмму внутри блока. 
     function showChart(elem, id, array, modifier) {
-        const itemData = array.find(i => i.id == id) 
+        const itemData = array.find(i => i.id == id)
         let box = elem.querySelector(`.diagram-box_${modifier}`)
         box.innerHTML = `<canvas class="line-chart-${id}"></canvas>`
         createChart(`line-chart-${id}`, itemData, diagramOptions, diagramMounths)
     }
 
-  
+
+
 
     // *** МОДАЛЬНОЕ ОКНО ***
 
     // Инициализация DOM элементов модального окна.
-    const overlay = document.querySelector('.overlay')
-    const modal = document.querySelector('.modal')
-    const modalConfirm = modal.querySelector('.modal__btn_confirm')
-    const modalCancelled = modal.querySelector('.modal__btn_cancelled')
+    const overlay          = document.querySelector('.overlay')
+    const modals           = document.querySelectorAll('.modal')
+    const modalSmall       = document.querySelector('.modal_small')
+    const modalMedium      = document.querySelector('.modal_medium')
+    const modalLarge       = document.querySelector('.modal_large')
+    const modalSubject     = modalLarge.querySelector('.modal__title-subject')
+    const modalSubmit      = modalLarge.querySelector('.modal__submit')
+    const modalConfirm     = document.querySelectorAll('.modal__btn_confirm')
+    const modalCancelled   = document.querySelectorAll('.modal__btn_cancelled')
+    const selectReportBtn  = document.querySelector('.modal__select-report')
+    const selectMeetingBtn = document.querySelector('.modal__select-meeting')
+    const places           = modalLarge.querySelector('.modal__place-wrapper')
+    const timetable        = modalLarge.querySelector('.modal__timetable-wrapper')
+    
+    // Инициализация объекта "msg".
+    let msg = {
+        type: 'meeting',
+        payload: {}
+    }
 
-    // Отмена вызова модального окна
-    modalCancelled.addEventListener('click', () => {
+    // Инициализация значений по умолчанию.
+    let place = 'Белый зал'
+    let time = '11:20'
+    let unit = {}
+
+
+    //Инициализация bg активнх элементов.
+    const frames = {
+        placesFrame: `<svg class="modal__place-item__frame" viewBox="0 0 393 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.46459 23.5026L1.46459 23.0532L1.78612 22.7393L22.7861 2.2374L23.0969 1.93398L23.5313 1.93398L390.53 1.93399L391.597 1.93399L391.597 3.00063L391.598 62.1686L391.598 62.6105L391.285 62.9229L369.952 84.2562L369.64 84.5686L369.198 84.5686L2.53126 84.5686L1.46459 84.5686L1.46459 83.502L1.46459 23.5026Z" fill="#112054" fill-opacity="0.2" stroke="white" stroke-width="2.13333" />
+        </svg>`,
+        timetableFrame: `<svg class="modal__timetable-item__frame" viewBox="0 0 113 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.06616 19L1.06616 18.5582L1.37858 18.2458L17.3786 2.24574L17.691 1.93332L18.1328 1.93332L110.132 1.93333L111.198 1.93333L111.198 2.99997L111.199 39L111.199 39.4123L110.922 39.7175L95.9221 56.2194L95.6047 56.5686L95.1328 56.5686L2.13281 56.5686L1.06615 56.5686L1.06615 55.502L1.06616 19Z" fill="#112054" fill-opacity="0.2" stroke="white" stroke-width="2.13333"/>
+        </svg>`,
+        calendarFrame: `<svg class="modal__calendar-item__frame" viewBox="0 0 95 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.93334 23L1.93334 22.5507L2.25487 22.2368L23.2549 1.73481L23.5657 1.43138L24 1.43138L91.9978 1.43204L93.0645 1.43205L93.0645 2.49868L93.0656 61.6667L93.0656 62.1085L92.7532 62.4209L71.4198 83.7543L71.1074 84.0667L70.6656 84.0667L3 84.066L1.93334 84.066L1.93334 82.9994L1.93334 23Z" fill="#112054" fill-opacity="0.2" stroke="white" stroke-width="2.13333"/>
+        </svg> `
+    }
+
+    const {placesFrame, timetableFrame, calendarFrame} = frames
+
+
+
+    //Модальное окно: Служебные функции.
+
+    // Установка заголовка модального окна. 
+    const setModalTitle = subject => {
+        let title = ''
+
+        if (subject === 'Прочие подразделения') {
+            title = 'прочими подразделениями'
+        } else if (subject === 'НИО') {
+            title = 'НИО'
+        } else {
+            title = 'Высшей школой'
+        }
+        return title
+    }
+
+    // Переключение модальных окон.
+    function switchModals(currentModal, nextModal, activeClassName) {
+        currentModal.classList.remove(activeClassName)
+        nextModal.classList.add(activeClassName)
+    }
+
+    // Рендер элементов компонентов модальных окон. 
+    function setControlItems(arr, frame, parentNode, control) {
+        let str = ''
+
+        arr.map(item => {
+            str += `<div class="modal__${control}-item" data-${control}="${item}">
+                <span>${item}</span>
+                ${frame}
+            </div>`
+            
+        })
+
+        parentNode.innerHTML = str
+    }
+
+    // Установка активного элементоа по умолчанию.
+    function setDefaultActiveControlItem(arr, parentNode, val, control) {
+        arr.find((slot, index) => {
+            if (slot === val) {
+                parentNode[index].classList.add(`modal__${control}-item_active`)
+                parentNode[index].querySelector(`.modal__${control}-item__frame`).classList.add('modal_show')
+            }
+        })
+    }
+
+    // Переключение активных элементов компонентов модальных окон.
+    function toggleControlItems(controlItems, frames, item, control, activeFrameClassName = 'modal_show') {
+        let activeClassName = `modal__${control}-item_active` 
+
+        controlItems.forEach(i => i.classList.remove(activeClassName))
+        item.classList.add(activeClassName)
+        
+        frames.forEach(f => f.classList.remove(activeFrameClassName))
+        item.querySelector('svg').classList.add(activeFrameClassName)
+    }
+
+    // Скрытие модальных окон. 
+    function closeModals() {
         overlay.classList.remove('overlay_show')
-        modal.classList.remove('modal_show')
+        modals.forEach(i => i.classList.remove('modal_show'))
+    }
+
+
+
+    //Модальное окно: Выбор места встречи.
+
+    // Инициализация названий мест встречи.
+    const placesData = [
+        'Кабинет ректора',
+        'Зал ученого совета',
+        'Белый зал',
+        'Малый зал'
+    ]
+
+    // Рендер списка мест встречи DOM. 
+    setControlItems(placesData, placesFrame, places, 'place')
+
+    // Инициализация мест встречи в DOM.
+    const meetingPlaces          = modalLarge.querySelector('.modal__place-wrapper')
+    const meetingPlaceItems      = modalLarge.querySelectorAll('.modal__place-item')
+    const meetingPlaceItemFrames = modalLarge.querySelectorAll('.modal__place-item__frame')
+
+    // Установка места встречи по умолчанию.
+    setDefaultActiveControlItem(placesData, meetingPlaceItems, place, 'place')
+
+    // Переключение активного места встречи.
+    meetingPlaces.addEventListener('click', (evt) => {
+        let target = evt.target.closest('div')
+
+        if (!target.classList.contains('modal__place-item')) return 
+
+        toggleControlItems(meetingPlaceItems, meetingPlaceItemFrames, target, 'place',)
+        place = target.dataset.place
     })
 
-    // Подтверждение вызова модального окна.
-    modalConfirm.addEventListener('click', function() {
-        let id = this.getAttribute('data-id')
-        //...
-       
-        overlay.classList.remove('overlay_show')
-        modal.classList.remove('modal_show')
+
+    //Модальное окно: Выбор времени совещания.
+
+    // Инициализация временных слотов.
+    const timeSlotsData = [
+        '06:00', '06:10', '06:20', '06:30', '06:40', '06:50',
+        '07:00', '07:10', '07:20', '07:30', '07:40', '07:50',
+        '08:00', '08:10', '08:20', '08:30', '08:40', '08:50',
+        '09:00', '09:10', '09:20', '09:30', '09:40', '09:50',
+        '10:00', '10:10', '10:20', '10:30', '10:40', '10:50',
+        '11:00', '11:10', '11:20', '11:30', '11:40', '11:50',
+        '12:00', '12:10', '12:20', '12:30', '12:40', '12:50',
+        '13:00', '13:10', '13:20', '13:30', '13:40', '13:50',
+        '14:00', '14:10', '14:20', '14:30', '14:40', '14:50',
+        '15:00', '15:10', '15:20', '15:30', '15:40', '15:50',
+        '16:00', '16:10', '16:20', '16:30', '16:40', '16:50',
+        '17:00', '17:10', '17:20', '17:30', '17:40', '17:50',
+        '18:00', '18:10', '18:20', '18:30', '18:40', '18:50',
+        '19:00', '19:10', '19:20', '19:30', '19:40', '19:50',
+        '20:00', '20:10', '20:20', '20:30', '20:40', '20:50',
+        '21:00', '21:10', '21:20', '21:30', '21:40', '21:50',
+        '22:00', '22:10', '22:20', '22:30', '22:40', '22:50',
+    ]
+
+    // Рендер временных слотов в DOM. 
+    setControlItems(timeSlotsData, timetableFrame, timetable, 'timetable')
+
+    // Инициализация временных слотов в DOM.
+    const timeSlots = timetable.querySelectorAll('.modal__timetable-item')
+    const timeSlotsFrames = modalLarge.querySelectorAll('.modal__timetable-item__frame')
+
+    // Установка временного слота по умолчанию.
+    setDefaultActiveControlItem(timeSlotsData, timeSlots, time, 'timetable')
+
+    // Переключение активного временного слота.
+    timetable.addEventListener('click', (evt) => {
+        let target = evt.target.closest('div')
+
+        if (!target.classList.contains('modal__timetable-item')) return 
+
+        toggleControlItems(timeSlots, timeSlotsFrames, target, 'timetable')
+        time = target.dataset.timetable
     })
+
+
+
+    //Модальное окно: Выбор даты совещания.
+
+    // Инициализация параметров календаря.
+    let month, year, date, currentDay
+    let dFirstMonth = 1
+    let days = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+    let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+
+    // Инициализация DOM элемента в который будет рендерится сетка календаря.
+    let calendarBody = document.querySelector('.modal__calendar-body')
+
+    // Инициализация кнопок переключения месяца календаря.
+    let arrowBtns = document.querySelectorAll('.modal__calendar-arrow__btn')
+    
+    // Ф-ия устанавливает текущее значение текущий даты.
+    function calendarInit() {
+        month = new Date().getMonth()
+        year = new Date().getFullYear()
+        date = new Date()
+        currentDay = new Date().getDate()
+    }
+
+    // Ф-ия рендерит дни недели в шапку календаря.
+    function setCalendarDays() {
+        let str = ''
+        days.map(d => {
+            str += `<td>${d}</td>`
+        })
+        document.querySelector('.modal__calendar-days').innerHTML = str
+    }
+
+    // Ф-ия рендерит месяц в шапку календаря.
+    function setCalendarMonths() {
+        let currentMonth = months[month]
+        document.querySelector('.modal__calendar-month').innerHTML = currentMonth
+    }
+
+    // Ф-ия рендерит год в шапку календаря.
+    function setCalendarYear() {
+        document.querySelector('.modal__calendar-year').innerHTML = year
+    }
+ 
+    // Ф-ия возвращает представление месяца в виде массива данных, 
+    // где каждая неделя - это вложеный массив объектов, представляющих дни месяца,
+    // имеющих поле "index" (число месяца). 
+    // Опционально: Элемент, занчение поля "index" которого, соответствует 
+    // значению переменной "currentDay" будет иметь поле "mark" со значением "today" 
+    function calendar() {
+        let days = [];
+        let day;
+        let week = 0;
+
+        days[week] = [];
+        let dLast = new Date(year, month + 1, 0).getDate();
+        for (let i = 1; i <= dLast; i++) {
+            if (new Date(year, month, i).getDay() != dFirstMonth) {
+                day = { index: i }
+
+                if (day.index === currentDay) {
+                    day.mark = 'today'
+                }
+                days[week].push(day)
+            }
+            else {
+                week++;
+                days[week] = [];
+                day = { index: i }
+                days[week].push(day)
+            }
+            if (day.index === currentDay) {
+                day.mark = 'today'
+            }
+        }
+        if (days[0].length > 0) {
+            for (let i = days[0].length; i < 7; i++) {
+                days[0].unshift('')
+            }
+        }
+        return days
+    }
+
+
+    // Ф-ия возвращает содержимое одной клетки календаря.
+    const dayCell = day => {
+        return `<span>${day}</span>${calendarFrame}`
+    }
+
+    // Ф-ия рендерит календарь в DOM.
+    function setCalendarBody() {
+        calendarBody.innerHTML = ''
+
+        calendar().map(week => {
+            let tr = '<tr>'
+
+            week.map((day, i) => {
+                let mark = day.mark ? 'today' : null
+
+                tr += `<td class="day-cell ${mark}"> ${ day.index ? dayCell(day.index)  : ''}</td>`
+                if (week[i - 1] == week.length) tr += '</tr>'
+            })
+            calendarBody.innerHTML += tr
+        })
+    }
+
+    // Ф-ия обновляет календарь (вызывает рендер при изменении даты или при первичной инициализации).
+    function updateCalendar() {
+        setTimeout(() => {
+            setCalendarBody()
+            setCalendarCellsClick()
+        }, 0)
+    }
+
+    // Ф-ия вызывает обновление календаря, устанавливает значение вобронной даты в поле "date" объекта "msg".
+    function changeDay(day) {
+        date.setDate(day)
+        currentDay = date.getDate()
+        updateCalendar()
+        msg.payload.date = day
+    }
+
+    // Ф-ия описывает поведение переключении месяца вперед.
+    function increase() {
+        month++
+        if (month > 11) {
+            month = -1
+            month++
+            year++
+            setCalendarYear()
+        }
+    }
+
+    // Ф-ия описывает поведение переключении месяца назад.
+    function decresase() {
+        month--
+        if (month < 0) {
+            month = 12
+            month--
+            year--
+            setCalendarYear()
+        }
+    }
+
+    // Ф-ия вызывает изменение календаря при переключении месяца.
+    function changeMonth(btn) {
+        if (btn.classList.contains('increase')) {
+            increase()
+        } else {
+            decresase()
+        }
+        setCalendarMonths()
+        updateCalendar()
+    }
+    
+    // Навешивание события клика на кнопки переключения месяца календаря.
+    arrowBtns.forEach(btn => btn.addEventListener('click', () => changeMonth(btn)))
+
+    // Навешивание события клика отрендеренные клетки календаря.
+    function setCalendarCellsClick() {
+        const calendarCells = calendarBody.querySelectorAll('.day-cell span')
+
+        calendarCells.forEach(elem => elem.addEventListener('click', () => {
+            changeDay(elem.textContent)
+        }))
+    }
+    
+    function modalCalendar() {
+        calendarInit()
+        setCalendarDays()
+        setCalendarMonths()
+        setCalendarYear()
+        setCalendarBody()
+        setCalendarCellsClick()   
+    }
+
+    modalCalendar()
+    
+
+
+    // Модальное окно: События/Отправка данных.
+
+    // Скрытие модальных окон при клике на подложку.
+    overlay.addEventListener('click', () => {
+        closeModals()
+    })
+
+    // Переключение модального окна.
+    selectReportBtn.addEventListener('click', () => {
+        switchModals(modalMedium, modalLarge, 'modal_show')
+    })
+
+    // Отправка уведомления текущих показателях, переключение модального окна.
+    selectMeetingBtn.addEventListener('click', () => {
+        msg.type = 'report'
+        msg.payload = unit
+        switchModals(modalLarge, modalMedium, 'modal_show')
+    })
+
+    // Отправка уведомления о сборе совещания. 
+    modalSubmit.addEventListener('click', () => {
+        msg.type = 'meeting'
+        msg.payload = {}
+        msg.payload.id = unit.id
+        msg.payload.name = unit.name
+        msg.payload.date = date
+        msg.payload.time = time
+        msg.payload.place = place
+        switchModals(modalLarge, modalSmall, 'modal_show')
+    })
+
+
+    // Отмена отправки данных.
+    modalCancelled.forEach(i => {
+        i.addEventListener('click', () => closeModals())
+    })
+
+    // Подтверждение отправки данных.
+    modalConfirm.forEach(i => {
+        i.addEventListener('click', () => {
+            closeModals()
+            console.log(msg)
+            //..
+        })
+    })
+
 
 
 
@@ -550,7 +942,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `
     }
-    
+
     // ф-ия выводит меню на страницу.
     function setMenu(data) {
         let out = document.querySelector('.plan__tabcontent-block__wrap_menu')
@@ -591,8 +983,6 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 array.push(0)
             }
-
-
         })
 
         menuBlocks.forEach((i, index) => {
@@ -610,18 +1000,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setLinesDefault(planData)
-    
+
     // Клик на элемент меню.
     menuBlocks.forEach(elem => {
         elem.addEventListener('click', function (e) {
-            let id = elem.getAttribute('data-id')
+            let id = +elem.getAttribute('data-id')
 
             // Открытие модалного окна (собрать совещание).
             if (e.target.className == 'plan__menu-block__alarm') {
                 overlay.classList.add('overlay_show')
-                modal.classList.add('modal_show')
-                modalConfirm.setAttribute('data-id', id)
-            } 
+                modalLarge.classList.add('modal_show')
+                if (id !== undefined) {
+                    planData.find(partner => {
+                        if (partner.items && partner.id == id) {
+                            unit = partner
+                            calendarInit()
+                            modalSubject.textContent = setModalTitle(partner.name)
+                        }
+                    })
+                }
+            }
             // Логика связанная с непосредственным выбором элемента меню.
             else {
                 // Анимация линии.
@@ -630,7 +1028,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let line = this.children[0].children[0]
                 let rect = this.children[0].children[1]
                 let title = this.children[1].children[0].textContent
-        
+
                 line.setAttribute('width', '100%')
                 rect.setAttribute('x', '100%')
 
@@ -639,14 +1037,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Рендер контента.
                 setContent(getSortData(planData, id))
-                
+
                 // Отображение диаграммы. 
                 menuBlocks.forEach(b => b.classList.remove('plan__menu-block_opened'))
                 menuDiagramBoxes.forEach(b => b.innerHTML = '')
                 elem.classList.add('plan__menu-block_opened')
                 showChart(elem, id, planData, 'menu')
             }
-            
+
         })
     })
 
@@ -695,7 +1093,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // Установка подзаголовка.
         setSubtitle(sortData.length)
-       
+
         return sortData
     }
 
@@ -707,10 +1105,10 @@ document.addEventListener('DOMContentLoaded', () => {
     class Partner {
         constructor(array, modifier) {
             this.array = array,
-            this.className = 'plan__tabcontent-block__wrap',
-            this.modifier = modifier,
-            this.parent = document.querySelector(`.plan__tabcontent-block_${this.modifier}`),
-            this.count = this.array.length
+                this.className = 'plan__tabcontent-block__wrap',
+                this.modifier = modifier,
+                this.parent = document.querySelector(`.plan__tabcontent-block_${this.modifier}`),
+                this.count = this.array.length
         }
 
         get length() {
@@ -725,8 +1123,8 @@ document.addEventListener('DOMContentLoaded', () => {
             let bgOffsetModifier = ''
             if (index > 0 && index < 3) {
                 bgOffsetModifier = 'middle'
-            } 
- 
+            }
+
             return `
                 <svg class="plan__tabcontent-block__bg plan__tabcontent-block__bg_${bgOffsetModifier} hide" viewBox="0 0 1269 675" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="path-1-outside" maskUnits="userSpaceOnUse" x="0" y="0" width="1269" height="675" fill="black">
@@ -736,7 +1134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2 33.8009V334.547V619.393L44 654.828H702.5L723.5 672.192L897 673H1155L1176 654.828H1215L1267 610.307V334.547V35.6181L1233 5.6344H1028.5L1003 28.8036H441.5L415 5.6344H329L315.5 18.3548H268L249 2H39L2 33.8009Z" fill="#1A358F" fill-opacity="0.98"/>
                     <path d="M2 33.8009L0.696371 32.2842L0 32.8827V33.8009H2ZM2 619.393H0V620.322L0.710305 620.921L2 619.393ZM44 654.828L42.7103 656.357L43.269 656.828H44V654.828ZM702.5 654.828L703.774 653.287L703.22 652.828H702.5V654.828ZM723.5 672.192L722.226 673.733L722.776 674.188L723.491 674.192L723.5 672.192ZM897 673L896.991 675H897V673ZM1155 673V675H1155.75L1156.31 674.512L1155 673ZM1176 654.828V652.828H1175.25L1174.69 653.316L1176 654.828ZM1215 654.828V656.828H1215.74L1216.3 656.347L1215 654.828ZM1267 610.307L1268.3 611.826L1269 611.227V610.307H1267ZM1267 35.6181H1269V34.7153L1268.32 34.1181L1267 35.6181ZM1233 5.6344L1234.32 4.13437L1233.76 3.6344H1233V5.6344ZM1028.5 5.6344V3.6344H1027.73L1027.16 4.15416L1028.5 5.6344ZM1003 28.8036V30.8036H1003.77L1004.34 30.2839L1003 28.8036ZM441.5 28.8036L440.184 30.3093L440.749 30.8036H441.5V28.8036ZM415 5.6344L416.316 4.12873L415.751 3.6344H415V5.6344ZM329 5.6344V3.6344H328.206L327.628 4.17878L329 5.6344ZM315.5 18.3548V20.3548H316.294L316.872 19.8104L315.5 18.3548ZM268 18.3548L266.695 19.8706L267.258 20.3548H268V18.3548ZM249 2L250.305 0.484212L249.742 0H249V2ZM39 2V0H38.2586L37.6964 0.483243L39 2ZM4 334.547V33.8009H0V334.547H4ZM4 619.393V334.547H0V619.393H4ZM45.2897 653.299L3.2897 617.864L0.710305 620.921L42.7103 656.357L45.2897 653.299ZM702.5 652.828H44V656.828H702.5V652.828ZM724.774 670.65L703.774 653.287L701.226 656.369L722.226 673.733L724.774 670.65ZM897.009 671L723.509 670.192L723.491 674.192L896.991 675L897.009 671ZM1155 671H897V675H1155V671ZM1174.69 653.316L1153.69 671.488L1156.31 674.512L1177.31 656.34L1174.69 653.316ZM1215 652.828H1176V656.828H1215V652.828ZM1265.7 608.787L1213.7 653.309L1216.3 656.347L1268.3 611.826L1265.7 608.787ZM1265 334.547V610.307H1269V334.547H1265ZM1265 35.6181V334.547H1269V35.6181H1265ZM1231.68 7.13443L1265.68 37.1182L1268.32 34.1181L1234.32 4.13437L1231.68 7.13443ZM1028.5 7.6344H1233V3.6344H1028.5V7.6344ZM1004.34 30.2839L1029.84 7.11464L1027.16 4.15416L1001.66 27.3234L1004.34 30.2839ZM441.5 30.8036H1003V26.8036H441.5V30.8036ZM413.684 7.14007L440.184 30.3093L442.816 27.298L416.316 4.12873L413.684 7.14007ZM329 7.6344H415V3.6344H329V7.6344ZM316.872 19.8104L330.372 7.09002L327.628 4.17878L314.128 16.8991L316.872 19.8104ZM268 20.3548H315.5V16.3548H268V20.3548ZM247.695 3.51579L266.695 19.8706L269.305 16.839L250.305 0.484212L247.695 3.51579ZM39 4H249V0H39V4ZM3.30363 35.3177L40.3036 3.51676L37.6964 0.483243L0.696371 32.2842L3.30363 35.3177Z" fill="white" mask="url(#path-1-outside)"/>
                 </svg>
-            ` 
+            `
         }
 
         // декоративный разделитель.
@@ -751,14 +1149,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 </svg>
             `
         }
-        
+
         // Mетод создающий отдельный элемент списка.
         createBlockItem(item, index) {
 
             return `
                 <div class="plan__tabcontent-block__item" data-id="${item.id}">
                 
-                    ${index === 3 ? '<div class="diagram-box_list"></div>' : '' } 
+                    ${index === 3 ? '<div class="diagram-box_list"></div>' : ''} 
 
                     ${this.bg(index)}
                     
@@ -781,7 +1179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
 
-                    ${index <= 2 ? '<div class="diagram-box_list"></div>' : '' } 
+                    ${index <= 2 ? '<div class="diagram-box_list"></div>' : ''} 
                 </div>
             `
         }
@@ -1064,20 +1462,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // Отображение диаграммы.
         listItems.forEach(elem => {
             elem.addEventListener('click', () => {
-             let id = elem.getAttribute('data-id')
-             let bg = elem.querySelector('.plan__tabcontent-block__bg')
-             listItemBgs.forEach(bg => bg.classList.remove('show'))
-             bg.classList.add('show')
-             listDiagramBoxes.forEach(b => b.innerHTML = '')
-             showChart(elem, id, sortData, 'list') 
+                let id = elem.getAttribute('data-id')
+                let bg = elem.querySelector('.plan__tabcontent-block__bg')
+                listItemBgs.forEach(bg => bg.classList.remove('show'))
+                bg.classList.add('show')
+                listDiagramBoxes.forEach(b => b.innerHTML = '')
+                showChart(elem, id, sortData, 'list')
             })
         })
 
         // Скрытие диаграммы.
         document.addEventListener('click', (e) => {
             elem = e.target.className
-           
-            if (elem =='plan__wrapper' || elem =='plan__tabcontent-wrap' || elem == 'plan__tabcontent-block__wrap plan__tabcontent-block__wrap_min-content' || elem == 'plan__header-title' || elem == 'plan__header' || elem == 'subtitle' || elem == 'plan__tabcontent plan__tabcontent_p1') {
+
+            if (elem == 'plan__wrapper' || elem == 'plan__tabcontent-wrap' || elem == 'plan__tabcontent-block__wrap plan__tabcontent-block__wrap_min-content' || elem == 'plan__header-title' || elem == 'plan__header' || elem == 'subtitle' || elem == 'plan__tabcontent plan__tabcontent_p1') {
                 listItemBgs.forEach(bg => bg.classList.remove('show'))
                 listDiagramBoxes.forEach(b => b.innerHTML = '')
             }
