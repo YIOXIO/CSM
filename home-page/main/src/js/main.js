@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
        
     });
 
-    document.querySelector('.footer__btns').addEventListener('click', () => {
+    document.querySelector('#partners').addEventListener('click', () => {
+
+    });
+
+    document.querySelector('#students_enrollment').addEventListener('click', () => {
 
     });
 

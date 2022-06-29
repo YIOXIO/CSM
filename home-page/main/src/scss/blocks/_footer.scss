@@ -60,6 +60,17 @@
 	justify-content: center;
 	color: #fff;
 	padding-top: 0.7vw;
+	
+
+	&_enrollment {
+		top: 0.35vw;
+		right: 1.4vw;
+		width: 10.7vw;
+
+		.footer__btns-text {
+			margin-top: -0.5vw;
+		}
+	}
 }
 
 .btn--large {
@@ -73,10 +84,12 @@
 }
 
 .footer__btns-text {
-	font-weight: 700;
-	font-size: 0.521vw;
-	letter-spacing: 0.1em;
+	font-family: Oswald;
+	font-weight: 500;
+	font-size: .55vw;
+	letter-spacing: .15em;
 	text-transform: uppercase;
+	color: #fff;
 }
 
 .footer__btns-icon {
