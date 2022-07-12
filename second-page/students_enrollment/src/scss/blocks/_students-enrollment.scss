@@ -64,21 +64,34 @@
         overflow: hidden;
     }
 
+    
+
     &__tabcontent {
-        position: absolute;
-        width: 90vw;
-        height: 38vw;
-        background-color: #002060;;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        overflow-y: scroll;
-        justify-content: start;
         transition: all ease-in-out .6s;
-        &::-webkit-scrollbar {
-            width: 0;
-            height: 0;
+        &__scroll-area {
+            position: absolute;
+            width: 90vw;
+            height: 38vw;
+            background-color: #002060;;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            overflow-y: scroll;
+            justify-content: start;
+            
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        &__thead {
+            width: 90vw;
+            position: absolute;
+            z-index: 999;
         }
     }
+
+   
 }
 
 .hide {
