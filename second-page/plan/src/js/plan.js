@@ -507,20 +507,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectMeetingBtn = document.querySelector('.modal__select-meeting')
     const places           = modalLarge.querySelector('.modal__place-wrapper')
     const timetable        = modalLarge.querySelector('.modal__timetable-wrapper')
-
-    // REFACTOR //////////////////////////////////
-    // const $ = (el, sel) => el.querySelector(sel)
-    // const $$ = (el, sel) => el.querySelectorAll(sel)
-
-    // const $_$ = sel => document.querySelector(sel)
-    // $('.overlay')
-
-    // $(document, '.overlay')
-    // $$(document, '.modal')
-
-    // const app = ['.overlay', '.modal'].map(x => $(x)).map(x => x.addEventListener())
-
-    // REFACTOR //////////////////////////////////
     
     // Инициализация объекта "msg".
     let msg = {
@@ -572,10 +558,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentModal.classList.remove(activeClassName)
         nextModal.classList.add(activeClassName)
     }
-
-    // REFACTOR //////////////////////////////////// 
-    const toggle = (elms = [], active) => elms.forEach(x => x.classList.toggle(active))
-    // REFACTOR //////////////////////////////////
 
 
     // Рендер элементов компонентов модальных окон. 
@@ -652,9 +634,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         toggleControlItems(meetingPlaceItems, meetingPlaceItemFrames, target, 'place')
         place = target.dataset.place
-
-        // (x, { }) ->
-        //  ({ }) ->
     })
 
 
@@ -724,18 +703,6 @@ document.addEventListener('DOMContentLoaded', () => {
         date = new Date()
         currentDay = new Date().getDate()
     }
-
-    // function Calendar() {
-    //     return ({
-    //         month: new Date().getMonth(),
-    //         year: new Date().getFullYear(),
-    //         date: new Date(),
-    //         currentDay: new Date().getDate(),
-    //     })
-    // }
-
-    // var calendar = Calendar()
-
 
     // Ф-ия рендерит дни недели в шапку календаря.
     function setCalendarDays() {

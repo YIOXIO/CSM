@@ -180,15 +180,15 @@
             }
 
             &__indicators {
-                margin-left: .5vw;
+                margin-left: 1vw;
                 display: grid;
-                grid-template-columns: 3.8vw 1fr;
-                gap: 1vw;
+                grid-template-columns: 3vw 1fr;
+                gap: 0.8vw;
             }
 
             &__value {
                 margin-top: -0.4vw;
-                font-size: 1vw;
+                font-size: 1.2vw;
             }
 
             &__current-plan {
@@ -198,7 +198,6 @@
                 &::before {
                     @include slash();
                     height: 1.2vw;
-                    left: -0.5vw;
                    
                 }
             }
