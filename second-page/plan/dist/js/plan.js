@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             name: 'Высшая школа Экономики и бизнеса',
             color: '#217AFF',
-            fact: 99,
-            plan: 10000000000,
+            fact: 1299.99,
+            plan: 1999999.99,
             isIcrease: true,
             currentMonth: 8,
             annualStatistics: [10, 20, 40, 35, 16, 25, 50, 55, 40, 45, 20, 80],
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     id: 11,
                     name: 'Кафедра маркетинга (в т.ч. научно-исследовательская лаборатория «Маркетинговые исследования транспортного комплекса»)',
                     fact: 110,
-                    plan: 10000000000,
+                    plan: 100000000,
                     isIncrease: false,
                     currentMonth: 8,
                     annualStatistics: [10, 20, 40, 35, 16, 25, 50, 55, 40, 45, 20, 80]
@@ -507,6 +507,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectMeetingBtn = document.querySelector('.modal__select-meeting')
     const places           = modalLarge.querySelector('.modal__place-wrapper')
     const timetable        = modalLarge.querySelector('.modal__timetable-wrapper')
+
+    // REFACTOR //////////////////////////////////
+    // const $ = (el, sel) => el.querySelector(sel)
+    // const $$ = (el, sel) => el.querySelectorAll(sel)
+
+    // const $_$ = sel => document.querySelector(sel)
+    // $('.overlay')
+
+    // $(document, '.overlay')
+    // $$(document, '.modal')
+
+    // const app = ['.overlay', '.modal'].map(x => $(x)).map(x => x.addEventListener())
+
+    // REFACTOR //////////////////////////////////
     
     // Инициализация объекта "msg".
     let msg = {
@@ -559,6 +573,11 @@ document.addEventListener('DOMContentLoaded', () => {
         nextModal.classList.add(activeClassName)
     }
 
+    // REFACTOR //////////////////////////////////// 
+    const toggle = (elms = [], active) => elms.forEach(x => x.classList.toggle(active))
+    // REFACTOR //////////////////////////////////
+
+
     // Рендер элементов компонентов модальных окон. 
     function setControlItems(arr, frame, parentNode, control) {
         let str = ''
@@ -573,6 +592,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         parentNode.innerHTML = str
     }
+    
 
     // Установка активного элементоа по умолчанию.
     function setDefaultActiveControlItem(arr, parentNode, val, control) {
@@ -630,8 +650,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!target.classList.contains('modal__place-item')) return 
 
-        toggleControlItems(meetingPlaceItems, meetingPlaceItemFrames, target, 'place',)
+        toggleControlItems(meetingPlaceItems, meetingPlaceItemFrames, target, 'place')
         place = target.dataset.place
+
+        // (x, { }) ->
+        //  ({ }) ->
     })
 
 
@@ -701,6 +724,18 @@ document.addEventListener('DOMContentLoaded', () => {
         date = new Date()
         currentDay = new Date().getDate()
     }
+
+    // function Calendar() {
+    //     return ({
+    //         month: new Date().getMonth(),
+    //         year: new Date().getFullYear(),
+    //         date: new Date(),
+    //         currentDay: new Date().getDate(),
+    //     })
+    // }
+
+    // var calendar = Calendar()
+
 
     // Ф-ия рендерит дни недели в шапку календаря.
     function setCalendarDays() {
