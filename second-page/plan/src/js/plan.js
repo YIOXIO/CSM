@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     plan: 100000000,
                     isIncrease: false,
                     currentMonth: 8,
-                    annualStatistics: [10, 20, 40, 35, 16, 25, 50, 55, 40, 45, 20, 80]
+                    annualStatistics: [10, 20, 40, 35, 160, 25, 50, 55, 40, 45, 20, 80]
                 },
                 {
                     id: 12,
@@ -434,7 +434,6 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             y: {
                 min: 0,
-                max: 100,
                 ticks: {
                     stepSize: 100,
                     color: '#FFFFFF',
