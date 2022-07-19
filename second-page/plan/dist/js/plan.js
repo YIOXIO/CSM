@@ -946,10 +946,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ф-ия выводит меню на страницу.
     function setMenu(data) {
+        
         let out = document.querySelector('.plan__tabcontent-block__wrap_menu')
         let menuResult = ''
 
-        data.map(item => {
+        data.sort(byField('fact')).map(item => {
             menuResult += menuItem(item)
         })
 
@@ -1072,6 +1073,10 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    function byField(field) {
+        return (a, b) => a[field] < b[field] ? 1 : -1
+    }
+
     // Сортировка массива данных. 
     function getSortData(data, id) {
         sortData = []
@@ -1094,8 +1099,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // Установка подзаголовка.
         setSubtitle(sortData.length)
-
-        return sortData
+        
+        return sortData.sort(byField('fact'))
     }
 
 
