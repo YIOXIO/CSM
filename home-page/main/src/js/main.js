@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const generalData = {
         students:  4844,
-        rate: 5,
+        // rate: 5,
         teachers: 1279,
         scientists: 347,
         score: 4.2,
@@ -188,12 +188,14 @@ document.addEventListener('DOMContentLoaded', () => {
         progress: 39.62,
         publications: 1078,
         cash: 3.45,
-        budget: 4.08 
+        budget: 4.08,
+        dpoProgress: 30.8,
+        dpoStudents: 11009  
     }
  
     function  generalDataOutput(data) {
         for (let key in data) {
-            document.querySelector(`.circle-block__value_${key}`).textContent = data[key];
+            document.querySelector(`.circle-block__value_${key}`).textContent = numDataOutput(data[key]);
         }
     }
 
@@ -1119,11 +1121,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     const allBranchesBtn = document.querySelector('.circle-block__first-clicked-aria');
-    const staffBtn = document.querySelector('.circle-block__third-clicked-aria');
+    const staffBtn = document.querySelector('.circle-block__second-clicked-aria');
+    const dpoBtn = document.querySelector('.circle-block__third-clicked-aria');
     const planBtn = document.querySelector('.circle-block__fifth-clicked-aria');
-
+    
     const allBranchesBg = document.querySelector('.circle-first__icon');
     const staffBg = document.querySelector('.staff-bg');
+    const dpoBg = document.querySelector('.dpo-bg');
     const planBg = document.querySelector('.plan-bg');
 
 
@@ -1138,6 +1142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     animateButtonHover(staffBtn, staffBg, 'max-opacity');
+    animateButtonHover(dpoBtn, dpoBg, 'max-opacity');
     animateButtonHover(allBranchesBtn, allBranchesBg, 'scale');
     animateButtonHover(planBtn, planBg, 'white-stroke');
 

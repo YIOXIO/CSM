@@ -555,8 +555,6 @@
                     right: 0.3vw;
                     bottom: 0.5vw;
                   }
-              
-                  
                 }
               
                 .cirlce-block__wrap {
@@ -625,7 +623,6 @@
                   text-align: center;
                   letter-spacing: 0.1em;
                   text-transform: uppercase;
-              
                   color: #FB9B2B;
                 }
                 .cirlce-block__contains {
@@ -682,17 +679,18 @@
                     transform: rotate(39deg);
                     // background:rgba(33, 122, 255, 0.7);
                     z-index: 999;
+                    cursor: pointer;
                 }
               
                 .cirlce-block__contains {
                   position: static;
                   transform: none;
-                  transform: translate(-1.875vw, -2.083vw);
+                  transform: translate(-0.875vw,-2.083vw);  
               
                   .cirlce-block__wrap {
                     align-items: flex-start;
                     position: relative;
-                    left: 0.5vw;
+                    left: 0.2vw;
               
                     .circle-block__icon {
                       margin-left: 0.4vw;
@@ -706,15 +704,8 @@
               
                   }
               
-                  &:nth-of-type(2) {
-                    transform: translate(-2.8vw, -1vw);
-                    .circle-block__text{
-                      color: #217AFF;
-                    }
-                  }
-              
                   &:last-of-type {
-                    transform: translate(-7vw, -.1vw);
+                    transform: translate(-5vw, -0.6vw);
                     .cirlce-block__wrap {
                       align-items: baseline;
                     }
@@ -732,7 +723,7 @@
                 }
               }
               
-              .circle-third__icon {
+              .circle-second__icon {
                 width: 15.417vw;
                 height: 17.656vw;
                
@@ -863,11 +854,9 @@
                     transition: all ease-in-out 1s;
                 }
 
-                >svg{
-                  
-                 
-                  path{
-                   
+                svg{
+
+                  path {
                     width: 12.82vw;
                     height: 7.813vw;
                   }
@@ -884,7 +873,6 @@
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                
                 z-index: 11;
               
                 &::before {
@@ -926,8 +914,99 @@
               
                 .circle-block__text {
                   position: relative;
-                  left: 2vw;
+                  left: .8vw;
                 }
+
+                &-clicked-aria {
+                    position: absolute;
+                    width: 6.5vw;
+                    height: 16vw;
+                    top: 5%;
+                    left: 35%;
+                    transform: rotate(322deg);
+                    z-index: 999;
+                    cursor: pointer;
+                }
+              
+                .cirlce-block__contains {
+                  position: static;
+                  transform: none;
+                  transform: translate(-6vw,0.1vw);
+              
+                  .cirlce-block__wrap {
+                    align-items: flex-start;
+                    position: relative;
+                    left: 0.5vw;
+              
+                    .circle-block__icon {
+                      margin-left: 0.4vw;
+                      margin-right: 0;                  
+                    }
+              
+                    .down{
+                      position: relative;
+                      top: -1.4vw;
+                    }
+              
+                  }
+              
+                  &:nth-of-type(2) {
+                    transform: translate(-3.5vw,1.4vw);
+                    .circle-block__text{
+                      color: #217AFF;
+                    }
+                  }
+              
+                  &:last-of-type {
+                    transform: translate(-1.2vw,1.8vw);
+
+
+                    .cirlce-block__wrap {
+                      align-items: baseline;
+                    }
+                  }
+                }
+              
+                .circle-block__wrapper {
+                  display: flex;
+                  flex-direction: column;
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  transform: translateY(-50%);
+                  z-index: 11;
+                }
+              }
+              
+              .circle-third__icon {
+                width: 15.417vw;
+                height: 17.656vw;
+               
+                path {
+                    transition: all 1s;
+                    stroke-opacity: 0.2;
+                }
+              }
+              
+              .circle__parts {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                top: 0;
+                z-index: 2;
+                width: 18.594vw;
+                height: 18.594vw;
+              }
+              
+              .cirlce-block__wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              
+                .circle-block__icon {
+                  margin-right: 0.4vw;
+                }
+              
               }
               
               .circle-second__icon {
@@ -945,8 +1024,6 @@
                 left: 11%;
               
                 .circle__part-text {
-				
-
                   position: absolute;
                   top: 10vw;
                   left: -2vw;
@@ -1116,8 +1193,6 @@
                         font-size: 0.7vw;
                         line-height: 0.829vw;
                         color: #627dae;
-
-                        
                     }
         
                     &-hours {
