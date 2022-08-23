@@ -900,7 +900,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalConfirm.forEach(i => {
         i.addEventListener('click', () => {
             closeModals()
-            console.log(msg)
+            // console.log(msg)
             //..
         })
     })
