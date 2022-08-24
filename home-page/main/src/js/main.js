@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
     });
 
-    document.querySelector('#vaccination').addEventListener('click', () => {
+    document.querySelector('#dpo').addEventListener('click', () => {
         
     });
 
-    document.querySelector('#vaccination').addEventListener('click', () => {
+    document.querySelector('#dpo').addEventListener('click', () => {
         
     });
 
@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //=================== вакцинация =====================
 
-    const vaccinationData = {
+    const dpoData = {
         date: '2021-10-02',
         total: 3345,
         vaccinated: 2457,
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sick: 108
     }
 
-    function vaccinationDataOutput(data) {
+    function dpoDataOutput(data) {
 
         function sumData() {
             const result = [data.vaccinated, data.unvaccinated, data.recovered, data.sick, data.unsuitable];
@@ -396,9 +396,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const setLine = (value, color) => {
             return  `
                 <svg width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <svg class="vaccination__graphiс-data" width="${categoryRatio(value + 1)}" x="0" y="0" >
-                    <rect class="vaccination__graphiс-row" fill=${color} x="0" y="0" transform="translate(-5)"/>
-                    <text class="vaccination__graphiс-value" x="100%" y="60%"  text-anchor="middle" dy="0.3em" transform="translate(5)">
+                    <svg class="dpo__graphiс-data" width="${categoryRatio(value + 1)}" x="0" y="0" >
+                    <rect class="dpo__graphiс-row" fill=${color} x="0" y="0" transform="translate(-5)"/>
+                    <text class="dpo__graphiс-value" x="100%" y="60%"  text-anchor="middle" dy="0.3em" transform="translate(5)">
                         ${value}
                     </text>
                 </svg>
@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function output (data) {
             const element = document.createElement('div');
 
-            element.classList.add('vaccination__graphiс');
+            element.classList.add('dpo__graphiс');
 
             element.innerHTML = `
                 ${setLine(data.vaccinated,'#217AFF')}
@@ -419,14 +419,14 @@ document.addEventListener('DOMContentLoaded', () => {
            
             `;
 
-            document.querySelector('.vaccination__diagram-wrap').append(element);
+            document.querySelector('.dpo__diagram-wrap').append(element);
         }
 
         output(data);
-        document.querySelector('.vaccination__diagram-value').textContent = data.total;
+        document.querySelector('.dpo__diagram-value').textContent = data.total;
     }
 
-    vaccinationDataOutput(vaccinationData);
+    // dpoDataOutput(dpoData);
 
 
 
@@ -948,7 +948,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.calendar-finance').setAttribute('data-date', financeData.date);
     document.querySelector('.calendar-science').setAttribute('data-date', scienceData.date);
     document.querySelector('.calendar-international').setAttribute('data-date', internationalData.date);
-    document.querySelector('.calendar-vaccination').setAttribute('data-date', vaccinationData.date);
+    document.querySelector('.calendar-dpo').setAttribute('data-date', dpoData.date);
     document.querySelector('.calendar-students').setAttribute('data-date', staffData.date);
     
     calendar();
@@ -1149,8 +1149,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========  изменение окончании слова "человек(ка)", блок вакцинация =========
 
-    function setVaccinationtDescription(data) {
-        const description = document.querySelector('.vaccination__diagram-descr span');
+    function setdpotDescription(data) {
+        const description = document.querySelector('.dpo__diagram-descr span');
 
         const getlastNum = () => {
             let array = data.toString().split('');
@@ -1172,7 +1172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         description.textContent = str;
     }
 
-    setVaccinationtDescription(vaccinationData.total)
+    // setdpotDescription(dpoData.total)
 
 
 
