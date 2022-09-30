@@ -62,17 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
     });
 
-    document.querySelector('#dpo').addEventListener('click', () => {
-        
-    });
 
     document.querySelector('#dpo').addEventListener('click', () => {
-        
+        //...
     });
 
-    document.querySelector('#covid_click').addEventListener('click', () => {
-        // открыть страницу table
-    })
 
    
     //=================== служебные функции =====================
