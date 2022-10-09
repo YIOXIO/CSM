@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const branchVacDataFromServer = [  // Server data exemple.
         {
-            totalStaffAllBranches: 1260,
+            totalStaffAllBranches: 1265,
             totalVaccinated: 913,
             totalUnvaccinated: 185,
             totalrecovered: 54,
@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
             date: '22.02.2022'
         },
         {
-            branchName: 'Брянск',
-            totalStaff: 82,
-            vaccinated: 67,
-            unvaccinated: 12,
-            recovered: 5,
-            unsuitable: 7,
-            sick: 5
+            branchName: 'Москва',
+            totalStaff: 3000,
+            vaccinated: 1590,
+            unvaccinated: 1410,
+            recovered: 500,
+            unsuitable: 17,
+            sick: 100
         },
         {
             branchName: 'Брянск',
@@ -145,6 +145,15 @@ document.addEventListener('DOMContentLoaded', () => {
             unsuitable: 3,
             sick: 0
         },
+        {
+            branchName: 'Брянск',
+            totalStaff: 84,
+            vaccinated: 167,
+            unvaccinated: 2212,
+            recovered: 0,
+            unsuitable: 3,
+            sick: 0
+        },
         
     ]
 
@@ -251,7 +260,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ф-ия создает массив объектов исключая обобщенные данные из нулевого элемента массива. 
 
-    const datasetPerBranch = branchVacDataFromServer.filter((obj, i) => i !== 0);
+    let datasetPerBranch = branchVacDataFromServer.filter((obj, i) => i !== 0 && i !== 1);
+
+    let datsetPerMoscow =  branchVacDataFromServer.filter ((obj, i) => i === 1);
 
     // вспомогательная ф-ия для вывода данных.
 
@@ -313,6 +324,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }) => {
 
         new branchVacData(branchName, totalStaff, vaccinated, unvaccinated, recovered, unsuitable, sick, '.branches-vac__list').render();
+    });
+
+    console.log(datasetPerBranch)
+
+    datsetPerMoscow.forEach(({
+        branchName,
+        totalStaff,
+        vaccinated,
+        unvaccinated,
+        recovered,
+        unsuitable,
+        sick
+    }) => {
+
+        new branchVacData(branchName, totalStaff, vaccinated, unvaccinated, recovered, unsuitable, sick, '.branches-vac__data-moscow').render();
     });
 
     // вывод обобщенных данных.

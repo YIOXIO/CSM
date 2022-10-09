@@ -40,10 +40,15 @@
 
 .footer__btns {
 	position: absolute;
-	bottom: 4vw;
+	bottom: 4.6vw;
 	right: 4vw;
 	display: flex;
 	z-index: 1;
+
+	&_down {
+		bottom: 1.2vw;
+		right: 14.4vw;
+	}
 }
 
 .footer__btns-item {

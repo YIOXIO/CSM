@@ -62,17 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
     });
 
-    document.querySelector('#vaccination').addEventListener('click', () => {
-        
+
+    document.querySelector('#dpo').addEventListener('click', () => {
+        //...
     });
 
-    document.querySelector('#vaccination').addEventListener('click', () => {
-        
-    });
-
-    document.querySelector('#covid_click').addEventListener('click', () => {
-        // открыть страницу table
-    })
 
    
     //=================== служебные функции =====================
@@ -132,6 +126,28 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
 
 
+    function progressbarDataOutput(data, block, isExpand = true) {
+        const progress = ((data.currentReceipts / data.currentPlan) * 100).toFixed(2);
+
+        const scienceProgressbar = Array.from(document.querySelectorAll(`.${block}__plan-progressbar-item`));
+        const scienceProgressbarLength = progressLength(scienceProgressbar, progress);
+        
+        function setProgressBar(progressBar, length, val) {
+            for (let i = 0; i < length; i++) {
+                progressBar[i].setAttribute('fill-opacity', val)
+            }
+        } 
+
+        setProgressBar(scienceProgressbar, scienceProgressbarLength, 1)
+
+        insertToPage(`${block}__plan-ratio`, progress + '%');
+        insertToPage(`${block}__plan-value`, numDataOutput(data.currentPlan) );
+        insertToPage(`${block}__legend-value_current-receipts`, numDataOutput(data.currentReceipts));
+        if (isExpand) {
+            insertToPage(`${block}__legend-value_expected-receipts`, numDataOutput(data.expectedReceipts));
+        }   
+    }
+
 
 
     //=================== центральная диаграмма =====================
@@ -180,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const generalData = {
         students:  4844,
-        rate: 5,
+        // rate: 5,
         teachers: 1279,
         scientists: 347,
         score: 4.2,
@@ -188,12 +204,14 @@ document.addEventListener('DOMContentLoaded', () => {
         progress: 39.62,
         publications: 1078,
         cash: 3.45,
-        budget: 4.08 
+        budget: 4.08,
+        dpoProgress: 30.8,
+        dpoStudents: 11009  
     }
  
     function  generalDataOutput(data) {
         for (let key in data) {
-            document.querySelector(`.circle-block__value_${key}`).textContent = data[key];
+            document.querySelector(`.circle-block__value_${key}`).textContent = numDataOutput(data[key]);
         }
     }
 
@@ -366,68 +384,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
     internationalDataOutput(internationalData);
 
+    // ===================== ДПО =========================
 
-
-    //=================== вакцинация =====================
-
-    const vaccinationData = {
-        date: '2021-10-02',
-        total: 3345,
-        vaccinated: 2457,
-        unvaccinated: 887,
-        recovered: 1050,
-        unsuitable: 232,
-        sick: 108
+    const dpoData = {
+        date: '2021-10-05',
+        plan: {
+            currentPlan: 150000.6,
+            currentReceipts: 100000.4,
+            expectedReceipts: 233203.6,
+            progress: 80.62 
+        },
+        priority: {
+            pp: {
+                descr: 'ПП',
+                fact: 680,
+                plan: 1700,
+                color: '#48CC8B'
+            },
+            pk: {
+                descr: 'ПК',
+                fact: 100,
+                plan: 17525,
+                color: '#B196FF'
+            }
+        }
     }
 
-    function vaccinationDataOutput(data) {
+    progressbarDataOutput(dpoData.plan, 'dpo', false);
 
-        function sumData() {
-            const result = [data.vaccinated, data.unvaccinated, data.recovered, data.sick, data.unsuitable];
-            const sum = result.reduce((a, b) => a + b)
+    let dpoPriorityProgress = data => {
+        let { descr, fact, plan, color } = data 
+        let ratio = ((fact / plan) * 100).toFixed(1);
+        let fill = (330 / 100) *  (ratio <= 100 ? ratio : 100);
 
-            return sum;
-        } 
-
-        const categoryRatio = category => Math.ceil((category / sumData()) * 100);
-
-        const setLine = (value, color) => {
-            return  `
-                <svg width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <svg class="vaccination__graphiс-data" width="${categoryRatio(value + 1)}" x="0" y="0" >
-                    <rect class="vaccination__graphiс-row" fill=${color} x="0" y="0" transform="translate(-5)"/>
-                    <text class="vaccination__graphiс-value" x="100%" y="60%"  text-anchor="middle" dy="0.3em" transform="translate(5)">
-                        ${value}
-                    </text>
-                </svg>
-            </svg>`
-        }
-                
-        function output (data) {
-            const element = document.createElement('div');
-
-            element.classList.add('vaccination__graphiс');
-
-            element.innerHTML = `
-                ${setLine(data.vaccinated,'#217AFF')}
-                ${setLine(data.unvaccinated, '#6C38FF')}
-                ${setLine(data.recovered, '#A7EB17')}
-                ${setLine(data.unsuitable, '#FB9B2B' )}
-                ${setLine(data.sick, '#FD6A6A')}
-           
-            `;
-
-            document.querySelector('.vaccination__diagram-wrap').append(element);
-        }
-
-        output(data);
-        document.querySelector('.vaccination__diagram-value').textContent = data.total;
+        return `
+            <div class="dpo__data-item">
+                <div class="dpo__data-item__info">
+                    <div class="dpo__data-item__ratio" style="color:${color};">${ratio}%</div>
+                    <div class="dpo__data-item__value">${numDataOutput(plan)} чел.</div>
+                </div>
+                <div class="dpo__data-item__progress">
+                    <div class="dpo__data-item__descr">${descr}</div>						
+                    <svg class="dpo__data-item__progressbar" width="92%" height="1vw" viewBox="0 0 330 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M330 7L-1.3113e-05 7" stroke="#0E2D7B" stroke-width="14" stroke-dasharray="3 2"/>
+                        <path d="M${fill} 7H3.05186e-06" stroke=${color} stroke-width="14" stroke-dasharray="3 2"/>
+                    </svg>
+                </div>
+            </div>
+        `
     }
 
-    vaccinationDataOutput(vaccinationData);
+    function setDpoPriorityProgressbar() {
+        let out = dpoPriorityProgress(dpoData.priority.pp) + dpoPriorityProgress(dpoData.priority.pk);
+        document.querySelector('.dpo__data-wrapper').innerHTML = out;
+    }
 
-
-
+    setDpoPriorityProgressbar();
+   
     //=================== наука =====================
 
     const scienceData = {
@@ -556,29 +569,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
     }
 
-    function scienceProgressbarDataOutput(data) {
-        const progress = ((data.currentReceipts / data.currentPlan) * 100).toFixed(2);
-
-        const scienceProgressbar = Array.from(document.querySelectorAll('.science__plan-progressbar-item'));
-        const scienceProgressbarLength = progressLength(scienceProgressbar, progress);
-        
-        function setProgressBar(progressBar, length, val) {
-            for (let i = 0; i < length; i++) {
-                progressBar[i].setAttribute('fill-opacity', val)
-            }
-        } 
-
-        setProgressBar(scienceProgressbar, scienceProgressbarLength, 1)
-
-        insertToPage('science__plan-ratio', progress + '%');
-        insertToPage('science__plan-value', numDataOutput(data.currentPlan) );
-        insertToPage('science__legend-value_current-receipts', numDataOutput(data.currentReceipts));
-        insertToPage('science__legend-value_expected-receipts', numDataOutput(data.expectedReceipts));
-    }
-
-    scienceProgressbarDataOutput(scienceData.plan)
-
-        
+    progressbarDataOutput(scienceData.plan, 'science')    
         
 
     function publicationsDataOutput(data, category, color = '#FB9B2B') {
@@ -676,7 +667,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     publicationsDiagramAnimation()
 
-// ============================== студенты ===========================================
+    // ============================== студенты ===========================================
 
 
     const staffData = {
@@ -770,7 +761,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     studentsCategoryDataOutput(staffData.categories)
-
 
 
     // ======================= календарь ===============================
@@ -946,7 +936,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.calendar-finance').setAttribute('data-date', financeData.date);
     document.querySelector('.calendar-science').setAttribute('data-date', scienceData.date);
     document.querySelector('.calendar-international').setAttribute('data-date', internationalData.date);
-    document.querySelector('.calendar-vaccination').setAttribute('data-date', vaccinationData.date);
+    document.querySelector('.calendar-dpo').setAttribute('data-date', dpoData.date);
     document.querySelector('.calendar-students').setAttribute('data-date', staffData.date);
     
     calendar();
@@ -1117,13 +1107,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //====================== анимация кнопок центрального блока ===================
 
-    
     const allBranchesBtn = document.querySelector('.circle-block__first-clicked-aria');
-    const staffBtn = document.querySelector('.circle-block__third-clicked-aria');
+    const staffBtn = document.querySelector('.circle-block__second-clicked-aria');
+    // const dpoBtn = document.querySelector('.circle-block__third-clicked-aria');
     const planBtn = document.querySelector('.circle-block__fifth-clicked-aria');
-
+    
     const allBranchesBg = document.querySelector('.circle-first__icon');
     const staffBg = document.querySelector('.staff-bg');
+    // const dpoBg = document.querySelector('.dpo-bg');
     const planBg = document.querySelector('.plan-bg');
 
 
@@ -1138,38 +1129,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     animateButtonHover(staffBtn, staffBg, 'max-opacity');
+    // animateButtonHover(dpoBtn, dpoBg, 'max-opacity');
     animateButtonHover(allBranchesBtn, allBranchesBg, 'scale');
     animateButtonHover(planBtn, planBg, 'white-stroke');
-
-
-    // ========  изменение окончании слова "человек(ка)", блок вакцинация =========
-
-    function setVaccinationtDescription(data) {
-        const description = document.querySelector('.vaccination__diagram-descr span');
-
-        const getlastNum = () => {
-            let array = data.toString().split('');
-
-            return +array[array.length - 1]
-        } 
-
-        const lastNum = getlastNum()
-
-        let str = 'челове';
-
-        if (lastNum === 2 || lastNum === 3 || lastNum === 4) {
-            str += 'ка'
-        } 
-        else {
-            str += 'к'
-        }
-
-        description.textContent = str;
-    }
-
-    setVaccinationtDescription(vaccinationData.total)
-
-
 
     //  ========= данные для легенды центральной диаграммы в блоке студенты ========
 

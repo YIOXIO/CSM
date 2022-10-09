@@ -555,8 +555,6 @@
                     right: 0.3vw;
                     bottom: 0.5vw;
                   }
-              
-                  
                 }
               
                 .cirlce-block__wrap {
@@ -625,7 +623,6 @@
                   text-align: center;
                   letter-spacing: 0.1em;
                   text-transform: uppercase;
-              
                   color: #FB9B2B;
                 }
                 .cirlce-block__contains {
@@ -682,17 +679,18 @@
                     transform: rotate(39deg);
                     // background:rgba(33, 122, 255, 0.7);
                     z-index: 999;
+                    cursor: pointer;
                 }
               
                 .cirlce-block__contains {
                   position: static;
                   transform: none;
-                  transform: translate(-1.875vw, -2.083vw);
+                  transform: translate(-0.875vw,-2.083vw);  
               
                   .cirlce-block__wrap {
                     align-items: flex-start;
                     position: relative;
-                    left: 0.5vw;
+                    left: 0.1vw;
               
                     .circle-block__icon {
                       margin-left: 0.4vw;
@@ -706,15 +704,8 @@
               
                   }
               
-                  &:nth-of-type(2) {
-                    transform: translate(-2.8vw, -1vw);
-                    .circle-block__text{
-                      color: #217AFF;
-                    }
-                  }
-              
                   &:last-of-type {
-                    transform: translate(-7vw, -.1vw);
+                    transform: translate(-5vw, -0.6vw);
                     .cirlce-block__wrap {
                       align-items: baseline;
                     }
@@ -732,7 +723,7 @@
                 }
               }
               
-              .circle-third__icon {
+              .circle-second__icon {
                 width: 15.417vw;
                 height: 17.656vw;
                
@@ -863,11 +854,9 @@
                     transition: all ease-in-out 1s;
                 }
 
-                >svg{
-                  
-                 
-                  path{
-                   
+                svg{
+
+                  path {
                     width: 12.82vw;
                     height: 7.813vw;
                   }
@@ -884,7 +873,6 @@
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                
                 z-index: 11;
               
                 &::before {
@@ -926,8 +914,99 @@
               
                 .circle-block__text {
                   position: relative;
-                  left: 2vw;
+                  left: .8vw;
                 }
+
+                &-clicked-aria {
+                    position: absolute;
+                    width: 6.5vw;
+                    height: 16vw;
+                    top: 5%;
+                    left: 35%;
+                    transform: rotate(322deg);
+                    z-index: 999;
+                    cursor: pointer;
+                }
+              
+                .cirlce-block__contains {
+                  position: static;
+                  transform: none;
+                  transform: translate(-6vw,0.1vw);
+              
+                  .cirlce-block__wrap {
+                    align-items: flex-start;
+                    position: relative;
+                    left: 0.5vw;
+              
+                    .circle-block__icon {
+                      margin-left: 0.4vw;
+                      margin-right: 0;                  
+                    }
+              
+                    .down{
+                      position: relative;
+                      top: -1.4vw;
+                    }
+              
+                  }
+              
+                  &:nth-of-type(2) {
+                    transform: translate(-3.5vw,1.4vw);
+                    .circle-block__text{
+                      color: #217AFF;
+                    }
+                  }
+              
+                  &:last-of-type {
+                    transform: translate(-1.2vw,1.8vw);
+
+
+                    .cirlce-block__wrap {
+                      align-items: baseline;
+                    }
+                  }
+                }
+              
+                .circle-block__wrapper {
+                  display: flex;
+                  flex-direction: column;
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  transform: translateY(-50%);
+                  z-index: 11;
+                }
+              }
+              
+              .circle-third__icon {
+                width: 15.417vw;
+                height: 17.656vw;
+               
+                path {
+                    transition: all 1s;
+                    stroke-opacity: 0.2;
+                }
+              }
+              
+              .circle__parts {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                top: 0;
+                z-index: 2;
+                width: 18.594vw;
+                height: 18.594vw;
+              }
+              
+              .cirlce-block__wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              
+                .circle-block__icon {
+                  margin-right: 0.4vw;
+                }
+              
               }
               
               .circle-second__icon {
@@ -945,8 +1024,6 @@
                 left: 11%;
               
                 .circle__part-text {
-				
-
                   position: absolute;
                   top: 10vw;
                   left: -2vw;
@@ -1116,8 +1193,6 @@
                         font-size: 0.7vw;
                         line-height: 0.829vw;
                         color: #627dae;
-
-                        
                     }
         
                     &-hours {
@@ -1530,177 +1605,182 @@
             }
         }
  
-        .vaccination {
+        .dpo {
             cursor: pointer;
             width: 21.8vw;
             height: 17.2vw;
             margin: 3.5vw 3.7vw 1.5vw auto;
 
             .block-wrap {
-                padding-top: 0vw;
-                padding-right: 0.3vw;
-            }
-
-            &__header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                padding-top: 1.3vw;
+                padding-left: 1.4vw;
+                padding-right: 1.8vw;
+                padding-bottom: 3.9vw;
             }
 
             &__title {
-                max-width: 6vw;
-                text-align: center;
-                line-height: 110%;
-                margin-top: 1.4vw;
-                margin-left: 0.7vw;
+                font-size: .88vw !important;
             }
 
-            &__select {
-                position: relative;
-                margin-right: 0.5vw;
-                margin-top: 1vw;
-                width: 11.2vw;
-                height: 1.8vw;
-
-                &-item {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100%;
-                    text-align: center;
-
-                    &-text {
-                        font-family: Oswald;
-                        font-weight: 400;
-                        font-size: 0.9vw;
-                        line-height: 0.9vw;
-                        letter-spacing: 0.05em;
-                        color: #FFFFFF;
-                    } 
-
-                    &-icon {
-                        margin-top: 0.2vw;
-                        margin-left: 0.2vw;
-                        width: 0.6vw;
-                        height: 0.7vw;
-                    }
-                }
-            }
-
-            &__diagram {
+            &__info {
                 width: 100%;
-                height: 6.2vw;
-                padding-top: 0.5vw;
-                display: flex;
-
-                &-info {
-                    width: 32.5%;
-                    height: 110%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-
-                &-value {
-                    font-family: Oswald;
-                    font-weight: 400;
-                    font-size: 1.2vw;
-                    line-height: 1.7vw;
-                    text-align: center;
-                    letter-spacing: 0.05em;
-                    color: #FFFFFF;
-                }
-
-                &-descr {
-                    font-family: Oswald;
-                    font-weight: 400;
-                    font-size: 0.75vw;
-                    line-height: 0.8vw;
-                    text-align: center;
-                    letter-spacing: 0.05em;
-                    color: #FFFFFF;
-                }
-
-                &-frame {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: -1;
-                }
-
-                &-wrap {
-                    position: relative;
-                    width: 66.5%;
-                    height: 100%;
-                }
+                height: 50%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
             }
 
-            &__graphiс {
-                width: 100%;
-                height: 100%;
-                padding: 0.5vw 0;
-                margin-left: 1vw;
+            &__plan {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                margin-top: 0.9vw;
+                margin-left: 0.3vw;
 
-                &-data {
-                    width: 100%;
-                    height: 100%;
-                    overflow: visible;
+                &-header {
+                    font-family: Oswald;
+                    font-weight: 400;
+                    font-size: 0.7vw;
+                    letter-spacing: 0.03em;
+                    color: #CDD6EE;
                 }
-        
-                &-row, &-data {
-                    width: 100%;
-                    height: 100%;
-                }
-        
-                &-value {
+
+                &-ratio {
                     font-family: Montserrat;
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 0.45em;
-                    fill: #FFFFFF;
-                    font-stretch: none;   
+                    font-weight: 700;
+                    font-size: 0.9vw;                   
+                    color: #F79A2D;
+                }
+
+                &-progressbar {
+                    margin-top: 0.1vw;
+                    margin-left: -0.3vw;
+                    width: 8.3vw;
+                    height: 1.4vw;
+                }
+
+                &-sum {
+                    font-family: Oswald;
+                    font-weight: 400;
+                    font-size: 0.7vw;
+                    letter-spacing: 0.03em;
+                    color: #FFFFFF;
+                    display: inline-block;
+                    text-align: right;
+                    margin-top: 0.1vw;
+                    margin-right: 0.8vw;
+                   
+
+                    span {
+                        margin-left: 0.2vw;
+                    }
+                }
+
+                &-value {
+                    display: inline;
                 }
             }
 
             &__legend {
-                padding: 0.1vw;
-                width: 100%;
-                height: 5vw;
                 display: flex;
                 flex-direction: column;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-                padding-top: 0.5vw;
-                margin-left: 0.7vw;
+                width: 100%;
+                height: 100%;
+                
+                &-item { 
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding-left: 1.9vw;
 
-                &-item {
-                    
-                    display: grid;
-                    height: 1.3vw;
-                    grid-template-columns: 1vw 8vw;
-                }
+                    &_fact {
+                        margin-top: 0.6vw;
+                        padding-right: 0.9vw;
+                    }
 
-                &-icon {
-                    width: 0.8vw;
-                    height: 0.9vw;
+                    &_planned {
+                        margin-top: 1.3vw;
+                    }
                 }
 
                 &-descr {
-                    margin-left: 0.3vw;
                     font-family: Oswald;
                     font-weight: 400;
-                    font-size: 0.65vw;
-                    line-height: 0.7vw;
-                    letter-spacing: 0.05em;
+                    font-size: 0.7vw;
+                    line-height: 0.9vw;
+                    letter-spacing: 0.03em;
+                    color: #CDD6EE;
+                }
+
+                &-sum {
+                    font-family: Oswald;
+                    font-weight: 400;
+                    font-size: 0.7vw;
+                    letter-spacing: 0.03em;
                     color: #FFFFFF;
+                    display: inline-block;
+                    margin-top: 0.2vw;
+
+                    span {
+                        margin-left: 0.2vw;
+                    }
+                }
+
+                &-value {
+                    display: inline;
+                }
+
+            }
+
+            &__divider {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 0.2vw;
+            }
+
+            &__data {
+                margin-top: 0.5vw;
+                &-title {
+                    font-family: 'Oswald';
+                    font-weight: 400;
+                    font-size: 0.85vw;
+                    text-transform: uppercase;
+                    letter-spacing: 0.03em;
+                    color: #FFFFFF;
+                }
+                &-item {
+                    width: 100%;
+                    height:  2.5vw;
+                    margin-top: -0.1vw;
+                    &__info {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    &__ratio {
+                        margin-left: 1.8vw;
+                        font-family: 'Montserrat';
+                        font-weight: 700;
+                        font-size: .8vw;
+                        color: #48CC8B;
+
+                    }
+                    &__value, &__descr {
+                        font-family: 'Oswald';
+                        font-weight: 400;
+                        font-size: .78vw;
+                        letter-spacing: 0.03em;
+                        color: #FFFFFF;
+                    }
+                    &__progress {
+                        margin-top: 0vw;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    &__descr {
+                        margin-top: -0.1vw;
+                    }
                 }
             }
         }
@@ -1758,9 +1838,9 @@
         bottom: 0.8vw;
     }
 
-    &-vaccination {
+    &-dpo {
         gap: 10.8vw;
-        bottom: 0.6vw;
+        bottom: 0.3vw;
     }
 
     &-international {
@@ -1800,7 +1880,6 @@
             font-size: 0.4vw;
             color: #FB9B2B;
             padding: 0 0.2vw 0.1vw 0;
-            
         }
     }
 }
