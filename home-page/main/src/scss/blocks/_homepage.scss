@@ -10,183 +10,100 @@
         position: relative;
         flex: 1;
 
-        .finance {
+        .dpo {
             cursor: pointer;
-            width: 23vw;
-            height: 22.4vw;
-            margin: 0 auto 0 3vw;    
-            
+            width: 21.8vw;
+            height: 17.2vw;
+            margin: .5vw 3.7vw 1.5vw auto;
+
             .block-wrap {
-                padding-top: 1.2vw;
-                padding-left: 1.8vw;
+                padding-top: 1.3vw;
+                padding-left: 1.4vw;
                 padding-right: 1.8vw;
-                padding-bottom: 1.2vw;
+                padding-bottom: 3.9vw;
             }
 
-            &__header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+            &__title {
+                font-size: .88vw !important;
             }
 
-            &__total {
-                &-wrap {
-                    display: flex;
-                    align-items: flex-end;
-                    font-family: Oswald;
-                    font-weight: 400;
-                    font-size: 1.05vw;
-                    color: #FFFFFF;
-
-                    span {
-                        margin-left: 0.5vw;
-                        font-size: 0.65vw;
-                    }
-                }
-
-                &-descr {
-                    margin-top: 0.1vw;
-                    font-family: Oswald;
-                    font-weight: 400;
-                    font-size: 0.47vw;
-                    letter-spacing: 0.1em;
-                    text-transform: uppercase;
-                    color: #627DAE;
-                }
+            &__info {
+                width: 100%;
+                height: 50%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
             }
 
-            &__body {
-                position: relative;
-                top: 0.7vw;
-                right: 0.5vw;
-                width: 20vw;
-                height: 15.5vw;
+            &__plan {
                 display: flex;
                 flex-direction: column;
+                margin-top: 0.9vw;
+                margin-left: 0.3vw;
 
-                &-item {
-                    position: relative;
-                    width: 100%;
-                    height: 50%; 
-                    display: flex;
-                    justify-content: space-between;
-                    padding-left: 1.1vw;
-                    
-                    &_wage-fund {
-                        padding-top: 0.6vw;
-                    }
-
-                    &_сosts {
-                        padding-top: 0.2vw;
-                    }
-                }
-            }
-
-            &__diagram, &__legend {
-                width: 50%;
-                height: 100%;
-            }
-
-            &__diagram {
-                position: relative;
-               
-                &-data, &-center {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    height: 7vw;
-                }
-
-                &-data {
-                    width: 6.55vw;
-                }
-
-                &-center {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 4vw;
-                }
-
-                &-text {
-                    font-family: Montserrat;
-                    font-weight: 700;
-                    font-size: 0.5vw;
-                    line-height: 0.7vw;
-                    color: #FFFFFF;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 40%;
-                    text-align: center;
-                    text-transform: uppercase;
-                }
-                
-                &-value {
-                    position: absolute;
+                &-header {
                     font-family: Oswald;
                     font-weight: 400;
-                    font-size: 0.55vw;
-                    letter-spacing: 0.02em;
+                    font-size: 0.7vw;
+                    letter-spacing: 0.03em;
+                    color: #CDD6EE;
+                }
+
+                &-ratio {
+                    font-family: Montserrat;
+                    font-weight: 700;
+                    font-size: 0.9vw;                   
+                    color: #F79A2D;
+                }
+
+                &-progressbar {
+                    margin-top: 0.1vw;
+                    margin-left: -0.3vw;
+                    width: 8.3vw;
+                    height: 1.4vw;
+                }
+
+                &-sum {
+                    font-family: Oswald;
+                    font-weight: 400;
+                    font-size: 0.7vw;
+                    letter-spacing: 0.03em;
                     color: #FFFFFF;
-                    
-                    &_budget-resources {
-                        top: 0.6vw;
-                        right: -1.2vw;
-                    }
+                    display: inline-block;
+                    text-align: right;
+                    margin-top: 0.1vw;
+                    margin-right: 0.8vw;
+                   
 
-                    &_other-resources {
-                        left: -0.4vw;
-                        bottom: 0.3vw;   
+                    span {
+                        margin-left: 0.2vw;
                     }
+                }
 
-                    &_land-tax {
-                        right: -0.8vw;
-                        bottom: 5.9vw;
-                    }
-
-                    &_property-tax {
-                        top: -0.5vw;
-                        right: 1vw;
-                    }
-
-                    &_wage-fund {
-                        top: 0.5vw;
-                        left: -0.3vw;    
-                    }
+                &-value {
+                    display: inline;
                 }
             }
 
             &__legend {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                align-items: flex-start;
-                padding: 0 0.8vw 0 1.2vw;
-            
-
-                &_wage-fund {
-                    padding-top: 1.8vw;
-                    padding-bottom: 0.8vw;
-                }
-
-                &_сosts {
-                    padding-top: 1.4vw;
-                    padding-bottom: 1.4vw;
-                }
+                width: 100%;
+                height: 100%;
                 
-                &-item {
-                    display: grid;
-                    grid-template-columns: 1vw 1fr;
-                    height: max-content;
-                }
+                &-item { 
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding-left: 1.9vw;
 
-                &-mark {
-                    margin-top: 0.05vw;
-                    width: 0.9vw;
-                    height: 0.8vw; 
+                    &_fact {
+                        margin-top: 0.6vw;
+                        padding-right: 0.9vw;
+                    }
+
+                    &_planned {
+                        margin-top: 1.3vw;
+                    }
                 }
 
                 &-descr {
@@ -195,10 +112,273 @@
                     font-size: 0.7vw;
                     line-height: 0.9vw;
                     letter-spacing: 0.03em;
+                    color: #CDD6EE;
+                }
+
+                &-sum {
+                    font-family: Oswald;
+                    font-weight: 400;
+                    font-size: 0.7vw;
+                    letter-spacing: 0.03em;
                     color: #FFFFFF;
+                    display: inline-block;
+                    margin-top: 0.2vw;
+
+                    span {
+                        margin-left: 0.2vw;
+                    }
+                }
+
+                &-value {
+                    display: inline;
+                }
+
+            }
+
+            &__divider {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 0.2vw;
+            }
+
+            &__data {
+                margin-top: 0.5vw;
+                &-title {
+                    font-family: 'Oswald';
+                    font-weight: 400;
+                    font-size: 0.85vw;
+                    text-transform: uppercase;
+                    letter-spacing: 0.03em;
+                    color: #FFFFFF;
+                }
+                &-item {
+                    width: 100%;
+                    height:  2.5vw;
+                    margin-top: -0.1vw;
+                    &__info {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    &__ratio {
+                        margin-left: 1.8vw;
+                        font-family: 'Montserrat';
+                        font-weight: 700;
+                        font-size: .8vw;
+                        color: #48CC8B;
+
+                    }
+                    &__value, &__descr {
+                        font-family: 'Oswald';
+                        font-weight: 400;
+                        font-size: .78vw;
+                        letter-spacing: 0.03em;
+                        color: #FFFFFF;
+                    }
+                    &__progress {
+                        margin-top: 0vw;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    &__descr {
+                        margin-top: -0.1vw;
+                    }
                 }
             }
         }
+
+        // .finance {
+        //     cursor: pointer;
+        //     width: 23vw;
+        //     height: 22.4vw;
+        //     margin: 0 auto 0 3vw;    
+            
+        //     .block-wrap {
+        //         padding-top: 1.2vw;
+        //         padding-left: 1.8vw;
+        //         padding-right: 1.8vw;
+        //         padding-bottom: 1.2vw;
+        //     }
+
+        //     &__header {
+        //         display: flex;
+        //         justify-content: space-between;
+        //         align-items: center;
+        //     }
+
+        //     &__total {
+        //         &-wrap {
+        //             display: flex;
+        //             align-items: flex-end;
+        //             font-family: Oswald;
+        //             font-weight: 400;
+        //             font-size: 1.05vw;
+        //             color: #FFFFFF;
+
+        //             span {
+        //                 margin-left: 0.5vw;
+        //                 font-size: 0.65vw;
+        //             }
+        //         }
+
+        //         &-descr {
+        //             margin-top: 0.1vw;
+        //             font-family: Oswald;
+        //             font-weight: 400;
+        //             font-size: 0.47vw;
+        //             letter-spacing: 0.1em;
+        //             text-transform: uppercase;
+        //             color: #627DAE;
+        //         }
+        //     }
+
+        //     &__body {
+        //         position: relative;
+        //         top: 0.7vw;
+        //         right: 0.5vw;
+        //         width: 20vw;
+        //         height: 15.5vw;
+        //         display: flex;
+        //         flex-direction: column;
+
+        //         &-item {
+        //             position: relative;
+        //             width: 100%;
+        //             height: 50%; 
+        //             display: flex;
+        //             justify-content: space-between;
+        //             padding-left: 1.1vw;
+                    
+        //             &_wage-fund {
+        //                 padding-top: 0.6vw;
+        //             }
+
+        //             &_сosts {
+        //                 padding-top: 0.2vw;
+        //             }
+        //         }
+        //     }
+
+        //     &__diagram, &__legend {
+        //         width: 50%;
+        //         height: 100%;
+        //     }
+
+        //     &__diagram {
+        //         position: relative;
+               
+        //         &-data, &-center {
+        //             position: absolute;
+        //             top: 50%;
+        //             left: 50%;
+        //             transform: translate(-50%, -50%);
+        //             height: 7vw;
+        //         }
+
+        //         &-data {
+        //             width: 6.55vw;
+        //         }
+
+        //         &-center {
+        //             display: flex;
+        //             justify-content: center;
+        //             align-items: center;
+        //             width: 4vw;
+        //         }
+
+        //         &-text {
+        //             font-family: Montserrat;
+        //             font-weight: 700;
+        //             font-size: 0.5vw;
+        //             line-height: 0.7vw;
+        //             color: #FFFFFF;
+        //             position: absolute;
+        //             top: 50%;
+        //             left: 50%;
+        //             transform: translate(-50%, -50%);
+        //             width: 40%;
+        //             text-align: center;
+        //             text-transform: uppercase;
+        //         }
+                
+        //         &-value {
+        //             position: absolute;
+        //             font-family: Oswald;
+        //             font-weight: 400;
+        //             font-size: 0.55vw;
+        //             letter-spacing: 0.02em;
+        //             color: #FFFFFF;
+                    
+        //             &_budget-resources {
+        //                 top: 0.6vw;
+        //                 right: -1.2vw;
+        //             }
+
+        //             &_other-resources {
+        //                 left: -0.4vw;
+        //                 bottom: 0.3vw;   
+        //             }
+
+        //             &_land-tax {
+        //                 right: -0.8vw;
+        //                 bottom: 5.9vw;
+        //             }
+
+        //             &_property-tax {
+        //                 top: -0.5vw;
+        //                 right: 1vw;
+        //             }
+
+        //             &_wage-fund {
+        //                 top: 0.5vw;
+        //                 left: -0.3vw;    
+        //             }
+        //         }
+        //     }
+
+        //     &__legend {
+        //         display: flex;
+        //         flex-direction: column;
+        //         justify-content: space-between;
+        //         align-items: flex-start;
+        //         padding: 0 0.8vw 0 1.2vw;
+            
+
+        //         &_wage-fund {
+        //             padding-top: 1.8vw;
+        //             padding-bottom: 0.8vw;
+        //         }
+
+        //         &_сosts {
+        //             padding-top: 1.4vw;
+        //             padding-bottom: 1.4vw;
+        //         }
+                
+        //         &-item {
+        //             display: grid;
+        //             grid-template-columns: 1vw 1fr;
+        //             height: max-content;
+        //         }
+
+        //         &-mark {
+        //             margin-top: 0.05vw;
+        //             width: 0.9vw;
+        //             height: 0.8vw; 
+        //         }
+
+        //         &-descr {
+        //             font-family: Oswald;
+        //             font-weight: 400;
+        //             font-size: 0.7vw;
+        //             line-height: 0.9vw;
+        //             letter-spacing: 0.03em;
+        //             color: #FFFFFF;
+        //         }
+        //     }
+        // }
         
         .science {
             cursor: pointer;
@@ -542,6 +722,7 @@
               
                   .circle-block__text {
                     text-align: center;
+                    font-size: 0.6vw;
                   }
               
                   .circle-block__icon {
@@ -679,18 +860,17 @@
                     transform: rotate(39deg);
                     // background:rgba(33, 122, 255, 0.7);
                     z-index: 999;
-                    cursor: pointer;
                 }
               
                 .cirlce-block__contains {
                   position: static;
                   transform: none;
-                  transform: translate(-0.875vw,-2.083vw);  
+                  transform: translate(-1.875vw, -2.083vw);
               
                   .cirlce-block__wrap {
                     align-items: flex-start;
                     position: relative;
-                    left: 0.1vw;
+                    left: 0.5vw;
               
                     .circle-block__icon {
                       margin-left: 0.4vw;
@@ -704,8 +884,15 @@
               
                   }
               
+                  &:nth-of-type(2) {
+                    transform: translate(-2.8vw, -1vw);
+                    .circle-block__text{
+                      color: #217AFF;
+                    }
+                  }
+              
                   &:last-of-type {
-                    transform: translate(-5vw, -0.6vw);
+                    transform: translate(-7vw, -.1vw);
                     .cirlce-block__wrap {
                       align-items: baseline;
                     }
@@ -720,6 +907,36 @@
                   right: 0;
                   transform: translateY(-50%);
                   z-index: 11;
+                }
+              }
+              
+              .circle-third__icon {
+                width: 15.417vw;
+                height: 17.656vw;
+               
+                path {
+                    transition: all 1s;
+                    stroke-opacity: 0.2;
+                }
+              }
+              
+              .circle__parts {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                top: 0;
+                z-index: 2;
+                width: 18.594vw;
+                height: 18.594vw;
+              }
+              
+              .cirlce-block__wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              
+                .circle-block__icon {
+                  margin-right: 0.4vw;
                 }
               }
               
@@ -914,67 +1131,55 @@
               
                 .circle-block__text {
                   position: relative;
-                  left: .8vw;
+                  left: 2vw;
                 }
+              }
+              
+              .star {
+                margin: 0 .8vw 0 1vw;
+              }
 
-                &-clicked-aria {
-                    position: absolute;
-                    width: 6.5vw;
-                    height: 16vw;
-                    top: 5%;
-                    left: 35%;
-                    transform: rotate(322deg);
-                    z-index: 999;
-                    cursor: pointer;
-                }
+              .circle-second__icon {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 14.323vw;
+                height: 17.604vw;
+              }
               
-                .cirlce-block__contains {
-                  position: static;
-                  transform: none;
-                  transform: translate(-6vw,0.1vw);
+              .circle__part-top {
+                color: #fb9b2b;
+                position: absolute;
+                top: 53%;
+                left: 11%;
               
-                  .cirlce-block__wrap {
-                    align-items: flex-start;
-                    position: relative;
-                    left: 0.5vw;
-              
-                    .circle-block__icon {
-                      margin-left: 0.4vw;
-                      margin-right: 0;                  
-                    }
-              
-                    .down{
-                      position: relative;
-                      top: -1.4vw;
-                    }
-              
-                  }
-              
-                  &:nth-of-type(2) {
-                    transform: translate(-3.5vw,1.4vw);
-                    .circle-block__text{
-                      color: #217AFF;
-                    }
-                  }
-              
-                  &:last-of-type {
-                    transform: translate(-1.2vw,1.8vw);
-
-
-                    .cirlce-block__wrap {
-                      align-items: baseline;
-                    }
-                  }
-                }
-              
-                .circle-block__wrapper {
-                  display: flex;
-                  flex-direction: column;
+                .circle__part-text {
                   position: absolute;
-                  top: 50%;
-                  right: 0;
-                  transform: translateY(-50%);
-                  z-index: 11;
+                  top: 10vw;
+                  left: -2vw;
+                  z-index: 1;
+                }
+              }
+
+              .circle__part-text {
+                text-align: center;
+              
+                span {
+                  display: block;
+                }
+              
+                span:first-of-type {
+                  font-size: 1vw;
+                  line-height: 0.9vw;
+                  font-weight: 700;
+                  margin-bottom: 0.156vw;
+                }
+              
+                span:last-of-type {
+                  letter-spacing: 0.1em;
+                  text-transform: uppercase;
+                  font-size: 0.5vw;
+                  line-height: 0.781vw;
                 }
               }
               
@@ -1604,183 +1809,178 @@
                 width: 5vw;
             }
         }
- 
-        .dpo {
+
+        .vaccination {
             cursor: pointer;
             width: 21.8vw;
             height: 17.2vw;
             margin: 3.5vw 3.7vw 1.5vw auto;
 
             .block-wrap {
-                padding-top: 1.3vw;
-                padding-left: 1.4vw;
-                padding-right: 1.8vw;
-                padding-bottom: 3.9vw;
+                padding-top: 0vw;
+                padding-right: 0.3vw;
+            }
+
+            &__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
 
             &__title {
-                font-size: .88vw !important;
+                max-width: 6vw;
+                text-align: center;
+                line-height: 110%;
+                margin-top: 1.4vw;
+                margin-left: 0.7vw;
             }
 
-            &__info {
-                width: 100%;
-                height: 50%;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
+            &__select {
+                position: relative;
+                margin-right: 0.5vw;
+                margin-top: 1vw;
+                width: 11.2vw;
+                height: 1.8vw;
 
-            &__plan {
-                display: flex;
-                flex-direction: column;
-                margin-top: 0.9vw;
-                margin-left: 0.3vw;
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
 
-                &-header {
-                    font-family: Oswald;
-                    font-weight: 400;
-                    font-size: 0.7vw;
-                    letter-spacing: 0.03em;
-                    color: #CDD6EE;
-                }
+                    &-text {
+                        font-family: Oswald;
+                        font-weight: 400;
+                        font-size: 0.9vw;
+                        line-height: 0.9vw;
+                        letter-spacing: 0.05em;
+                        color: #FFFFFF;
+                    } 
 
-                &-ratio {
-                    font-family: Montserrat;
-                    font-weight: 700;
-                    font-size: 0.9vw;                   
-                    color: #F79A2D;
-                }
-
-                &-progressbar {
-                    margin-top: 0.1vw;
-                    margin-left: -0.3vw;
-                    width: 8.3vw;
-                    height: 1.4vw;
-                }
-
-                &-sum {
-                    font-family: Oswald;
-                    font-weight: 400;
-                    font-size: 0.7vw;
-                    letter-spacing: 0.03em;
-                    color: #FFFFFF;
-                    display: inline-block;
-                    text-align: right;
-                    margin-top: 0.1vw;
-                    margin-right: 0.8vw;
-                   
-
-                    span {
+                    &-icon {
+                        margin-top: 0.2vw;
                         margin-left: 0.2vw;
+                        width: 0.6vw;
+                        height: 0.7vw;
                     }
+                }
+            }
+
+            &__diagram {
+                width: 100%;
+                height: 6.2vw;
+                padding-top: 0.5vw;
+                display: flex;
+
+                &-info {
+                    width: 32.5%;
+                    height: 110%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                 }
 
                 &-value {
-                    display: inline;
-                }
-            }
-
-            &__legend {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                height: 100%;
-                
-                &-item { 
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    padding-left: 1.9vw;
-
-                    &_fact {
-                        margin-top: 0.6vw;
-                        padding-right: 0.9vw;
-                    }
-
-                    &_planned {
-                        margin-top: 1.3vw;
-                    }
+                    font-family: Oswald;
+                    font-weight: 400;
+                    font-size: 1.2vw;
+                    line-height: 1.7vw;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
                 }
 
                 &-descr {
                     font-family: Oswald;
                     font-weight: 400;
-                    font-size: 0.7vw;
-                    line-height: 0.9vw;
-                    letter-spacing: 0.03em;
-                    color: #CDD6EE;
+                    font-size: 0.75vw;
+                    line-height: 0.8vw;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
                 }
 
-                &-sum {
+                &-frame {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+
+                &-wrap {
+                    position: relative;
+                    width: 66.5%;
+                    height: 100%;
+                }
+            }
+
+            &__graphiс {
+                width: 100%;
+                height: 100%;
+                padding: 0.5vw 0;
+                margin-left: 1vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &-data {
+                    width: 100%;
+                    height: 100%;
+                    overflow: visible;
+                }
+        
+                &-row, &-data {
+                    width: 100%;
+                    height: 100%;
+                }
+        
+                &-value {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 0.45em;
+                    fill: #FFFFFF;
+                    font-stretch: none;   
+                }
+            }
+
+            &__legend {
+                padding: 0.1vw;
+                width: 100%;
+                height: 5vw;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                padding-top: 0.5vw;
+                margin-left: 0.7vw;
+
+                &-item {
+                    
+                    display: grid;
+                    height: 1.3vw;
+                    grid-template-columns: 1vw 8vw;
+                }
+
+                &-icon {
+                    width: 0.8vw;
+                    height: 0.9vw;
+                }
+
+                &-descr {
+                    margin-left: 0.3vw;
                     font-family: Oswald;
                     font-weight: 400;
-                    font-size: 0.7vw;
-                    letter-spacing: 0.03em;
+                    font-size: 0.65vw;
+                    line-height: 0.7vw;
+                    letter-spacing: 0.05em;
                     color: #FFFFFF;
-                    display: inline-block;
-                    margin-top: 0.2vw;
-
-                    span {
-                        margin-left: 0.2vw;
-                    }
-                }
-
-                &-value {
-                    display: inline;
-                }
-
-            }
-
-            &__divider {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 80%;
-                height: 0.2vw;
-            }
-
-            &__data {
-                margin-top: 0.5vw;
-                &-title {
-                    font-family: 'Oswald';
-                    font-weight: 400;
-                    font-size: 0.85vw;
-                    text-transform: uppercase;
-                    letter-spacing: 0.03em;
-                    color: #FFFFFF;
-                }
-                &-item {
-                    width: 100%;
-                    height:  2.5vw;
-                    margin-top: -0.1vw;
-                    &__info {
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                    &__ratio {
-                        margin-left: 1.8vw;
-                        font-family: 'Montserrat';
-                        font-weight: 700;
-                        font-size: .8vw;
-                        color: #48CC8B;
-
-                    }
-                    &__value, &__descr {
-                        font-family: 'Oswald';
-                        font-weight: 400;
-                        font-size: .78vw;
-                        letter-spacing: 0.03em;
-                        color: #FFFFFF;
-                    }
-                    &__progress {
-                        margin-top: 0vw;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                    }
-                    &__descr {
-                        margin-top: -0.1vw;
-                    }
                 }
             }
         }
@@ -1823,8 +2023,8 @@
     
     position: absolute;
     display: grid;
-    gap: 11.8vw;
-    bottom: 0.5vw;
+    gap: 10.8vw;
+    bottom: 0.3vw;
     left: 50%;
     transform: translateX(-50%);
     grid-template-columns: 5vw 5vw;
@@ -1835,10 +2035,16 @@
 
     &-science {
         gap: 10.6vw;
-        bottom: 0.8vw;
+        bottom: 0.3vw;
     }
 
     &-dpo {
+        gap: 10.8vw;
+        bottom: 0.2vw;
+    }
+
+    
+    &-vaccination {
         gap: 10.8vw;
         bottom: 0.3vw;
     }
