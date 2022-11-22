@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 2,
-            name: 'Высшая школа Финансов',
+            name: 'Московский промышленно-экономический колледж',
             color: '#EF8E8E',
             fact: 30,
             plan: 15000,
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 3,
-            name: 'Высшая школа Менеджмента',
+            name: 'Управление "Приемная комиссия"',
             color: '#2BD6FB',
             fact: 20,
             plan: 1000,
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 4,
-            name: 'Высшая школа кибертехнологий, математики и статики',
+            name: 'Центр социально-экономических проектов',
             color: '#627DAE',
             fact: 130,
             plan: 20000,
@@ -239,18 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
             items: []
         },
         {
-            id: 5,
-            name: 'Высшая инженерная школа «Новые материалы и технологии»',
-            color: '#4CD382',
-            fact: 69,
-            plan: 15000,
-            isIcrease: true,
-            currentMonth: 8,
-            annualStatistics: [10, 30, 20, 35, 96, 85, 88, 55, 40, 43, 20, 10],
-        },
-        {
             id: 6,
-            name: 'Высшая школа Социально – гуманитарных наук',
+            name: 'Институт бизнеса и управленческого образования "Business and executive education"',
             color: '#6C38FF',
             items: [],
             fact: 13,
@@ -261,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 8,
-            name: 'Высшая школа права',
+            name: 'Московский приборостроительный техникум',
             color: '#FB9B2B',
             fact: 80,
             plan: 19000,
@@ -272,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 9,
-            name: 'НИО',
+            name: 'Базовая кафедра благотворительного фонда поддержки образовательных программ "Капитаны" "Инновационный менеджмент и социальное предпринимательство"',
             color: '#FBE62B',
             fact: 89,
             plan: 4000,
@@ -283,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 10,
-            name: 'Прочие подразделения',
+            name: 'Факультет дистанционного обучения',
             color: '#A7EB17',
             fact: 9,
             plan: 7000,
@@ -614,19 +604,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // *** МОДАЛЬНОЕ ОКНО ***
 
     // Инициализация DOM элементов модального окна.
-    const overlay          = document.querySelector('.overlay')
-    const modals           = document.querySelectorAll('.modal')
-    const modalSmall       = document.querySelector('.modal_small')
-    const modalMedium      = document.querySelector('.modal_medium')
-    const modalLarge       = document.querySelector('.modal_large')
-    const modalSubject     = modalLarge.querySelector('.modal__title-subject')
-    const modalSubmit      = modalLarge.querySelector('.modal__submit')
-    const modalConfirm     = document.querySelectorAll('.modal__btn_confirm')
-    const modalCancelled   = document.querySelectorAll('.modal__btn_cancelled')
-    const selectReportBtn  = document.querySelector('.modal__select-report')
-    const selectMeetingBtn = document.querySelector('.modal__select-meeting')
-    const places           = modalLarge.querySelector('.modal__place-wrapper')
-    const timetable        = modalLarge.querySelector('.modal__timetable-wrapper')
+    const overlay             = document.querySelector('.overlay')
+    const modals              = document.querySelectorAll('.modal')
+    const modalSmall          = document.querySelector('.modal_small')
+    const modalMedium         = document.querySelector('.modal_medium')
+    const modalLarge          = document.querySelector('.modal_large')
+    const modalSubject        = modalLarge.querySelector('.modal__title-subject')
+    const modalMediumSubject  = document.querySelector('.modal_medium__title-subject')
+    const modalSubmit         = modalLarge.querySelector('.modal__submit')
+    const modalConfirm        = document.querySelectorAll('.modal__btn_confirm')
+    const modalCancelled      = document.querySelectorAll('.modal__btn_cancelled')
+    const selectReportBtn     = document.querySelector('.modal__select-report')
+    const selectMeetingBtn    = document.querySelector('.modal__select-meeting')
+    const places              = modalLarge.querySelector('.modal__place-wrapper')
+    const timetable           = modalLarge.querySelector('.modal__timetable-wrapper')
     
     // Инициализация объекта "msg".
     let msg = {
@@ -660,16 +651,72 @@ document.addEventListener('DOMContentLoaded', () => {
     //Модальное окно: Служебные функции.
 
     // Установка заголовка модального окна. 
-    const setModalTitle = subject => {
+    const setModalTitle = (subject, isLargeModal = true) => {
         let title = ''
+        let keyWord = ''
+        let array = subject.toLowerCase().split(' ')
 
-        if (subject === 'Прочие подразделения') {
-            title = 'прочими подразделениями'
-        } else if (subject === 'НИО') {
-            title = 'НИО'
-        } else {
-            title = 'Высшей школой'
+        array.forEach(substr => {
+            if (substr == 'кафедра' || substr == 'колледж' || substr == 'управление' || substr == 'центр' || substr == 'факультет' || substr == 'институт' || substr == 'техникум' || substr == 'кафедра') {
+                keyWord = substr
+            }
+        })
+
+        if (isLargeModal) {
+            switch(keyWord) {
+                case 'кафедра' :
+                    title = 'кафедрой'
+                break
+                case 'колледж' :
+                    title = 'колледжем'
+                break
+                case 'управление' :
+                    title = 'управлением'
+                break
+                case 'центр' :
+                    title = 'центром'
+                break
+                case 'факультет' :
+                    title = 'факультетом'
+                break
+                case 'техникум' :
+                    title = 'техникумом'
+                break
+                case 'институт' :
+                    title = 'институтом'
+                break
+                default: 
+                title = 'высшей школой'  
+            } 
+        } 
+        else {
+            switch(keyWord) {
+                case 'кафедра' :
+                    title = 'кафедру'
+                break
+                case 'колледж' :
+                    title = keyWord
+                break
+                case 'управление' :
+                    title = keyWord
+                break
+                case 'центр' :
+                    title = keyWord
+                break
+                case 'факультет' :
+                    title = keyWord
+                break
+                case 'техникум' :
+                    title = keyWord
+                break
+                case 'институт' :
+                    title = keyWord
+                break
+                default: 
+                title = 'высшую школоу'  
+            } 
         }
+
         return title
     }
 
@@ -1139,6 +1186,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             unit = partner
                             calendarInit()
                             modalSubject.textContent = setModalTitle(partner.name)
+                            modalMediumSubject.textContent = setModalTitle(partner.name, false)
                         }
                     })
                 }
