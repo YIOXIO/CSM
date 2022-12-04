@@ -661,8 +661,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 keyWord = substr
             }
         })
-        console.log(subject)
-        console.log(keyWord)
+
         if (isLargeModal) {
             switch(keyWord) {
                 case 'кафедра' :
@@ -717,8 +716,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 title = 'высшую школоу'  
             } 
         }
-
-        
 
         return title
     }
