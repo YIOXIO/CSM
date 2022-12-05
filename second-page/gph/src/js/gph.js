@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     id: 13,
                     name: 'Кафедра маркетинга (в т.ч. научно-исследовательская лаборатория «Маркетинговые исследования транспортного комплекса») 3 ',
-                    inWork: 0,
+                    inWork: 5,
                     expired: 0,
                     projects: [
                         {
@@ -129,16 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             workerFullName: 'Петров Алексей Сергеевич',
                             daysLeft: 10,
                         },
-                        {
-                            startDate: '16.03.2019',
-                            workerFullName: 'Сидоров Виктор Андреевич',
-                            daysLeft: 7,
-                        },
-                        {
-                            startDate: '11.08.2017',
-                            workerFullName: 'Петров Алексей Сергеевич',
-                            daysLeft: 10,
-                        },
+                        
                     ]
                     
                 }
@@ -195,14 +186,14 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 3,
             name: 'B',
             color: 'yellow',
-            inWork: 3,
-            expired: 0,
+            inWork: 54,
+            expired: 54,
             items: [
                 {
                     id: 31,
                     name: 'Базовая кафедра «Экономические и правовые экспертизы»1',
-                    inWork: 2,
-                    expired: 2,
+                    inWork: 11,
+                    expired: 11,
                     projects: [
                         {
                             startDate: '20.05.2021',
@@ -301,37 +292,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 },
                 {
-                    id: 35,
+                    id: 1235,
                     name: 'Базовая кафедра «!!!» 3',
                     inWork: 2,
-                    expired: 1,
+                    expired: 0,
                     projects: [
                         {
                             startDate: '20.05.2021',
-                            workerFullName: 'Иванов Иван Иванович',
+                                workerFullName: 'Иванов Иван Иванович',
                             daysLeft: 6,
                         },
                         {
                             startDate: '16.03.2019',
                             workerFullName: 'Сидоров Виктор Андреевич',
                             daysLeft: 7,
-                        },
-                        {
-                            startDate: '11.08.2017',
-                            workerFullName: 'Петров Алексей Сергеевич',
-                            daysLeft: 0,
-                        },
-                        {
-                            startDate: '20.05.2016',
-                            workerFullName: 'Михалков Никита Сергеевич',
-                            daysLeft: 0,
-                        },
+                        },  
+                       
                     ]
                 },
                 {
                     id: 33,
                     name: 'Базовая кафедра 4',
-                    inWork: 3,
+                    inWork: 10,
                     expired: 10,
                     projects: [
                         {
@@ -359,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     id: 34,
                     name: 'Базовая кафедра «Экономические и правовые экспертизы» 5',
-                    inWork: 3,
+                    inWork: 10,
                     expired: 10,
                     projects: [
                         {
@@ -415,8 +397,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     id: 36,
                     name: 'Базовая кафедра «Экономические и правовые экспертизы»',
-                    inWork: 3,
-                    expired: 10,
+                    inWork: 4,
+                    expired: 2,
                     projects: [
                         {
                             startDate: '20.05.2021',
@@ -443,8 +425,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     id: 37,
                     name: 'Базовая кафедра «Экономические и правовые экспертизы» e',
-                    inWork: 3,
-                    expired: 10,
+                    inWork: 16,
+                    expired: 16,
                     projects: [
                         {
                             startDate: '20.05.2021',
@@ -1225,7 +1207,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (partner.items) {
                             partner.items.find(item => {
                                 if (item.id && item.id == id) {
-                                    console.log(item)
                                     modalLarge.innerHTML = setModalBody(item)
                                 }
                             })
@@ -1297,7 +1278,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function projects(items) { 
         let sortItems = items.sort(byField('daysLeft')).reverse() 
         let out = ''
-        console.log(sortItems)
         sortItems.map(i => {
            out += `<p>${i.startDate}</p><p>${i.workerFullName}</p><p class="days-left ${i.daysLeft <= 0 ? 'font-blue' : ''}">${i.daysLeft}</p>`
         })
@@ -1306,7 +1286,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function frame(expired, projects) {
-        if (projects !== undefined && projects.length > 3) {
+        if (projects !== undefined && projects.length > 4) {
             document.querySelector('.modal').classList.add('frame-modal')
             return `
                 <svg class="modal-bg" viewBox="0 0 1265 1431" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1342,8 +1322,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </linearGradient>
                 </defs>
                 </svg>
-            
-
             `
         }
  
@@ -1358,7 +1336,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <line x1="1.29289" y1="49.2929" x2="49.2929" y2="1.2929" stroke="${item.expired <= 0 ? '#FFFFFF' : '#112054'}" stroke-width="2"/>
             </svg>
             <div class="gph__tabcontent-block__item data-id="${item.id}">
-                <div class="gph__tabcontent-block__info">
+                <div class="gph__tabcontent-block__content">
                     <svg class="gph__tabcontent-block__mark" width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect stroke="${item.color}" x="0" y="0" fill="white"/>
                     </svg>
