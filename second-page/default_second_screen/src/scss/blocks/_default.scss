@@ -46,6 +46,15 @@
         position: absolute;
         width: 100%;   
         top: 7vw;
+
+        img:nth-child(2) {
+           position: absolute;
+           top: 50%;
+           left: 18vw;
+           transform: translate(-50%, -50%);
+           width: 17vw;
+           height: auto;
+        }
     }
 } 
     
