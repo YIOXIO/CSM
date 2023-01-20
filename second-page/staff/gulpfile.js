@@ -8,7 +8,7 @@ const rename       = require('gulp-rename')
 const concat       = require('gulp-concat')
 const uglify       = require('gulp-uglify-es').default
 const newer        = require('gulp-newer')
-const scss         = require('gulp-sass')
+const scss         = require('gulp-sass')(require('sass'))
 const del          = require('del')
 
 
