@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //====================== вывод данных в блок international__data =========================
 
 
-
+        insertToPage('international__data-header-value', data[3].students)
         new internationalInfoGraphic(data[2].inDetail, 'international__data-body_resources', null, 'blue').render();
         new internationalInfoGraphic(data[3].inDetail, 'international__data-body_students', null, 'blue').render();
         new internationalInfoGraphic(data[4].foreignlLanguages, 'international__data-body_foreign-languages', null, 'blue').render();
