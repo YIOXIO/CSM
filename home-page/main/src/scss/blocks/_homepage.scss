@@ -764,8 +764,6 @@
                     // background-color:rgba(33, 122, 255, 0.7);
                     cursor: pointer;
                     z-index: 999;
-
-
                 }
               
                 .circle-fifth__icon {
@@ -1128,7 +1126,19 @@
                 height: 17.604vw;
                 z-index: 2;
                 transform: translate(0.6vw, -6.2vw);
-              
+                
+
+                &-clicked-aria {
+                    position: absolute;
+                    width: 7.5vw;
+                    height: 18vw;
+                    top: 0%;
+                    left: 29%;
+                    transform: rotate(326deg);
+                    // background-color: rgba(33,122,255,.7);
+                    z-index: 998;
+                }
+
                 .circle-block__text {
                   position: relative;
                   left: 2vw;
@@ -1272,7 +1282,7 @@
                 }
             }
 
-            .circle-block__first-clicked-aria, .circle-block__third-clicked-aria, .circle-block__fifth-clicked-aria {
+            .circle-block__second-clicked-aria, .circle-block__first-clicked-aria, .circle-block__third-clicked-aria, .circle-block__fifth-clicked-aria {
                 cursor: pointer;
             }
 

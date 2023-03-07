@@ -58,6 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    document.querySelector('#ninth-building').addEventListener('click', () => {
+        //...
+    });
+
     document.querySelector('#international').addEventListener('click', () => {
         
     });
