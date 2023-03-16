@@ -15,10 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    document.querySelector('#plugLeft').addEventListener('click', () => {
-        
-    });
-
     document.querySelector('#portraits').addEventListener('click', () => {
 
         
@@ -200,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const generalData = {
         students:  4844,
-        rate: 5,
+        // rate: 5,
         teachers: 1279,
         scientists: 347,
         score: 4.2,
