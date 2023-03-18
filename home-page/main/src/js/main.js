@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const generalData = {
         students:  4844,
-        // rate: 5,
+        rate: 5,
         teachers: 1279,
         scientists: 347,
         score: 4.2,
