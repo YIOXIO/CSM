@@ -10,10 +10,12 @@
 
   &_portraits {
     left: 5vw;
+    user-select: none;
   }
 
   &_priority {
     left: 13vw;
+    user-select: none;
   }
 
   &_covid {
@@ -22,6 +24,7 @@
     width: 11vw;
     top: 1vw;
     cursor: pointer;
+    user-select: none;
   }
 
   &_to-website {
@@ -256,7 +259,7 @@
     &_home {
       top: 1.7vw;
       left: 2.9vw;
-      z-index: 1;
+      z-index: 101;
       cursor: pointer;
     }
 }

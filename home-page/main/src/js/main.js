@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     document.querySelector('#covid_click').addEventListener('click', () => {
-       
+        console.log('covid_click')
     });
 
     document.querySelector('#partners').addEventListener('click', () => {
@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('#portraits').addEventListener('click', () => {
-
+        console.log('portraits')
         
     });
 
     document.querySelector('#priority').addEventListener('click', () => {
-        
+        console.log('priority')
     });
 
     document.querySelector('#all_branches').addEventListener('click', () => {
@@ -54,8 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    document.querySelector('#rec_click').addEventListener('click', (e) => {
+        console.log('rec_click')
+    });
+
     document.querySelector('#ninth-building').addEventListener('click', () => {
-        //...
+        console.log('ninth-building')
     });
 
     document.querySelector('#international').addEventListener('click', () => {
