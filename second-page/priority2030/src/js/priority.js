@@ -39,7 +39,7 @@ const API = {
       plan: '1111',
       fact: '1427',
       annualStatistics: [800, 1050, 1110, 1130, 1200, 1190, 1300, 1200, 1400],
-      unit: 'people'
+      unit: 'people',
     },
     {
       id: 'p6',
@@ -118,7 +118,7 @@ const API = {
   ]
 }
 
-const DIAGRAM_MAX_VAL = 2000
+const DIAGRAM_MAX_VAL =  API.base[4].max_value || 2000
 
 // tabs
 
