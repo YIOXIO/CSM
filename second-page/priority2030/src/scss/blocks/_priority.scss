@@ -308,12 +308,6 @@
                         margin-left: .2vw;
                     }
                 }
-
-                &-fact {
-                    div {
-                        color: #FB9B2B;
-                    }
-                }
             }
 
             .diagram-wrap {
@@ -332,6 +326,13 @@
                     position: absolute;
                     width: 100%;
                     border-bottom: 1px dashed #FFFFFF;
+                }
+
+                .priority__item-plan {
+                    position: absolute;
+                    bottom: 0;
+                    transform: translateY(50%);
+                    right: -9vw;
                 }
             }
         }

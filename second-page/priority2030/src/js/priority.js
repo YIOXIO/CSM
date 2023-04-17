@@ -423,15 +423,18 @@ const templateData = (
           <span>${setUnit(unit)}</span>
         </div>
         <div class="priority__item-plan">
-          <span>Плановое значение</span>
-          <div>${plan}</div>
-          <span>${setUnit(unit)}</span>
         </div>
       </div>
       <div class="diagram-wrap"> 
         <div class="diagram-box"></div>
         <div class="planned-box">
-          <div style="height:${(plan / DIAGRAM_MAX_VAL) * 100}%;" class="planned-line"></div>
+          <div style="height:${(plan / DIAGRAM_MAX_VAL) * 100}%;" class="planned-line">
+            <div class="priority__item-plan">
+              <span>Плановое значение</span>
+              <div>${plan}</div>
+              <span>${setUnit(unit)}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
