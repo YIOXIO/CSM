@@ -5,7 +5,7 @@ const API = {
       date: '28.02.2023',
       title: 'Р1 Объем НИОКР в расчете на одного научно-педагогического работника',
       plan: '421320.00 ',
-      fact: '33967.00',
+      fact: '1133967.00',
       unit: 'rub'
     },
     {
@@ -311,7 +311,7 @@ const progressbar = ratio => {
   <svg class="priority__item-progressbar" viewBox="0 0 1054 60" fill="none"
     xmlns="http://www.w3.org/2000/svg">
     <rect opacity="0.05" x="-2" width="100%" height="100%" fill="white"></rect>
-    <rect y="1" width="${ratio}%" height="100%" fill="url(#p1-m-1)"></rect>
+    <rect y="1" width="${+ratio < 100 ? ratio : 100  }%" height="100%" fill="url(#p1-m-1)"></rect>
     <path d="M15.3077 1H20.1543L-24.2247 60H-29.0713L15.3077 1Z" fill="#112054"></path>
     <path d="M1042.03 60L1086.41 1H1081.56L1037.18 60H1042.03Z" fill="#112054"></path>
     <path d="M1022.64 60L1067.02 1H1062.18L1017.8 60H1022.64Z" fill="#112054"></path>
