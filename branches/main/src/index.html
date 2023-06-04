@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="bg"></div>
+	
+		<header class="header">
+			<form action="/" class="header__search">
+				<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 68" class="header__search-bg">
+					<path d="M24.5 21.5L2 -1H978.5L956 21.5H871.5L853 40H785.5L758 67.5H115L69 21.5H24.5Z" fill="#112054" fill-opacity="0.18" stroke="#217AFF" stroke-opacity="0.2" />
+				</svg>
+			
+				<div class="header__search-contains">
+					<button type="submit" class="header__search-submit">
+					<svg width="0.885vw" height="1.8vh" viewBox="0 0 17 17">
+						<path
+							d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z"
+							stroke="#FB9B2B"
+							stroke-width="2"
+							stroke-miterlimit="10"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+						<path d="M12 12L16 16" stroke="#FB9B2B" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+					</button>
+					<input type="search" class="header__search-input" placeholder="Поиск" />
+				</div>
+			</form>
+		
+			<svg fill="none" xmlns="http://www.w3.org/2000/svg" class="header__bg" width="4.531vw" height="30.104vw" viewBox="0 0 87 578">
+				<path d="M55 188C55 189.657 53.6569 191 52 191C50.3431 191 49 189.657 49 188" stroke="#217AFF" stroke-width="2" />
+				<path d="M60.1315 185L52 172.803L43.8685 185L60.1315 185Z" stroke="#217AFF" stroke-width="2" />
+				<g opacity="0.68">
+					<path d="M15 -66L15 -108L15 -134L123.5 -134C145.5 -134 132.667 322 123.5 575L61 513L61 460.5L49 448L49 408.5L61 396L61 247.5L15 201L15 41L1.00001 27L1 -52L15 -66Z" fill-opacity="0.18" fill="#112054" />
+					<path
+						d="M60.5 513L60.5 460.701L48.6393 448.346L48.5 448.201L48.5 448L48.5 408.5L48.5 408.299L48.6393 408.154L60.5 395.799L60.5 247.706L14.6446 201.352L14.5 201.206L14.5 201L14.5 41.2071L0.646454 27.3535L0.500007 27.2071L0.500007 27L0.500004 -52L0.500004 -52.2071L0.64645 -52.3536L14.5 -66.2071L14.5 -108L14.5 -134L14.5 -134.5L15 -134.5L123.5 -134.5C124.427 -134.5 125.211 -133.897 125.869 -132.974C126.532 -132.044 127.139 -130.692 127.701 -128.973C128.828 -125.526 129.819 -120.468 130.688 -113.979C132.428 -100.991 133.696 -82.1708 134.57 -58.8156C136.318 -12.0999 136.49 52.8162 135.687 125.63C134.083 271.262 128.583 448.517 124 575.018L123.958 576.159L123.148 575.355L60.6479 513.355L60.5 513.208L60.5 513Z"
+						stroke="#217AFF"
+						stroke-opacity="0.4"
+					/>
+				</g>
+				<path
+					d="M28.5 194V194.207L28.6464 194.354L41.6464 207.354L41.7929 207.5H42H74H74.5V207V167V166.793L74.3536 166.646L64.3536 156.646L64.2071 156.5H64H29H28.5V157V194Z"
+					stroke="#217AFF"
+					stroke-opacity="0.2"
+				/>
+			</svg>
+	</header>
+
+	<main class="layout">
+		<div class="topnav">
+			<ul id="rec_click" class="layout-link layout-link_home">
+				<li class="layout-link__item">
+					<svg width="2.708vw" height="2.708vw" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M51 38V1H11L1 11V51H38L51 38Z" fill="black" fill-opacity="0.1"/>
+						<path d="M51.5 38V38.2071L51.3536 38.3536L38.3536 51.3536L38.2071 51.5H38H1H0.5V51V11V10.7929L0.646446 10.6464L10.6464 0.646447L10.7929 0.5H11H51H51.5V1V38Z" stroke="#217AFF" stroke-opacity="0.4"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M35.2485 26.8038H33.5024C33.0867 26.8038 32.7125 27.1846 32.7125 27.6077C32.3799 31.0346 29.5114 33.7 26.0608 33.7C22.3607 33.7 19.3259 30.6115 19.3259 26.8885C19.3259 23.1654 22.3607 20.1615 25.9776 20.1192V21.2192C25.9776 21.7269 26.3102 21.8962 26.7675 21.7269L32.3799 18.85C32.8372 18.5962 32.8372 18.2154 32.3799 17.9615L26.7675 15.0423C26.6428 15 26.5596 15 26.4765 15C26.1855 15 25.9776 15.1692 25.9776 15.5077V16.6077C20.4899 16.6923 16 21.2192 16 26.8038C16 32.4731 20.4484 37 26.0192 37C31.299 37 35.6227 32.8115 35.9968 27.5231C36.0384 27.1846 35.6643 26.8038 35.2485 26.8038Z" fill="#217AFF"/>
+					</svg>
+				</li>
+			</ul>
+
+			<a id="portraits" class="topnav__btn topnav__btn_portraits" href="#">
+				<svg class="topnav__btn-border" width="105" height="52" viewBox="0 0 105 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M104 38V1H11L1 11V51H91L104 38Z" fill="black" fill-opacity="0.1"/>
+					<path d="M104.5 38V38.2071L104.354 38.3536L91.3536 51.3536L91.2071 51.5H91H1H0.5V51V11V10.7929L0.646446 10.6464L10.6464 0.646447L10.7929 0.5H11H104H104.5V1V38Z" stroke="#217AFF" stroke-opacity="0.4"/>
+				</svg>
+				<p class="topnav__btn-text">Портреты</p>
+			</a>
+		</div>
+		
+
+
+		<div class="homepage">	
+			<div class="homepage__left">
+
+
+				<section id="finance" class="finance block">
+					<svg class="block-bg" viewBox="0 0 437 429" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.5 34.5V410V411L18 427.5H113L121.5 419H142.5L148.5 425.5H186L197.5 413.5H307.5L319 424.5H419L433.5 410L434.5 30L415.5 11.5H385.5L376 2H334L324.5 11.5H24.5L1.5 34.5Z" fill="#112054" fill-opacity="0.18" stroke="#217AFF" stroke-opacity="0.9" stroke-width="3"/>
+						<path d="M339.81 5H368L364.19 9H336L339.81 5Z" fill="#223E9E"/>
+						<path d="M169.381 418H187L184.619 420H167L169.381 418Z" fill="#0E2D7B"/>
+						<path d="M173.381 414H191L188.619 416H171L173.381 414Z" fill="#0E2D7B"/>
+						<path d="M339.864 5H353L349.136 9H336L339.864 5Z" fill="#217AFF"/>
+						<path d="M169.5 418H178L175.5 420H167L169.5 418Z" fill="#217AFF"/>
+						<path d="M173.5 414H186L183.5 416H171L173.5 414Z" fill="#217AFF"/>
+					</svg>
+
+					<div class="block-wrap block-wrap">
+						<div class="finance__header">
+							<div class="finance__title block-title">Финансы</div>
+							<div class="finance__total">
+								<div class="finance__total-wrap">
+									<div class="finance__total-value"></div>
+									<span>руб.</span>
+								</div>
+								<div class="finance__total-descr">Основные средства на балансе</div>
+							</div>
+						</div>
+
+						<div class="finance__body">
+							<img class="block-bg" src="./assets/img/main/grid-finance.svg" alt="grid">
+							<div class="finance__body-item finance__body-item_wage-fund">
+								<div class="finance__diagram">
+									<div class="finance__diagram_wage-fund finance__diagram-data"></div>
+
+									<div class="finance__diagram-value finance__diagram-value_budget-resources"></div> 
+									<div class="finance__diagram-value finance__diagram-value_other-resources"></div> 
+									
+									
+								</div>
+								<div class="finance__legend finance__legend_wage-fund">
+									<div class="finance__legend-item">
+										<svg class="finance__legend-mark" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="2.12132" y="8" width="7" height="7" transform="rotate(-45 2.12132 8)" stroke="#2BD6FB" stroke-width="3"/>
+										</svg>
+										<div class="finance__legend-descr">Из средств бюджета</div>
+									</div>
+
+									<div class="finance__legend-item">
+										<svg class="finance__legend-mark" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="2.12132" y="8" width="7" height="7" transform="rotate(-45 2.12132 8)" stroke="#217AFF" stroke-width="3"/>
+											</svg>
+											
+										<div class="finance__legend-descr">Из средств от иной приносящей доход деятельности</div>
+									</div>
+								</div>
+							</div>
+							<div class="finance__body-item finance__body-item_сosts">
+								<div class="finance__diagram">
+									<div class="finance__diagram_сosts finance__diagram-data"></div>
+
+										
+									<div class="finance__diagram-value finance__diagram-value_land-tax"></div> 
+									<div class="finance__diagram-value finance__diagram-value_property-tax"></div> 
+									<div class="finance__diagram-value finance__diagram-value_wage-fund"></div> 
+									
+								
+								</div>
+								<div class="finance__legend finance__legend_сosts">
+									<div class="finance__legend-item">
+										<svg class="finance__legend-mark" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="2.12132" y="8" width="7" height="7" transform="rotate(-45 2.12132 8)" stroke="#FD6A6A" stroke-width="3"/>
+										</svg>
+										<div class="finance__legend-descr">Фонд оплаты труда</div>
+									</div>
+
+									<div class="finance__legend-item">
+										<svg class="finance__legend-mark" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="2.12132" y="8" width="7" height="7" transform="rotate(-45 2.12132 8)" stroke="#FB9B2B" stroke-width="3"/>
+										</svg>
+											
+										<div class="finance__legend-descr">Земельный налог</div>
+									</div>
+
+									<div class="finance__legend-item">
+										<svg class="finance__legend-mark" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="2.12132" y="8" width="7" height="7" transform="rotate(-45 2.12132 8)" stroke="#FFC01D" stroke-width="3"/>
+										</svg>
+										<div class="finance__legend-descr">Имущественный налог</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="calendar calendar-finance">
+							<basic-calendar class="calendar-unit" dir="left"></basic-calendar>
+							<basic-calendar class="calendar-unit" dir="right"></basic-calendar>
+						</div>
+					</div>
+				</section>
+
+				<section id="staff" class="staff block">
+					<svg class="block-bg" viewBox="0 0 417 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2 34.5V356V357L18.5 373.5H113.5L122 365H143L149 371.5H186.5L198 359.5H288L299.5 371.5H399.5L414 356L415 30L396 11.5H276L266.5 2H224.5L215 11.5H25L2 34.5Z" fill="#112054" fill-opacity="0.18" stroke="#217AFF" stroke-opacity="0.9" stroke-width="3"/>
+						<path d="M232.81 7H261L257.19 11H229L232.81 7Z" fill="#0E2D7B"/>
+						<path d="M165.881 354H183.5L181.119 356H163.5L165.881 354Z" fill="#0E2D7B"/>
+						<path d="M169.881 350H187.5L185.119 352H167.5L169.881 350Z" fill="#0E2D7B"/>
+						<path d="M232.864 7H246L242.136 11H229L232.864 7Z" fill="#217AFF"/>
+						<path d="M166 354H174.5L172 356H163.5L166 354Z" fill="#217AFF"/>
+						<path d="M170 350H182.5L180 352H167.5L170 350Z" fill="#217AFF"/>
+					</svg>
+					<div class="block-wrap">
+						<div class="staff__title block-title">Сотрудники</div>
+						<div class="staff__info">
+							<div class="staff__diagram-wrap">
+								<div class="staff__diagram finance__diagram-data"></div>
+							</div>
+							<ul class="staff__list">
+								<li>
+									<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="2.12132" y="8" width="7" height="7" transform="rotate(-45 2.12132 8)" stroke="#217AFF" stroke-width="3"/>
+									</svg>
+									<span>Профессорско-преподавательский состав</span>
+								</li>
+								<li>
+									<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="2.12132" y="8" width="7" height="7" transform="rotate(-45 2.12132 8)" stroke="#EF8E8E" stroke-width="3"/>
+									</svg>
+									<span>Научные руководители</span>
+								</li>
+								<li>
+									<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="2.12132" y="8" width="7" height="7" transform="rotate(-45 2.12132 8)" stroke="#2BD6FB" stroke-width="3"/>
+									</svg>
+									<span>Административно-управленческий персонал</span>
+								</li>
+								<li>
+									<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="2.12132" y="8" width="7" height="7" transform="rotate(-45 2.12132 8)" stroke="#627DAE" stroke-width="3"/>
+									</svg>
+									<span>Учебно-вспомогательный персонал</span>
+								</li>
+								<li>
+									<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="2.12132" y="8" width="7" height="7" transform="rotate(-45 2.12132 8)" stroke="#4CD382" stroke-width="3"/>
+									</svg>
+									<span>Прочий обслуживающий персонал</span>
+								</li>
+								<li>
+									<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="2.12132" y="8" width="7" height="7" transform="rotate(-45 2.12132 8)" stroke="#6C38FF" stroke-width="3"/>
+									</svg>
+									<span>Среднее профессиональное образование</span>
+								</li>
+								<p>+ Лицей</p>
+							</ul>
+						</div>
+						<div class="calendar calendar-staff">
+							<basic-calendar class="calendar-unit" dir="left"></basic-calendar>
+							<basic-calendar class="calendar-unit" dir="right"></basic-calendar>
+						</div>		
+					</div>
+				</section>
+			</div>
+
+
+			<div class="homepage__middle"> 
+				<section class="main block">
+
+
+					<div>
+						<div class="circle-block" >
+							<div class="performance-diagram">
+								<div class="performance-diagram__contains">
+									<svg  class="performance-diagram-svg absolute-progrss-bar" width="10vw" height="10.1vw" viewBox="0 0 363 361" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="absolute-progrss-bar-item-1" d="M47.8668 179.775C47.9261 177.007 48.0712 174.231 48.3039 171.451L3.4607 167.698C3.15005 171.409 2.95626 175.115 2.87708 178.811L47.8668 179.775Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-2" d="M48.7158 167.304C49.032 164.554 49.4346 161.801 49.9254 159.047L5.62377 151.151C4.96958 154.82 4.43249 158.493 4.01043 162.163L48.7158 167.304Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-3" d="M50.7195 154.958C51.2888 152.249 51.9445 149.541 52.6885 146.837L9.30051 134.901C8.31223 138.493 7.43992 142.095 6.68178 145.702L50.7195 154.958Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-4" d="M53.8723 142.814C54.691 140.132 55.5863 137.494 56.5549 134.901L14.4008 119.152C13.1108 122.605 11.9201 126.114 10.8324 129.678L53.8723 142.814Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-5" d="M58.0757 131.041C59.1416 128.447 60.2797 125.904 61.4866 123.413L20.9899 103.791C19.3827 107.108 17.869 110.491 16.4529 113.937L58.0757 131.041Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-6" d="M63.3283 119.353C64.6088 116.899 65.9698 114.475 67.4113 112.086L28.8827 88.8365C26.9584 92.0253 25.1413 95.2611 23.4315 98.5386L63.3283 119.353Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-7" d="M69.619 108.552C71.1219 106.228 72.7037 103.938 74.3646 101.688L38.1588 74.9648C35.945 77.9641 33.8352 81.0174 31.8295 84.1195L69.619 108.552Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-8" d="M76.8904 98.3747C78.6018 96.1995 80.3902 94.0632 82.2561 91.9695L48.6608 62.0303C46.1821 64.8118 43.803 67.6533 41.5239 70.55L76.8904 98.3747Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-9" d="M85.1011 88.8883C87.0244 86.8471 88.9968 84.8794 91.0147 82.9852L60.2157 50.1763C57.5284 52.699 54.9049 55.3165 52.3499 58.028L85.1011 88.8883Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-10" d="M94.0897 80.1999C96.1955 78.3475 98.3433 76.5729 100.529 74.8756L72.9335 39.3304C70.0221 41.5907 67.1653 43.9514 64.3679 46.4121L94.0897 80.1999Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-11" d="M103.906 72.4006C106.151 70.7817 108.455 69.2267 110.815 67.7389L86.8181 29.6715C83.6674 31.6576 80.5914 33.7338 77.5926 35.8954L103.906 72.4006Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-12" d="M114.375 65.5715C116.761 64.1687 119.202 62.8328 121.696 61.5672L101.333 21.4379C98.0091 23.1248 94.7534 24.9065 91.5689 26.7787L114.375 65.5715Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-13" d="M125.44 59.7394C127.946 58.5635 130.503 57.4571 133.11 56.4233L116.523 14.5918C113.059 15.965 109.658 17.4367 106.322 19.0027L125.44 59.7394Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-14" d="M137.035 54.9468C139.67 53.9858 142.315 53.1125 144.969 52.3252L132.169 9.18409C128.635 10.2325 125.116 11.3943 121.616 12.6709L137.035 54.9468Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-15" d="M148.967 51.2157C151.68 50.5054 154.395 49.8833 157.111 49.3476L148.401 5.19852C144.785 5.91191 141.173 6.7395 137.568 7.68319L148.967 51.2157Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-16" d="M161.461 48.3745C164.192 47.9195 166.946 47.5473 169.722 47.2604L165.094 2.49899C161.389 2.88203 157.711 3.3789 154.065 3.98649L161.461 48.3745Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-17" d="M173.873 46.8958C176.634 46.6966 179.414 46.5817 182.21 46.5533L181.755 1.55565C178.027 1.59342 174.319 1.74667 170.634 2.01252L173.873 46.8958Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-18" d="M186.377 46.5752C189.144 46.6323 191.927 46.7745 194.722 47.004L198.405 2.155C194.692 1.85006 190.991 1.66085 187.306 1.5848L186.377 46.5752Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-19" d="M198.894 47.4213C201.682 47.7284 204.44 48.1188 207.168 48.5898L214.826 4.24626C211.194 3.619 207.524 3.09975 203.821 2.69183L198.894 47.4213Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-20" d="M211.243 49.3686C213.99 49.935 216.7 50.5817 219.371 51.3057L231.143 7.87257C227.585 6.90841 223.98 6.0483 220.331 5.29586L211.243 49.3686Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-21" d="M222.867 51.8187C225.488 52.71 228.091 53.6855 230.672 54.7458L247.774 13.1222C244.329 11.7068 240.854 10.4044 237.354 9.21431L222.867 51.8187Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-22" d="M234.502 56.3894C237.028 57.5203 239.532 58.7345 242.009 60.0327L262.898 20.1751C259.596 18.4446 256.257 16.825 252.885 15.3159L234.502 56.3894Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-23" d="M245.669 62.0231C248.079 63.3827 250.463 64.8244 252.817 66.3492L277.283 28.581C274.156 26.5554 270.985 24.6375 267.774 22.8269L245.669 62.0231Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-24" d="M256.296 68.6915C258.607 70.281 260.852 71.9302 263.032 73.6356L290.76 38.1935C287.857 35.9223 284.87 33.7287 281.801 31.6171L256.296 68.6915Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-25" d="M266.254 76.2496C268.406 78.0482 270.488 79.9002 272.498 81.802L303.419 49.1081C300.741 46.5754 297.973 44.1121 295.114 41.7227L266.254 76.2496Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-26" d="M275.814 84.782C277.768 86.7432 279.668 88.7716 281.511 90.8664L315.297 61.143C312.837 58.3467 310.3 55.6383 307.691 53.0197L275.814 84.782Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-27" d="M284.214 94.0377C285.977 96.1716 287.683 98.3701 289.327 100.632L325.725 74.1712C323.533 71.1559 321.258 68.2235 318.906 65.3757L284.214 94.0377Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-28" d="M291.726 104.039C293.283 106.327 294.781 108.676 296.214 111.087L334.891 88.0843C332.987 84.8821 330.995 81.7569 328.92 78.7104L291.726 104.039Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-29" d="M298.294 114.729C299.66 117.178 300.942 119.652 302.139 122.147L342.709 102.677C341.114 99.3536 339.409 96.0629 337.595 92.8091L298.294 114.729Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-30" d="M303.868 125.919C304.999 128.486 306.043 131.069 307.002 133.665L349.214 118.073C347.937 114.616 346.548 111.18 345.046 107.771L303.868 125.919Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-31" d="M350.851 122.745C351.98 126.123 353.006 129.535 353.93 132.975L310.296 144.629C309.607 142.064 308.842 139.52 308 137L350.851 122.745Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-32" d="M354.969 137.039C355.805 140.474 356.538 143.934 357.167 147.413L313 155.5C312.531 152.905 311.984 150.325 311.361 147.763L354.969 137.039Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-33" d="M357.944 152.056C358.479 155.544 358.911 159.048 359.238 162.563L314.5 166.5C314.256 163.879 313.935 161.266 313.535 158.664L357.944 152.056Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-34" d="M314.994 170.203C315.15 172.967 315.221 175.746 315.205 178.536L360.205 178.791C360.226 175.067 360.131 171.357 359.922 167.666L314.994 170.203Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-35" d="M314.814 182.469C314.673 185.27 314.447 188.047 314.139 190.798L358.859 195.808C359.27 192.145 359.57 188.451 359.757 184.73L314.814 182.469Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-36" d="M313.755 195.239C313.365 197.98 312.889 200.719 312.326 203.451L356.399 212.537C357.151 208.89 357.787 205.233 358.307 201.573L313.755 195.239Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-37" d="M311.421 207.519C310.779 210.211 310.05 212.897 309.234 215.572L352.274 228.707C353.362 225.141 354.334 221.56 355.192 217.967L311.421 207.519Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-38" d="M307.957 219.538C307.068 222.159 306.093 224.769 305.032 227.365L346.682 244.402C348.092 240.954 349.389 237.482 350.573 233.991L307.957 219.538Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-39" d="M303.375 231.218C302.242 233.783 301.038 236.295 299.766 238.754L339.736 259.428C341.429 256.154 343.031 252.812 344.536 249.404L303.375 231.218Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-40" d="M297.794 242.404C296.426 244.852 294.992 247.241 293.496 249.569L331.357 273.891C333.349 270.79 335.256 267.612 337.074 264.36L297.794 242.404Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-41" d="M290.814 252.597C289.248 254.88 287.605 257.122 285.887 259.32L321.339 287.035C323.633 284.101 325.826 281.107 327.918 278.059L290.814 252.597Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-42" d="M283.27 262.562C281.498 264.689 279.652 266.772 277.733 268.806L310.462 299.69C313.02 296.979 315.482 294.201 317.846 291.363L283.27 262.562Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-43" d="M274.827 271.791C272.867 273.745 270.834 275.651 268.73 277.505L298.48 311.268C301.276 308.804 303.979 306.27 306.59 303.668L274.827 271.791Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-44" d="M265.535 280.221C263.38 282.016 261.185 283.732 258.954 285.37L285.583 321.645C288.554 319.464 291.474 317.181 294.336 314.797L265.535 280.221Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-45" d="M255.566 287.765C253.253 289.351 250.908 290.855 248.533 292.277L271.653 330.883C274.815 328.989 277.935 326.989 281.008 324.883L255.566 287.765Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-46" d="M244.768 294.663C242.352 296.015 239.885 297.296 237.37 298.504L256.856 339.066C260.213 337.454 263.506 335.743 266.733 333.939L244.768 294.663Z" fill="#5D5041"/>										
+										<path class="absolute-progrss-bar-item-47" d="M233.587 300.25C231.056 301.371 228.478 302.419 225.856 303.391L241.495 345.586C244.99 344.29 248.428 342.893 251.806 341.397L233.587 300.25Z" fill="#5D5041"/>										
+										<path class="absolute-progrss-bar-item-48" d="M221.927 304.778C219.303 305.66 216.636 306.467 213.928 307.195L225.622 350.649C229.219 349.681 232.767 348.608 236.26 347.434L221.927 304.778Z" fill="#5D5041"/>										
+										<path class="absolute-progrss-bar-item-49" d="M209.86 308.213C207.133 308.866 204.405 309.431 201.679 309.91L209.46 354.232C213.09 353.595 216.719 352.843 220.342 351.975L209.86 308.213Z" fill="#5D5041"/>										
+										<path class="absolute-progrss-bar-item-50" d="M197.58 310.555C194.804 310.95 192.035 311.257 189.276 311.479L192.879 356.335C196.553 356.04 200.236 355.631 203.925 355.105L197.58 310.555Z" fill="#5D5041"/>										
+										<path class="absolute-progrss-bar-item-51" d="M185.811 312.178C183.043 312.225 180.264 312.187 177.477 312.061L175.451 357.015C179.172 357.183 182.882 357.234 186.578 357.171L185.811 312.178Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-52" d="M173.317 311.809C170.557 311.599 167.79 311.302 165.02 310.918L158.833 355.49C162.525 356.003 166.215 356.398 169.899 356.679L173.317 311.809Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-53" d="M160.903 310.282C158.175 309.817 155.444 309.266 152.713 308.626L142.454 352.441C146.081 353.291 149.714 354.024 153.348 354.643L160.903 310.282Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-54" d="M148.647 307.598C145.935 306.883 143.264 306.09 140.636 305.222L126.52 347.951C130.02 349.107 133.573 350.162 137.175 351.111L148.647 307.598Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-55" d="M136.721 303.85C134.087 302.885 131.502 301.846 128.967 300.735L110.917 341.957C114.294 343.435 117.732 344.818 121.23 346.1L136.721 303.85Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-56" d="M124.839 299.051C122.337 297.866 119.863 296.599 117.421 295.251L95.6701 334.645C98.9306 336.445 102.234 338.137 105.575 339.719L124.839 299.051Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-57" d="M113.805 293.18C111.424 291.768 109.076 290.276 106.763 288.702L81.4522 325.909C84.5345 328.006 87.6666 329.997 90.8436 331.882L113.805 293.18Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-58" d="M103.355 286.306C101.116 284.68 98.9122 282.975 96.7482 281.191L68.1233 315.913C70.998 318.283 73.9289 320.551 76.9112 322.717L103.355 286.306Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-59" d="M93.5597 278.467C91.4461 276.623 89.404 274.728 87.4335 272.784L55.8334 304.822C58.4576 307.411 61.174 309.932 63.9819 312.381L93.5597 278.467Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-60" d="M84.6107 270.549C82.7686 268.483 80.9816 266.35 79.2531 264.151L43.8758 291.962C46.1797 294.893 48.5632 297.738 51.0215 300.495L84.6107 270.549Z" fill="#5D5041"/>
+										<path class="absolute-progrss-bar-item-61" d="M76.7288 260.837C75.0861 258.609 73.5013 256.318 71.9781 253.963L34.1937 278.403C36.2172 281.532 38.325 284.58 40.5127 287.546L76.7288 260.837Z" fill="#5D5041"/>
+									</svg>
+										
+							
+									<div class="performance-diagram__value"></div>
+								</div>
+							</div>
+					
+							<div class="circle-block__first">
+								<svg class="circle-first__icon" width="12.82vw" height="7.813vw" viewBox="0 0 222 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="path-1-inside-1_2781_12963" fill="white">
+									<path d="M226.035 18.5131C152.976 -5.94579 73.9292 -5.88349 0.908966 18.6905L41.5132 139.344C88.255 123.613 138.854 123.574 185.621 139.23L226.035 18.5131Z"/>
+									</mask>
+									<path d="M226.035 18.5131C152.976 -5.94579 73.9292 -5.88349 0.908966 18.6905L41.5132 139.344C88.255 123.613 138.854 123.574 185.621 139.23L226.035 18.5131Z" fill="#112054" fill-opacity="0.1"/>
+									<path d="M226.035 18.5131C152.976 -5.94579 73.9292 -5.88349 0.908966 18.6905L41.5132 139.344C88.255 123.613 138.854 123.574 185.621 139.23L226.035 18.5131Z" fill="url(#paint0_linear_2781_12963)"/>
+									<path d="M226.035 18.5131C152.976 -5.94579 73.9292 -5.88349 0.908966 18.6905L41.5132 139.344C88.255 123.613 138.854 123.574 185.621 139.23L226.035 18.5131Z" stroke="#217AFF" stroke-width="2.03297" mask="url(#path-1-inside-1_2781_12963)"/>
+									<defs>
+									<linearGradient id="paint0_linear_2781_12963" x1="-16.3474" y1="-39.7236" x2="113.736" y2="707.687" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#217AFF" stop-opacity="0.23"/>
+									<stop offset="0.182292" stop-color="#217AFF" stop-opacity="0"/>
+									</linearGradient>
+									</defs>
+								</svg>
+							
+								<div id="all_branches" class="circle-block__first-clicked-aria"></div>
+
+								<span class="circle-block__link"></span>
+							</div>
+					
+							<div class="circle-block__second">
+								<svg class="circle-second__icon scale-element" width="15.625vw" height="7.813vw"  viewBox="0 0 275 338" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="path-1-inside-1_2781_12956" fill="white">
+									<path d="M278.992 342.832C280.859 268.282 259.186 195.04 217.051 133.512C174.917 71.9827 114.464 25.2964 44.2823 0.085495L0.445312 122.118C44.9746 138.114 83.3307 167.736 110.064 206.775C136.798 245.814 150.549 292.285 149.365 339.585L278.992 342.832Z"/>
+									</mask>
+									<path d="M278.992 342.832C280.859 268.282 259.186 195.04 217.051 133.512C174.917 71.9827 114.464 25.2964 44.2823 0.085495L0.445312 122.118C44.9746 138.114 83.3307 167.736 110.064 206.775C136.798 245.814 150.549 292.285 149.365 339.585L278.992 342.832Z" fill="#112054" fill-opacity="0.1" stroke="#217AFF" stroke-opacity="0.9" stroke-width="6" mask="url(#path-1-inside-1_2781_12956)"/>
+								</svg>
+							</div>
+
+							<div class="circle-block__third">
+								<svg class="circle-third__icon" viewBox="0 0 296 339" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="path-1-inside-1_2781_12957" fill="white">
+									<path d="M301.088 6.20883C298.009 81.4242 272.246 153.948 227.186 214.251C182.126 274.554 119.876 319.813 48.6172 344.082L0.868896 203.882C43.8367 189.248 81.372 161.958 108.542 125.596C135.713 89.2351 151.247 45.5045 153.104 0.151093L301.088 6.20883Z"/>
+									</mask>
+									<path d="M301.088 6.20883C298.009 81.4242 272.246 153.948 227.186 214.251C182.126 274.554 119.876 319.813 48.6172 344.082L0.868896 203.882C43.8367 189.248 81.372 161.958 108.542 125.596C135.713 89.2351 151.247 45.5045 153.104 0.151093L301.088 6.20883Z" fill="#112054" fill-opacity="0.1" stroke="#217AFF" stroke-opacity="0.9" stroke-width="6" mask="url(#path-1-inside-1_2781_12957)"/>
+								</svg>
+							</div>
+					
+							<div class="circle-block__fourth">
+								<svg  class="circle-fourth__icon" viewBox="0 0 217 139" viewBox="0 0 221 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="path-1-inside-1_2781_12961" fill="white">
+									<path d="M0.045166 121.578C71.2502 145.983 148.384 147.038 220.23 124.59L182.013 2.27478C136.194 16.5906 87.0038 15.9176 41.5939 0.353638L0.045166 121.578Z"/>
+									</mask>
+									<path d="M0.045166 121.578C71.2502 145.983 148.384 147.038 220.23 124.59L182.013 2.27478C136.194 16.5906 87.0038 15.9176 41.5939 0.353638L0.045166 121.578Z" fill="#112054" fill-opacity="0.1" stroke="#217AFF" stroke-opacity="0.4" stroke-width="2.03297" mask="url(#path-1-inside-1_2781_12961)"/>
+								</svg>
+								<div class="cirlce-block__contains">
+										<span class="circle-block__value circle-block__value_score"></span>
+										<p class="circle-block__text">средний балл</p>
+								</div>
+							</div>
+					
+							<div  class="circle-block__fifth" >
+								<svg class="circle-block__fifth circle-fifth_icon" viewBox="0 0 272 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="path-1-inside-1_2781_12958" fill="white">
+									<path d="M231.088 325.228C165.413 300.667 108.489 257.195 67.5056 200.303C26.5222 143.41 3.31756 75.6477 0.822352 5.5748L130.408 0.960419C131.991 45.4206 146.714 88.4144 172.717 124.512C198.721 160.61 234.838 188.192 276.508 203.775L231.088 325.228Z"/>
+									</mask>
+									<path d="M231.088 325.228C165.413 300.667 108.489 257.195 67.5056 200.303C26.5222 143.41 3.31756 75.6477 0.822352 5.5748L130.408 0.960419C131.991 45.4206 146.714 88.4144 172.717 124.512C198.721 160.61 234.838 188.192 276.508 203.775L231.088 325.228Z" fill="#112054" fill-opacity="0.1" stroke="#217AFF" stroke-opacity="0.9" stroke-width="6.0989" mask="url(#path-1-inside-1_2781_12958)"/>
+								</svg>
+								<div id="plan" class="circle-block__fifth-clicked-aria"></div>
+								<div class="cirlce-block__wrapper">
+										<div class="cirlce-block__contains ">
+									<span class="circle-block__value circle-block__value_seniorityPPS"></span>
+									<span class="circle-block__value">%</span>
+									<p class="circle-block__text">
+											остепенность
+											<br /> 
+											ППС
+									</p>
+										</div>					
+										<div class="cirlce-block__contains">
+									<span class="circle-block__value circle-block__value_seniorityNR"></span>
+									<span class="circle-block__value">%</span>
+									<p class="circle-block__text">
+										остепенность
+										<br /> 
+										НР
+									</p>
+										</div>
+								</div>
+							</div>
+							<div id="finance" class="circle-block__sixth">
+								<svg class="circle-sixth__icon" viewBox="0 0 295 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="path-1-inside-1_2781_12962" fill="white">
+									<path d="M0.203125 355.951C0.203132 278.768 23.7586 203.424 67.7219 139.987C111.685 76.5489 173.962 28.0394 246.231 0.940289L299.549 143.131C256.226 159.376 218.892 188.456 192.537 226.486C166.182 264.515 152.062 309.682 152.062 355.951H0.203125Z"/>
+									</mask>
+									<path d="M0.203125 355.951C0.203132 278.768 23.7586 203.424 67.7219 139.987C111.685 76.5489 173.962 28.0394 246.231 0.940289L299.549 143.131C256.226 159.376 218.892 188.456 192.537 226.486C166.182 264.515 152.062 309.682 152.062 355.951H0.203125Z" fill="#112054" fill-opacity="0.1" stroke="#217AFF" stroke-opacity="0.4" stroke-width="2.03297" mask="url(#path-1-inside-1_2781_12962)"/>
+								</svg>
+								<div class="cirlce-block__wrapper">
+									<div class="cirlce-block__contains ">
+										<div class="cirlce-block__wrap">
+											<span class="circle-block__value circle-block__value_cash"></span>
+										</div>
+											<p class="circle-block__text">Денежные<br> Средства, млн.</p>
+									</div>
+							
+									<div class="cirlce-block__contains">
+										<div class="cirlce-block__wrap">
+											<span class="circle-block__value circle-block__value_subsidies"></span>
+										</div>
+										<p class="circle-block__text">
+											субсидии
+											<br>на гз 
+										</p>
+									</div>
+								</div>
+							</div>
+					
+						<div class="circle-block__middle">
+							<span class="circle-block__value circle-block__value_students"></span>
+							<p>ОБучающихся</p>
+						</div>
+						<div class="circle__parts">
+							<div class="circle__part-top">
+								<div class="circle__part-text">
+									<span class="span_84 performance-diagram-absolute-value"></span>
+									<span class='span_text'>Абсолютная <br/> успеваемость</span>
+								</div>	
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+
+				<section id="students" class="students block">
+					<svg class="block-bg" viewBox="0 0 795 171" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M793 35.1957V151.125V152.147L776.5 169L581.5 169L573 160.318H534L526 169L302.5 169L289 154.7L63 154.7L51.5 166.957H17.5L2 151.125V30.5994L21 11.7034L372 11.7034L381.5 2L423.5 2L433 11.7034L770 11.7034L793 35.1957Z" fill="#112054" fill-opacity="0.18" stroke="#217AFF" stroke-opacity="0.9" stroke-width="3"/>
+						<path d="M35.619 155H18L20.381 157H38L35.619 155Z" fill="#223E9E"/>
+						<path d="M31.619 151H14L16.381 153H34L31.619 151Z" fill="#223E9E"/>
+						<path d="M35.5 155H27L29.5 157H38L35.5 155Z" fill="#217AFF"/>
+						<path d="M31.5 151H19L21.5 153H34L31.5 151Z" fill="#217AFF"/>
+					</svg>	
+
+						<div class="students__wrap">
+									<div class="students__item students__teaching-load ">
+									<p class="students__title">Педагогическая нагрузка</p>
+							
+								<div class="students__teaching-load-plan">
+									<span class="students__teaching-load-title students__teaching-load-title_plan">Фактическая:</span>
+									<span class="students__teaching-load-hours">
+										<span class="spanstudents__teaching-load-value"></span>
+										<br>
+										<span>часов</span> 
+									</span>
+								</div>
+
+								<div class="students__teaching-load-progressbar">
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							
+								<div class="students__teaching-load-fact">
+									<p class="students__teaching-load-ratio"></p>
+									<p class="students__teaching-load-title">Фактическая</p>
+								</div>
+									
+							</div>
+							
+							<div class="students__item students__diagram">
+									
+									<div class="students__diagram-data"> </div>
+
+									<div class="students__diagram-info">
+								<svg class="block-bg" viewBox="0 0 65 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g filter="url(#filter0_d_2008:318)">
+									<path d="M55 55.4259V1H6.25365L1 7.5955V64H48.1703L55 55.4259Z" fill="#112054"/>
+									<path d="M55.5 55.4259V55.6007L55.3911 55.7374L48.5614 64.3115L48.4112 64.5H48.1703H1H0.5V64V7.5955V7.4207L0.60891 7.28397L5.86256 0.688476L6.01268 0.5H6.25365H55H55.5V1V55.4259Z" stroke="#217AFF"/>
+									</g>
+									<defs>
+									<filter id="filter0_d_2008:318" x="0" y="0" width="65" height="75" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+									<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+									<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+									<feOffset dx="5" dy="6"/>
+									<feGaussianBlur stdDeviation="2"/>
+									<feColorMatrix type="matrix" values="0 0 0 0 0.0897222 0 0 0 0 0.241933 0 0 0 0 0.633333 0 0 0 0.12 0"/>
+									<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2008:318"/>
+									<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2008:318" result="shape"/>
+									</filter>
+									</defs>
+									</svg>
+
+									<div class="students__diagram-month-text"></div>
+									
+									<div class="students__diagram-info__wrap">
+										<div class="students__diagram-info__item">
+											<svg class="students__diagram-info__icon"   viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect x="3" y="8" width="7" height="7" transform="rotate(-45 3 8)" stroke="#217AFF" stroke-width="3"/>
+											</svg>
+											<div class="students__diagram-info__value students__diagram-info__value_bachelors"></div>
+										</div>
+										<div class="students__diagram-info__item">
+											<svg class="students__diagram-info__icon"  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect x="3" y="8" width="7" height="7" transform="rotate(-45 3 8)" stroke="#D1CB33" stroke-width="3"/>
+											</svg>
+											<div class="students__diagram-info__value students__diagram-info__value_specialists"></div>
+										</div>
+										<div class="students__diagram-info__item">
+											<svg class="students__diagram-info__icon"   viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect x="3" y="8" width="7" height="7" transform="rotate(-45 3 8)" stroke="#FB9B2B" stroke-width="3"/>
+											</svg>
+											<div class="students__diagram-info__value students__diagram-info__value_magisters"></div>
+										</div>
+									</div>
+									</div>
+							
+									<div class="students__diagram-legend">
+								<div class="students__diagram-legend-item">
+										<div class="students__diagram-legend-wrap">
+									<svg class="students__diagram-legend-icon"   viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="3" y="8" width="7" height="7" transform="rotate(-45 3 8)" stroke="#217AFF" stroke-width="3"/>
+									</svg>
+									<span>Бакалавры</span>
+										</div>
+								</div>
+
+								<div class="students__diagram-legend-item">
+									<div class="students__diagram-legend-wrap">
+											<svg class="students__diagram-legend-icon"   viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect x="3" y="8" width="7" height="7" transform="rotate(-45 3 8)" stroke="#D1CB33" stroke-width="3"/>
+											</svg>
+												<span>Специалисты</span>
+									</div>
+								</div>
+
+								<div class="students__diagram-legend-item">
+									<div class="students__diagram-legend-wrap">
+										<svg class="students__diagram-legend-icon"   viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="3" y="8" width="7" height="7" transform="rotate(-45 3 8)" stroke="#FB9B2B" stroke-width="3"/>
+										</svg>
+										<span>Магистры</span>
+									</div>
+								</div>
+							</div>
+								</div>	
+
+						<div class="students__item students__graphic-container">
+							<div class="students__graphic-item">
+								<div class="students__graphic-info">
+									<div class="students__graphic-descr">Очное</div>
+
+									<div class="students__graphic-value students__graphic-value_fullTime"></div>
+								</div>
+								
+
+								<svg class="students__graphic" width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<svg class="students__graphic-data staff__graphic-data_management-staff" width="100%" x="0" y="0" >
+										<rect class="students__graphic-row" width="100%" fill="#217AFF" x="3" y="0.75" />
+										<rect  class="students__graphic-right-rect students__graphic-right-rect_blue" x="100%" y="0"  fill="white"/>
+									</svg>
+								</svg>
+							</div>
+							<div class="students__graphic-item">
+								<div class="students__graphic-info">
+									<div class="students__graphic-descr">Очно-заочное</div>
+
+									<div class="students__graphic-value students__graphic-value_distance"></div>
+								</div>
+								
+								<svg class="students__graphic" width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<svg class="students__graphic-data staff__graphic-data_management-staff" width="100%" x="0" y="0" >
+										<rect class="students__graphic-row" width="100%" fill="#217AFF" x="3" y="0.75" />
+										<rect  class="students__graphic-right-rect students__graphic-right-rect_blue" x="100%" y="0"  fill="white"/>
+									</svg>
+								</svg>
+							</div>
+							<div class="students__graphic-item">
+								<div class="students__graphic-info">
+									<div class="students__graphic-descr">Заочное</div>
+
+									<div class="students__graphic-value students__graphic-value_extramural"></div>
+								</div>
+							
+								<svg class="students__graphic" width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<svg class="students__graphic-data staff__graphic-data_management-staff" width="100%" x="0" y="0" >
+										<rect class="students__graphic-row" width="100%" fill="#217AFF" x="3" y="0.75" />
+										<rect  class="students__graphic-right-rect students__graphic-right-rect_blue" x="100%" y="0"  fill="white"/>
+									</svg>
+								</svg>
+							</div>	
+
+
+							<div class="students__graphic-item students__graphic-item_budget">
+								<div class="students__graphic-info">
+									<div class="students__graphic-descr">Бюджет</div>
+
+									<div class="students__graphic-value students__graphic-value_public"></div>
+								</div>
+								
+								<svg class="students__graphic" width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<svg class="students__graphic-data staff__graphic-data_management-staff" width="100%" x="0" y="0" >
+										<rect class="students__graphic-row" width="100%" fill="#217AFF" x="3" y="0.75" />
+										<rect  class="students__graphic-right-rect students__graphic-right-rect_blue" x="100%" y="0"  fill="white"/>
+									</svg>
+								</svg>
+							</div>
+
+							<div class="students__graphic-item">
+								<div class="students__graphic-info">
+									<div class="students__graphic-descr">Внебюджет</div>
+
+									<div class="students__graphic-value students__graphic-value_nonBudget"></div>
+								</div>
+								
+								<svg class="students__graphic" width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<svg class="students__graphic-data staff__graphic-data_management-staff" width="100%" x="0" y="0" >
+										<rect class="students__graphic-row" width="100%" fill="#217AFF" x="3" y="0.75" />
+										<rect  class="students__graphic-right-rect students__graphic-right-rect_blue" x="100%" y="0"  fill="white"/>
+									</svg>
+								</svg>
+							</div>			
+						</div>
+						
+						<div class="calendar calendar-students">
+							<single-calendar class="calendar-unit" dir="left"></single-calendar>
+						</div>	
+				</div>
+			</section>
+		</div>
+
+
+		<div class="homepage__right">
+			<section id="international" class="international block">
+
+
+				<svg class="block-bg" viewBox="0 0 417 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M415 34.5V271V272L398.5 288.5H303.5L295 280H274L268 286.5H230.5L219 274.5H129L117.5 286.5H17.5L3 271L2 30L21 11.5H51L60.5 2H102.5L112 11.5H392L415 34.5Z" fill="#112054" fill-opacity="0.18" stroke="#217AFF" stroke-opacity="0.9" stroke-width="3"/>
+					<path d="M100.69 5H72.5L76.3095 9H104.5L100.69 5Z" fill="#217AFF" fill-opacity="0.2"/>
+					<path d="M247.119 279H229.5L231.881 281H249.5L247.119 279Z" fill="#217AFF" fill-opacity="0.2"/>
+					<path d="M243.119 275H225.5L227.881 277H245.5L243.119 275Z" fill="#217AFF" fill-opacity="0.2"/>
+					<path d="M100.636 5H87.5L91.3636 9H104.5L100.636 5Z" fill="#217AFF"/>
+					<path d="M247 279H238.5L241 281H249.5L247 279Z" fill="#217AFF"/>
+					<path d="M243 275H230.5L233 277H245.5L243 275Z" fill="#217AFF"/>
+				</svg>
+			</section>
+
+
+			<section id="vaccination" class="vaccination block">
+				<svg class="block-bg" viewBox="0 0 417 325" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2 34.5V306V307L18.5 323.5H113.5L122 315H143L149 321.5H186.5L198 309.5H288L299.5 321.5H399.5L414 306L415 30L396 11.5H366L356.5 2H314.5L305 11.5H25L2 34.5Z" fill="#112054" fill-opacity="0.18" stroke="#217AFF" stroke-opacity="0.9" stroke-width="3"/>
+					<path d="M323.31 6H351.5L347.69 10H319.5L323.31 6Z" fill="#223E9E"/>
+					<path d="M169.881 314H187.5L185.119 316H167.5L169.881 314Z" fill="#0E2D7B"/>
+					<path d="M173.881 310H191.5L189.119 312H171.5L173.881 310Z" fill="#0E2D7B"/>
+					<path d="M323.364 6H336.5L332.636 10H319.5L323.364 6Z" fill="#217AFF"/>
+					<path d="M170 314H178.5L176 316H167.5L170 314Z" fill="#217AFF"/>
+					<path d="M174 310H186.5L184 312H171.5L174 310Z" fill="#217AFF"/>
+				</svg>		
+			</section>
+		</div>
+	</div>	
+</main>
+
+<footer class="footer">
+	<svg class="footer__img" viewBox="0 0 1920 105">
+		<g opacity="0.68">
+			<path
+				d="M48 15H6H-20V123.5C-20 145.5 1715.5 132.667 1968.5 123.5L1973.5 55.5H1824.5L1816.5 62.5H1798.5L1772 92.5H1738.5H525L494 61.5H441.5L429 49H389.5L377 61.5H311.5L265 15H155L141 1H62L48 15Z"
+				fill="#112054" fill-opacity="0.18"
+			/>
+			<path
+				d="M-20 14.5H-20.5V15V123.5C-20.5 123.895 -20.2558 124.193 -19.9954 124.4C-19.7283 124.613 -19.3605 124.8 -18.9234 124.971C-18.044 125.316 -16.7607 125.641 -15.1064 125.953C-11.7897 126.578 -6.88153 127.168 -0.491129 127.724C12.2949 128.838 31.0718 129.824 55.0483 130.692C103.004 132.429 171.791 133.697 255.12 134.57C421.779 136.318 646.626 136.49 879.377 135.688C1344.87 134.083 1842.01 128.583 1968.52 124L1968.97 123.983L1969 123.537L1974 55.5367L1974.04 55H1973.5H1824.5H1824.31L1824.17 55.1237L1816.31 62H1798.5H1798.27L1798.13 62.169L1771.77 92H1738.5H525.207L494.354 61.1464L494.207 61H494H441.707L429.354 48.6464L429.207 48.5H429H389.5H389.293L389.146 48.6464L376.793 61H311.707L265.354 14.6464L265.207 14.5H265H155.207L141.354 0.646447L141.207 0.5H141H62H61.7929L61.6464 0.646447L47.7929 14.5H6H-20Z"
+				stroke="#217AFF"
+				stroke-opacity="0.4"
+			/>
+		</g>
+	</svg>
+
+	<a href="/" class="footer__logo">
+		<img src="./assets/img/logo.svg" alt="" />
+	</a>
+</footer>
+</div>
+
+<script src="./js/main.js"></script>
+</body>
+</html>	

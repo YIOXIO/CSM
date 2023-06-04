@@ -1,0 +1,128 @@
+.footer {
+	position: relative;
+}
+
+.footer__btns-val {
+	position: absolute;
+	font-weight: 700;
+	font-size: 0.521vw;
+	bottom: 0.3vw;
+	right: 0.3vw;
+	padding: 0 0.881vw;
+	background-color: #fb9b2b;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: .7vw .7vw 0 0;
+		border-color: #101f54 transparent transparent transparent;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 .7vw .7vw;
+		border-color: transparent transparent #101f54 transparent;
+	}
+}
+
+.footer__btns {
+	position: absolute;
+	bottom: 4.6vw;
+	right: 4vw;
+	display: flex;
+	z-index: 1;
+
+	&_down {
+		bottom: 1.2vw;
+		right: 14.4vw;
+	}
+}
+
+.footer__btns-item {
+	margin: 0 -0.3vw;
+}
+
+.footer__btns-btn {
+	position: relative;
+	width: 11vw;
+ height: 4vw;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	padding-top: 0.7vw;
+	
+
+	&_enrollment {
+		top: 0.35vw;
+		right: 1.4vw;
+		width: 10.7vw;
+
+		.footer__btns-text {
+			margin-top: -0.5vw;
+		}
+	}
+}
+
+.btn--large {
+	width: 10.677vw;
+	height: 3.438vw;
+
+	.footer__btns-text {
+		position: relative;
+		left: 0.5vw;
+	}
+}
+
+.footer__btns-text {
+	font-family: Oswald;
+	font-weight: 500;
+	font-size: .55vw;
+	letter-spacing: .15em;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.footer__btns-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.footer__logo {
+	position: absolute;
+	left: 4.271vw;
+	bottom: 1vw;
+
+	img {
+		width: 10.677vw;
+		height: 3.1vw;
+	}
+}
+
+.footer__img {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	height: 6vw;
+	overflow: hidden;
+}
