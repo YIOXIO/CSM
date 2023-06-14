@@ -108,12 +108,23 @@
 
 .footer__logo {
 	position: absolute;
-	left: 4.271vw;
+	left: 6.8vw;
 	bottom: 1vw;
 
 	img {
-		width: 10.677vw;
+		width: 8.1vw;
 		height: 3.1vw;
+	}
+}
+
+.footer__logo_seconbary {
+	position: absolute;
+	left: 2.8vw;
+	bottom: 1vw;
+
+	img {
+		width: 3.6vw;
+		height: auto;
 	}
 }
 
