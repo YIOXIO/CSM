@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ======================= фон ===============================
 
     const baseBackground = {
-        color: '#0046B5',
+        color: '#112054',
     }
 
     function setBackgroundColor(color) {
