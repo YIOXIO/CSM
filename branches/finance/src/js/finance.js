@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         subsidies: 100000000,
         scholarshipSupport: 64066897.35,
         taxDate: '01.10.2021',
-        propertyTax: 2,
-        transportTax: 1066069.043243,
-        landTax: 65176613.51,
+        propertyTax: 0,
+        transportTax: 20,
+        landTax: 40,
         budgetResources: 1016043100.08,
         otherResources: 2,
         totalEstate: 6984734981.58,
@@ -53,11 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }  
 
-    function setProgressBarTriple(progressBar, lengthLeft, lengthCenter, valLeft, valCenter) {
+    function setProgressBarTriple(progressBar, lengthLeft = 0, lengthCenter = 0, valLeft, valCenter) {
         if (lengthCenter < 1) {
             lengthCenter = 1;
         }
-
         let length = lengthLeft + lengthCenter;
 
         for (let i = 0; i <= length; i++) {
@@ -74,9 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // ф-ця для получения соотношения данных из одной категории.
 
     const getValueInPercents = (num, total) => (num / total) * 100;
-
-    // const getValueInPercentsTriple = (total, ...nums) => ((nums[0] + nums[1]) / total) * 100;
-
 
     function numDataOutput(num) {
         let str = num.toString();
@@ -160,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         propertyTaxRatio = getValueInPercents(data.propertyTax, totalTax);
         landTaxRatio = getValueInPercents(data.landTax, totalTax);
-        transportTaxRatio = getValueInPercents(data.transportTax, totalTax)
+        transportTaxRatio = getValueInPercents(data.transportTax, totalTax);
 
         budgetResourcesRatio = getValueInPercents(data.budgetResources, totalResources);
         otherResourcesRatio = getValueInPercents(data.otherResources, totalResources);
