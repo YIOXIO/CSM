@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         subsidies: 100000000,
         scholarshipSupport: 64066897.35,
         taxDate: '01.10.2021',
-        propertyTax: 0,
-        transportTax: 20,
-        landTax: 40,
+        propertyTax: 20,
+        transportTax: 0,
+        landTax: 0,
         budgetResources: 1016043100.08,
         otherResources: 2,
         totalEstate: 6984734981.58,
@@ -58,14 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
             lengthCenter = 1;
         }
         let length = lengthLeft + lengthCenter;
-
+        console.log(length)
         for (let i = 0; i <= length; i++) {
-            if (i <= lengthLeft) {
-                progressBar[i].style.fill = valLeft;
-                
+            if (i < lengthLeft) {
+                if (progressBar[i]) progressBar[i].style.fill = valLeft;
             } 
             else {
-                progressBar[i].style.fill = valCenter;
+                if (progressBar[i]) progressBar[i].style.fill = valCenter;
             }
         }
     }  
@@ -179,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         realEstateLength = progressLength(estateProgressbar, realEstateRatio);
         differenceEstateLength = progressLength(estateProgressbar, differenceEstateRatio);
-        
     
         // выводим данные на страницу.
         
@@ -214,9 +212,8 @@ document.addEventListener('DOMContentLoaded', () => {
         insertToPage('prompt__text_diff-estate',  numDataOutput(differenceEstateInItems) + ' шт.')
         insertToPage('prompt__text_personal-estate',  numDataOutput(data.personalEstateInItems) + ' шт.')
 
+
         // закрашиваем диаграммы.
-
-
         setProgressBar(resourcesProgressbar, budgetResourcesLength, '#217AFF');
         setProgressBarTriple(taxProgressbar,  propertyTaxLength, transportTaxLength, '#FB9B2B', '#AB8E6D');
         setProgressBarTriple(estateProgressbar,  realEstateLength, differenceEstateLength, '#A7EB17', '#71814F');
@@ -237,8 +234,11 @@ document.addEventListener('DOMContentLoaded', () => {
         insertToPage('finance__data-value-state-assignment', numDataOutput(data.stateAssignment) + ' ');
         insertToPage('finance__data-value-subsidies', numDataOutput(data.subsidies) + ' ');
         insertToPage('finance__data-value-scholarship-support', numDataOutput(data.scholarshipSupport) + ' ');
-
         insertToPage('finance__info-subheader-date', data.taxDate);
+
+
+
+        
     }
 
    finance(financeServerData)
