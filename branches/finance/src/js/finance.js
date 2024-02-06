@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // данные с сервера.
 
     const financeServerData = {
@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         subsidies: 100000000,
         scholarshipSupport: 64066897.35,
         taxDate: '01.10.2021',
-        propertyTax: 20,
-        transportTax: 0,
-        landTax: 0,
+        propertyTax: 2,
+        transportTax: 1066069.043243,
+        landTax: 65176613.51,
         budgetResources: 1016043100.08,
         otherResources: 2,
         totalEstate: 6984734981.58,
@@ -32,46 +32,49 @@ document.addEventListener('DOMContentLoaded', () => {
     function progressLength(progressBar, data) {
         let currentValue;
 
-        
+
 
         if (data > 100) {
             currentValue = progressBar.length;
         }
         else {
-            currentValue = Math.round((progressBar.length / 100) * data );
+            currentValue = Math.round((progressBar.length / 100) * data);
         }
 
-        return currentValue; 
+        return currentValue;
     }
-    
+
     // ф-ця закрашивающая элементы.
 
     function setProgressBar(progressBar, length, val) {
-    
+
         for (let i = 0; i < length; i++) {
             progressBar[i].style.fill = val;
         }
-    }  
+    }
 
-    function setProgressBarTriple(progressBar, lengthLeft = 0, lengthCenter = 0, valLeft, valCenter) {
+    function setProgressBarTriple(progressBar, lengthLeft, lengthCenter, valLeft, valCenter) {
         if (lengthCenter < 1) {
             lengthCenter = 1;
         }
         let length = lengthLeft + lengthCenter;
-        console.log(length)
-        for (let i = 0; i <= length; i++) {
-            if (i < lengthLeft) {
-                if (progressBar[i]) progressBar[i].style.fill = valLeft;
-            } 
-            else {
-                if (progressBar[i]) progressBar[i].style.fill = valCenter;
+        for (let i = 0; i < length; i++) {
+            if (progressBar[i] && progressBar[i].style) {
+                if (i < lengthLeft) {
+                    progressBar[i].style.fill = valLeft;
+                } else {
+                    progressBar[i].style.fill = valCenter;
+                }
             }
         }
-    }  
+    }
 
     // ф-ця для получения соотношения данных из одной категории.
 
     const getValueInPercents = (num, total) => (num / total) * 100;
+
+    // const getValueInPercentsTriple = (total, ...nums) => ((nums[0] + nums[1]) / total) * 100;
+
 
     function numDataOutput(num) {
         let str = num.toString();
@@ -89,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else {
                 out = intPart.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
             }
-    
+
             out += '.' + decimalPart;
         }
         else {
@@ -99,10 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
             else {
                 out = str.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
             }
-        }    
+        }
 
         return out;
-    } 
+    }
 
     function finance(data) {
         // инициализация диаграмм.
@@ -117,9 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let propertyTaxRatio, transportTaxRatio, landTaxRatio, totalTax, transportTaxLength, propertyTaxLength;
         let budgetResourcesRatio, otherResourcesRatio, totalResources, budgetResourcesLength;
-        let realEstateRatio, personalEstateRatio,  differenceEstateRatio, differenceEstate, realEstateLength, totalEstate, differenceEstateInItems;
-        
-        
+        let realEstateRatio, personalEstateRatio, differenceEstateRatio, differenceEstate, realEstateLength, totalEstate, differenceEstateInItems;
+
+
         // ф-ця для преобразования числовых данных в нужный вид: (##,#%)
 
 
@@ -140,32 +143,32 @@ document.addEventListener('DOMContentLoaded', () => {
         // получаем сумму для каждой категории.
 
 
-        totalTax =  parseInt(data.propertyTax) + parseInt(data.landTax) + parseInt(data.transportTax);
+        totalTax = parseInt(data.propertyTax) + parseInt(data.landTax) + parseInt(data.transportTax);
         totalResources = parseInt(data.budgetResources) + parseInt(data.otherResources);
-       
+
         totalEstate = parseInt(data.totalEstate);
         differenceEstate = parseInt(data.totalEstate) - (parseInt(data.realEstate) + parseInt(data.personalEstate));
         differenceEstateInItems = parseInt(data.totalEstateInItems) - (parseInt(data.realEstateInItems) + parseInt(data.personalEstateInItems));
-        
 
-        
-      
+
+
+
         // получаем процентое показание для каждого показателя каждой категории.
 
 
         propertyTaxRatio = getValueInPercents(data.propertyTax, totalTax);
         landTaxRatio = getValueInPercents(data.landTax, totalTax);
-        transportTaxRatio = getValueInPercents(data.transportTax, totalTax);
+        transportTaxRatio = getValueInPercents(data.transportTax, totalTax)
 
         budgetResourcesRatio = getValueInPercents(data.budgetResources, totalResources);
         otherResourcesRatio = getValueInPercents(data.otherResources, totalResources);
 
         realEstateRatio = getValueInPercents(data.realEstate, totalEstate);
         personalEstateRatio = getValueInPercents(data.personalEstate, totalEstate);
-        differenceEstateRatio = getValueInPercents(differenceEstate , totalEstate);
+        differenceEstateRatio = getValueInPercents(differenceEstate, totalEstate);
 
-    
-        
+
+
 
 
         // получаем кол-во элементов диаграммы, которое необходимо закрасить.
@@ -178,9 +181,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         realEstateLength = progressLength(estateProgressbar, realEstateRatio);
         differenceEstateLength = progressLength(estateProgressbar, differenceEstateRatio);
-    
+
+
         // выводим данные на страницу.
-        
+
         insertToPage('finance__info-ratio-left_tax', rateDataOutput(propertyTaxRatio));
         insertToPage('finance__info-sum-left_tax span', numDataOutput(data.propertyTax) + ' ');
 
@@ -192,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         insertToPage('finance__info-total_tax span', numDataOutput(totalTax));
 
-        
+
         dataMount('resources', totalResources, budgetResourcesRatio, otherResourcesRatio, data.budgetResources, data.otherResources);
 
         insertToPage('finance__info-ratio-left_estate', rateDataOutput(realEstateRatio));
@@ -206,17 +210,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         insertToPage('finance__info-total_estate span', numDataOutput(totalEstate));
 
-        
-        insertToPage('prompt__text_total-estate', numDataOutput(data.totalEstateInItems) + ' шт.')
-        insertToPage('prompt__text_real-estate',  numDataOutput(data.realEstateInItems) + ' шт.')
-        insertToPage('prompt__text_diff-estate',  numDataOutput(differenceEstateInItems) + ' шт.')
-        insertToPage('prompt__text_personal-estate',  numDataOutput(data.personalEstateInItems) + ' шт.')
 
+        insertToPage('prompt__text_total-estate', numDataOutput(data.totalEstateInItems) + ' шт.')
+        insertToPage('prompt__text_real-estate', numDataOutput(data.realEstateInItems) + ' шт.')
+        insertToPage('prompt__text_diff-estate', numDataOutput(differenceEstateInItems) + ' шт.')
+        insertToPage('prompt__text_personal-estate', numDataOutput(data.personalEstateInItems) + ' шт.')
 
         // закрашиваем диаграммы.
+
+
         setProgressBar(resourcesProgressbar, budgetResourcesLength, '#217AFF');
-        setProgressBarTriple(taxProgressbar,  propertyTaxLength, transportTaxLength, '#FB9B2B', '#AB8E6D');
-        setProgressBarTriple(estateProgressbar,  realEstateLength, differenceEstateLength, '#A7EB17', '#71814F');
+        setProgressBarTriple(taxProgressbar, propertyTaxLength, transportTaxLength, '#FB9B2B', '#AB8E6D');
+        setProgressBarTriple(estateProgressbar, realEstateLength, differenceEstateLength, '#A7EB17', '#71814F');
 
         // круговая диаграмма.
 
@@ -234,14 +239,11 @@ document.addEventListener('DOMContentLoaded', () => {
         insertToPage('finance__data-value-state-assignment', numDataOutput(data.stateAssignment) + ' ');
         insertToPage('finance__data-value-subsidies', numDataOutput(data.subsidies) + ' ');
         insertToPage('finance__data-value-scholarship-support', numDataOutput(data.scholarshipSupport) + ' ');
+
         insertToPage('finance__info-subheader-date', data.taxDate);
-
-
-
-        
     }
 
-   finance(financeServerData)
+    finance(financeServerData)
 
-    
+
 });

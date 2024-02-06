@@ -1,12 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const scienceServerData = {
-        date: '21.10.2022',
+        date: '04.02.2024',
         currentPlan: 503760.6,
         expectedReceipts: {
-            date: '31.12.2022',
+            date: '31.12.2024',
             sum: 236166.5
         },
+        //Добавлены данные для НИР и научно-техническим услугам
+        currentPlanTechnical:101749.4,
+        currentReceiptsTechnicals: 75310.7,
+        expectedReceiptsTechnicals: {
+            sum: 101749.4,
+        },
+        //______________________________________________________
         currentReceipts: 40220.5,
         publications: {
             scopus: {
@@ -122,7 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]
             }
             
-        }
+        },
+
     }
 
     // ====================== служебные функции ===============================
@@ -185,13 +193,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ==================== вывод данных в блок science__info =================
 
-        
+        // Выполнение плана по НИР
         insertToPage('science__info-title__date', data.date);
-        insertToPage('science__info-title__year', data.date.split('.')[2]);
+        // insertToPage('science__info-title__year', data.date.split('.')[2]);
         insertToPage('science__info-block-value_current-receipt', numDataOutput(data.currentReceipts));
         insertToPage('science__info-block-value_expected-receipt', numDataOutput(data.expectedReceipts.sum));
         insertToPage('science__info-block-descr_expected-receipt span', data.expectedReceipts.date);
 
+        // Выполнение плана по НИР и научно-техническим услугам
+        insertToPage('science__info-block_technical-value_current-receipt', numDataOutput(data.currentReceiptsTechnicals));
+        insertToPage('science__info-block_technical-value_expected-receipt', numDataOutput(data.expectedReceiptsTechnicals.sum));
+        insertToPage('science__info-block-descr_technical-expected-receipt span', data.expectedReceipts.date);
+        // _____________________________________________________________________________________________
+
+
+        // Вертикальные диаграммы
         insertToPage('science__info-block-value_scoups', numDataOutput(data.publications.scopus.scopusTotal));
         insertToPage('science__info-block-value_scoups_q1-q2', numDataOutput(data.publications.scopus.q1q2Total));
         insertToPage('science__info-block-value_wos', numDataOutput(data.publications.wos.wosTotal));
@@ -210,8 +226,20 @@ document.addEventListener('DOMContentLoaded', () => {
         insertToPage('science__data-plan__info-ratio_fact', planProgress + '%');
         insertToPage('science__data-plan__info-value_fact', numDataOutput(data.currentReceipts));
         insertToPage('science__data-plan__info-value_planned', numDataOutput(data.currentPlan));
+      
+        //Прогрессбар для НИР и научно-техническим услугам
+        const technicalPlanProgressbar = Array.from(document.querySelectorAll('.science-technical__data-plan__progressbar path'));
+        const technicalPlanProgress = ((data.currentReceiptsTechnicals / data.currentPlanTechnical) * 100).toFixed(2);
 
+        const technicalPlanProgressbarLength = progressLength(technicalPlanProgressbar, technicalPlanProgress);
 
+        setProgressBar(technicalPlanProgressbar,  technicalPlanProgressbarLength, '#FB9B2B');
+
+        insertToPage('science-technical__data-plan__info-ratio_fact', technicalPlanProgress + '%');
+        insertToPage('science-technical__data-plan__info-value_fact', numDataOutput(data.currentReceiptsTechnicals));
+        insertToPage('science-technical__data-plan__info-value_planned', numDataOutput(data.currentPlanTechnical));
+
+        // ________________________________________________________________________________________________________
         // ====================== вертикальные диаграммы =======================
 
 

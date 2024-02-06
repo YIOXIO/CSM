@@ -1,0 +1,209 @@
+.modal{
+    backdrop-filter: blur(3px);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .4s linear;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-block-end: 92.5px;
+    padding-inline-end: 70.85px;
+}
+.opened{
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+    
+}
+
+.modal-container{
+    max-inline-size: 958px;
+    min-block-size: 622px;
+    position: relative;
+}
+
+.close-modal-btn{
+    position: absolute;
+    top: 65px;
+    right: 59px;
+    background-image: url('../../assets/img/close-button.svg');
+    block-size: 21px;
+    inline-size: 21px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.more-list{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 60px;
+    row-gap: 30px;
+    background-image: url('../../assets/img/modal-popup.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: flex-start;
+    padding: 120px 107px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    min-inline-size: 976px;
+    min-block-size: 622px;
+    position: relative;
+}
+
+
+
+
+// Кнопки
+.button-primary {
+    color: #217aff;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    padding-block: 15px;
+    padding-inline: 12px 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    min-block-size: 50.98px;
+    min-inline-size: 50.98px;
+  }
+  .button-primary::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    clip-path: polygon(
+      0 12px,
+      12px 0,
+      100% 0,
+      100% calc(100% - 12px),
+      calc(100% - 12px) 100%,
+      0 100%,
+      0 12px,
+      1px calc(12px + 0.41px),
+      1px calc(100% - 1px),
+      calc(100% - 12px - 0.41px) calc(100% - 1px),
+      calc(100% - 1px) calc(100% - 12px - 0.41px),
+      calc(100% - 1px) 1px,
+      calc(12px + 0.41px) 1px,
+      1px calc(12px + 0.41px)
+    );
+    background-color: rgba(33, 122, 255, 0.4);
+  }
+
+
+  .button-primary_golden {
+    color: #fb9b2b;
+  } 
+  .button-primary_golden::before {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 12px) 0,
+      100% 12px,
+      100% 100%,
+      12px 100%,
+      0 calc(100% - 12px),
+      0 0,
+      1px 1px,
+      1px calc(100% - 12px - 0.41px),
+      calc(12px + 0.41px) calc(100% - 1px),
+      calc(100% - 1px) calc(100% - 1px),
+      calc(100% - 1px) calc(12px + 0.41px),
+      calc(100% - 12px - 0.41px) 1px,
+      1px 1px
+    );
+  
+    background-color: rgba(251, 155, 43, 0.4);
+  } 
+  
+  
+  .button-primary_casual {
+    min-inline-size: 207px;
+    min-block-size: 52px;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    clip-path: polygon(
+      0 12px,
+      12px 0,
+      calc(100% - 12px) 0,
+      100% 12px,
+      100% calc(100% - 12px),
+      calc(100% - 12px) 100%,
+      12px 100%,
+      0 calc(100% - 12px),
+      0 12px,
+      168px calc(12px + 0.41px),
+      1px calc(100% - 36px - 0.41px),
+      calc(12px + 0.41px) calc(100% - 1px),
+      calc(100% - 207px - 0.41px) calc(100% - 13px),
+      calc(100% - 209px) calc(100% - 12px - 0.41px),
+      calc(100% - 210px) calc(21px + 0.41px),
+      calc(100% - 195px - 0.41px) 1px,
+      calc(194px + 0.41px) 1px,
+      206px calc(12px + 0.41px)
+    );
+    background-color: rgba(17, 32, 84, 0.68);
+    transition: background-color 0.5s linear;
+  }
+  .button-primary_casual:hover {
+    background-color: rgba(17, 32, 84, 0.98);
+  }
+  .button-primary_casual::before {
+    clip-path: polygon(
+      0 12px,
+      12px 0,
+      calc(100% - 12px) 0,
+      100% 12px,
+      100% calc(100% - 12px),
+      calc(100% - 12px) 100%,
+      12px 100%,
+      0 calc(100% - 12px),
+      0 12px,
+      1px calc(12px + 0.41px),
+      1px calc(100% - 12px - 0.41px),
+      calc(12px + 0.41px) calc(100% - 1px),
+      calc(100% - 12px - 0.41px) calc(100% - 1px),
+      calc(100% - 1px) calc(100% - 12px - 0.41px),
+      calc(100% - 1px) calc(12px + 0.41px),
+      calc(100% - 12px - 0.41px) 1px,
+      calc(12px + 0.41px) 1px,
+      1px calc(12px + 0.41px)
+    );
+  }
+  .button-primary_casual:hover::before {
+    background-color: rgba(33, 122, 255, 1);
+    transition: background-color 0.5s linear;
+  }
+
+
+  .button-primary_casual-golden {
+    color: #fb9b2b;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .button-primary_casual-golden::before {
+    background-color: rgba(251, 155, 43, 0.4);
+  }
+  .button-primary_casual-golden:hover::before {
+    background-color: rgba(251, 155, 43, 1);
+    transition: background-color 0.5s linear;
+  }
+  

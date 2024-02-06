@@ -776,7 +776,7 @@
                   flex-direction: column;
                   position: absolute;
                   top: 0;
-                  left: 0;
+                  left: -0.7vw;
                   z-index: 11;
                 }
               
@@ -786,7 +786,11 @@
               
                 .circle-block__text {
                   font-size: 0.521vw;
-                  line-height: 0.833vw;
+                  line-height: .533vw;
+                  inline-size: 5vw;
+                  &_font-size-small{
+                    font-size: 0.371vw;
+                  }
                 }
               
                 .span_text{
@@ -816,7 +820,7 @@
                   }
               
                   &:last-of-type {
-                    transform: translate(8vw, 2vw);
+                    transform: translate(7.2vw,2.7vw);
                   }
                 }
             }
@@ -2226,7 +2230,71 @@
 .absolute-progrss-bar-item-60 { animation: change_fill_absolute 0.2s ; animation-delay: 5.9s;   }
 .absolute-progrss-bar-item-61 { animation: change_fill_absolute 0.1s ; animation-delay: 6s;   }
 
+.pop-up {
+        display: none;
+        height: 100vh;
+        width: 100vw;
+        backdrop-filter: blur(8px);
+        position: absolute;
+        z-index: 61;
+        top: 0;
+}
 
+.pop-up-appear{
+    display: block;
+}
+
+.popup-container {
+    display: flex;
+    min-width: 1026px;
+    min-height: 660px;
+    background-image: url(../../assets/img/PopUp-block.png);
+    position: absolute;
+    right: 6vw;
+    bottom: 7vh;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.nir-container{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    position: relative;
+    z-index: 12;
+}
+
+.nir-link{
+    inline-size: 5.9vw;
+    block-size: 11.4vw;
+    background-size: cover;
+    background-image: url('../../assets/img/main/blue-border.svg');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 0.28vw;
+    margin-inline-start: -2.6vw;
+}
+
+.nir-technical-link {
+    background-image: url('../../assets/img/main/orange-border.svg');
+    inline-size: 10.3vw;
+    block-size: 8.7vw;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    align-items: center;
+    margin-inline-start: 1.3vw;
+    margin-block-start: -1.6vw;
+}
+.nir-text{
+    width: 10vw;
+    height: 8vw;
+    &_technical{
+        margin-block-start: 0.9vw;
+    }
+}
 
 @keyframes change_fill_absolute {
     0% { fill: #5D5041;}

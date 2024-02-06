@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const studentsData = {
             date: '01.10.2021',
             employment: 91,
-            performanceData = {
+            performanceData: {
                 absolute: 77,
                 quality: 55
             },

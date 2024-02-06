@@ -36,8 +36,8 @@ const API = {
       kind: 'p5',
       date: '28.02.2023',
       title: 'Р5 Количество обучающихся по программам ДПО на «цифровой кафедре» образовательной организации высшего образования',
-      plan: '1111',
-      fact: '1427',
+      plan: '2289',
+      fact: '2970',
       annualStatistics: [800, 1050, 1110, 1130, 1200, 1190, 1300, 1200, 1400],
       unit: 'people',
     },
@@ -118,7 +118,7 @@ const API = {
   ]
 }
 
-const DIAGRAM_MAX_VAL =  API.base[4].max_value || 2000
+const DIAGRAM_MAX_VAL = API.base[4].max_value || 2000
 
 // tabs
 
@@ -176,22 +176,22 @@ const addSpases = num => {
 
 const setUnit = value => {
   let out
-  switch(value) {
-    case 'people': 
+  switch (value) {
+    case 'people':
       out = ' чел.'
-    break
-    case 'rub':    
+      break
+    case 'rub':
       out = ' руб.'
-    break
-    case 'item':   
+      break
+    case 'item':
       out = ' ед.'
-    break
-    case 'ratio':  
+      break
+    case 'ratio':
       out = '%'
-    break
+      break
   }
   return out
-}  
+}
 
 
 // *** ДИАГРАММА ***
@@ -296,7 +296,7 @@ function showChart(elem, kind, array) {
 
 
 // Элементы блока данных
- 
+
 const rectIcon = () => {
   return `
   <svg width=".8vw" height=".8vw" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -311,7 +311,7 @@ const progressbar = ratio => {
   <svg class="priority__item-progressbar" viewBox="0 0 1054 60" fill="none"
     xmlns="http://www.w3.org/2000/svg">
     <rect opacity="0.05" x="-2" width="100%" height="100%" fill="white"></rect>
-    <rect y="1" width="${+ratio < 100 ? ratio : 100  }%" height="100%" fill="url(#p1-m-1)"></rect>
+    <rect y="1" width="${+ratio < 100 ? ratio : 100}%" height="100%" fill="url(#p1-m-1)"></rect>
     <path d="M15.3077 1H20.1543L-24.2247 60H-29.0713L15.3077 1Z" fill="#112054"></path>
     <path d="M1042.03 60L1086.41 1H1081.56L1037.18 60H1042.03Z" fill="#112054"></path>
     <path d="M1022.64 60L1067.02 1H1062.18L1017.8 60H1022.64Z" fill="#112054"></path>
@@ -381,14 +381,14 @@ const progressbar = ratio => {
 }
 
 const templateData = (
-  { 
-    kind, 
-    plan, 
-    fact, 
-    unit 
-  }, 
+  {
+    kind,
+    plan,
+    fact,
+    unit
+  },
   ratio, modifier) => {
-  if ((kind == 'p2' ||  kind == 'p3') 
+  if ((kind == 'p2' || kind == 'p3')
     && modifier != 'special') {
     return `
     <div class="priority__item-data">
@@ -458,12 +458,12 @@ const templateData = (
 }
 
 const template = (data, modifier = 'default', fraction = 1) => {
-  const {date, title, plan, fact } = data
+  const { date, title, plan, fact } = data
 
   let ratio = fact
   if (modifier != 'planned' && fact != 0) {
     ratio = (fact / plan * 100).toFixed(fraction)
-  } 
+  }
 
   return `
   <div class="priority__item priority__item_${modifier}">
@@ -485,11 +485,11 @@ const template = (data, modifier = 'default', fraction = 1) => {
 
 function setItems() {
   let diagramData = [],
-  base = '',
-  special = ''
+    base = '',
+    special = ''
 
   API.base.forEach(x => {
-    const { kind, annualStatistics } = x 
+    const { kind, annualStatistics } = x
 
     if (kind == 'p2' || kind == 'p3') {
       base += template(x, 'planned')
@@ -499,7 +499,7 @@ function setItems() {
       diagramData.push({
         kind,
         annualStatistics
-      }) 
+      })
       base += template(x, 'charted')
       return
     }

@@ -8,8 +8,21 @@ const rename       = require('gulp-rename')
 const concat       = require('gulp-concat')
 const uglify       = require('gulp-uglify-es').default
 const newer        = require('gulp-newer')
-const scss         = require('gulp-sass')
 const del          = require('del')
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+
+
+
+gulp.task('sass', function() {
+  return gulp.src('src/scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('default', function() {
+  gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
+});
 
 
 const server = () => {
@@ -46,16 +59,16 @@ const scripts = () => {
 }
 
 const styles = () => {
-	return src('src/scss/main.scss')
-	.pipe(scss())
-	.pipe(rename('style.min.css'))
-	.pipe(autoprefixer({
-		overrideBrowserslist: ['last 10 versions'],
-		grid: true
-	}))
-	.pipe(cleanCSS(({ level: { 1: { specialComments: 0 } } })))
-	.pipe(dest('dist/css'))
-	.pipe(browserSync.stream())	
+  return src('src/scss/main.scss')
+    .pipe(sass())
+    .pipe(rename('style.min.css'))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 versions'],
+      grid: true
+    }))
+    .pipe(cleanCSS(({ level: { 1: { specialComments: 0 } } })))
+    .pipe(dest('dist/css'))
+    .pipe(browserSync.stream())  
 }
 
 const images = () => {

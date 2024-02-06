@@ -204,9 +204,9 @@ document.addEventListener('DOMContentLoaded', () => {
         teachers: 1279,
         scientists: 347,
         score: 4.2,
-        contracts: 111,
-        progress: 39.62,
-        publications: 1078,
+        contracts: 152,
+        progress: 101.4,
+        publications: 993,
         // cash: 3.45,
         // budget: 4.08,
         dpoProgress: 30.8,
@@ -758,7 +758,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
-
     function studentsEmploymentDataOutput(data) {
 
         const studentsEmploymentProgressbar = Array.from(document.querySelectorAll('.students__employment-diagram path')).reverse();
@@ -1290,4 +1289,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     insertToPage('footer__btns-val', numDataOutput(partnersData.count));
+    
 })
+
+const openPopUp = document.getElementById("modal-open-btn");//Выделяет кнопку "Еще" для открытия модального окна
+const closePopUp = document.querySelector('.close-modal-btn');// Выделяет кнопку для закрытия модального окна
+const popUp = document.querySelector('.modal');//Выделяет модальное окно
+
+// Открывает модальное окно
+openPopUp.addEventListener('click', () => {
+    popUp.classList.add('opened');
+});
+    
+//Закрывает модальное
+closePopUp.addEventListener('click', () => {
+    popUp.classList.remove('opened');
+});

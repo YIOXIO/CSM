@@ -47,7 +47,7 @@
 
 	&_down {
 		bottom: 1.2vw;
-		right: 14.4vw;
+		right: 4vw;
 	}
 }
 
@@ -58,20 +58,25 @@
 .footer__btns-btn {
 	position: relative;
 	width: 11vw;
- height: 4vw;
+ 	height: 4vw;
 	z-index: 1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: #fff;
 	padding-top: 0.7vw;
-	
+
+
+	&_more{
+		bottom: -0.4vw;
+	}
+
 
 	&_enrollment {
 		top: 0.35vw;
 		right: 1.4vw;
 		width: 10.7vw;
-
+		
 		.footer__btns-text {
 			margin-top: -0.5vw;
 		}
