@@ -46,7 +46,7 @@
   }
 
   &-text {
-    font-size: 0.95vw;
+    font-size: 0.8vw;
     color: #217AFF;
     text-transform: uppercase;
     font-weight: 400;
@@ -146,7 +146,7 @@
   }
   
   .header__link-text {
-    font-family: Rubik;
+    font-family: 'Rubik';
     font-weight: 700;
     font-size: 0.625vw;
     letter-spacing: 0.1em;
@@ -154,10 +154,10 @@
     color: #217aff;
 
     &_provost {
-      font-family: Oswald;
-      font-weight: 400;
-      font-size: 0.85vw;
-      letter-spacing: 0.1em;
+      font-family: 'Oswald';
+      font-weight: 500;
+      font-size: 0.72vw;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
       color: #217AFF;
     }
@@ -232,10 +232,11 @@
     height: 4vw;
     display: flex;
     align-items: center;
-    padding-left: 1.2vw;
+    padding-left: 0;
     padding-bottom: 0.625vw;
     z-index: 100;
     cursor: pointer;
+    justify-content: center;
   }
   
   .header__bg {
