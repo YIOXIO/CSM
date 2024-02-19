@@ -86,12 +86,12 @@
 					<path d="M216 38V1H11L1 11V51H203L216 38Z" fill="black" fill-opacity="0.1"/>
 					<path d="M216 0.5H216.5V1V38V38.2071L216.354 38.3536L203.354 51.3536L203.207 51.5H203H1H0.5V51V11V10.7929L0.646454 10.6464L10.6465 0.646447L10.7929 0.5H11H216Z" stroke="#FB9B2B" stroke-opacity="0.4"/>
 				</svg>
-				<p class="topnav__btn-text topnav__btn-text_orange">ВУЗЫ МОСКВЫ COVID-19</p>
+				<p class="topnav__btn-text topnav__btn-text_orange">РЕЙТИНГ ВУЗА ПО ИИ</p>
 			</div>
 		
 			<button class="header__link"  id="ninth-building">
 			
-				<span class="header__link-text header__link-text_provost">Цифровой корпус</span>
+				<span class="header__link-text header__link-text_provost">КОРПУС ИМ. А.С. ВИШНЯКОВА</span>
 			
 				<svg class="header__link-bg" fill="none" viewBox="0 0 209 66">
 					<path d="M202 54H160L166.81 61H195L202 54Z" fill="#223E9E" />
@@ -1078,7 +1078,22 @@
 
 
 		<div class="homepage__right">
+			<div class="study">
+				<div id="enrollment" class="study__link">
+					<svg class="block-bg" viewBox="0 0 209 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M208.5 39.5L194.5 53.5H15L1 39.5V16L16 1H152H196.5L208.5 13V39.5Z" fill="#112054" fill-opacity="0.68" stroke="#217AFF" stroke-opacity="0.2"></path>
+					</svg>
+					<span>СТРУКТУРА ВУЗА</span>
+				</div>
 
+				<div id="study_schedule" class="study__link">
+					<svg class="block-bg" viewBox="0 0 209 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M208.5 39.5L194.5 53.5H15L1 39.5V16L16 1H152H196.5L208.5 13V39.5Z" fill="#112054" fill-opacity="0.68" stroke="#217AFF" stroke-opacity="0.2"></path>
+					</svg>
+					<span>Финансы</span>
+				</div>
+			</div>
+<!-- 
 			<div class="study">
 				<div id="enrollment" class="study__link">
 					<svg class="block-bg" viewBox="0 0 209 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1093,7 +1108,7 @@
 					</svg>
 					<span>график учебного процесса</span>
 				</div>
-			</div>
+			</div> -->
 
 			<section id="international" class="international block">
 
@@ -1323,28 +1338,12 @@
             <div class="modal-container">
                 <button class="close-modal-btn"></button>
                 <ul class="more-list">
-                    <li class="" >
-                        <button class="button-primary button-primary_casual">COVID-19</button>
+					<li>
+						<button class="button-primary button-primary_casual">РЭУ ПРИЕМ</button>
                     </li>
-                    <li class="" >
-                        <button class="button-primary button-primary_casual">ПРИОРИТЕТ 2030</button>
-                    </li>
-                    <li class="" >
-                        <button class="button-primary button-primary_casual">Поступление 2022 в датах</button>
-                    </li>
-                    <li class="" >
-                        <button class="button-primary button-primary_casual">Портреты</button>
-                    </li>
-
-                    <li class="" >
-                        <button class="button-primary button-primary_casual">сводный Отчет по приему</button>
-                    </li>
-                    <li class="" >
-                        <button class="button-primary button-primary_casual">график учебного процесса</button>
-                    </li>
-                    <li class="" >
-                        <button class="button-primary button-primary_casual">дпо</button>
-                    </li>
+					<li>
+						<button class="button-primary button-primary_casual">БИЗНЕС-ИНКУБАТОР</button>
+					</li>
                 </ul>
             </div>
         </section>
@@ -1375,7 +1374,7 @@
 	</a>
 
 	<div class="footer__btns">
-		<div class="footer__btns-item">
+		<!-- <div class="footer__btns-item">
 			<button class="footer__btns-btn footer__btns-btn_enrollment" id="students_enrollment">
 				<svg class="footer__btns-icon" width="100%" height="100%" viewBox="0 0 186 54" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M185 39.1333L172.586 53H13.4145L1 39.1333V15.8571L14.3012 1H134.899H174.359L185 12.8857V39.1333Z" fill="#112054" fill-opacity="0.68" stroke="#217AFF" stroke-opacity="0.2"/>
@@ -1383,7 +1382,7 @@
 					
 				<span class="footer__btns-text">сводный отчет по приему</span>
 			</button>
-		</div>
+		</div> -->
 		<div class="footer__btns-item">
 			<button class="footer__btns-btn" id="partners">
 				<svg class="footer__btns-icon" viewBox="0 0 189 66" width="100%" height="100%">
@@ -1397,8 +1396,17 @@
 				<span class="footer__btns-val"></span>
 			</button>
 		</div>
+		<div class="footer__btns-item">
+			<button class="footer__btns-btn footer__btns-btn_more" id="modal-open-btn">
+				<svg class="footer__btns-icon" width="100%" height="100%" viewBox="0 0 186 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M185 39.1333L172.586 53H13.4145L1 39.1333V15.8571L14.3012 1H134.899H174.359L185 12.8857V39.1333Z" fill="#112054" fill-opacity="0.68" stroke="#217AFF" stroke-opacity="0.2"/>
+				</svg>
+				<span class="footer__btns-text">Меню</span>
+			</button>
+		</div>
+
 	</div>
-	<div class="footer__btns footer__btns_down">
+	<!-- <div class="footer__btns footer__btns_down">
 		<div class="footer__btns-item">
 			<button class="footer__btns-btn footer__btns-btn_enrollment" id="dpo">
 				<svg class="footer__btns-icon" width="100%" height="100%" viewBox="0 0 186 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1412,10 +1420,10 @@
 				<svg class="footer__btns-icon" width="100%" height="100%" viewBox="0 0 186 54" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M185 39.1333L172.586 53H13.4145L1 39.1333V15.8571L14.3012 1H134.899H174.359L185 12.8857V39.1333Z" fill="#112054" fill-opacity="0.68" stroke="#217AFF" stroke-opacity="0.2"/>
 				</svg>
-				<span class="footer__btns-text">Еще</span>
+				<span class="footer__btns-text">Меню</span>
 			</button>
 		</div>
-	</div>
+	</div> -->
 
 </footer>
 </div>
