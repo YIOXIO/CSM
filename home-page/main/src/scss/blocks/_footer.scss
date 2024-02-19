@@ -44,6 +44,7 @@
 	right: 4vw;
 	display: flex;
 	z-index: 1;
+	gap: 1vw;
 
 	&_down {
 		bottom: 1.2vw;
@@ -69,6 +70,7 @@
 
 	&_more{
 		bottom: -0.4vw;
+		padding: 0;
 	}
 
 
