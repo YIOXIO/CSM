@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    document.querySelector('#students_enrollment').addEventListener('click', () => {
+    // document.querySelector('#students_enrollment').addEventListener('click', () => {
 
-    });
+    // });
 
     document.querySelector('#portraits').addEventListener('click', () => {
         console.log('portraits')
@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    document.querySelector('#dpo').addEventListener('click', () => {
-        //...
-    });
+    // document.querySelector('#dpo').addEventListener('click', () => {
+    //     //...
+    // });
 
 
    
@@ -577,18 +577,23 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
     function publicationsDataOutput(data, category, color = '#FB9B2B') {
-        const diagram = Array.from(document.querySelectorAll(`.wos rect`));
-
-        const max = Math.max(...data[category]);
-
+        const diagram = Array.from(document.querySelectorAll('.wos rect'));
+        const values = data[category];
+        
+        if (values.length < diagram.length) {
+            console.error('Недостаточно значений в массиве данных');
+            return;
+        }
+        
+        const max = Math.max(...values);
+        
         diagram.map((i, index) => {
-            let value = (data[category][index] / max) * 100;
-
-            i.setAttribute('fill', color)
+            let value = (values[index] / max) * 100;
+            i.setAttribute('fill', color);
             i.setAttribute('height', `${value}%`);
             i.setAttribute('y', `${100 - value}%`);
         });
-
+        
         document.querySelector('.science__diagram-value').textContent = max;
     }
 
