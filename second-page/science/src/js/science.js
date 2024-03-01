@@ -2,10 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scienceServerData = {
         date: '04.02.2024',
-        currentPlan: 503760.6,
+        currentPlan: 647240 ,
+        currentReceipts: 326251.4,
         expectedReceipts: {
             date: '31.12.2024',
-            sum: 236166.5
+            sum: 647240
         },
         //Добавлены данные для НИР и научно-техническим услугам
         currentPlanTechnical:101749.4,
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sum: 101749.4,
         },
         //______________________________________________________
-        currentReceipts: 40220.5,
+        
         publications: {
             scopus: {
                 scopusTotal: 694,
@@ -216,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ====================== прогрессбар =======================
 
-        const sciencePlanProgressbar = Array.from(document.querySelectorAll('.science__data-plan__progressbar path'));
+        const sciencePlanProgressbar = Array.from(document.querySelectorAll('.science-nir__data-plan__progressbar path'));
         const planProgress = ((data.currentReceipts / data.currentPlan) * 100).toFixed(2);
 
         const sciencePlanProgressbarLength = progressLength(sciencePlanProgressbar, planProgress);
