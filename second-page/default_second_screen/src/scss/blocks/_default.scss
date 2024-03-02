@@ -6,16 +6,17 @@
     transform: translate(-50%, -50%);
 
     &__title {
+        color: var(--white, #FFF);    
         font-family: Oswald;
-        font-weight: 400;
-        font-size: 5vw;
-        line-height: 6.1vw;
-        letter-spacing: 0.05em;
-        color: #FFFFFF;
-        margin-left: 40vw;
+        font-size: 2.0752vw;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; 
+        letter-spacing: 0.1vw;
+        margin-block-end: 3.3vh;
 
         span {
-            font-weight: 700;
+            color: #FB9B2B;
         }
     }
 
@@ -48,4 +49,89 @@
         top: 7vw;
     }
 } 
+
+.default-layout{
+    padding-inline-start: 4.323vw;
+}
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 0.5vh;
+    padding-inline-start: 1.4vw;
+
+    &__text{
+        color: #FFF;
+        font-family: 'Oswald';
+        font-size: 1.232vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 65.067px */
+        letter-spacing: 1.502px;
+
+        span{
+        color: #22C23C;
+
+        }
+    }
+    &__link{
+        color: #FB9B2B;
+        font-family: 'Oswald';
+        font-size: 0.93vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 49.4px */
+        letter-spacing: 1.14px;
+    }
+    &__button-container{
+        display: flex;
+        gap: 0.5vw;
+    }
+    &__documents{
+        display: flex;
+        flex-direction: column;
+        gap: 0.6vh;
+    }
+    &__item{
+      position: relative;
+    }
+
+}
+.green-element{
+    display: block;
+    block-size: 0.66vw;
+    inline-size: 0.66vw;
+    transform: rotate(-45deg);
+    background-color: #22C23C;
+    position: absolute;
+    top: 50%;
+    left: -1%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.modal{
+    display: none;
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000ba;
+}
+
+.pdfCloseButton{
+    font-size: 50px;
+    text-align: right;
+    display: block;
+    cursor: pointer;
+}
     
+.document-icon{
+    inline-size: 1.6vw;
+}
