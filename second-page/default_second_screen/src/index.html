@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
@@ -12,6 +12,19 @@
 	<div class="wrapper">
 		<div class="bg"></div>
 		<header class="header">
+			<ul class="layout-link layout-link_home">
+				<li class="layout-link__item">
+					<svg width="2.708vw" height="2.708vw" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M51.5 38V38.2071L51.3536 38.3536L38.3536 51.3536L38.2071 51.5H38H1H0.5V51V11V10.7929L0.646446 10.6464L10.6464 0.646447L10.7929 0.5H11H51H51.5V1V38Z"
+							stroke="#217AFF" stroke-opacity="0.4" />
+						<path
+							d="M32.6657 17C35.2923 18.9086 37 22.0048 37 25.5C37 31.299 32.299 36 26.5 36C20.701 36 16 31.299 16 25.5C16 22.0048 17.7077 18.9086 20.3343 17"
+							stroke="#217AFF" stroke-width="2" />
+						<path d="M26.5 13V27" stroke="#217AFF" stroke-width="2" />
+					</svg>
+				</li>
+			</ul>
 			<form action="/" class="header__search">
 				<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 68" class="header__search-bg">
 					<path d="M24.5 21.5L2 -1H978.5L956 21.5H871.5L853 40H785.5L758 67.5H115L69 21.5H24.5Z"
@@ -68,28 +81,44 @@
 			</svg>
 		</header>
 
-		<main class="layout">
-			<ul class="layout-link layout-link_home">
-				<li class="layout-link__item">
-					<svg width="2.708vw" height="2.708vw" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M51.5 38V38.2071L51.3536 38.3536L38.3536 51.3536L38.2071 51.5H38H1H0.5V51V11V10.7929L0.646446 10.6464L10.6464 0.646447L10.7929 0.5H11H51H51.5V1V38Z"
-							stroke="#217AFF" stroke-opacity="0.4" />
-						<path
-							d="M32.6657 17C35.2923 18.9086 37 22.0048 37 25.5C37 31.299 32.299 36 26.5 36C20.701 36 16 31.299 16 25.5C16 22.0048 17.7077 18.9086 20.3343 17"
-							stroke="#217AFF" stroke-width="2" />
-						<path d="M26.5 13V27" stroke="#217AFF" stroke-width="2" />
-					</svg>
-				</li>
-			</ul>
+		<main class="default-layout">
+		 <h1 class="default__title">Корпус цифровых и информационных технологий <span class="span-accent-gold">им. А.С. Вишнякова</span> </h1>
+		<ul class="todo-list">
+			<li class="todo-list__item">
+				<span class="green-element"></span>
+				<p class="todo-list__text">Выполнение строительно-монтажных работ на 29.02.2024 <span class="span-accent-green">(завершено)</span> </p>
+			</li>
+			<li class="todo-list__item">
+				<span class="green-element"></span>
 
-			<img class="default__img" src="./assets/img/reu_rf.svg">
+				<p class="todo-list__text">Выполнение пуско-наладочных работ на 29.02.2024<span class="span-accent-green">(завершено)</span> </p>
 
-			<div class="default">
-				<div class="default__title"><span>Ц</span>ифровая </div>
-				<div class="default__title"><span>С</span>истема</div>
-				<div class="default__title"><span>М</span>ониторинга</div>
-			</div>
+			</li>
+			<li class="todo-list__item">
+				<span class="green-element"></span>
+				<p class="todo-list__text">Инженерные сети<span class="span-accent-green">(сданы)</span> </p>
+			</li>
+			<li class="todo-list__item">
+				<ul class="todo-list__documents">
+					<li class="todo-list__button-container">
+						<img class="document-icon" src="./assets/img/document-icon.svg" alt="">
+						<button class="todo-list__link openPdfButton" data-file-index="0" >акт о подключении к централизованной системе водоотведения от 24.05.2018 № 6136ДП-К (подписан 12.01.2024)</button>
+					</li>
+					<li class="todo-list__button-container">
+						<img class="document-icon" src="./assets/img/document-icon.svg" alt="">
+						<button class="todo-list__link openPdfButton" data-file-index="1" >акт о подключении к централизованной системе водоотведения от 24.05.2018 № 6135ДП-К (подписан 15.01.2024)</button>
+					</li>
+					<li class="todo-list__button-container">
+						<img class="document-icon" src="./assets/img/document-icon.svg" alt="">
+						<button class="todo-list__link openPdfButton" data-file-index="2" >справка от 21.12.2023 № 117/а о присоединении линии проводного вещания (радиотрансляционная линия)</button>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div id="pdfPopup" class="modal">
+			<span class="pdfCloseButton">&times;</span>
+			<iframe id="pdfViewer" width="85%" height="85%" style="border: none;" type="application/pdf"></iframe>
+		  </div>
 		</main>
 
 		<footer class="footer">
