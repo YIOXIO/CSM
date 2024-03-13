@@ -10,6 +10,7 @@ const uglify       = require('gulp-uglify-es').default
 const newer        = require('gulp-newer')
 const scss         = require('gulp-sass')(require('sass'))
 const del          = require('del')
+const babel = require('gulp-babel');
 
 
 const server = () => {
@@ -39,6 +40,9 @@ const scripts = () => {
 	return src([
 		'src/js/**.js'
 	])
+	.pipe(babel({ // Добавляем Babel в процесс сборки
+		presets: ['@babel/preset-env']
+	  }))
 	.pipe(concat('default.js'))
 	.pipe(uglify())
 	.pipe(dest('dist/js'))
