@@ -52,6 +52,7 @@
 
 .default-layout{
     padding-inline-start: 4.323vw;
+    overflow: scroll;
 }
 
 .todo-list{
@@ -70,10 +71,7 @@
         line-height: 130%; /* 65.067px */
         letter-spacing: 1.502px;
 
-        span{
-        color: #22C23C;
 
-        }
     }
     &__link{
         color: #FB9B2B;
@@ -109,22 +107,45 @@
     left: -1%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
+.blue-element{
+    display: block;
+    block-size: 0.66vw;
+    inline-size: 0.66vw;
+    transform: rotate(-45deg);
+    background-color: #217AFF;
+    position: absolute;
+    top: 50%;
+    left: -1%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
 .modal{
     display: none;
     position: absolute;
     inline-size: 100%;
     block-size: 100%;
-    z-index: 999;
+    z-index: 3;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     justify-content: center;
     align-content: flex-end;
     flex-direction: column;
-    align-items: center;
-    background-color: #000000ba;
+    align-items: flex-end;
 }
-
+.pdf-overlay{
+    background-color: #000000ba;
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    cursor: pointer;
+    z-index: -1;
+}
+.span-accent-green{
+color: #22C23C;
+}
+.span-accent-blue{
+    color: #fff;
+}
 .pdfCloseButton{
     font-size: 50px;
     text-align: right;
@@ -134,4 +155,70 @@
     
 .document-icon{
     inline-size: 1.6vw;
+}
+
+
+.pdf-toolbar-button{
+    position: relative;
+}
+
+.pdf-zoom-icon{
+    height: 2.5vw;
+    width: 2.5vw;
+}
+
+
+.pdf-canvas{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    block-size: 90%;
+}
+
+.pdf-toolbar{
+    display: flex;
+    z-index: 999;
+    position: absolute;
+    margin-inline-end: 20vw;
+    flex-direction: column;
+    gap: 1vw;
+
+}
+#zoom_controls{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translate(-12vw, -42vh);
+}
+
+.pdf-button-text{
+    font-family: 'Rubik';
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 25.6px; /* 98.462% */
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+    color: #217AFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.pdf-next-button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 11vw;
+    height: 8vh;
+}
+.default-layout__logo{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-6.8vw, 14.4vh);
+    inline-size: 17vw;
 }
