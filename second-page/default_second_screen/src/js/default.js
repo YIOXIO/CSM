@@ -9,12 +9,11 @@ const pdfFiles = [
   './assets/defaultSecond/dist/pdf/act8.pdf',
 ];
 
-// Инициализация PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.js';
 
-// Функция для отображения pdf-файла в модальном окне
-let canvas; // Объявляем canvas в глобальной области видимости
-let ctx; // Объявляем ctx в глобальной области видимости
+
+let canvas; 
+let ctx; 
 
 function openPdfModal(fileIndex) {
   const modal = document.getElementById('pdfPopup');
@@ -52,7 +51,7 @@ function openPdfModal(fileIndex) {
   // Функция для отрисовки страницы
   function renderPage(num) {
     if (pageRendering) {
-      // Если страница уже отрисовывается, то не отрисовываем ее еще раз
+     
       return;
     }
     pageRendering = true;
@@ -99,8 +98,8 @@ openPdfButtons.forEach(button => {
 function closePdfModal() {
   const modal = document.getElementById('pdfPopup');
   const canvas = document.getElementById('pdfCanvas');
-  let pageNum = 1; // Если вы хотите сбросить номер страницы, инициализируйте его здесь
-  let scale = 1; // Если вы хотите сбросить масштаб, инициализируйте его здесь
+  let pageNum = 1;
+  let scale = 1; 
 
   // Удаляем существующий canvas
   if (canvas) {
@@ -114,7 +113,6 @@ function closePdfModal() {
   // Скрываем модальное окно
   modal.style.display = 'none';
 }
-
 
 // Добавляем функцию в качестве обработчика событий для overlay
 const closeModalOverlay = document.querySelector('.pdf-overlay');
