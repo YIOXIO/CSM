@@ -1,9 +1,139 @@
 .operational-layout{
-    padding-inline-start: 4.323vw;
+    padding-inline-start: 8.323vw;
     overflow: scroll;
 }
 
 .operation-area-bg{
     max-inline-size: 80vw;
     transform: translate(10px, -9%);
+}
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1.6vh;
+    padding-inline-start: 1.4vw;
+    margin-block-start: 1.6vw;
+    margin-block-end: 5.5vw;
+
+    &__span{
+    font-size: 1.23vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 65.067px */
+    letter-spacing: 1.502px;
+    margin-inline-start: .5vw;
+    }
+    &__text{
+        color: #FFF;
+        font-family: 'Oswald';
+        font-size: 1.232vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 65.067px */
+        letter-spacing: 1.502px;
+        margin-inline-start: .5vw;
+        max-inline-size: 68vw;
+    }
+    &__link{
+        color: #FB9B2B;
+        font-family: 'Oswald';
+        font-size: 0.93vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 49.4px */
+        letter-spacing: 1.14px;
+    }
+    &__button-container{
+        display: flex;
+        gap: 0.5vw;
+    }
+    &__documents{
+        display: flex;
+        flex-direction: column;
+        gap: 0.6vh;
+    }
+    &__item{
+      position: relative;
+    }
+
+}
+.green-element{
+    display: block;
+    block-size: 0.66vw;
+    inline-size: 0.66vw;
+    transform: rotate(-45deg);
+    background-color: #22C23C;
+    position: absolute;
+    top: 50%;
+    left: -1%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.blue-element{
+    display: block;
+    block-size: 0.66vw;
+    inline-size: 0.66vw;
+    transform: rotate(-45deg);
+    background-color: #217AFF;
+    position: absolute;
+    top: 50%;
+    left: -1%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.modal{
+    display: none;
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.pdf-overlay{
+    background-color: #000000ba;
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    cursor: pointer;
+    z-index: -1;
+}
+.span-accent-green{
+color: #22C23C;
+}
+.span-accent-blue{
+    color: #fff;
+}
+
+.operational-logo{
+    inline-size: 17.5vw;
+    margin-block-start: 2.6vw;
+    margin-block-end: 1.8vw;
+}
+
+.operational-title{
+    font-size: 2.442vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 130px */
+    letter-spacing: 5px;
+    margin-block-end: 1.3vw;
+}
+
+.operational-year{
+font-size: 1.9531vw;
+font-style: normal;
+font-weight: 500;
+line-height: 130%; 
+letter-spacing: 2.4px;
+margin-block-end: 2vw;
+}
+
+.span-accent-gold{
+color: #FB9B2B;
 }
