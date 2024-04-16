@@ -10,6 +10,8 @@ const uglify       = require('gulp-uglify-es').default
 const newer        = require('gulp-newer')
 const scss         = require('gulp-sass')(require('sass'))
 const del          = require('del')
+const babel = require('gulp-babel');
+
 
 const server = () => {
 	browserSync.init({
@@ -36,9 +38,12 @@ const html = () => {
 
 const scripts = () => {
 	return src([
-		'src/js/all-branches.js'
+		'src/js/**.js'
 	])
-	.pipe(concat('all-branches.js'))
+	.pipe(babel({ // Добавляем Babel в процесс сборки
+		presets: ['@babel/preset-env']
+	  }))
+	.pipe(concat('default.js'))
 	.pipe(uglify())
 	.pipe(dest('dist/js'))
 	.pipe(browserSync.stream())
@@ -76,8 +81,8 @@ const icons = () => {
 }
 
 const fonts = () => {
-	return src('src/fonts/**/*')
-	.pipe(dest('dist/fonts'))
+	return src('src/assets/fonts/**/*')
+	.pipe(dest('dist/assets/fonts'))
 	.pipe(browserSync.stream())
 }
 
@@ -85,6 +90,11 @@ const cleanscss = () => {
 	return del('src/scss/*.css');
 }
 
+const pdf = () => {
+	return src('src/pdf/*.pdf')
+		.pipe(dest('dist/pdf'))
+		.pipe(browserSync.stream());
+}
 const watcher = () => {
 	watch('src/*.html').on('change', parallel(html))
 	watch('src/scss/**/*.+(scss|sass|css)', series(styles, cleanscss))
@@ -92,9 +102,10 @@ const watcher = () => {
 	watch('src/assets/img/**/*', images)
 	watch('src/icons/**/*', icons)
 	watch('src/fonts/**/*', fonts)
+	watch('src/pdf/*.pdf', pdf)
 }
 
-const build = parallel(html, scripts, styles, images, icons, fonts, server, watcher, cleanscss)
+const build = parallel(html, scripts, styles, images, icons, fonts, pdf, server, watcher, cleanscss)
 
 exports.server    = server
 exports.watcher   = watcher
@@ -103,6 +114,7 @@ exports.scripts   = scripts
 exports.styles    = styles
 exports.images    = images
 exports.fonts     = fonts
+exports.pdf       = pdf
 exports.cleanscss = cleanscss
 exports.cleanimg  = cleanimg
 
