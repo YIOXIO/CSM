@@ -10,6 +10,7 @@ const pdfFiles = [
   './assets/defaultSecond/dist/pdf/act9.pdf',
   './assets/defaultSecond/dist/pdf/act10.pdf',
   './assets/defaultSecond/dist/pdf/act11.pdf',
+  './assets/defaultSecond/dist/pdf/act12.pdf',
 ];
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.js';
