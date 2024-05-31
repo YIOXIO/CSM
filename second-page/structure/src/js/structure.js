@@ -17,28 +17,35 @@
 //  })
 // })
 
-var modal = document.getElementById("modal");
-var btn1 = document.getElementById("button1");
-var btn2 = document.getElementById("button2");
-var span = document.getElementsByClassName("close")[0];
-var iframe = document.getElementById("modal-iframe");
 
-btn1.onclick = function() {
+
+
+
+const modal = document.querySelector("#modal");
+const closeModal = document.querySelector(".close");
+const iframe = document.querySelector("#modal-iframe");
+var links = [
+  "https://xn--p1ag3a.xn--p1ai/structure/hs",
+  "https://xn--p1ag3a.xn--p1ai/users",
+  "https://xn--p1ag3a.xn--p1ai/structure",
+];
+
+function openModal(index) {
   modal.style.display = "block";
-  iframe.src = "https://xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii";
+  iframe.src = links[index];
 }
 
-btn2.onclick = function() {
-  modal.style.display = "block";
-  iframe.src = "https://www.example2.com";
-}
-
-span.onclick = function() {
+closeModal.addEventListener('click', () => {
   modal.style.display = "none";
-}
+  iframe.src = ''
+})
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+var cards = document.querySelectorAll(".s-card");
+cards.forEach(function(card) {
+  card.addEventListener("click", function() {
+    var index = this.getAttribute("data-link");
+    openModal(index);
+  });
+});
+
+
