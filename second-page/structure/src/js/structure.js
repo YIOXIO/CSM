@@ -53,11 +53,6 @@ function handleEscClosePopup(evt) {
   }
 }
 
-function handleEscClosePopup(evt) {
-  if (evt.key === 'Escape') {
-    closePopup(document.querySelector('.popup_is_active'));
-  }
-}
 
 popup.addEventListener('click', closePopup);
 
