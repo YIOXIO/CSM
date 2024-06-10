@@ -1,0 +1,158 @@
+.r-table{
+    &__container{
+        max-inline-size: 91.916vw;
+        margin-inline: auto;
+        font-family: "Oswald", sans-serif;
+        font-style: normal;
+
+    }
+
+
+    &__title{
+        color: #FFF;
+        font-size: 1.953vw;
+        font-family: "HeliosCondC";
+        font-weight: 700;
+        margin-block-end: 5.719vh;
+        line-height: 110%; /* 88px */
+    }
+
+    &__header{
+        color: #FFF;
+        font-size: 1.465vw;
+        font-weight: 500;
+        line-height: 110%;
+        text-align: left;
+    }
+
+
+
+    &__rating-name{
+        color: #FFF;
+        font-size: 1.465vw;
+        font-weight: 500;
+        line-height: 110%; 
+        &_xs{
+            font-weight: 250;
+            font-size: 1.465vw;
+
+        }
+    }
+
+    &__place{
+        color: #FB9B2B;
+        font-size: 1.465vw;
+        font-weight: 500;
+        margin-block-end: 20px;
+        line-height: 110%; 
+    }
+
+    &__year{
+        color: #FFDD85;
+        font-size: 1.465vw;
+        font-weight: 400;
+        line-height: 110%; 
+    }
+
+    &__position{
+        color: #FFF;
+        font-size: 1.27vw;
+        font-weight: 500;
+        line-height: 110%;
+    }
+
+    &__paragraph{
+        color: #FFF;
+        font-size: 1.025vw;
+        font-weight: 300;
+        line-height: 110%;
+    }
+
+
+    // Таблица
+
+    &__layout{
+        border-collapse: separate;
+        border-radius: 20px; 
+        overflow: hidden; 
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        max-inline-size: 96.8%;
+        block-size: 67vh;
+        overflow-y: scroll;
+    }
+
+    &__thead{
+        border-radius: 20px;
+        background-color: rgba(33, 122, 255, 0.68);
+        >tr{
+            display: grid;
+            grid-template-columns:4.1% 30.9% 17.5% 1fr;
+        th{
+            margin-block:  35px;
+            padding-inline: clamp(1.25rem, -1.783rem + 2.528vw, 4.688rem) clamp(1.25rem, -0.68rem + 1.608vw, 3.438rem);
+            border-right: 1px solid #FFF; 
+            vertical-align: top;
+            cursor: pointer;
+
+        }
+        >th:nth-child(1){
+            padding-inline: clamp(1.25rem, -0.68rem + 1.608vw, 3.438rem) clamp(1.25rem, -1.783rem + 2.528vw, 4.688rem);
+        }
+        >th:nth-child(4){
+            border: none;
+        }
+        }
+    }
+
+    &__row{
+        display: grid;
+            grid-template-columns:4.1% 30.9% 17.5% 1fr;
+            border-radius: 20px;
+            border: 3px solid rgba(33, 122, 255, 0.90);
+            background-color: rgba(51, 77, 128, 0.68);
+            >td:nth-child(1){
+                padding-inline: clamp(1.25rem, -0.68rem + 1.608vw, 3.438rem) clamp(1.25rem, -1.783rem + 2.528vw, 4.688rem);
+
+            }
+            >td{
+                margin-block: 60px 40px;
+                padding-inline: clamp(1.25rem, -1.783rem + 2.528vw, 4.688rem) clamp(1.25rem, -0.68rem + 1.608vw, 3.438rem);
+                border-right: 1px solid #FFF; 
+                vertical-align: top;
+
+            }
+    }
+
+    &__row:nth-child(even){
+
+            background-color: rgba(17, 32, 84, 0.68);
+    }
+    &__tbody{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        
+    }
+
+
+}
+
+tbody {
+
+    >tr{
+        display: flex;     
+        >td:nth-child(4){
+            border: none;
+        }
+        >td{
+         
+            flex-grow: 1;
+            
+        }
+    }
+
+}
+
+
