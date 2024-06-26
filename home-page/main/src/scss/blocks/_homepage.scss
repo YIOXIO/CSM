@@ -833,6 +833,19 @@
                 left: 50%;
                 transform: translateX(-50%);
               
+                .circle-block__text:first-child{
+                    color: #2075f5;
+                    font-size: .700vw;
+                    text-wrap: nowrap;
+                    letter-spacing: 0.09vw;
+                }
+                .circle-block__value{
+                    font-size: 2.1vw;
+                }
+                .circle-block__text{
+                    font-size: 0.528vw;
+                }
+
                 .circle-fourth__icon {
                   width: 12.604vw;
                   height: 8.177vw;
@@ -918,7 +931,7 @@
                
                 path {
                     transition: all 1s;
-                    stroke-opacity: 0.2;
+                    stroke-opacity: 1;
                 }
               }
               
@@ -948,7 +961,7 @@
                
                 path {
                     transition: all 1s;
-                    stroke-opacity: 0.2;
+                    stroke-opacity: 1;
                 }
               }
               
@@ -1111,7 +1124,7 @@
               .circle-block__value {
                 color: #fff;
                 font-weight: 500;
-                font-size: 1.8vw;
+                font-size: 1.6vw;
               }
               
               .circle-block__text {
@@ -1131,6 +1144,19 @@
                 z-index: 2;
                 transform: translate(0.6vw, -6.2vw);
                 
+                &>.cirlce-block__contains:nth-child(3){
+                    transform: translate(-29%,-75%);
+                }
+                &>.cirlce-block__contains:nth-child(2){
+                    transform: translate(-133%,-178%);
+                }
+                &>.cirlce-block__contains:nth-child(4){
+                    transform: translate(19%,40%);
+                }
+
+                .cirlce-block__wrap{
+                    flex-direction: column;
+                }
 
                 &-clicked-aria {
                     position: absolute;
@@ -1144,8 +1170,10 @@
                 }
 
                 .circle-block__text {
-                  position: relative;
-                  left: 2vw;
+                    position: relative;
+                    font-size: .526vw;
+                    line-height: .842vw;
+                    letter-spacing: 0.001vw;
                 }
               }
               
@@ -1203,7 +1231,7 @@
                
                 path {
                     transition: all 1s;
-                    stroke-opacity: 0.2;
+                    stroke-opacity: 1;
                 }
               }
               

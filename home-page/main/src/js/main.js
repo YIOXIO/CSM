@@ -200,10 +200,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const generalData = {
         students:  4844,
-        rate: 5,
+        rate: 15,
         teachers: 1279,
         scientists: 347,
-        score: 4.2,
+        score: 53,
         contracts: 152,
         progress: 101.4,
         publications: 993,
