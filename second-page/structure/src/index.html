@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="/assets/structure/dist/css/style.min.css">
 </head>
 
 <body>
@@ -112,10 +112,10 @@
 					</h2>
 				</article>
 				<div class="structure__wrapper">
-					<article class="s-card s-card_rector" href="#">
+					<a class="s-card s-card_rector" href="https://www.xn--p1ag3a.xn--p1ai/structure/rektorat/lobanov-ivan-vasilevich">
 						<h3 class="s-card__header">Ректор</h3>
 						<h3 class="s-card__subheader s-card__subheader_rector">Лобанов Иван Васильевич</h3>
-					</article>
+					</a>
 					<div class="structure__layout">
 						<!-- ПЕРВАЯ КОЛОНКА  -->
 						<ul class="structure__list line">
@@ -1560,7 +1560,7 @@
 										</li>
 										<li>
 											<a href="https://www.xn--p1ag3a.xn--p1ai/structure/filials/pyatigorsk?ysclid=lwyylab7bi962959593">
-												<span class="s-card__span-accent">филиал РЭУ им. Г.В. Плеханова в <br> г.
+												<span class="s-card__span-accent">Филиал РЭУ им. Г.В. Плеханова в   г.
 													Пятигорске Ставропольского края</span>
 											</a>
 										</li>
@@ -1604,6 +1604,11 @@
 											<a href="https://www.xn--p1ag3a.xn--p1ai/structure/filials/minsk?ysclid=lwyynqyu5r417399028">
 												<span class="s-card__span-accent">Минский филиал РЭУ им. Г.В.
 													Плеханова</span>
+											</a>
+										</li>
+										<li>
+											<a href="https://ae.reu.tech/ru">
+												<span class="s-card__span-accent">Филиал РЭУ им.Г.В. Плеханова в г. Дубае (ОАЭ)</span>
 											</a>
 										</li>
 									</ol>
@@ -3301,9 +3306,9 @@
 
 			</section>
 
-			<div id="modal" class="modal ">
+
+			<div id="modal" class="modal modal_is_animated">
 				<div class="modal-content">
-					<span class="close">&times;</span>
 					<iframe class="structure-iframe" id="modal-iframe" src=""></iframe>
 				</div>
 			</div>
@@ -3328,7 +3333,7 @@
 
 
 			<a href="/" class="footer__logo">
-				<img src="./assets/img/logo.svg" alt="" />
+				<img src="/assets/structure/dist/assets/img/logo.svg" alt="" />
 			</a>
 
 			<div class="footer__btns">
@@ -3362,8 +3367,9 @@
 			</div>
 		</footer>
 
-
-		<script src="./js/structure.js"></script>
+		<script src="/lib/signalr/dist/browser/signalr.js"></script>
+		<script src="/js/VideoWall/SlaveCommunication.js"></script> 
+		<script src="/assets/structure/dist/js/structure.js"></script>
 </body>
 
 </html>

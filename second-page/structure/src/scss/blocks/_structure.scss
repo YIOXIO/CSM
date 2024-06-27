@@ -1028,7 +1028,25 @@ a{
     transition: visibility 0s, opacity 0.6s;
     padding-inline: 2.5vw;
     z-index: 998;
+}
 
+
+.modal_is_animated{
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    transition: visibility 0s 0.6s, opacity 0.6s;
+}
+
+.modal_is_active{
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    transition: visibility 0s, opacity 0.6s;
+    z-index: 999;
 }
 
 .popup__list{

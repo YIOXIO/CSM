@@ -1,20 +1,21 @@
 const modal = document.querySelector("#modal");
-const closeModalButton = document.querySelector(".close");
+
 const iframe = document.querySelector("#modal-iframe");
 const popup = document.querySelector('.popup');
 const popupContent = document.querySelector('.popup__content');
 
 function openModal(element) {;
-  modal.style.display = "block";
+
+  modal.classList.add('modal_is_active')
   iframe.src = element.getAttribute('href');
 }
 
 function closeModal() {
-  modal.style.display = 'none';
   iframe.src = ''; 
+  modal.classList.remove('modal_is_active')
 }
+modal.addEventListener('click', closeModal)
 
-closeModalButton.addEventListener("click", closeModal);
 
 let cards = document.querySelectorAll("a");
 cards.forEach(function(card) {
