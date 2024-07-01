@@ -10,6 +10,7 @@ const uglify       = require('gulp-uglify-es').default
 const newer        = require('gulp-newer')
 const scss         = require('gulp-sass')(require('sass'))
 const del          = require('del')
+const stripComments = require('gulp-strip-comments');
 
 
 const server = () => {
@@ -28,6 +29,7 @@ const server = () => {
 
 const html = () => {
 	return src('src/*.html')
+	.pipe(stripComments())
 	.pipe(htmlmin({
 		collapseWhitespace: true
 	}))
@@ -37,6 +39,7 @@ const html = () => {
 
 const scripts = () => {
 	return src('src/js/**/*.js')
+	.pipe(stripComments())
 	.pipe(uglify())
 	.pipe(dest('dist/js'))
 	.pipe(browserSync.stream())
