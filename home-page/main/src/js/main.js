@@ -207,8 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
         contracts: 152,
         progress: 101.4,
         publications: 993,
-        // cash: 3.45,
-        // budget: 4.08,
+        cash: 3.45 ,
+        budget: 4.08 ,
         dpoProgress: 30.8,
         dpoStudents: 11009  
     }
@@ -1310,3 +1310,7 @@ openPopUp.addEventListener('click', () => {
 closePopUp.addEventListener('click', () => {
     popUp.classList.remove('opened');
 });
+
+document.querySelector('.circle-block__second').addEventListener('click', () => {
+    alert('click')
+})

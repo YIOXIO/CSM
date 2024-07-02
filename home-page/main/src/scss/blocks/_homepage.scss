@@ -1143,6 +1143,7 @@
                 height: 17.604vw;
                 z-index: 2;
                 transform: translate(0.6vw, -6.2vw);
+                cursor: pointer;
                 
                 &>.cirlce-block__contains:nth-child(3){
                     transform: translate(-29%,-75%);
