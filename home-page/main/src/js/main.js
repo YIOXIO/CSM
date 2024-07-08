@@ -695,103 +695,89 @@ const priority2030Data = {
     P6: " 226.81 руб"
 };
 
-const legendItems = document.querySelectorAll('.vaccination__legend-item');
+function updateLegend() {
+    const legendItems = document.querySelectorAll('.vaccination__legend-item');
 
-legendItems.forEach(item => {
-    const descr = item.querySelector('.vaccination__legend-descr');
-    const key = descr.textContent.trim().split(' ')[0];
-    if (priority2030Data[key]) {
-        const span = document.createElement('span');
-        span.className = 'vaccination__legend-value';
-        span.textContent = priority2030Data[key];
-        descr.appendChild(span);
-    }
-});
+    legendItems.forEach(item => {
+        const descr = item.querySelector('.vaccination__legend-descr');
+        const key = descr.textContent.trim().split(' ')[0];
+        if (priority2030Data[key]) {
+            const span = document.createElement('span');
+            span.className = 'vaccination__legend-value';
+            span.textContent = priority2030Data[key];
+            descr.appendChild(span);
+        }
+    });
+}
 
-// =============================== ДИАГРАМА ПРИОРИТЕТ 2030 =================================
-
-const ctx = document.getElementById('P5-chart').getContext('2d');
-const chart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['сен', 'окт', 'ноя', 'дек', 'янв', 'фев', 'мар', 'апр', 'май'],
-        datasets: [{
-            label: 'Факт',
-            data: priority2030Data.P5.annualStatistics,
-            backgroundColor: '#217AFF',
-            borderColor: '#217AFF',
-            borderWidth: 2,
-
-        }, {
-            label: 'План',
-            data: Array(9).fill(2000), // Линия плана на уровне 2000
-            backgroundColor: '#FFA500',
-            borderColor: '#FFF',
-            borderWidth: 1,
-            borderDash: [2, 2], // Пунктирная линия для плана
-            pointRadius: 0,
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-            y: {
-                suggestedMax: 4500,
-
-                beginAtZero: true,
-                ticks: {
-                    color: 'white', // Цвет меток на оси Y
+function createChart() {
+    const ctx = document.getElementById('P5-chart').getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['сен', 'окт', 'ноя', 'дек', 'янв', 'фев', 'мар', 'апр', 'май'],
+            datasets: [{
+                label: 'Факт',
+                data: priority2030Data.P5.annualStatistics,
+                backgroundColor: '#217AFF',
+                borderColor: '#217AFF',
+                borderWidth: 2,
+            }, {
+                label: 'План',
+                data: Array(9).fill(2000),
+                backgroundColor: '#FFA500',
+                borderColor: '#FFF',
+                borderWidth: 1,
+                borderDash: [2, 2],
+                pointRadius: 0,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    suggestedMax: 4500,
+                    beginAtZero: true,
+                    ticks: {
+                        color: 'white',
+                        display: false
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.1)',
+                        display: false,
+                    },
+                    border: {
+                        color: 'white',
+                        width: 1
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: 'white',
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.1)',
+                        display: false,
+                    },
+                    border: {
+                        color: 'white',
+                        width: 1
+                    }
+                }
+            },
+            plugins: {
+                legend: {
                     display: false
                 },
-                grid: {
-                    color: 'rgba(255, 255, 255, 0.1)',
-                    display: false,
-                },
-                border: {
-                    color: 'white', // Цвет оси Y
-                    width: 1 // Толщина оси Y
-                }
             },
-            x: {
-                ticks: {
-                    color: 'white', // Цвет меток на оси X    
-                },
-                grid: {
-                    color: 'rgba(255, 255, 255, 0.1)', // Цвет сетки на оси X
-                    display: false,
-                },
-                border: {
-                    color: 'white', // Цвет оси Y
-                    width: 1 // Толщина оси Y
-                }
-            }
         },
-        plugins: {
-            legend: {
-                display: false
-            },
+    });
+}
 
-        },
-        afterDraw: function(chart) {
-            const ctx = chart.ctx;
-            const yAxis = chart.scales['y'];
-            const xAxis = chart.scales['x'];
-
-            // Текст для линии факта
-            ctx.fillStyle = '#217AFF';
-            ctx.font = '12px Arial';
-            ctx.textAlign = 'right';
-            ctx.fillText('Факт', xAxis.left - 10, yAxis.getPixelForValue(priority2030Data.P5.annualStatistics[0]) + 5);
-
-            // Текст для линии плана
-            ctx.fillStyle = '#FFA500';
-            ctx.font = '12px Arial';
-            ctx.textAlign = 'right';
-            ctx.fillText('План', xAxis.left - 10, yAxis.getPixelForValue(2000) + 5);
-        }
-    },
-});
+// Call the functions to update the legend and create the chart
+updateLegend();
+createChart();
 
 
 
