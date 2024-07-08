@@ -207,8 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
         contracts: 152,
         progress: 101.4,
         publications: 993,
-        cash: 3.45 ,
-        budget: 4.08 ,
+        // cash: 3.45 ,
+        // budget: 4.08 ,
         dpoProgress: 30.8,
         dpoStudents: 11009  
     }
@@ -676,63 +676,183 @@ document.addEventListener('DOMContentLoaded', () => {
     
     publicationsDiagramAnimation()
 
+
+// ========================== Приоритет 2030 ======================
+
+const priority2030Data = {
+    P1: " 109.52 руб.",
+    P2: " 21.77%",
+    P3: " 0.55%",
+    P4: " 2 469.82 руб.",
+    P5: {
+        kind: 'p5',
+        date: '28.02.2023',
+        plan: 2402, // План на каждый месяц
+        fact: 2429,
+        annualStatistics: [2969, 2970, 2970, 2970, 2970, 2970, 2970, 2970, 2970],
+        unit: 'people',
+    },
+    P6: " 226.81 руб"
+};
+
+const legendItems = document.querySelectorAll('.vaccination__legend-item');
+
+legendItems.forEach(item => {
+    const descr = item.querySelector('.vaccination__legend-descr');
+    const key = descr.textContent.trim().split(' ')[0];
+    if (priority2030Data[key]) {
+        const span = document.createElement('span');
+        span.className = 'vaccination__legend-value';
+        span.textContent = priority2030Data[key];
+        descr.appendChild(span);
+    }
+});
+
+// =============================== ДИАГРАМА ПРИОРИТЕТ 2030 =================================
+
+const ctx = document.getElementById('P5-chart').getContext('2d');
+const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['сен', 'окт', 'ноя', 'дек', 'янв', 'фев', 'мар', 'апр', 'май'],
+        datasets: [{
+            label: 'Факт',
+            data: priority2030Data.P5.annualStatistics,
+            backgroundColor: '#217AFF',
+            borderColor: '#217AFF',
+            borderWidth: 2,
+
+        }, {
+            label: 'План',
+            data: Array(9).fill(2000), // Линия плана на уровне 2000
+            backgroundColor: '#FFA500',
+            borderColor: '#FFF',
+            borderWidth: 1,
+            borderDash: [2, 2], // Пунктирная линия для плана
+            pointRadius: 0,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                suggestedMax: 4500,
+
+                beginAtZero: true,
+                ticks: {
+                    color: 'white', // Цвет меток на оси Y
+                    display: false
+                },
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.1)',
+                    display: false,
+                },
+                border: {
+                    color: 'white', // Цвет оси Y
+                    width: 1 // Толщина оси Y
+                }
+            },
+            x: {
+                ticks: {
+                    color: 'white', // Цвет меток на оси X    
+                },
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.1)', // Цвет сетки на оси X
+                    display: false,
+                },
+                border: {
+                    color: 'white', // Цвет оси Y
+                    width: 1 // Толщина оси Y
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                display: false
+            },
+
+        },
+        afterDraw: function(chart) {
+            const ctx = chart.ctx;
+            const yAxis = chart.scales['y'];
+            const xAxis = chart.scales['x'];
+
+            // Текст для линии факта
+            ctx.fillStyle = '#217AFF';
+            ctx.font = '12px Arial';
+            ctx.textAlign = 'right';
+            ctx.fillText('Факт', xAxis.left - 10, yAxis.getPixelForValue(priority2030Data.P5.annualStatistics[0]) + 5);
+
+            // Текст для линии плана
+            ctx.fillStyle = '#FFA500';
+            ctx.font = '12px Arial';
+            ctx.textAlign = 'right';
+            ctx.fillText('План', xAxis.left - 10, yAxis.getPixelForValue(2000) + 5);
+        }
+    },
+});
+
+
+
+
      //=================== вакцинация =====================
 
-     const vaccinationData = {
-        date: '2021-10-02',
-        total: 3345,
-        vaccinated: 2457,
-        unvaccinated: 887,
-        recovered: 1050,
-        unsuitable: 232,
-        sick: 108
-    }
+    //  const vaccinationData = {
+    //     date: '2021-10-02',
+    //     total: 3345,
+    //     vaccinated: 2457,
+    //     unvaccinated: 887,
+    //     recovered: 1050,
+    //     unsuitable: 232,
+    //     sick: 108
+    // }
 
-    function vaccinationDataOutput(data) {
+    // function vaccinationDataOutput(data) {
 
-        function sumData() {
-            const result = [data.vaccinated, data.unvaccinated, data.recovered, data.sick, data.unsuitable];
-            const sum = result.reduce((a, b) => a + b)
+    //     function sumData() {
+    //         const result = [data.vaccinated, data.unvaccinated, data.recovered, data.sick, data.unsuitable];
+    //         const sum = result.reduce((a, b) => a + b)
 
-            return sum;
-        } 
+    //         return sum;
+    //     } 
 
-        const categoryRatio = category => Math.ceil((category / sumData()) * 100);
+    //     const categoryRatio = category => Math.ceil((category / sumData()) * 100);
 
-        const setLine = (value, color) => {
-            return  `
-                <svg width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <svg class="vaccination__graphiс-data" width="${categoryRatio(value + 1)}" x="0" y="0" >
-                    <rect class="vaccination__graphiс-row" fill=${color} x="0" y="0" transform="translate(-5)"/>
-                    <text class="vaccination__graphiс-value" x="100%" y="60%"  text-anchor="middle" dy="0.3em" transform="translate(5)">
-                        ${value}
-                    </text>
-                </svg>
-            </svg>`
-        }
+    //     const setLine = (value, color) => {
+    //         return  `
+    //             <svg width="100%" overflow="visible" viewBox="0 0 120 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+    //                 <svg class="vaccination__graphiс-data" width="${categoryRatio(value + 1)}" x="0" y="0" >
+    //                 <rect class="vaccination__graphiс-row" fill=${color} x="0" y="0" transform="translate(-5)"/>
+    //                 <text class="vaccination__graphiс-value" x="100%" y="60%"  text-anchor="middle" dy="0.3em" transform="translate(5)">
+    //                     ${value}
+    //                 </text>
+    //             </svg>
+    //         </svg>`
+    //     }
                 
-        function output (data) {
-            const element = document.createElement('div');
+    //     function output (data) {
+    //         const element = document.createElement('div');
 
-            element.classList.add('vaccination__graphiс');
+    //         element.classList.add('vaccination__graphiс');
 
-            element.innerHTML = `
-                ${setLine(data.vaccinated,'#217AFF')}
-                ${setLine(data.unvaccinated, '#6C38FF')}
-                ${setLine(data.recovered, '#A7EB17')}
-                ${setLine(data.unsuitable, '#FB9B2B' )}
-                ${setLine(data.sick, '#FD6A6A')}
+    //         element.innerHTML = `
+    //             ${setLine(data.vaccinated,'#217AFF')}
+    //             ${setLine(data.unvaccinated, '#6C38FF')}
+    //             ${setLine(data.recovered, '#A7EB17')}
+    //             ${setLine(data.unsuitable, '#FB9B2B' )}
+    //             ${setLine(data.sick, '#FD6A6A')}
            
-            `;
+    //         `;
 
-            document.querySelector('.vaccination__diagram-wrap').append(element);
-        }
+    //         document.querySelector('.vaccination__diagram-wrap').append(element);
+    //     }
 
-        output(data);
-        document.querySelector('.vaccination__diagram-value').textContent = data.total;
-    }
+    //     output(data);
+    //     document.querySelector('.vaccination__diagram-value').textContent = data.total;
+    // }
 
-    vaccinationDataOutput(vaccinationData);
+    // vaccinationDataOutput(vaccinationData);
 
     // ============================== студенты ===========================================
 

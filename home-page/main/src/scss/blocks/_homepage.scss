@@ -1868,14 +1868,15 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                margin-block-end: 0.5vw;
             }
 
-            &__title {
-                max-width: 6vw;
+            &__title {                
                 text-align: center;
                 line-height: 110%;
                 margin-top: 1.4vw;
-                margin-left: 0.7vw;
+                margin-left: 1.7vw;
+                text-wrap: nowrap;
             }
 
             &__select {
@@ -1913,16 +1914,20 @@
 
             &__diagram {
                 width: 100%;
-                height: 6.2vw;
-                padding-top: 0.5vw;
-                display: flex;
-
+                padding-top: .5vw;
+                padding-inline-start: 1.7vw;
+                display: grid;
+                grid-template-columns: 0.01fr 1fr;
+                block-size: 13vh;
                 &-info {
-                    width: 32.5%;
-                    height: 110%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    :nth-child(1){
+                        margin-block-end: clamp(1.25rem, 1.581rem + -0.276vw, 0.875rem);
+                    }
+                
                 }
 
                 &-value {
@@ -1938,11 +1943,12 @@
                 &-descr {
                     font-family: Oswald;
                     font-weight: 400;
-                    font-size: 0.75vw;
-                    line-height: 0.8vw;
+                    font-size: 0.45vw;
+                    line-height: 0.6vw;
                     text-align: center;
                     letter-spacing: 0.05em;
                     color: #FFFFFF;
+
                 }
 
                 &-frame {
@@ -1988,11 +1994,22 @@
                     font-style: normal;
                     font-weight: 600;
                     font-size: 0.45em;
-                    fill: #FFFFFF;
+                    fill: #FB9B2B;
                     font-stretch: none;   
                 }
+                
             }
+            &__p-text{
+                font-family: Oswald;
+                font-weight: 400;
+                font-size: .65vw;
+                line-height: .7vw;
+                letter-spacing: .001em;
+                color: #fff;
+                grid-column: 1/3 ;
+                margin-block-end: 0.395vw;
 
+            }
             &__legend {
                 padding: 0.1vw;
                 width: 100%;
@@ -2000,10 +2017,19 @@
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
-                justify-content: space-evenly;
+                justify-content: flex-start;
                 padding-top: 0.5vw;
-                margin-left: 0.7vw;
+                margin-left: 1.5vw;
 
+                &-value{
+                    color: #FB9B2B;
+                    font-family: Oswald;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 130%; /* 18.2px */
+                    font-size: 0.74vw;
+                }
+    
                 &-item {
                     
                     display: grid;
@@ -2025,6 +2051,7 @@
                     letter-spacing: 0.05em;
                     color: #FFFFFF;
                 }
+
             }
         }
     }
@@ -2341,3 +2368,12 @@
 .white-stroke {
     stroke: #ffffffec !important;
 }
+
+.chart-container {
+    position: relative;
+    block-size: 100%;
+    inline-size: 95%;
+    max-block-size: clamp(6.25rem, 3.493rem + 2.298vw, 9.375rem);
+
+}
+

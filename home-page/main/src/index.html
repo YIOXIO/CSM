@@ -1872,21 +1872,8 @@
 						</svg>
 						<div class="block-wrap">
 							<div class="vaccination__header">
-								<div class="vaccination__title block-title">Москва (вакцинация)</div>
-								<div class="vaccination__select">
-								</div>
+								<div class="vaccination__title block-title">Приоритет 2030</div>
 							</div>
-
-							<div class="vaccination__diagram">
-								<div class="vaccination__diagram-info">
-									<div class="vaccination__diagram-value"></div>
-									<div class="vaccination__diagram-descr"> <span></span> <br> всего</div>
-								</div>
-								<div class="vaccination__diagram-wrap">
-									<img class="block-bg" src="./assets/img/main/grid-vaccination.svg" alt="grid">
-								</div>
-							</div>
-
 							<div class="vaccination__legend">
 								<div class="vaccination__legend-item">
 									<svg class="vaccination__legend-icon" width="15" height="15" viewBox="0 0 15 15"
@@ -1895,7 +1882,7 @@
 											transform="rotate(45 7.07104 2.12132)" fill="white" stroke="#217AFF"
 											stroke-width="3" />
 									</svg>
-									<div class="vaccination__legend-descr">Привившиеся</div>
+									<div class="vaccination__legend-descr">P1 — </div>
 								</div>
 
 								<div class="vaccination__legend-item">
@@ -1905,17 +1892,7 @@
 											transform="rotate(45 7.07104 2.12132)" fill="white" stroke="#6C38FF"
 											stroke-width="3" />
 									</svg>
-									<div class="vaccination__legend-descr">Непривившиеся</div>
-								</div>
-
-								<div class="vaccination__legend-item">
-									<svg class="vaccination__legend-icon" width="15" height="15" viewBox="0 0 15 15"
-										fill="none" xmlns="http://www.w3.org/2000/svg">
-										<rect x="7.07104" y="2.12132" width="7" height="7"
-											transform="rotate(45 7.07104 2.12132)" fill="white" stroke="#A7EB17"
-											stroke-width="3" />
-									</svg>
-									<div class="vaccination__legend-descr">Непривившиеся, болели за 6 месяцев</div>
+									<div class="vaccination__legend-descr">P2 — <span></span></div>									
 								</div>
 
 								<div class="vaccination__legend-item">
@@ -1925,9 +1902,20 @@
 											transform="rotate(45 7.07104 2.12132)" fill="white" stroke="#FD6A6A"
 											stroke-width="3" />
 									</svg>
-									<div class="vaccination__legend-descr">Болеют в данный момент</div>
+									<div class="vaccination__legend-descr">P3 — </div>
 								</div>
 
+								<div class="vaccination__legend-item">
+									<svg class="vaccination__legend-icon" width="15" height="15" viewBox="0 0 15 15"
+										fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="7.07104" y="2.12132" width="7" height="7"
+											transform="rotate(45 7.07104 2.12132)" fill="white" stroke="#A7EB17"
+											stroke-width="3" />
+									</svg>
+									<div class="vaccination__legend-descr">P4 — </div>
+								</div>
+
+		
 								<div class="vaccination__legend-item">
 									<svg class="vaccination__legend-icon" width="15" height="15" viewBox="0 0 15 15"
 										fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1935,13 +1923,27 @@
 											transform="rotate(45 7.07104 2.12132)" fill="white" stroke="#FB9B2B"
 											stroke-width="3" />
 									</svg>
-									<div class="vaccination__legend-descr">Непривившиеся, имеют мед. отвод</div>
+									<div class="vaccination__legend-descr">P6 — </div>
+								</div>
+							</div>
+							<div class="vaccination__diagram">
+								<p class="vaccination__p-text">P5 Количество обучающихся по программам ДПО на «цифровой кафедре» образовательной организации высшего образования</p>
+								<div class="vaccination__diagram-info">
+									
+									<div class="vaccination__diagram-descr">Чел</div>
+									<div class="vaccination__diagram-descr">Факт</div>
+									<div class="vaccination__diagram-descr">План</div>
+								</div>
+								<div class="chart-container">
+									<canvas id="P5-chart"></canvas>
 								</div>
 							</div>
 
+			
+
 							<div class="calendar calendar-vaccination">
 								<basic-calendar class="calendar-unit" dir="left"></basic-calendar>
-								<basic-calendar class="calendar-unit" dir="right"></basic-calendar>
+								<!-- <basic-calendar class="calendar-unit" dir="right"></basic-calendar> -->
 							</div>
 						</div>
 					</section>
@@ -2112,6 +2114,7 @@
 
 		</footer>
 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="js/miniature.js"></script>
 	<script src="./js/main.js"></script>
 </body>
