@@ -372,21 +372,21 @@ document.addEventListener('DOMContentLoaded', () => {
     //=========== международная деятельность =============
 
 
-    const internationalData = {
-        date: '2021-01-31',
-        foreignStudents: 1224,
-        nonresidentStudents: 6556,
-        partners: 'XX',
-    }
+    // const internationalData = {
+    //     date: '2021-01-31',
+    //     foreignStudents: 1224,
+    //     nonresidentStudents: 6556,
+    //     partners: 'XX',
+    // }
 
 
-    function internationalDataOutput(data) {
-        insertToPage('international__value_foreign-students', numDataOutput(data.foreignStudents));
-        insertToPage('international__value_nonresident-students', numDataOutput(data.nonresidentStudents));
-        insertToPage('international__value_partners', data.partners);
-    }
+    // function internationalDataOutput(data) {
+    //     insertToPage('international__value_foreign-students', numDataOutput(data.foreignStudents));
+    //     insertToPage('international__value_nonresident-students', numDataOutput(data.nonresidentStudents));
+    //     insertToPage('international__value_partners', data.partners);
+    // }
 
-    internationalDataOutput(internationalData);
+    // internationalDataOutput(internationalData);
 
     // ===================== ДПО =========================
 
@@ -678,108 +678,110 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ========================== Приоритет 2030 ======================
-
-const priority2030Data = {
-    P1: " 109.52 руб.",
-    P2: " 21.77%",
-    P3: " 0.55%",
-    P4: " 2 469.82 руб.",
-    P5: {
-        kind: 'p5',
-        date: '28.02.2023',
-        plan: 2402, // План на каждый месяц
-        fact: 2429,
-        annualStatistics: [2969, 2970, 2970, 2970, 2970, 2970, 2970, 2970, 2970],
-        unit: 'people',
-    },
-    P6: " 226.81 руб"
-};
-
-function updateLegend() {
-    const legendItems = document.querySelectorAll('.vaccination__legend-item');
-
-    legendItems.forEach(item => {
-        const descr = item.querySelector('.vaccination__legend-descr');
-        const key = descr.textContent.trim().split(' ')[0];
-        if (priority2030Data[key]) {
-            const span = document.createElement('span');
-            span.className = 'vaccination__legend-value';
-            span.textContent = priority2030Data[key];
-            descr.appendChild(span);
-        }
-    });
-}
-
-function createChart() {
-    const ctx = document.getElementById('P5-chart').getContext('2d');
-    const chart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['сен', 'окт', 'ноя', 'дек', 'янв', 'фев', 'мар', 'апр', 'май'],
-            datasets: [{
-                label: 'Факт',
-                data: priority2030Data.P5.annualStatistics,
-                backgroundColor: '#217AFF',
-                borderColor: '#217AFF',
-                borderWidth: 2,
-            }, {
-                label: 'План',
-                data: Array(9).fill(2000),
-                backgroundColor: '#FFA500',
-                borderColor: '#FFF',
-                borderWidth: 1,
-                borderDash: [2, 2],
-                pointRadius: 0,
-            }]
+const priority2030 = {
+    priority2030Data: {
+        P1: " 109.52 руб.",
+        P2: " 21.77%",
+        P3: " 0.55%",
+        P4: " 2 469.82 руб.",
+        P5: {
+            kind: 'p5',
+            date: '28.02.2023',
+            plan: 2402, // План на каждый месяц
+            fact: 2429,
+            annualStatistics: [2969, 2970, 2970, 2970, 2970, 2970, 2970, 2970, 2970],
+            unit: 'people',
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    suggestedMax: 4500,
-                    beginAtZero: true,
-                    ticks: {
-                        color: 'white',
+        P6: " 226.81 руб"
+    },
+
+    updateLegend() {
+        const legendItems = document.querySelectorAll('.vaccination__legend-item');
+
+        legendItems.forEach(item => {
+            const descr = item.querySelector('.vaccination__legend-descr');
+            const key = descr.textContent.trim().split(' ')[0];
+            if (this.priority2030Data[key]) {
+                const span = document.createElement('span');
+                span.className = 'vaccination__legend-value';
+                span.textContent = this.priority2030Data[key];
+                descr.appendChild(span);
+            }
+        });
+    },
+
+    createChart() {
+        const ctx = document.getElementById('P5-chart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['сен', 'окт', 'ноя', 'дек', 'янв', 'фев', 'мар', 'апр', 'май'],
+                datasets: [{
+                    label: 'Факт',
+                    data: this.priority2030Data.P5.annualStatistics,
+                    backgroundColor: '#217AFF',
+                    borderColor: '#217AFF',
+                    borderWidth: 2,
+                }, {
+                    label: 'План',
+                    data: Array(9).fill(2000),
+                    backgroundColor: '#FFA500',
+                    borderColor: '#FFF',
+                    borderWidth: 1,
+                    borderDash: [2, 2],
+                    pointRadius: 0,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        suggestedMax: 4500,
+                        beginAtZero: true,
+                        ticks: {
+                            color: 'white',
+                            display: false
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)',
+                            display: false,
+                        },
+                        border: {
+                            color: 'white',
+                            width: 1
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: 'white',
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)',
+                            display: false,
+                        },
+                        border: {
+                            color: 'white',
+                            width: 1
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
                         display: false
                     },
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.1)',
-                        display: false,
-                    },
-                    border: {
-                        color: 'white',
-                        width: 1
-                    }
-                },
-                x: {
-                    ticks: {
-                        color: 'white',
-                    },
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.1)',
-                        display: false,
-                    },
-                    border: {
-                        color: 'white',
-                        width: 1
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false
                 },
             },
-        },
-    });
-}
+        });
+    },
 
-// Call the functions to update the legend and create the chart
-updateLegend();
-createChart();
+    init() {
+        this.updateLegend();
+        this.createChart();
+    }
+};
 
-
+priority2030.init();
 
 
      //=================== вакцинация =====================
