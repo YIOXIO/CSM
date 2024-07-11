@@ -3,10 +3,22 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Document</title>
-   <link rel="stylesheet" href="/assets/itKorpPartners/dist/css/style.min.css">
+  	<link rel="stylesheet" href="/assets/itKorpPartners/dist/css/style.min.css">
+   <script>
+		document.addEventListener('keydown', function (event) {
+			if ((event.ctrlKey || event.metaKey) && (event.key === '+' || event.key === '-' || event.key === '=')) {
+				event.preventDefault();
+			}
+		});
 
+		document.addEventListener('wheel', function (event) {
+			if (event.ctrlKey || event.metaKey) {
+				event.preventDefault();
+			}
+		}, { passive: false });
+   </script>
 </head>
 
 <body>
@@ -82,603 +94,1235 @@
 			</svg>
 		</header>
 		<main class="partners">
-		<div class="partners__container">
-			<article class="partners__article">
-				<article class="partners__title-wrapper">
-					<h1 class="partners__title">Взаимодействие университета с индустриальными партнерами</h1>
-					<h2 class="partners__subtitle">в корпусе цифровых и информационных технологий им. А.С. Вишнякова</h2>
-				</article>	
-				<article class="partners__button-wrapper">
-					<button  class="partners__filter-button partners__filter-button_active">Все</button>
-					<button class="partners__filter-button">Наука</button>
-					<button class="partners__filter-button">ДПО</button>
-					<button class="partners__filter-button">Проект</button>
-				</article>
-			</article>
-			<ul class="partners__list">
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Alfa-bank.svg" alt="">
+			<div class="partners__container">
+				<article class="partners__article">
+					<article class="partners__title-wrapper">
+						<h1 class="partners__title">Взаимодействие университета с индустриальными партнерами</h1>
+						<h2 class="partners__subtitle">в корпусе цифровых и информационных технологий им. А.С. Вишнякова</h2>
+					</article>	
+					<article class="partners__button-wrapper partners__button-wrapper_column">
+						<article class="partners__button-wrapper">
+							<button  class="partners__filter-button partners__filter-button_active">Все</button>
+							<button class="partners__filter-button">Образование</button>
+							<button class="partners__filter-button">Наука</button>
+							<button class="partners__filter-button">ДПО</button>
+							<!-- <button class="partners__filter-button">Проект</button> -->
 						</article>
-						<p class="partners__card-name">Конференц-зал на 120 мест (Альфа-Банк)</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_project">
-								<img src="/assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">
-								Проект
-							</span> 
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/VK.svg" alt="">
-						</article>
-						<p class="partners__card-name">Зона отдыха совместно с ВК</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_project">
-								<img src="/assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">
-								Проект
-							</span> 
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/TASS.svg" alt="">
-						</article>
-						<p class="partners__card-name">Студия видеозаписи совместно с ТАСС</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_project">
-								<img src="/assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">
-								Проект
-							</span> 
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/FAS.svg" alt="">
-						</article>
-						<p class="partners__card-name">Цифровая лаборатория ФАС России</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/ISP-RAN.svg" alt="">
-						</article>
-						<p class="partners__card-name">Научная лаборатория «Гетерогенные компьютерные системы»</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/ROS-Kachestvo.png" alt="">
-						</article>
-						<p class="partners__card-name">Аналитический центр совместно с АНО «Роскачество»</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/REA.svg" alt="">
-						</article>
-						<p class="partners__card-name">Учебная аудитория совместно с Российским энергетическим агентством</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_dpo">
-								<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">
-								ДПО
-							</span>
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/RUS-Hydro.svg" alt="">
-						</article>
-						<p class="partners__card-name">Учебная аудитория совместно с ПАО «РусГидро»</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_dpo">
-								<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">
-								ДПО
-							</span>
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/REO.svg" alt="">
-						</article>
-						<p class="partners__card-name">Учебная аудитория совместно с ППК «РЭО»</p>
-
-						<article class="partners__category-wrapper">
-		
-							<span class="partners__category partners__category_type_dpo">
-								<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">
-								ДПО
-							</span>
-		
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/CEMI.svg" alt="">
-						</article>
-						<p class="partners__card-name">Научная лаборатория «Исследования денежно-кредитной системы и анализа финансовых рынков»</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Romir.svg" alt="">
-						</article>
-						<p class="partners__card-name">Нейротренд/Ромир</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Department_Moscow.svg" alt="">
-						</article>
-						<p class="partners__card-name">Центр экономики города Москвы</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_project">
-								<img src="/assets/itKorpPartners/dist//assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">
-								Наука
-							</span>
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/X5-Group.svg" alt="">
-						</article>
-						<p class="partners__card-name">Лаборатория инновационных технологий совместно <br>  с ООО «Х5-РИТЕЙЛ ГРУПП»</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/JUST.svg" alt="">
-						</article>
-						<p class="partners__card-name">Центр внешнеэкономической экспертизы PЭУ -JUST</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
+						<article class="partners__button-wrapper">
+				
 			
+							<span class="partners__category partners__category_type_all">
+								<img src="/assets/itKorpPartners/dist/assets/icons/summary-icon.svg" alt="">
+								Всего партнеров — <span id="all-summary" class="category-summmary"></span>
+							</span> 
+							<span class="partners__category partners__category_type_project">
+								<img src="/assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">
+								Всего проектов — <span id="project-summary" class="category-summmary"></span>
+							</span>
 
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Capital-group.svg" alt="">
-						</article>
-						<p class="partners__card-name">Учебная аудитория совместно с Capital group</p>
-
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_dpo">
+							
+							<!-- <span class="partners__category partners__category_type_project">
+								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+								Наука —  <span id="science-summary" class="category-summmary"></span>
+							</span>  -->
+							<!-- <span class="partners__category partners__category_type_project">
 								<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">
-								ДПО
-							</span>
-					
+								ДПО — <span id="dpo-summary" class="category-summmary"> </span>
+							</span>  -->
+							 <!-- <span class="partners__category partners__category_type_project">
+								<img src="/assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">
+								Проект —  <span id="project-summary" class="category-summmary"></span>
+							</span>   -->
+		
 						</article>
+			
 					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Gazprom-bank.svg" alt="">
+				</article>
+				<ul id="partners-list" class="partners__list">
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Alfa-bank.svg" alt="">
+							</article>
+							<p class="partners__card-name">Рабочее пространство на 120 мест</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">
+									- Проведение мероприятий и прикладных научных исследований по актуальным темам <br>
+									- Участие преподавателей в грантовой программе Банка
+								</p>							
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 
+							</article>
 						</article>
-						<p class="partners__card-name">Исследовательская лаборатория АО «Газпромбанк»</p>
+					</li>		
+					
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/VK.svg" alt="">
+							</article>
+							<p class="partners__card-name">Коворкинг ВК</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Развитии игровой индустрии Образовательные мероприятия Внедрение сервисов
+								</p>
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/TASS.svg" alt="">
+							</article>
+							<p class="partners__card-name">Студия видеозаписи совместно с ТАСС</p>
+							 <article class="partners__card-stats">
+								<p class="partners__card-description">Совместная Мастерская информационного агентства «ИТАР-ТАСС» на базе информационного ТАСС. Проведение на базе новой студии различных мероприятий для СМИ с осуществлением прямых включений и трансляций (мероприятия для освещения деятельности вуза, мероприятия учебного характера с целью изучения процесса организации пресс-конференций)
+								</p>							
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 		
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/rostex.svg" alt="">
+							</article>
+							<p class="partners__card-name">ГК Ростех</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">
+									- Запуск и тестирование функционирования Цифровой лаборатории «Цифровые технологии экономики данных» <br>
+								 	- Проведение исследовательских проектов
+								   </p>															
+							</article>
+							<article class="partners__category-wrapper">		
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование						
+								</span>					
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>	
+	
+							</article>
+						</article>
+					</li>
+					<!-- <li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/FAS.svg" alt="">
+							</article>
+							<p class="partners__card-name">Цифровая лаборатория ФАС России</p>
+	
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование	
+								</span>
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+						
+							</article>
+						</article>
+					</li> -->
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/1c.svg" alt="">
+							</article>
+							<p class="partners__card-name">Учебная аудитория компании 1С</p>
 
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/ROS-Telekom.png" alt="">
-						</article>
-						<p class="partners__card-name">Учебная лаборатория «Базис» от ПАО «Ростелекома»</p>
+								<article class="partners__card-stats">
+								<p class="partners__card-description">Совместная программа профессиональной переподготовки для студентов не ИТ-направлений подготовки  «Разработка программного обеспечения на платформе «1С:Предприятие» в рамках проекта «Цифровая кафедра»
 
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
+								</p>							
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 			
+							</article>
 						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/OZON.png" alt="">
-						</article>
-						<p class="partners__card-name">Учебная аудитория совместно <br> с Озон</p>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/ISP-RAN.svg" alt="">
+							</article>
+							<p class="partners__card-name">Научная лаборатория «Гетерогенные компьютерные системы»</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">
+									Научно-исследовательские проекты НЛ:<br>
+- Разработка и исследование методов автоматизации проектирования предметно-ориентированных потоковых вычислителей на базе ПЛИС <br>
+- Реконструкция треков частиц в эксперименте MPD (международный проект NICA)<br>
 
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Glavnoe-kontrolnoe-upravlenie.png" alt="">
-						</article>
-						<p class="partners__card-name">Лаборатория электронного тренинга совместно с Главным контрольным управлением</p>
 
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
+								   </p>															
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование							
+								</span>
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+							</article>
 						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/VTB.png" alt="">
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/ROS-Kachestvo.png" alt="">
+							</article>
+							<p class="partners__card-name">Аналитический центр совместно с АНО «Роскачество»</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Проведение исследований по разботке  стандарта  организаций  АНО «Роскачество»</p>
+												
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>
+				
+							</article>
 						</article>
-						<p class="partners__card-name">Лаборатория Банка ВТБ</p>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/REA.svg" alt="">
+							</article>
+							<p class="partners__card-name">Учебная аудитория совместно с Российским энергетическим агентством</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Открытые образовательные мероприятиях (онлайн лекторий) научно-образовательного консорциума «Энергетика будущего» по актуальным проблемам развития ТЭК</p>											
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_dpo">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">
+									ДПО
+								</span>
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/RUS-Hydro.svg" alt="">
+							</article>
+							<p class="partners__card-name">Учебная аудитория совместно с ПАО «РусГидро»</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Совместный  проект Русгидро, Благовещенской ТЭЦ Исследование промышленных аналогов и выбор экономически обоснованных рецептур композиционных материалов для транспортировки абразивных материалов</p>											
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_dpo">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">
+									ДПО
+								</span>
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/REO.svg" alt="">
+							</article>
+							<p class="partners__card-name">Учебная аудитория совместно с ППК «РЭО»</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Разработка современной технологии рециклинга вторичных отходов резинотехнической и шинной промышленности для применения в сфере дорожного строительства и жилищно-коммунального хозяйства»</p>
+						
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_dpo">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span>
+								<span class="partners__category partners__category_type_dpo">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">
+									ДПО
+								</span>
+			
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/CEMI.svg" alt="">
+							</article>
+							<p class="partners__card-name">Научная лаборатория «Исследования денежно-кредитной системы и анализа финансовых рынков»</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Создана интернет-платформа Findax.ru, созданы роботы, в онлайн-режиме собирающие информацию по всем финансовым инструментам, торгуемым на Мосбирже и два интернет-приложения для анализа и подбора портфельных инвестиций на разных временных горизонтах на рынке акций.
+								</p>
+						
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование							
+								</span>
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+	
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Romir.svg" alt="">
+							</article>
+							<p class="partners__card-name">Нейротренд/Ромир</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Программа исследования психофизиологических процессов восприятия и реакций людей на развлекательный, информационный и образовательный контент, маркетинговые материалы. </p>						 
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Department_Moscow.svg" alt="">
+							</article>
+							<p class="partners__card-name">Центр экономики города Москвы</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Реализация научно-исследовательских проектов по стратегическим направлениям экономического развития города Москвы и разработке предложение по повышению инвестиционной привлекательности города Москвы
+								</p>
+															
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span>
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/X5-Group.svg" alt="">
+							</article>
+							<p class="partners__card-name">Лаборатория инновационных технологий совместно <br>  с ООО «Х5-РИТЕЙЛ ГРУПП»</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Проект создания совместной сенсорной лаборатории для дегустации продуктов собственных торговых марок ТС «Перекрёсток»,Научный проект по автоматизации контроля качества фруктов и овощей на базе искусственного интеллекта</p>						 
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+							</article>
+						</article>
+					</li>
+					<li>
 
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/JUST.svg" alt="">
+							</article>
+							<p class="partners__card-name">Центр внешнеэкономической экспертизы PЭУ -JUST</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Проект экспертной  и консалтинговой деятельности в области таможенной экспертизы по таким востребованным направлениям как:таможенная стоимость, пост-контроль и аудит, товарная номенклатура ВЭД ЕАЭС </p>						 
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+				
+	
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Capital-group.svg" alt="">
+							</article>
+							<p class="partners__card-name">Учебная аудитория совместно с Capital group</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">
+									- Создание совместного научно-образовательного центра проектного консалтинга<br>
+									- Организация XIV и XV Международной научно-практической конференции <br>
+				
+								   </p>												
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_dpo">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span>
+								<span class="partners__category partners__category_type_dpo">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">
+									ДПО
+								</span>
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Gazprom-bank.svg" alt="">
+							</article>
+							<p class="partners__card-name">Исследовательская лаборатория АО «Газпромбанк»</p>
+							 <article class="partners__card-stats">
+								<p class="partners__card-description">- НИР - Разработка методических рекомендаций по учету и контролю использования цифровых финансовых активов (заключен догвоор, отчет сдан)<br> -  Проведение на регулярной основе мастер-классов для студентов университета.
+								</p>
+															
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование							
+								</span>
+	
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/ROS-Telekom.png" alt="">
+							</article>
+							<p class="partners__card-name">Учебная лаборатория «Базис» от ПАО «Ростелекома»</p>
+						<article class="partners__card-stats">
+								<p class="partners__card-description">Подготовка преподавателей РЭУ им. Г.В. Плеханова по программам повышения квалификации</p>
+															
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/OZON.png" alt="">
+							</article>
+							<p class="partners__card-name">Учебная аудитория совместно <br> с Озон</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Реализация образовательных программ под патронажем OZON. Кураторство проектов, мастер-классы, выездные занятия в рамках образовательных программ направлений «Цифровые технологии в торговле и логистике», «Логистика и управление цепями поставок»
+								</p>
+															
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование						
+								</span>		
 					
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 			
+							</article>
 						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/SBER-ARVR.png" alt="">
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Glavnoe-kontrolnoe-upravlenie.png" alt="">
+							</article>
+							<p class="partners__card-name">Лаборатория электронного тренинга совместно с Главным контрольным управлением</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">- Проведение на регулярной основе практических занятий с острудниками Главногоконтрольного управления города Москвы.<br> - Выполнение аналитических работ по заказу структур Правительства Москвы.<br> 
+								</p>
+															
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+						
+							</article>
 						</article>
-						<p class="partners__card-name">AR/VR лаборатория совместно с АО Сбер и MAFF MEDIA</p>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/VTB.png" alt="">
+							</article>
+							<p class="partners__card-name">Лаборатория Банка ВТБ</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">- Проведение конкурса экспертной деятельности<br>
+									- НИР для молодых ученых до 30 лет<br>
+									- НИР для ППС ВШФ
+									</p>
+														
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование							
+								</span>
+			
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/SBER-ARVR.png" alt="">
+							</article>
+							<p class="partners__card-name">AR/VR лаборатория совместно с АО Сбер и MAFF MEDIA</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">- Магистратура «Мультимедийные цифровые технологии в креативных индустриях». <br> - Программа ДПО «Профессиональная разработка игр в РОБЛОКС» совместно с MAFF.             
+								</p>							
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование							
+								</span>
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/ROS-Patent.svg" alt="">
+							</article>
+							<p class="partners__card-name">Базовая кафедра экономики и права Роспатента</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Разработка и реализация программ повышения квалификации и профессиональной переподготовки. <br> Открытие сетевой образовательной программы подготовки магистров совместно с Федеральным институтом промышленной собственности
+								</p>							
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/VCIOM.png" alt="">
+							</article>
+							<p class="partners__card-name">Центр студенческих социологических исследований совместно с ВЦИОМ</p>
+							 <article class="partners__card-stats">
+								<p class="partners__card-description">- Комплексное социологическое исследование «Вуз –место реализации потенциала молодежи. Экосистема «Школа-Вуз-Работа», привлечено 30 000,00 тыс. руб.<br>
+									- «ВЦИОМ - Прометей» ( Социологический диктант, Социологическая школа, Конкурс «Дипломник года»)
+									</p>
+												
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование							
+								</span>
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Soft-Line.png" alt="">
+							</article>
+							<p class="partners__card-name">Кафедра информатики, лаборатория компании SoftLine</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Предоставление преподавателей, а также учебно-методических материалов для реализации программ профессиональной переподготовки в рамках Федерального проекта «Кадры для беспилотных авиационных систем» </p>							
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+						
+							</article>
+						</article>
+					</li>
+					<!-- <li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/Loginom.png" alt="">
+							</article>
+							<p class="partners__card-name">Кафедра высшей математики - <br> каб. Зав. Кафедрой</p>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+						
+							</article>
+						</article>
+					</li> -->
+					<!-- <li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/InfoWatch.svg" alt="">
+							</article>
+							<p class="partners__card-name">Учебная аудитория компании «ИнфоВотч»</p>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>
+						
+							</article>
+						</article>
+					</li> -->
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Romir.svg" alt="">
+							</article>
+							<p class="partners__card-name">Лаборатория совместно с РОМИР</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">- Учебный колл-центр для социологических опросов. <br>- Исследования по демографии. <br>- Исследования потребительского поведения </p>							
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование							
+								</span>
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Techno-Red.png" alt="">
+							</article>
+							<p class="partners__card-name">Проектно-учебная лаборатория робототехники ТЕХНОРЭД</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Реализация совместных образовательных программ по направлениям робототехники</p>							
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>
+						
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/m24.svg" alt="">
+							</article>
+							<p class="partners__card-name">Учебная лаборатория <br> Первая Академия медиа <br> + Москва 24</p>
+							 <article class="partners__card-stats">
+								<p class="partners__card-description">Совместная Медиалаборатория телеканала «Москва 24»  Производство на базе новой студии различных видеопродуктов (запись выпусков новостей, студенческих ток-шоу)
+								</p>							
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 				
+							</article>
+						</article>
+					</li>
+					<!-- <li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/NII_Voshod.svg" alt="">
+							</article>
+							<p class="partners__card-name">Учебная аудитория совместно с ФГАУ НИИ «Восход»</p>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>					
+							</article>
+						</article>
+					</li> -->
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Green-Data.png" alt="">
+							</article>
+							<p class="partners__card-name">Учебная лаборатория информационных систем компании ООО «Гриндата»</p>
+							 <article class="partners__card-stats">
+								<p class="partners__card-description">НИРы по развитию модулей интеллектуальной платформы GreenData</p>
+										
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование							
+								</span>		
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/FSP.svg" alt="">
+							</article>
+							<p class="partners__card-name">Лаборатория Федерации спортивного программирования России</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Совместная реализация мероприятий, образовательных программ с целью подготовки кадров и высококвалифицированных спортсменов в области спортивного программирования, а также формирование спортивных команд на базе университета
+								</p>
+										
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 			
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Aero-Dron-Service.png" alt="">
+							</article>
+							<p class="partners__card-name">Лаборатория БАС с ООО «АЭРО ДРОН СЕРВИС»</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Обучение участников акселерационных программ, проектирование и настройка БАС
 
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
+								</p>
+										
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 			
+							</article>
 						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/ROS-Patent.svg" alt="">
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Federation-race-dron.svg" alt="">
+							</article>
+							<p class="partners__card-name">Федерация гонок дронов Москвы</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Совместная организация и проведение соревнований по гонкам дронов с целью популяризации и развития технологического вида спорта в России
+								</p>										
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 			
+							</article>
 						</article>
-						<p class="partners__card-name">Базовая кафедра экономики и права Роспатента</p>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/ROS-Congress.svg" alt="">
+							</article>
+							<p class="partners__card-name">Бизнес клуб «Y-club» и Фонд «Росконгресс»</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Организация стратегических и менторских сессий совместно с АНО «Агентство стратегических инициатив по продвижению новых проектов» и Фондом «Росконгресс» в целях развития и поддержки молодежного предпринимательства в университете
 
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
+								</p>										
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 				
+							</article>
 						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/VCIOM.png" alt="">
+					</li>
+					<!-- <li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Federation-PC-sport.png" alt="">
+							</article>
+							<p class="partners__card-name">Буткэмп совместно с Федерацией компьютерного спорта Москвы</p>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 					
+							</article>
 						</article>
-						<p class="partners__card-name">Центр студенческих социологических исследований совместно с ВЦИОМ</p>
+					</li> -->
+					<!-- <li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Informatika-i-upravlenie.png" alt="">
+							</article>
+							<p class="partners__card-name">Центр перспективных исследований в искусственном  интеллекте</p>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
+									Наука							
+								</span>					
+							</article>
+						</article>
+					</li> -->
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/Drone-sports.png" alt="">
+							</article>
+							<p class="partners__card-name">Спортивный зал + зона полётов дронов с Drone sports global</p>
 
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Soft-Line.png" alt="">
-						</article>
-						<p class="partners__card-name">Кафедра информатики, лаборатория компании SoftLine</p>
+													<article class="partners__card-stats">
+								<p class="partners__card-description">Оснащение пространства для осуществления безопасных тренировочных полетов дронов и проведения соревнований по гонкам дронов
 
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
+								</p>							
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">
+									Наука
+								</span> 	
+							</article>
 						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Loginom.png" alt="">
-						</article>
-						<p class="partners__card-name">Кафедра высшей математики - <br> каб. Зав. Кафедрой</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/InfoWatch.svg" alt="">
-						</article>
-						<p class="partners__card-name">Учебная аудитория компании «ИнфоВотч»</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Romir.svg" alt="">
-						</article>
-						<p class="partners__card-name">Лаборатория совместно с РОМИР</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Techno-Red.png" alt="">
-						</article>
-						<p class="partners__card-name">Учебная аудитория совместно с ТЕХНОРЭД</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
-								ДПО							
-							</span>
-					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/m24.svg" alt="">
-						</article>
-						<p class="partners__card-name">Учебная лаборатория <br> Первая Академия медиа <br> + Москва 24</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist//assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">	
-								Проект							
-							</span>					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/NII_Voshod.svg" alt="">
-						</article>
-						<p class="partners__card-name">Учебная аудитория совместно с ФГАУ НИИ «Восход»</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Green-Data.png" alt="">
-						</article>
-						<p class="partners__card-name">Учебная лаборатория информационных систем компании ООО «Гриндата»</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/FSP.svg" alt="">
-						</article>
-						<p class="partners__card-name">Лаборатория Федерации спортивного программирования России</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist//assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">	
-								Проект							
-							</span>					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Aero-Dron-Service.png" alt="">
-						</article>
-						<p class="partners__card-name">Лаборатория БАС с ООО «АЭРО ДРОН СЕРВИС»</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist//assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">	
-								Проект							
-							</span>					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Federation-race-dron.svg" alt="">
-						</article>
-						<p class="partners__card-name">Федерация гонок дронов Москвы</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist//assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">	
-								Проект							
-							</span>					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/ROS-Congress.svg" alt="">
-						</article>
-						<p class="partners__card-name">Бизнес клуб «Y-club» и Фонд «Росконгресс»</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist//assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">	
-								Проект							
-							</span>					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Federation-PC-sport.png" alt="">
-						</article>
-						<p class="partners__card-name">Буткэмп совместно с Федерацией компьютерного спорта Москвы</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist//assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">	
-								Проект							
-							</span>					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Informatika-i-upravlenie.png" alt="">
-						</article>
-						<p class="partners__card-name">Центр перспективных исследований в искусственном  интеллекте</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/science-icon-element.svg" alt="">	
-								Наука							
-							</span>					
-						</article>
-					</article>
-				</li>
-				<li>
-					<article class="partners__card">
-						<article class="partners__icon-wrapper">
-							<img class="partners__icon" src="/assets/itKorpPartners/dist/assets/icons/Drone-sports.png" alt="">
-						</article>
-						<p class="partners__card-name">Спортивный зал + зона полётов дронов с Drone sports global</p>
-						<article class="partners__category-wrapper">
-							<span class="partners__category partners__category_type_science">
-								<img src="/assets/itKorpPartners/dist/assets/icons/project-icon-element.svg" alt="">	
-								Проект							
-							</span>					
-						</article>
-					</article>
-				</li>
-			</ul>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/dvijenieFirst.svg" alt="">
+							</article>
+							<p class="partners__card-name">Движение первых</p>
 
-		</div>
+													<article class="partners__card-stats">
+								<p class="partners__card-description">Образование и пилоты будущего
+								</p>							
+							</article> 
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_project">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">
+									Образование
+								</span> 			
+							</article>
+						</article>
+					</li>
+
+					<!-- НОВЫЕ КАРТОЧКИ КОММЕНТ УДАЛИТЬ -->
+	
+	
+	
+	
+	
+	
+<!-- 	
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/2035.svg" alt="">
+							</article>
+							<p class="partners__card-name">АНО «Университет 2035» </p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">179 415 040,00 руб.</span></p>
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">4959</span></p>							
+							</article>
+												<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon " src="/assets/itKorpPartners/dist/assets/icons/fosargo.svg" alt="">
+							</article>
+							<p class="partners__card-name">Акционерное общество "Апатит"</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">8 000 000,00 руб.</span></p>
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">42
+								</span></p>							
+							</article>
+												<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon " src="/assets/itKorpPartners/dist/assets/icons/binopharm-group.png" alt="">
+							</article>
+							<p class="partners__card-name">ООО «Биннофарм Групп»
+							</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">1 750 000,00
+									руб.</span></p>
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">22
+								</span></p>							
+							</article>
+												<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/tplusgroup.svg" alt="">
+							</article>
+							<p class="partners__card-name">ПАО «Т Плюс»
+							</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">1 188 000,00 руб.</span></p>
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">36</span></p>							
+							</article>
+												<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/Kamaz.svg" alt="">
+							</article>
+							<p class="partners__card-name">ПАО "КАМАЗ"</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">850 000,00
+									руб.</span></p>
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">25</span></p>							
+							</article>
+												<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon " src="/assets/itKorpPartners/dist/assets/icons/Sber-strachovanie.svg" alt="">
+							</article>
+							<p class="partners__card-name">ООО СК «Сбербанк страхование жизни»
+							</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">1 116 000,00
+									руб.</span></p>
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">120</span></p>							
+							</article>
+												<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon " src="/assets/itKorpPartners/dist/assets/icons/Rosseti.svg" alt="">
+							</article>
+							<p class="partners__card-name">ПАО "Россети"
+	
+							</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">3 000 000,00
+	
+									руб.</span></p>
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">6</span></p>							
+							</article>
+												<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/Tpp.svg" alt="">
+							</article>
+							<p class="partners__card-name">ТПП РФ
+	
+	
+							</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">600 000,00
+	
+	
+									руб.</span></p>
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">25</span></p>							
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/education-icon-element.svg" alt="">	
+									Образование							
+								</span>		
+					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon " src="/assets/itKorpPartners/dist/assets/icons/agenstvo-strategicheskich-inn.svg" alt="">
+							</article>
+							<p class="partners__card-name">АНО «Агентство стратегических инициатив»						</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">12 849 480,00
+	
+	
+	
+									руб.</span></p>
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">256</span></p>							
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon " src="/assets/itKorpPartners/dist/assets/icons/PIK.svg" alt="">
+							</article>
+							<p class="partners__card-name">Группа компаний ПИК
+							</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">1 400 000,00 руб.</span></p>								
+							</article>
+												<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/gazprom-oil.svg" alt="">
+							</article>
+							<p class="partners__card-name">ООО «Газпромнефть Экспертные решения»
+	
+							</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">640 000,00
+									руб.</span></p>		
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">10</span></p>							
+	
+							</article>
+							<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon " src="/assets/itKorpPartners/dist/assets/icons/RSHB.svg" alt="">
+							</article>
+							<p class="partners__card-name">АО «Россельхозбанк»
+	
+	
+							</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">4 233 600,00
+	
+									руб.</span></p>		
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">160
+								</span></p>							
+	
+							</article>
+												<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/MetroMoscow.svg" alt="">
+							</article>
+							<p class="partners__card-name">ГУП «МОСКОВСКИЙ МЕТРОПОЛИТЕН»
+	
+	
+	
+							</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">3 926 630,00
+	
+									руб.</span></p>		
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">571
+								</span></p>							
+	
+							</article>
+												<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon partners__icon_60" src="/assets/itKorpPartners/dist/assets/icons/Bolshevichka.png" alt="">
+							</article>
+							<p class="partners__card-name">ТОО "Большевичка"			
+							</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">171 000,00
+	
+	
+									руб.</span></p>		
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">5
+								</span></p>							
+	
+							</article>
+												<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li>
+					<li>
+						<article class="partners__card">
+							<article class="partners__icon-wrapper">
+								<img class="partners__icon " src="/assets/itKorpPartners/dist/assets/icons/FAS.svg" alt="">
+							</article>
+							<p class="partners__card-name">Федеральная служба судебных приставов
+							</p>
+							<article class="partners__card-stats">
+								<p class="partners__card-description">Количество привлеченных средств <br> <span class="partners-card-sum">6 502 000,00
+									руб.</span></p>		
+								<p class="partners__card-description">Количество студентов на практике<br> <span class="partners-card-students">510
+								</span></p>							
+	
+							</article>
+								<article class="partners__category-wrapper">
+								<span class="partners__category partners__category_type_science">
+									<img src="/assets/itKorpPartners/dist/assets/icons/dpo-icon-element.svg" alt="">	
+									ДПО							
+								</span>					
+							</article>
+						</article>
+					</li> -->
+				</ul>
+	
+			</div>
 			
 
 
