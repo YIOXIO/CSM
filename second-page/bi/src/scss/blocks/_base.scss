@@ -5,7 +5,8 @@
 	top: 0;
 	bottom: 0;
 	z-index: -1;
-	background: url('../assets/img/bg.png') repeat center/1920px;
+	background-image: url('../assets/img/bg.png');
+  background-size: cover;
 	overflow: hidden;
 }
 
