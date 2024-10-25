@@ -32,6 +32,7 @@
                 height: 50%;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+
             }
 
             &__plan {
@@ -1914,22 +1915,20 @@
 
             &__diagram {
                 width: 100%;
-                padding-top: .5vw;
                 padding-inline-start: 1.7vw;
                 display: grid;
                 grid-template-columns: 0.01fr 1fr;
-                block-size: 13vh;
                 &-info {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: flex-start;
-                    :nth-child(1){
-                        margin-block-end: clamp(1.25rem, 1.581rem + -0.276vw, 0.875rem);
-                    }
-                
+                    margin-block-start: clamp(1.975rem,1.324rem + .46vw,1.9rem);                
                 }
-
+                &_flex{
+                    display: flex;
+                    flex-direction: column;
+                }
                 &-value {
                     font-family: Oswald;
                     font-weight: 400;
@@ -1945,10 +1944,9 @@
                     font-weight: 400;
                     font-size: 0.45vw;
                     line-height: 0.6vw;
-                    text-align: center;
+                    text-align: left;
                     letter-spacing: 0.05em;
                     color: #FFFFFF;
-
                 }
 
                 &-frame {

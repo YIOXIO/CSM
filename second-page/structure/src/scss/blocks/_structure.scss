@@ -627,12 +627,12 @@ a{
         right: -1%;
     }
     &:nth-child(1)::before{
-        block-size: calc(100% + 7.28vw);
+        block-size: calc(100% + 7.88vw);
         top: 50%;
 
     }
     &:nth-child(4)::before{
-        block-size: calc(100% + 7.28vw);
+        block-size: calc(100% + 8.5vw);
 
     }
     &:nth-child(7)::before{
@@ -721,7 +721,7 @@ a{
     
     &:nth-child(2)::before{
         background-color: #FFF;
-        block-size: calc(100% + 3.34vw);
+        block-size: calc(100% + 3.58vw);
         top: -40%;
         right: 48.6%;
         bottom: 0;
@@ -734,7 +734,7 @@ a{
     &::before{
         content: "";
         position: absolute;
-        right: 7.4%;
+        right: 8.5%;
         background-color: #fff;
         inline-size: .049vh;
         block-size: 50%;
@@ -753,11 +753,31 @@ a{
 
 }
 
+
+.finance{
+    >.line-flex{
+        &:nth-child(2)::before{
+          block-size: calc(100% + 3.98vw); 
+        }
+    }
+    >.line-grid{
+
+        &::before{
+            right: 9.5%;
+            background-color: #FFF;
+            inline-size: .049vh;
+            block-size: 50%;
+            z-index: -1;
+  
+        }
+    }
+}
+
 .manage{
     >.line-flex{
         &:nth-child(2)::before{
             background-color: #FFF;
-            block-size: calc(100% + 2.714vw);
+            block-size: calc(100% + 2.554vw);
             top: -40%;
             right: 48.6%;
             bottom: 0;
@@ -766,7 +786,7 @@ a{
     >.line-grid{
 
         &::before{
-            right: 5.3%;
+            right: 4.6%;
             background-color: #FFF;
             inline-size: .049vh;
             block-size: 50%;
@@ -794,7 +814,8 @@ a{
     >.line-grid{
 
         &::before{
-            right: 9.1%;
+            right: 8.1%;
+            top: 31%;
             background-color: #FFF;
             inline-size: .049vh;
             block-size: 50%;
@@ -822,7 +843,8 @@ a{
     >.line-grid{
 
         &::before{
-            right: 8%;
+            right: 7.9%;
+            top: 25.4%;
             background-color: #FFF;
             inline-size: .049vh;
             block-size: 50%;
@@ -832,7 +854,7 @@ a{
         &:nth-child(2)::before{
             background-color: #fff;
             block-size: 50%;
-            left: 3%;
+            left: 1.5%;
         
         }
     }
