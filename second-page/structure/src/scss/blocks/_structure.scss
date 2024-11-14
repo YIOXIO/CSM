@@ -632,7 +632,7 @@ a{
 
     }
     &:nth-child(4)::before{
-        block-size: calc(100% + 8.5vw);
+        block-size: clamp(11.25rem, -0.882rem + 10.61vw, 24.4rem);
 
     }
     &:nth-child(7)::before{
@@ -757,13 +757,13 @@ a{
 .finance{
     >.line-flex{
         &:nth-child(2)::before{
-          block-size: calc(100% + 3.98vw); 
+          block-size: clamp(6.313rem, 0.015rem + 5.331vw, 13.003rem); 
         }
     }
     >.line-grid{
 
         &::before{
-            right: 9.5%;
+            right: clamp(1.8rem, -4rem + 2.941vw, 8rem);
             background-color: #FFF;
             inline-size: .049vh;
             block-size: 50%;
