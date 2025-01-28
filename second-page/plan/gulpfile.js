@@ -36,10 +36,11 @@ const html = () => {
 }
 
 const scripts = () => {
-	return src('src/js/plan.js')
-	.pipe(concat('plan.js'))
-	.pipe(dest('dist/js'))
-	.pipe(browserSync.stream())
+    return src('src/js/**/*.js')
+        .pipe(newer('dist/js'))
+        .pipe(uglify())
+        .pipe(dest('dist/js'))
+        .pipe(browserSync.stream());
 }
 
 const styles = () => {
@@ -68,7 +69,7 @@ const cleanimg = () => {
 }
 
 const icons = () => {
-	return src('src/assetsicons/**/*')
+	return src('src/assets/icons/**/*')
 	.pipe(dest('dist/assets/icons'))
 	.pipe(browserSync.stream())
 }

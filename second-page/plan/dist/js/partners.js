@@ -19,8 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     haveCorporateUniversity: 'нет',
                     level: 'Высший орган',
                     contacts: 'Лысенкова Елена Вячеславовн - заместитель руководителя Федерального агентства по туризму (Ростуризм)',
-                    curator: 'Васякин Богдан Сергеевич - заведующий кафедрой психологии',
-                    
+                    curator: 'Васякин Богдан Сергеевич - заведующий кафедрой психологии',                    
                     contractConclusionDate: '23.12.2022',
                     contractType:'бессрочный',
                     dateOfUpdate: '15.04.2022'
@@ -349,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     contractConclusionDate: '23.12.2022',
                     contractType:'бессрочный'
                 },
-                {   
+                {    
                     id: 84,
                     name: 'Базовая кафедра «Экономические и правовые экспертизы» Союза судебных экспертов «Экспертный совет» Союза судебных экспертов «Экспертный совет»Союза судебных экспертов',
                     alias: 'Высшая школа креативных индустрий',
@@ -1001,6 +1000,18 @@ document.addEventListener('DOMContentLoaded', () => {
     setContent(getSortData(planData))  
 
 
+
+
+
+
+
+
+
+
+
+
+
+    
     // Ф-ия приводит номер телефона к установленному виду.
     // function transormPhoneNumber(phone) {
     //     let array = phone.toString().split('')
