@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scienceServerData = {
         date: '04.02.2024',
-        currentPlan: 647240 ,
-        currentReceipts: 326251.4,
+        currentPlan: 0 ,
+        currentReceipts: 0,
         expectedReceipts: {
             date: '31.12.2024',
-            sum: 647240
+            sum: 0
         },
         //Добавлены данные для НИР и научно-техническим услугам
         currentPlanTechnical:101749.4,
@@ -190,7 +190,17 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
 
     function science(data) {
-       
+
+
+        // Проверка на 0 или NaN
+        
+        const isInvalid = (value) => value === 0 || isNaN(value);
+
+        if(isInvalid(data.currentPlan) || isInvalid(data.currentReceipts) || isInvalid(data.expectedReceipts.sum)){
+            document.querySelector('.science__data-plan').style.display = 'none'
+            document.querySelector('.science__inner').style.display = 'none'
+            document.querySelector('.science__separator').style.margin = "0 0 1.5vh"
+        }
 
         // ==================== вывод данных в блок science__info =================
 
