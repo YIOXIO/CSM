@@ -1,0 +1,42 @@
+.unallocated {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMjYiIGhlaWdodD0iMTQxIiBmaWxsPSJub25lIj48cGF0aCBkPSJNMzI1IDE2LjI2NnYxMTUuNTYybC03Ljc1MSA3Ljc1MUgxNDIuNjI1bC0zLjk5My0zLjk5M2gtOS44NjRsLTIuODE5IDMuMDUzaC0xNy42MTVsLTUuNDAyLTUuNjM3SDYwLjY1NmwtNS40MDIgNS42MzdIOC4yODFsLTYuODExLTcuMjgxTDEgMTQuMTUybDguOTI1LTguNjloMTQuMDkyTDI4LjQ3OSAxaDE5LjczbDQuNDYyIDQuNDYyaDI2MS41MjVMMzI1IDE2LjI2NloiIGZpbGw9IiMxMTIwNTQiIGZpbGwtb3BhY2l0eT0iLjY4IiBzdHJva2U9IiMyMTdBRkYiIHN0cm9rZS1vcGFjaXR5PSIuMiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48L3N2Zz4=');
+    background-size: cover;
+    background-position: center;
+    padding: 0.6vw;
+    border: none;
+    inline-size: 16.9vw;
+    text-align: left;
+    position: absolute;
+    right: 16.5%;
+    top: 4%;
+    block-size: 7.3vw;
+    display: grid;
+    align-items: end;
+    &__title{
+        font-family: 'Oswald';
+        font-weight: 400;
+        letter-spacing: .05em;
+        color: #fff;
+        font-size: .88vw;
+        align-self: flex-start;
+    }
+    &__fact{
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        font-size: .7vw;
+        line-height: .829vw;
+        color: #627dae;
+        &-span{
+            font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: .9vw;
+        color: #f79a2d;
+        text-transform: none;
+        }
+    }
+    &__progress-bar{
+        inline-size: 13.3vw;
+        block-size: fit-content;
+    
+    }
+}

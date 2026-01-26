@@ -1129,7 +1129,7 @@ window.onload = function() {
       
     // document.querySelector('.calendar-finance').setAttribute('data-date', financeData.date);
     document.querySelector('.calendar-science').setAttribute('data-date', scienceData.date);
-    document.querySelector('.calendar-international').setAttribute('data-date', internationalData.date);
+    // document.querySelector('.calendar-international').setAttribute('data-date', internationalData.date);
     document.querySelector('.calendar-dpo').setAttribute('data-date', dpoData.date);
     document.querySelector('.calendar-students').setAttribute('data-date', staffData.date);
     

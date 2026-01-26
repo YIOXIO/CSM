@@ -1730,7 +1730,7 @@
             left: 50%;
             transform: translate(-56%,-50%);
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
 
             &__link {
                 position: relative;
