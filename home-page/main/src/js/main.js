@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     //============== переход на второстепенные страницы ==========
-    
+
 
     document.querySelector('#covid_click').addEventListener('click', () => {
         console.log('covid_click')
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('#portraits').addEventListener('click', () => {
         console.log('portraits')
-        
+
     });
 
     document.querySelector('#priority').addEventListener('click', () => {
@@ -25,30 +25,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('#all_branches').addEventListener('click', () => {
-        
+
     });
 
     document.querySelector('#plan').addEventListener('click', () => {
-        
+
     });
 
     document.querySelector('#students').addEventListener('click', () => {
-    
+
     });
 
     document.querySelector('#finance').addEventListener('click', () => {
-        
+
     });
 
     document.querySelector('#science').addEventListener('click', (evt) => {
         let target = evt.target
-       
+
         if (target.hasAttribute('data-btn')) {
             // выполнить ф-ию changeScienceDiagramData
             // ф-ия changeScienceDiagramData описана в ниже в блоке science 
             changeScienceDiagramData(target)
             clearTimeout(tr)
-        } 
+        }
         else {
             // открыть страницу science
         }
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('#international').addEventListener('click', () => {
-        
+
     });
 
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // });
 
 
-   
+
     //=================== служебные функции =====================
 
     function progressLength(progressBar, data) {
@@ -84,17 +84,17 @@ document.addEventListener('DOMContentLoaded', () => {
             currentValue = Math.round((progressBar.length / 100) * data);
         }
 
-        return currentValue; 
+        return currentValue;
     }
 
-    
+
     function setProgressBar(progressBar, length, val) {
         for (let i = 0; i < length; i++) {
             progressBar[i].style.fill = val;
         }
-    }  
+    }
 
-    
+
     const insertToPage = (className, data) => document.querySelector(`.${className}`).innerHTML = data;
 
 
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else {
                 out = intPart.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
             }
-    
+
             out += '.' + decimalPart;
         }
         else {
@@ -124,10 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
             else {
                 out = str.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
             }
-        }    
+        }
 
         return out;
-    } 
+    }
 
 
     function progressbarDataOutput(data, block, isExpand = true) {
@@ -135,42 +135,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const scienceProgressbar = Array.from(document.querySelectorAll(`.${block}__plan-progressbar-item`));
         const scienceProgressbarLength = progressLength(scienceProgressbar, progress);
-        
+
         function setProgressBar(progressBar, length, val) {
             for (let i = 0; i < length; i++) {
                 progressBar[i].setAttribute('fill-opacity', val)
             }
-        } 
+        }
 
         setProgressBar(scienceProgressbar, scienceProgressbarLength, 1)
 
         insertToPage(`${block}__plan-ratio`, progress + '%');
-        insertToPage(`${block}__plan-value`, numDataOutput(data.currentPlan) );
+        insertToPage(`${block}__plan-value`, numDataOutput(data.currentPlan));
         insertToPage(`${block}__legend-value_current-receipts`, numDataOutput(data.currentReceipts));
         if (isExpand) {
             insertToPage(`${block}__legend-value_expected-receipts`, numDataOutput(data.expectedReceipts));
-        }   
+        }
     }
 
 
 
     //=================== центральная диаграмма =====================
-    
+
     const performanceData = {
         absolute: 77,
         quality: 55
     }
-    
+
     function performanceDiagram(absoluteValue, animationTime = 6300) {
 
         const absoluteProgrssbar = Array.from(document.querySelectorAll('.absolute-progrss-bar path'));
 
         let absoluteLength = progressLength(absoluteProgrssbar, absoluteValue);
-       
+
         setTimeout(() => {
             setProgressBar(absoluteProgrssbar, absoluteLength, '#FB9B2B');
         }, animationTime)
-        
+
         function progressLength(progressBar, data) {
             let currentValue;
 
@@ -180,27 +180,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentValue = Math.round((progressBar.length / 100) * data);
             }
 
-            return currentValue; 
+            return currentValue;
         }
 
         function setProgressBar(progressBar, length, val) {
             for (let i = 0; i < length; i++) {
                 progressBar[i].style.fill = val;
             }
-        }  
+        }
 
         document.querySelector('.performance-diagram-absolute-value').textContent = numDataOutput(absoluteValue) + '%';
     }
 
-   
+
 
     performanceDiagram(performanceData.absolute);
 
     //=================== центральный блок данных =====================
 
     const generalData = {
-        students:  4844,
-        rate: 15,
+        students: 4844,
+        rate: '30-36',
         teachers: 1279,
         scientists: 347,
         score: 53,
@@ -210,10 +210,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // cash: 3.45 ,
         // budget: 4.08 ,
         dpoProgress: 30.8,
-        dpoStudents: 11009  
+        dpoStudents: 11009
     }
- 
-    function  generalDataOutput(data) {
+
+    function generalDataOutput(data) {
         for (let key in data) {
             document.querySelector(`.circle-block__value_${key}`).textContent = numDataOutput(data[key]);
         }
@@ -236,39 +236,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
- 
+
 
     wageFundDiagramData = Object.values(financeData).slice(2, 4);
     сostsDiagramData = Object.values(financeData).slice(4, 7).reverse();
 
-    const getInt = (array)  => array.map( i => parseInt(i))
-    
-    class Diagram  {
-        constructor (title, data, colors, parentSelector, isDecorated = false) {
-            this.parentSelector = document.querySelector(`.${ parentSelector }`),
-            this.segmentColors  = colors,
-            this.isDecorated    = isDecorated,
-            this.title          = title,
-            this.data           = data,
-            this.fill           = '#112054',
-            this.diff(),
-            this.offset(),
-            this.sector(),
-            this.insDiagramSectors(),
-            this.diagrammSegmentConfig()
+    const getInt = (array) => array.map(i => parseInt(i))
+
+    class Diagram {
+        constructor(title, data, colors, parentSelector, isDecorated = false) {
+            this.parentSelector = document.querySelector(`.${parentSelector}`),
+                this.segmentColors = colors,
+                this.isDecorated = isDecorated,
+                this.title = title,
+                this.data = data,
+                this.fill = '#112054',
+                this.diff(),
+                this.offset(),
+                this.sector(),
+                this.insDiagramSectors(),
+                this.diagrammSegmentConfig()
         }
-    
-        get diagramValues () { 
+
+        get diagramValues() {
             const sumValues = this.data.reduce((a, b) => a + b);
-    
-            let array = this.data.map(i => Math.round( i / sumValues * 100));
+
+            let array = this.data.map(i => Math.round(i / sumValues * 100));
             let max = Math.max(...array);
-           
+
             if (this.isDecorated) {
                 array = array.map(i => {
                     if (i === 0) {
                         return 0
-                    } 
+                    }
                     else if (i < 5) {
                         return 5
                     }
@@ -280,19 +280,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const sumRatio = array.reduce((a, b) => a + b);
             const diff = sumRatio - 100;
-    
+
             return array.map(i => i === max ? i - diff : i);
         }
-    
-        get internalEclipseColor () { return this.segmentColors[this.segmentColors.length - 1] }
-    
-        diff (val) { return 100 - val }
-    
-        offset (index) { 
+
+        get internalEclipseColor() { return this.segmentColors[this.segmentColors.length - 1] }
+
+        diff(val) { return 100 - val }
+
+        offset(index) {
             const start = 25;
             let location = 0;
             let sum = 0;
-          
+
             this.diagramValues.map((_, i, array) => {
                 if (i == index && i !== 0) {
                     for (let j = 0; j < i; j++) {
@@ -300,23 +300,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     sum = 100 - sum;
                 }
-            })    
+            })
             location = start + sum;
-           
-            return location;  
+
+            return location;
         }
-    
-        diagrammSegmentConfig (r = 15.91549430918954) { return `class="donut-segment" cx="21" cy="21" r="${r}"` }
-    
-        sector (item, index) { 
-            const strokeWidth = index == 0 ? 10 : index == this.diagramValues.length - 1 ? 5 : 7; 
-            return `<circle  ${this.diagrammSegmentConfig()} fill="${this.fill}" stroke="${this.segmentColors[index]}" stroke-width="${strokeWidth}" stroke-dasharray="${item} ${this.diff(item)}" stroke-dashoffset="${this.offset(index)}"></circle>`; 
+
+        diagrammSegmentConfig(r = 15.91549430918954) { return `class="donut-segment" cx="21" cy="21" r="${r}"` }
+
+        sector(item, index) {
+            const strokeWidth = index == 0 ? 10 : index == this.diagramValues.length - 1 ? 5 : 7;
+            return `<circle  ${this.diagrammSegmentConfig()} fill="${this.fill}" stroke="${this.segmentColors[index]}" stroke-width="${strokeWidth}" stroke-dasharray="${item} ${this.diff(item)}" stroke-dashoffset="${this.offset(index)}"></circle>`;
         }
-    
+
         insDiagramSectors() { return this.diagramValues.map((i, index) => this.sector(i, index)).join('') }
-      
-    
-        render () { 
+
+
+        render() {
             const diagram = document.createElement('div');
             diagram.classList.add('diagram');
             diagram.innerHTML = `
@@ -328,20 +328,20 @@ document.addEventListener('DOMContentLoaded', () => {
     
                 <div class="finance__diagram-text">${this.title}</div>
             `;
-            
+
             this.parentSelector.append(diagram);
-            
-            
+
+
         }
-    
+
     }
-    
+
     // new Diagram('Фонд оплаты труда', getInt(wageFundDiagramData), ['#2BD6FB', '#217AFF'], 'finance__diagram_wage-fund', ).render()
     // new Diagram('Затраты', getInt(сostsDiagramData), ['#FFC01D',  '#FB9B2B', '#FD6A6A'], 'finance__diagram_сosts', true).render()
 
     function financeDataOutput(data) {
         insertToPage('finance__total-value', numDataOutput(data.total));
-        
+
         insertToPage('finance__diagram-value_budget-resources', numDataOutput(data.budgetResources));
         insertToPage('finance__diagram-value_other-resources', numDataOutput(data.otherResources));
         insertToPage('finance__diagram-value_wage-fund', numDataOutput(data.wageFund));
@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (elem.classList.contains('finance__diagram-value_wage-fund') || elem.classList.contains('finance__diagram-value_other-resources')) {
             position = 'left'
-        } 
+        }
 
         if (strLength === 1) {
             elem.style[position] = '1.6vw'
@@ -396,7 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPlan: 150000.6,
             currentReceipts: 100000.4,
             expectedReceipts: 233203.6,
-            progress: 80.62 
+            progress: 80.62
         },
         priority: {
             pp: {
@@ -417,9 +417,9 @@ document.addEventListener('DOMContentLoaded', () => {
     progressbarDataOutput(dpoData.plan, 'dpo', false);
 
     let dpoPriorityProgress = data => {
-        let { descr, fact, plan, color } = data 
+        let { descr, fact, plan, color } = data
         let ratio = ((fact / plan) * 100).toFixed(1);
-        let fill = (330 / 100) *  (ratio <= 100 ? ratio : 100);
+        let fill = (330 / 100) * (ratio <= 100 ? ratio : 100);
 
         return `
             <div class="dpo__data-item">
@@ -444,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setDpoPriorityProgressbar();
-   
+
     //=================== наука =====================
 
     const scienceData = {
@@ -453,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPlan: 50000.6,
             currentReceipts: 199583.4,
             expectedReceipts: 233203.6,
-            progress: 80.62 
+            progress: 80.62
         },
         publications: {
             scopus: {
@@ -568,32 +568,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                 ]
             }
-            
+
         }
-        
+
     }
 
-    progressbarDataOutput(scienceData.plan, 'science')    
-        
+    progressbarDataOutput(scienceData.plan, 'science')
+
 
     function publicationsDataOutput(data, category, color = '#FB9B2B') {
         const diagram = Array.from(document.querySelectorAll('.wos rect'));
         const values = data[category];
-        
+
         if (values.length < diagram.length) {
             console.error('Недостаточно значений в массиве данных');
             return;
         }
-        
+
         const max = Math.max(...values);
-        
+
         diagram.map((i, index) => {
             let value = (values[index] / max) * 100;
             i.setAttribute('fill', color);
             i.setAttribute('height', `${value}%`);
             i.setAttribute('y', `${100 - value}%`);
         });
-        
+
         document.querySelector('.science__diagram-value').textContent = max;
     }
 
@@ -619,7 +619,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let color = ''
 
-        switch(category) {
+        switch (category) {
             case 'wos':
                 color = '#FB9B2B'
                 break;
@@ -631,32 +631,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'scopusQ1Q2':
                 color = '#44BCFF'
-                break;    
-    
+                break;
+
         }
 
         for (let i of listItems) {
             i.classList.remove('science__list-item_active')
             if (i.getAttribute('data-btn') == category) {
-               i.classList.add('science__list-item_active')
+                i.classList.add('science__list-item_active')
             }
         }
 
         publicationsDataOutput(publicationsData, category, color);
     }
 
-    
+
     publicationsDataOutput(publicationsData, 'wos');
 
     let publicationsDiagramCounter = 0
 
-    let publicationsDiagramItems = ['wos', 'wosQ1Q2', 'scopus', 'scopusQ1Q2'] 
+    let publicationsDiagramItems = ['wos', 'wosQ1Q2', 'scopus', 'scopusQ1Q2']
     let publicationsDiagramColors = ['#FB9B2B', '#FFDD85', '#217AFF', '#44BCFF']
 
     let tr
 
     function publicationsDiagramAnimation() {
-        tr = setTimeout(()=> {
+        tr = setTimeout(() => {
             if (publicationsDiagramCounter <= 3) {
                 document.querySelectorAll('.science__list-item').forEach(i => {
                     i.classList.remove('science__list-item_active')
@@ -664,147 +664,147 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelectorAll('.science__list-item')[publicationsDiagramCounter].classList.add('science__list-item_active')
                 publicationsDataOutput(publicationsData, publicationsDiagramItems[publicationsDiagramCounter], publicationsDiagramColors[publicationsDiagramCounter]);
                 publicationsDiagramCounter++
-            } 
+            }
             else {
-                
+
                 publicationsDiagramCounter = 0
             }
-            
+
             publicationsDiagramAnimation()
-        }, 3000)  
+        }, 3000)
     }
-    
+
     publicationsDiagramAnimation()
 
 
-// ========================== Приоритет 2030 ======================
-window.onload = function() {
-    const priority2030 = {
-        priority2030Data: {
-            P1: " 109.52 руб.",
-            P2: " 21.77%",
-            P3: " 0.55%",
-            P4: " 2 469.82 руб.",
-            P5: {
-                kind: 'p5',
-                date: '28.02.2023',
-                plan: 2402, // План на каждый месяц
-                fact: 2429,
-                annualStatistics: [2969, 2970, 2970, 2970, 2970, 2970, 2970, 2970, 2970],
-                unit: 'people',
+    // ========================== Приоритет 2030 ======================
+    window.onload = function () {
+        const priority2030 = {
+            priority2030Data: {
+                P1: " 109.52 руб.",
+                P2: " 21.77%",
+                P3: " 0.55%",
+                P4: " 2 469.82 руб.",
+                P5: {
+                    kind: 'p5',
+                    date: '28.02.2023',
+                    plan: 2402, // План на каждый месяц
+                    fact: 2429,
+                    annualStatistics: [2969, 2970, 2970, 2970, 2970, 2970, 2970, 2970, 2970],
+                    unit: 'people',
+                },
+                P6: " 226.81 руб"
             },
-            P6: " 226.81 руб"
-        },
 
-        updateLegend() {
-            const legendItems = document.querySelectorAll('.vaccination__legend-item');
+            updateLegend() {
+                const legendItems = document.querySelectorAll('.vaccination__legend-item');
 
-            legendItems.forEach(item => {
-                const descr = item.querySelector('.vaccination__legend-descr');
-                const key = descr.textContent.trim().split(' ')[0];
-                if (this.priority2030Data[key]) {
-                    const span = document.createElement('span');
-                    span.className = 'vaccination__legend-value';
-                    span.textContent = this.priority2030Data[key];
-                    descr.appendChild(span);
-                }
-            });
-        },
+                legendItems.forEach(item => {
+                    const descr = item.querySelector('.vaccination__legend-descr');
+                    const key = descr.textContent.trim().split(' ')[0];
+                    if (this.priority2030Data[key]) {
+                        const span = document.createElement('span');
+                        span.className = 'vaccination__legend-value';
+                        span.textContent = this.priority2030Data[key];
+                        descr.appendChild(span);
+                    }
+                });
+            },
 
-        createChart() {
-            const ctx = document.getElementById('P5-chart').getContext('2d');
-            const chart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['сен', 'окт', 'ноя', 'дек', 'янв', 'фев', 'мар', 'апр', 'май'],
-                    datasets: [{
-                        label: 'Факт',
-                        data: this.priority2030Data.P5.annualStatistics,
-                        backgroundColor: '#217AFF',
-                        borderColor: '#217AFF',
-                        borderWidth: 2,
-                    }, {
-                        label: 'План',
-                        data: Array(9).fill(2000),
-                        backgroundColor: '#FFA500',
-                        borderColor: '#FFF',
-                        borderWidth: 1,
-                        borderDash: [2, 2],
-                        pointRadius: 0,
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            suggestedMax: 4500,
-                            beginAtZero: true,
-                            ticks: {
-                                color: 'white',
-                                display: false
+            createChart() {
+                const ctx = document.getElementById('P5-chart').getContext('2d');
+                const chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['сен', 'окт', 'ноя', 'дек', 'янв', 'фев', 'мар', 'апр', 'май'],
+                        datasets: [{
+                            label: 'Факт',
+                            data: this.priority2030Data.P5.annualStatistics,
+                            backgroundColor: '#217AFF',
+                            borderColor: '#217AFF',
+                            borderWidth: 2,
+                        }, {
+                            label: 'План',
+                            data: Array(9).fill(2000),
+                            backgroundColor: '#FFA500',
+                            borderColor: '#FFF',
+                            borderWidth: 1,
+                            borderDash: [2, 2],
+                            pointRadius: 0,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                suggestedMax: 4500,
+                                beginAtZero: true,
+                                ticks: {
+                                    color: 'white',
+                                    display: false
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)',
+                                    display: false,
+                                },
+                                border: {
+                                    color: 'white',
+                                    width: 1,
+                                    offset: true
+                                },
+                                offset: true,
                             },
-                            grid: {
-                                color: 'rgba(255, 255, 255, 0.1)',
-                                display: false,
-                            },
-                            border: {
-                                color: 'white',
-                                width: 1,
-                                offset: true
-                            },
-                            offset: true,
-                        },
-                        x: {
-                            ticks: {
-                                color: 'white',
-                                font: {
-                                    size: this.convertVwToPx(.6) 
+                            x: {
+                                ticks: {
+                                    color: 'white',
+                                    font: {
+                                        size: this.convertVwToPx(.6)
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)',
+                                    display: false,
+                                },
+                                border: {
+                                    color: 'white',
+                                    width: 1,
                                 }
-                            },
-                            grid: {
-                                color: 'rgba(255, 255, 255, 0.1)',
+                            }
+                        },
+                        plugins: {
+                            legend: {
                                 display: false,
                             },
-                            border: {
-                                color: 'white',
-                                width: 1,
-                            }
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            display: false,
                         },
                     },
-                },
-            });
-        },
+                });
+            },
 
-        updateP5Fact() {
-            const diagramDescr = document.querySelector('.vaccination__diagram-descr span');
-            if (diagramDescr) {
-                diagramDescr.textContent = this.priority2030Data.P5.fact;
+            updateP5Fact() {
+                const diagramDescr = document.querySelector('.vaccination__diagram-descr span');
+                if (diagramDescr) {
+                    diagramDescr.textContent = this.priority2030Data.P5.fact;
+                }
+            },
+
+            convertVwToPx(vw) {
+                const viewportWidth = window.innerWidth;
+                return Math.round(vw * (viewportWidth / 100));
+            },
+
+            init() {
+                this.updateLegend();
+                this.createChart();
+                this.updateP5Fact();
             }
-        },
+        };
 
-        convertVwToPx(vw) {
-            const viewportWidth = window.innerWidth;
-            return Math.round(vw * (viewportWidth / 100));
-        },
-
-        init() {
-            this.updateLegend();
-            this.createChart();
-            this.updateP5Fact();
-        }
+        priority2030.init();
     };
 
-    priority2030.init();
-};
 
-
-     //=================== вакцинация =====================
+    //=================== вакцинация =====================
 
     //  const vaccinationData = {
     //     date: '2021-10-02',
@@ -838,7 +838,7 @@ window.onload = function() {
     //             </svg>
     //         </svg>`
     //     }
-                
+
     //     function output (data) {
     //         const element = document.createElement('div');
 
@@ -850,7 +850,7 @@ window.onload = function() {
     //             ${setLine(data.recovered, '#A7EB17')}
     //             ${setLine(data.unsuitable, '#FB9B2B' )}
     //             ${setLine(data.sick, '#FD6A6A')}
-           
+
     //         `;
 
     //         document.querySelector('.vaccination__diagram-wrap').append(element);
@@ -887,7 +887,7 @@ window.onload = function() {
                 specialists: 2421360,
                 magisters: 6422663
             }
-            
+
         }
 
     }
@@ -910,11 +910,11 @@ window.onload = function() {
 
         const teachingLoadProgressLength = progressLength(teachingLoadProgressbar, data.ratio);
 
-        function setProgressBarteachingLoad (progressBar, length, val) {
+        function setProgressBarteachingLoad(progressBar, length, val) {
             for (let i = 0; i < length; i++) {
                 progressBar[i].style.backgroundColor = val;
             }
-        }  
+        }
 
         setProgressBarteachingLoad(teachingLoadProgressbar, teachingLoadProgressLength, '#1A5FC7');
         insertToPage('spanstudents__teaching-load-value', data.hours);
@@ -934,7 +934,7 @@ window.onload = function() {
             const sum = result.reduce((a, b) => a + b);
 
             return sum;
-        } 
+        }
 
         const categoryRatio = (category, sum) => Math.ceil((category / sum) * 100);
 
@@ -959,7 +959,7 @@ window.onload = function() {
 
     // ======================= календарь ===============================
 
-    function calendar () {
+    function calendar() {
 
         const template = `
           <div class="calendar_science">
@@ -988,7 +988,7 @@ window.onload = function() {
             </div>
           </div>
         `
-      
+
         const style = `
           .calendar-unit {display: block;block;margin-top: 0.5vw;}
           .right {text-align: right;}
@@ -1002,118 +1002,118 @@ window.onload = function() {
             line-height: 0.6vw;
           }
         `
-      
+
         class HTMLElementExtended extends HTMLElement {
-          constructor(html, style, ...mixins) {
-            self = super();
-            this.constructor.setMixins(mixins);
-            const template = this.constructor.setTemplate(html, style);
-            this.$ = this.constructor.setShadowDOM(template);
-          }
-      
-          static setMixins (mixins) {
-            Object.assign(this.prototype, ...mixins);
-          }
-      
-          static setTemplate (html, style) {
-            const template = document.createElement('template');
-            template.innerHTML = html + `<style>${style}</style>`;
-            
-            return template;
-          }
-          
-          static setShadowDOM (template) {
-            const shadowRoot = self.attachShadow({ mode: 'open' });;
-            shadowRoot.appendChild(template.content.cloneNode(true));;
-            return shadowRoot;;
-          }
+            constructor(html, style, ...mixins) {
+                self = super();
+                this.constructor.setMixins(mixins);
+                const template = this.constructor.setTemplate(html, style);
+                this.$ = this.constructor.setShadowDOM(template);
+            }
+
+            static setMixins(mixins) {
+                Object.assign(this.prototype, ...mixins);
+            }
+
+            static setTemplate(html, style) {
+                const template = document.createElement('template');
+                template.innerHTML = html + `<style>${style}</style>`;
+
+                return template;
+            }
+
+            static setShadowDOM(template) {
+                const shadowRoot = self.attachShadow({ mode: 'open' });;
+                shadowRoot.appendChild(template.content.cloneNode(true));;
+                return shadowRoot;;
+            }
         }
-      
+
         window.HTMLElementExtended = HTMLElementExtended
-      
+
         class Calendar extends HTMLElementExtended {
-          constructor() {
-            super(template, style);
-            this.render();
-          }
-      
-          set currentDate (str) {
-            this.date = new Date(str);
-          }
-            
-          get data () { return this.parentNode.getAttribute('data-date'); }
-          get bar () { return this.$.querySelector('svg').children; }
-          get dir () { return this.getAttribute('dir') === 'left' ? 'left' : 'right'; }
-          get diff () { return this.dayOfYear(this.date) / this.daysInYear(this.date); }
-      
-          get value () {
-            return {
-              'left' : this.date.toLocaleString('ru-Ru').split(',')[0],
-              'right': `год ${ Math.floor(this.diff * 100)}%`
-            }[this.dir];
-          }
-      
-          setProgressBar(bar, active, fill) {
-            active < 1 ? active = 1 : active;
-      
-            for (let i = 0; i < active; i++) {
-              bar[i].style.fill = fill;
-            }
-          }
-      
-          dayOfYear (date) {
-            const year = date.getFullYear();
-            return Math.floor((date - new Date(year, 0, 0)) / 1000 / 60 / 60 / 24);
-          }
-      
-          daysInYear (date) {
-            const year = date.getFullYear();
-            return ((year % 4 === 0 && year % 100 > 0) || year % 400 == 0) ? 366 : 365;
-          }
-      
-          lastDay (date) {
-            const year = date.getFullYear();
-            const month = date.getFullYear();
-            return new Date(year, month + 1, 0).getDate();
-          }
-      
-          calc (date, bar) {
-            const { length } = bar;
-            const left = Math.floor(length * (date.getDate() / this.lastDay(date)));
-            const right = Math.floor(length * this.diff);
-            return {
-              left,
-              right
-            };
-          }
-      
-          async render () {
-            this.currentDate = this.data;
-            
-            const active = this.calc(this.date, this.bar)[this.dir];
-            this.setProgressBar(this.bar, active, '#FB9B2B');
-            this.$.firstElementChild.classList.toggle(this.dir);
-            this.$.querySelector('.value').textContent = this.value;
-          }
-        }
-
-        class CalendarSingle extends Calendar {
-            constructor () {
-                super()
+            constructor() {
+                super(template, style);
+                this.render();
             }
 
-            calc (date, bar) {
+            set currentDate(str) {
+                this.date = new Date(str);
+            }
+
+            get data() { return this.parentNode.getAttribute('data-date'); }
+            get bar() { return this.$.querySelector('svg').children; }
+            get dir() { return this.getAttribute('dir') === 'left' ? 'left' : 'right'; }
+            get diff() { return this.dayOfYear(this.date) / this.daysInYear(this.date); }
+
+            get value() {
+                return {
+                    'left': this.date.toLocaleString('ru-Ru').split(',')[0],
+                    'right': `год ${Math.floor(this.diff * 100)}%`
+                }[this.dir];
+            }
+
+            setProgressBar(bar, active, fill) {
+                active < 1 ? active = 1 : active;
+
+                for (let i = 0; i < active; i++) {
+                    bar[i].style.fill = fill;
+                }
+            }
+
+            dayOfYear(date) {
+                const year = date.getFullYear();
+                return Math.floor((date - new Date(year, 0, 0)) / 1000 / 60 / 60 / 24);
+            }
+
+            daysInYear(date) {
+                const year = date.getFullYear();
+                return ((year % 4 === 0 && year % 100 > 0) || year % 400 == 0) ? 366 : 365;
+            }
+
+            lastDay(date) {
+                const year = date.getFullYear();
+                const month = date.getFullYear();
+                return new Date(year, month + 1, 0).getDate();
+            }
+
+            calc(date, bar) {
                 const { length } = bar;
                 const left = Math.floor(length * (date.getDate() / this.lastDay(date)));
                 const right = Math.floor(length * this.diff);
                 return {
-                  left
+                    left,
+                    right
                 };
             }
 
-            async render () {
+            async render() {
                 this.currentDate = this.data;
-                
+
+                const active = this.calc(this.date, this.bar)[this.dir];
+                this.setProgressBar(this.bar, active, '#FB9B2B');
+                this.$.firstElementChild.classList.toggle(this.dir);
+                this.$.querySelector('.value').textContent = this.value;
+            }
+        }
+
+        class CalendarSingle extends Calendar {
+            constructor() {
+                super()
+            }
+
+            calc(date, bar) {
+                const { length } = bar;
+                const left = Math.floor(length * (date.getDate() / this.lastDay(date)));
+                const right = Math.floor(length * this.diff);
+                return {
+                    left
+                };
+            }
+
+            async render() {
+                this.currentDate = this.data;
+
                 const active = this.calc(this.date, this.bar)[this.dir];
                 this.setProgressBar(this.bar, active, '#FB9B2B');
                 this.$.firstElementChild.classList.toggle(this.dir);
@@ -1122,19 +1122,19 @@ window.onload = function() {
                 this.$.querySelector('.left svg').style = 'transform: scaleX(-1)';
             }
         }
-      
+
         customElements.get('basic-calendar') || customElements.define('basic-calendar', Calendar);
         customElements.get('single-calendar') || customElements.define('single-calendar', CalendarSingle);
     }
-      
+
     // document.querySelector('.calendar-finance').setAttribute('data-date', financeData.date);
     document.querySelector('.calendar-science').setAttribute('data-date', scienceData.date);
     // document.querySelector('.calendar-international').setAttribute('data-date', internationalData.date);
     document.querySelector('.calendar-dpo').setAttribute('data-date', dpoData.date);
     document.querySelector('.calendar-students').setAttribute('data-date', staffData.date);
-    
+
     calendar();
-	
+
 
     //================== глобус =========================
 
@@ -1143,11 +1143,11 @@ window.onload = function() {
         let sprites = [];
 
         myearth = new Earth("myearth", {
-        location: {
-            lat: 20,
-            lng: 20,
-        },
-        light: "none",
+            location: {
+                lat: 20,
+                lng: 20,
+            },
+            light: "none",
             mapImage: "../assets/img/main/hologram-map.svg",
             transparent: true,
             autoRotate: true,
@@ -1157,143 +1157,143 @@ window.onload = function() {
         });
 
         myearth.addEventListener("ready", function () {
-        this.startAutoRotate();
+            this.startAutoRotate();
 
-        // connections
+            // connections
 
-        var line = {
-            color: "#009CFF",
-            opacity: 0.15,
-            hairline: true,
-            offset: -0.5,
-        };
+            var line = {
+                color: "#009CFF",
+                opacity: 0.15,
+                hairline: true,
+                offset: -0.5,
+            };
 
-        for (var i in connections) {
-            line.locations = [
-            {
-                lat: connections[i][0],
-                lng: connections[i][1],
-            },
-            {
-                lat: connections[i][2],
-                lng: connections[i][3],
-            },
-            ];
-            this.addLine(line);
-        }
+            for (var i in connections) {
+                line.locations = [
+                    {
+                        lat: connections[i][0],
+                        lng: connections[i][1],
+                    },
+                    {
+                        lat: connections[i][2],
+                        lng: connections[i][3],
+                    },
+                ];
+                this.addLine(line);
+            }
 
-        // add 8 shine sprites
+            // add 8 shine sprites
 
-        for (var i = 0; i < 8; i++) {
-            sprites[i] = this.addSprite({
-            image: "../assets/img/main/hologram-shine.svg",
-            scale: 1,
-            offset: -0.5,
-            opacity: 1,
-            });
-            pulse(i);
-        }
+            for (var i = 0; i < 8; i++) {
+                sprites[i] = this.addSprite({
+                    image: "../assets/img/main/hologram-shine.svg",
+                    scale: 1,
+                    offset: -0.5,
+                    opacity: 1,
+                });
+                pulse(i);
+            }
         });
 
         function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min;
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
         }
 
         function pulse(index) {
-        var random_location =
-            connections[getRandomInt(0, connections.length - 1)];
-        sprites[index].location = {
-            lat: random_location[0],
-            lng: random_location[1],
-        };
+            var random_location =
+                connections[getRandomInt(0, connections.length - 1)];
+            sprites[index].location = {
+                lat: random_location[0],
+                lng: random_location[1],
+            };
 
-        sprites[index].animate("scale", 0.5, {
-            duration: 320,
-            complete: function () {
-            this.animate("scale", 0.2, {
+            sprites[index].animate("scale", 0.5, {
                 duration: 320,
                 complete: function () {
-                setTimeout(function () {
-                    pulse(index);
-                }, getRandomInt(100, 400));
+                    this.animate("scale", 0.2, {
+                        duration: 320,
+                        complete: function () {
+                            setTimeout(function () {
+                                pulse(index);
+                            }, getRandomInt(100, 400));
+                        },
+                    });
                 },
             });
-            },
-        });
         }
 
         var connections = [
-        [59.651901245117, 17.918600082397, 41.8002778, 12.2388889],
-        [59.651901245117, 17.918600082397, 51.4706, -0.461941],
+            [59.651901245117, 17.918600082397, 41.8002778, 12.2388889],
+            [59.651901245117, 17.918600082397, 51.4706, -0.461941],
 
-        [13.681099891662598, 100.74700164794922, -6.1255698204, 106.65599823],
-        [
-            13.681099891662598, 100.74700164794922, 28.566499710083008,
-            77.10310363769531,
-        ],
+            [13.681099891662598, 100.74700164794922, -6.1255698204, 106.65599823],
+            [
+                13.681099891662598, 100.74700164794922, 28.566499710083008,
+                77.10310363769531,
+            ],
 
-        [30.12190055847168, 31.40559959411621, -1.31923997402, 36.9277992249],
-        [30.12190055847168, 31.40559959411621, 25.2527999878, 55.3643989563],
-        [30.12190055847168, 31.40559959411621, 41.8002778, 12.2388889],
+            [30.12190055847168, 31.40559959411621, -1.31923997402, 36.9277992249],
+            [30.12190055847168, 31.40559959411621, 25.2527999878, 55.3643989563],
+            [30.12190055847168, 31.40559959411621, 41.8002778, 12.2388889],
 
-        [
-            28.566499710083008, 77.10310363769531, 7.180759906768799,
-            79.88410186767578,
-        ],
-        [
-            28.566499710083008, 77.10310363769531, 40.080101013183594,
-            116.58499908447266,
-        ],
-        [28.566499710083008, 77.10310363769531, 25.2527999878, 55.3643989563],
+            [
+                28.566499710083008, 77.10310363769531, 7.180759906768799,
+                79.88410186767578,
+            ],
+            [
+                28.566499710083008, 77.10310363769531, 40.080101013183594,
+                116.58499908447266,
+            ],
+            [28.566499710083008, 77.10310363769531, 25.2527999878, 55.3643989563],
 
-        [-33.9648017883, 18.6016998291, -1.31923997402, 36.9277992249],
+            [-33.9648017883, 18.6016998291, -1.31923997402, 36.9277992249],
 
-        [-1.31923997402, 36.9277992249, 25.2527999878, 55.3643989563],
+            [-1.31923997402, 36.9277992249, 25.2527999878, 55.3643989563],
 
-        [41.8002778, 12.2388889, 51.4706, -0.461941],
-        [41.8002778, 12.2388889, 40.471926, -3.56264],
+            [41.8002778, 12.2388889, 51.4706, -0.461941],
+            [41.8002778, 12.2388889, 40.471926, -3.56264],
 
-        [19.4363, -99.072098, 25.79319953918457, -80.29060363769531],
-        [19.4363, -99.072098, 33.94250107, -118.4079971],
-        [19.4363, -99.072098, -12.0219, -77.114304],
+            [19.4363, -99.072098, 25.79319953918457, -80.29060363769531],
+            [19.4363, -99.072098, 33.94250107, -118.4079971],
+            [19.4363, -99.072098, -12.0219, -77.114304],
 
-        [-12.0219, -77.114304, -33.393001556396484, -70.78579711914062],
-        [-12.0219, -77.114304, -34.8222, -58.5358],
-        [-12.0219, -77.114304, -22.910499572799996, -43.1631011963],
+            [-12.0219, -77.114304, -33.393001556396484, -70.78579711914062],
+            [-12.0219, -77.114304, -34.8222, -58.5358],
+            [-12.0219, -77.114304, -22.910499572799996, -43.1631011963],
 
-        [-34.8222, -58.5358, -33.393001556396484, -70.78579711914062],
-        [-34.8222, -58.5358, -22.910499572799996, -43.1631011963],
+            [-34.8222, -58.5358, -33.393001556396484, -70.78579711914062],
+            [-34.8222, -58.5358, -22.910499572799996, -43.1631011963],
 
-        [22.3089008331, 113.915000916, 13.681099891662598, 100.74700164794922],
-        [22.3089008331, 113.915000916, 40.080101013183594, 116.58499908447266],
-        [22.3089008331, 113.915000916, 31.143400192260742, 121.80500030517578],
+            [22.3089008331, 113.915000916, 13.681099891662598, 100.74700164794922],
+            [22.3089008331, 113.915000916, 40.080101013183594, 116.58499908447266],
+            [22.3089008331, 113.915000916, 31.143400192260742, 121.80500030517578],
 
-        [35.552299, 139.779999, 40.080101013183594, 116.58499908447266],
-        [35.552299, 139.779999, 31.143400192260742, 121.80500030517578],
+            [35.552299, 139.779999, 40.080101013183594, 116.58499908447266],
+            [35.552299, 139.779999, 31.143400192260742, 121.80500030517578],
 
-        [33.94250107, -118.4079971, 40.63980103, -73.77890015],
-        [33.94250107, -118.4079971, 25.79319953918457, -80.29060363769531],
-        [33.94250107, -118.4079971, 49.193901062, -123.183998108],
+            [33.94250107, -118.4079971, 40.63980103, -73.77890015],
+            [33.94250107, -118.4079971, 25.79319953918457, -80.29060363769531],
+            [33.94250107, -118.4079971, 49.193901062, -123.183998108],
 
-        [40.63980103, -73.77890015, 25.79319953918457, -80.29060363769531],
-        [40.63980103, -73.77890015, 51.4706, -0.461941],
+            [40.63980103, -73.77890015, 25.79319953918457, -80.29060363769531],
+            [40.63980103, -73.77890015, 51.4706, -0.461941],
 
-        [51.4706, -0.461941, 40.471926, -3.56264],
+            [51.4706, -0.461941, 40.471926, -3.56264],
 
-        [
-            40.080101013183594, 116.58499908447266, 31.143400192260742,
-            121.80500030517578,
-        ],
+            [
+                40.080101013183594, 116.58499908447266, 31.143400192260742,
+                121.80500030517578,
+            ],
 
-        [-33.94609832763672, 151.177001953125, -41.3272018433, 174.804992676],
-        [-33.94609832763672, 151.177001953125, -6.1255698204, 106.65599823],
+            [-33.94609832763672, 151.177001953125, -41.3272018433, 174.804992676],
+            [-33.94609832763672, 151.177001953125, -6.1255698204, 106.65599823],
 
-        [55.5914993286, 37.2615013123, 59.651901245117, 17.918600082397],
-        [55.5914993286, 37.2615013123, 41.8002778, 12.2388889],
-        [55.5914993286, 37.2615013123, 40.080101013183594, 116.58499908447266],
-        [55.5914993286, 37.2615013123, 25.2527999878, 55.3643989563],
+            [55.5914993286, 37.2615013123, 59.651901245117, 17.918600082397],
+            [55.5914993286, 37.2615013123, 41.8002778, 12.2388889],
+            [55.5914993286, 37.2615013123, 40.080101013183594, 116.58499908447266],
+            [55.5914993286, 37.2615013123, 25.2527999878, 55.3643989563],
         ];
     }
 
@@ -1305,7 +1305,7 @@ window.onload = function() {
     const staffBtn = document.querySelector('.circle-block__second-clicked-aria');
     // const dpoBtn = document.querySelector('.circle-block__third-clicked-aria');
     const planBtn = document.querySelector('.circle-block__fifth-clicked-aria');
-    
+
     const allBranchesBg = document.querySelector('.circle-first__icon');
     const staffBg = document.querySelector('.staff-bg');
     // const dpoBg = document.querySelector('.dpo-bg');
@@ -1316,7 +1316,7 @@ window.onload = function() {
         clickedElement.addEventListener('mouseover', () => {
             bgElement.classList.add(className);
         });
-    
+
         clickedElement.addEventListener('mouseout', () => {
             bgElement.classList.remove(className);
         });
@@ -1340,7 +1340,7 @@ window.onload = function() {
             let array = data.toString().split('');
 
             return +array[array.length - 1]
-        } 
+        }
 
         const lastNum = getlastNum()
 
@@ -1348,7 +1348,7 @@ window.onload = function() {
 
         if (lastNum === 2 || lastNum === 3 || lastNum === 4) {
             str += 'ка'
-        } 
+        }
         else {
             str += 'к'
         }
@@ -1367,51 +1367,51 @@ window.onload = function() {
 
         switch (month) {
             case '01':
-              str = 'январь'
-              break;
+                str = 'январь'
+                break;
             case '02':
-              str = 'февраль'
-              break;
+                str = 'февраль'
+                break;
             case '03':
-              str = 'март'
-              break;
+                str = 'март'
+                break;
             case '04':
-              str = 'апрель'
-              break;
+                str = 'апрель'
+                break;
             case '05':
-              str = 'май'
-              break;
+                str = 'май'
+                break;
             case '06':
-              str = 'июнь'
-              break;
+                str = 'июнь'
+                break;
             case '07':
-              str = 'июль'
-              break;
+                str = 'июль'
+                break;
             case '08':
-              str = 'август'
-              break;
+                str = 'август'
+                break;
             case '09':
-              str = 'сентябрь'
-              break;
+                str = 'сентябрь'
+                break;
             case '10':
-              str = 'октябрь'
-              break;
+                str = 'октябрь'
+                break;
             case '11':
-              str = 'ноябрь'
-              break;
+                str = 'ноябрь'
+                break;
             case '12':
-              str = 'декабрь'
-              break;
-            default :   
-              str = '';
-              break;
+                str = 'декабрь'
+                break;
+            default:
+                str = '';
+                break;
         }
 
         insertToPage(selector, str)
     }
-    
-    setMonth(staffData.date, 'students__diagram-month-text');  
-    setMonth(scienceData.date, 'science__diagram-month-text');  
+
+    setMonth(staffData.date, 'students__diagram-month-text');
+    setMonth(scienceData.date, 'science__diagram-month-text');
 
 
 
@@ -1422,7 +1422,7 @@ window.onload = function() {
     }
 
     insertToPage('footer__btns-val', numDataOutput(partnersData.count));
-    
+
 })
 
 const openPopUp = document.getElementById("modal-open-btn");//Выделяет кнопку "Еще" для открытия модального окна
@@ -1433,7 +1433,7 @@ const popUp = document.querySelector('.modal');//Выделяет модальн
 openPopUp.addEventListener('click', () => {
     popUp.classList.add('opened');
 });
-    
+
 //Закрывает модальное
 closePopUp.addEventListener('click', () => {
     popUp.classList.remove('opened');
