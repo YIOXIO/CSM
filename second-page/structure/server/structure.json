@@ -1,0 +1,3113 @@
+{
+    "structure": {
+        "columns": [
+          {
+            "name": "column-peach",
+            "items": [
+              {
+                "type": "basic",
+                "title": "проректор",
+                "name": "Штыхно Дмитрий Александрович",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/rektorat/shtyihno-dmitriy-aleksandrovich",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "научно-исследовательский институт развития образования",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/nii-razvitiya-obrazovaniya?ysclid=lwywfj7o66936700954",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "отдел программ развития и мониторинга",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/otdel-programm-razvitiya-i-monitoringa?ysclid=lwywg46s2j696752910",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "column-green",
+            "items": [
+              {
+                "type": "basic",
+                "title": "проректор",
+                "name": "Минашкин Виталий Григорьевич",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/rektorat/minashkin-vitaliy-grigorevich?ysclid=lwywguuipj481631044",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "дирекция по науке и инновациям",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/science/direktsiya-po-nauke-i-innovatsiyam?ysclid=lwywh5rf4z639301663",
+                "children": [
+                  {
+                    "type": "subitem",
+                    "title": "Управление организации НИР:",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/direktsiya-po-nauke-i-innovatsiyam/orgnirupr?ysclid=lwywhlebgx355954913",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел планирования и мониторинга научной деятельности",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/science/direktsiya-po-nauke-i-innovatsiyam/orgnirupr/otdel-planirovaniya-i-monitoringa-nauchnoy-deyatelnosti",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел сопровождения научных проектов",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/science/direktsiya-po-nauke-i-innovatsiyam/orgnirupr/otdel-soprovojdeniya-nauchnyih-proektov",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел научных мероприятий",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/science/direktsiya-po-nauke-i-innovatsiyam/orgnirupr/otdel_nauchnyh_meropriyatij",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел интеллектуальной собственности",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/science/direktsiya-po-nauke-i-innovatsiyam/orgnirupr/IPD",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел координации и развития научных исследований",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/science/direktsiya-po-nauke-i-innovatsiyam/orgnirupr/otdel-koordinatsii-i-razvitiya-nauchnyih-issledovaniy",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел сопровождения конкурсных процедур",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел экспертизы и наукометрии",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/science/direktsiya-po-nauke-i-innovatsiyam/orgnirupr/tsentr-ekspertizyi-i-naukometrii",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "НИИ «Инновационные финансовые инструменты и технологии»",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskie-podrazdeleniya-universiteta/nauchno-issledovatelskiy-institut-innovatsionnyie-finansovyie-instrumentyi-i-tehnologii?ysclid=lwywkmvoxl251235545",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "НИИ инновационного развития промышленности",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskie-podrazdeleniya-universiteta/nauchno-issledovatelskiy-institut-innovatsionnogo-razvitiya-promyishlennosti?ysclid=lwywl1osnf290249984",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научный центр экономики труда",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/direktsiya-po-nauke-i-innovatsiyam/nauchnyiy-tsentr-ekonomiki-truda?ysclid=lwywlq8rpk927872172",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "title": "СПЕЦИАЛЬНЫЙ ОТДЕЛ",
+                "name": "",
+                "link": "",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "НАУЧНАЯ ШКОЛА «Высшая школа публичной политики»",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskie-podrazdeleniya-universiteta/nauchnaya-shkola-vyisshaya-shkola-publichnoy-politiki?ysclid=lwywnz0csq791290563",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "Межфакультетский студенческий научный центр*",
+                "name": "",
+                "link": "https://xn--p1ag3a.xn--p1ai/science/studencheskoe-nauchnoe-obschestvo",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Департамент библиотечных и музейных сервисов «BiblioScience»",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-bibliotechnyih-i-muzeynyih-servisov-BiblioScience?ysclid=lwywqn16ol682410822",
+                "children": [
+                  {
+                    "type": "subitem",
+                    "title": "Научно-информационный библиотечный центр имени академика Л.И. Абалкина:",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/biblcentr?ysclid=lwywr037pg326118767",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел электронных ресурсов и технологий",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/science/biblcentr/struktura/otdel-elektronnyih-resursov-i-tehnologiy?ysclid=lwywro9nze211726059",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел формирования фондов и библиографии",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел обслуживания читателей и книгохранения",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/science/biblcentr/struktura/otdel-obslujivaniya-chitateley-i-knigohraneniya?ysclid=lwywur617170845668",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Музей РЭУ им. Г.В. Плеханова",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-bibliotechnyih-i-muzeynyih-servisov-BiblioScience/muzey-reu-im-gv-plehanova?ysclid=lwywv7cqhk73563193",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "title": "Научная школа «Теория и технологии управления»",
+                "name": "",
+                "link": "",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "Центр социально-экономических проектов",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/tsentr-sotsialno-ekonomicheskih-proektov?ysclid=lwyww1hvoj49258376",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Инжиниринговый центр",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskie-podrazdeleniya-universiteta/injiniringovyiy-tsentr?ysclid=lwywxf7vkq843452885",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Центр коллективного пользования",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskie-podrazdeleniya-universiteta/tsentr-kollektivnogo-polzovaniya?ysclid=lwywxv9c23810496412",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "title": "Центр научно-методологического сопровождения стратегического планирования",
+                "name": "",
+                "link": "https://xn--p1ag3a.xn--p1ai/structure/departments/tsentr-nauchno-metodologicheskogo-soprovojdeniya-strategicheskogo-planirovaniya?ysclid=lwywy6egi4304298842",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "column-lightdust",
+            "items": [
+              {
+                "type": "basic",
+                "title": "проректор",
+                "name": "Никулин Алексей Сергеевич",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/rektorat/nikulin-aleksey-sergeevich?ysclid=lwywj08oir215908399",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Факультет «Капитаны»",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/fakultet-biznesa-kapitanyi?ysclid=lwywjwt1mu932295839",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра Благотворительного фонда поддержки образовательных программ «Капитаны» «Инновационный менеджмент и социальное предпринимательство»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/fakultet-biznesa-kapitanyi/podchinennyie-podrazdeleniya/bazovaya-kafedra-kapitani?ysclid=lwywkzmlsv166832998",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научно-учебная лаборатория «Капитаны»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/fakultet-biznesa-kapitanyi/podchinennyie-podrazdeleniya/nauchno-uchebnaya-laboratoriya-kapitanyi?ysclid=lwywlmetx9129259350",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Деканат факультета «Капитаны»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/fakultet-biznesa-kapitanyi/dekanat?ysclid=lwywm5oozq75705330",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Департамент организации учебного процесса",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-organizatsii-uchebnogo-protsessa?ysclid=lwywmizhow587077059",
+                "children": [
+                  {
+                    "type": "subitem",
+                    "title": "Управление «Единый электронный деканат»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-organizatsii-uchebnogo-protsessa/Edinyj-elektronnyj-dekanat?ysclid=lwywmvtr6688439718",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Центр информационно-документационного сопровождения обучающихся",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-organizatsii-uchebnogo-protsessa/Edinyj-elektronnyj-dekanat/Centr-informacionno-dokumentacionnogo-soprovojdeniya-obuchayuschihsya?ysclid=lwywn9uu2y280936242",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел информации и управления движением контингента",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-organizatsii-uchebnogo-protsessa/Edinyj-elektronnyj-dekanat/Centr-informacionno-dokumentacionnogo-soprovojdeniya-obuchayuschihsya/Otdel-informacii-i-upravleniya-dvijeniem-kontingenta?ysclid=lwywntwmke198802927",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Группа ФИС ФРДО*",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел документационного сопровождения обучающихся",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-organizatsii-uchebnogo-protsessa/Edinyj-elektronnyj-dekanat/Centr-informacionno-dokumentacionnogo-soprovojdeniya-obuchayuschihsya/Otdel-dokumentacionnogo-soprovojdeniya-obuchayuschihsya?ysclid=lwywq47wm2563811701",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел по работе с контингентом",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-organizatsii-uchebnogo-protsessa/Edinyj-elektronnyj-dekanat/Otdel-po-rabote-s-kontingentom?ysclid=lwywrpafdn133162535",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел обращений студентов и преподавателей",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-organizatsii-uchebnogo-protsessa/Edinyj-elektronnyj-dekanat/Otdel-po-rabote-s-kontingentom?ysclid=lwywrpafdn133162535",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Управление координации и контроля учебного процесса",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-organizatsii-uchebnogo-protsessa/Upravlenie-koordinacii-i-kontrolya-uchebnogo-processa?ysclid=lwywtd4tof341838009",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Учебный отдел",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-organizatsii-uchebnogo-protsessa/Upravlenie-koordinacii-i-kontrolya-uchebnogo-processa/Uchebnyj-otdel?ysclid=lwywtt195t950292655",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел планирования и учета учебного процесса",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-organizatsii-uchebnogo-protsessa/Upravlenie-koordinacii-i-kontrolya-uchebnogo-processa/Otdel-planirovaniya-i-ucheta-uchebnogo-processa?ysclid=lwywu4kcx6672560053",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Учебно-методическое управление",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Центр методического обеспечения и развития образовательных программ",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел организации лицензирования и аккредитации",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Управление «приемная комиссия»",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-priemnaya-komissiya?ysclid=lwywvu5ovd727525356",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Отдел по работе с абитуриентами и продвижения образовательных программ",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-priemnaya-komissiya/otdel-po-rabote-s-abiturientami-i-prodvijeniya-obrazovatelnyih-programm?ysclid=lwyww5v8ur70742437",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел информационного сопровождения приемной комиссии",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-priemnaya-komissiya/otdel-informatsionnogo-soprovojdeniya-priemnoy-komissii?ysclid=lwywx1n8pc755293194",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Экономический лицей",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/pk/entrant/ekonomicheskiy-litsey?ysclid=lwywxh79y189320992",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Московский приборостроительный техникум (МПТ)",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/kolledji-i-tehnikum/moskovskiy-priborostroitelnyiy-tehnikum?ysclid=lwywyc52qf176619925",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Учебно-методический отдел",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Учебно-производственный тренинговый центр",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Канцелярия",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел информационных технологий",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Специализированная учебно-практическая лаборатория «Прикладная робототехника»",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Московский промышленно-экономический колледж (мпэк)",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/kolledji-i-tehnikum/moskovskiy-priborostroitelnyiy-tehnikum?ysclid=lwywyc52qf176619925",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Учебно-методический отдел",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Вычислительный отдел",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Канцелярия",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "московский технологический колледж питания (мткп)",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/kolledji-i-tehnikum/moskovskiy-tehnologicheskiy-kolledj-pitaniya?ysclid=lwyxgesfjx685202970",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Учебно-методический отдел",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Канцелярия",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Учебно-производственный тренинговый центр",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Факультет «Плехановская школа бизнеса «Интеграл»",
+                "name": "",
+                "link": "https://xn--p1ag3a.xn--p1ai/structure/hs/fakultet-distantsionnogo-obucheniya?ysclid=lwyy4gh8w6195629100",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Отдел маркетинга и пиар",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Учебно-методический центр по обучению и переподготовке аудиторов",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр сетевого общения",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Учебно-методическая лаборатория",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Лаборатория интерактивных методов обучения",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "title": "Центр Развития Карьеры",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/tsentr-razvitiya-kareryi?ysclid=lwyxqwg4od483537959",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Департамент молодежной политики и воспитательной работы",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "subitem",
+                    "title": "Управление по молодежной политике и воспитательной работе:",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-sotsialno-vospitatelnoy-rabote?ysclid=lwyxwia3su525765498",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел по социальной работе",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-sotsialno-vospitatelnoy-rabote/otdel-po-sotsialnoy-rabote",
+                        "children": []
+                      },
+                      {
+                        "type": "subitem",
+                        "title": "Центр по воспитательной работе и молодежной политике:",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-sotsialno-vospitatelnoy-rabote/tsentr-vospitatelnoy-rabote-i-molodejnoy-politike",
+                        "children": [
+                          {
+                            "type": "basic",
+                            "title": "Ассоциация выпускников*",
+                            "name": "",
+                            "link": "https://www.xn--p1ag3a.xn--p1ai/vyipusknikam?ysclid=lwyy60nq2g273440633",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Волонтерский центр РЭУ им. Г.В. Плеханова",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-sotsialno-vospitatelnoy-rabote/volonterskiy-tsentr-reu-im-gv-plehanova",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Центр гражданско-патриотического воспитания",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-sotsialno-vospitatelnoy-rabote/tsentr-grajdansko-patrioticheskogo-vospitaniya",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "База отдыха «Анапа»",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-sotsialno-vospitatelnoy-rabote/baza-otdyiha-anapa",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Спортивно-оздоровительный лагерь «Руза»",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-sotsialno-vospitatelnoy-rabote/sportivno-ozdorovitelnyiy-lager-ruza",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Студенческий совет*",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-sotsialno-vospitatelnoy-rabote/studencheskiy-sovet",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Международный центр молодежно-спортивных инициатив",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-sotsialno-vospitatelnoy-rabote/mejdunarodnyiy-tsentr-molodejno-sportivnyih-initsiativ",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Центр по работе с выпускниками",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-sotsialno-vospitatelnoy-rabote/tsentr-po-rabote-s-vyipusknikami?ysclid=lwyy4le41z26476769",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Психологическая служба",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-sotsialno-vospitatelnoy-rabote/psihologicheskaya-slujba",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "Управление «Конгресс-центр»:",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-kongress-tsentr?ysclid=lwyy36jnxe734545845",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел по культурно-творческой работе",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-kongress-tsentr/otdel-po-kulturno-tvorcheskoy-rabote",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел по организационно-массовой работе",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-kongress-tsentr/otdel-po-organizatsionno-massovoy-rabote",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "column-purple",
+            "items": [
+              {
+                "type": "basic",
+                "title": "проректор",
+                "name": "Гончаров Игорь Леонидович",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/rektorat/goncharov-igor-leonidovich?ysclid=lwywysnsln30125389",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Бухгалтерия",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/buhgalteriya?ysclid=lwywz6aauw406774075",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Операционный отдел",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/buhgalteriya/operatsionnyiy-otdel",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел налогового учета и отчетности",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/buhgalteriya/otdel-nalogovogo-ucheta-i-otchtnosti",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел материального учета, расчетов с поставщиками и подрядчиками",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/buhgalteriya/otdel-materialnogo-ucheta-raschetov-s-postavschikami-i-podryadchikami",
+                    "children": []
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "Управление по учету платных услуг и расчетов с физическими лицами",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/buhgalteriya/upravlenie-po-uchetu-platnyih-uslug-i-raschetov-s-fizicheskimi-litsami",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Расчетный отдел",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/buhgalteriya/upravlenie-po-uchetu-platnyih-uslug-i-raschetov-s-fizicheskimi-litsami/raschetnyiy-otdel?ysclid=lwyx1ytstb425324727",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел учета платных услуг",
+                        "name": "",
+                        "link": "https://xn--p1ag3a.xn--p1ai/structure/departments/buhgalteriya/upravlenie-po-uchetu-platnyih-uslug-i-raschetov-s-fizicheskimi-litsami/otdel-ucheta-platnyih-uslug",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "title": "Отдел имущества и оформления имущественных прав",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/otdel-imuschestva-i-oformleniya-imuschestvennyih-prav?ysclid=lwyx5et5yl69545749",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Планово-экономическое управление",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/planovo-ekonomicheskoe-upravlenie?ysclid=lwyx5sanef300954282",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Отдел бюджетирования",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/planovo-ekonomicheskoe-upravlenie/otdel-byudjetirovaniya",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел оплаты труда",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/planovo-ekonomicheskoe-upravlenie/otdel-oplatyi-truda",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Управление эксплуатации инженерных систем",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-ekspluatatsii-injenernyih-sistem?ysclid=lwyx74k1ow946871140",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Отдел главного механика",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-ekspluatatsii-injenernyih-sistem/otdel-glavnogo-mehanika",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел главного энергетика",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-ekspluatatsii-injenernyih-sistem/otdel-glavnogo-energetika",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел эксплуатации",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-ekspluatatsii-injenernyih-sistem/otdel-ekspluatatsii",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "title": "Управление строительства",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-stroitelstva?ysclid=lwyx8s6hf858250691",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Управление технического содержания и ремонта",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tehnicheskogo-soderjaniya-i-remonta?ysclid=lwyx93h63c599631978",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Служба обслуживающего персонала",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tehnicheskogo-soderjaniya-i-remonta/slujba-obslujivayuschego-personala",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Производственно-технический отдел",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tehnicheskogo-soderjaniya-i-remonta/proizvodstvenno-tehnicheskiy-otdel",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Проектно-сметный отдел",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tehnicheskogo-soderjaniya-i-remonta/proektno-smetnyiy-otdel",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Управление закупочной деятельности и материально-технического обеспечения",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-zakupochnoy-deyatelnosti-i-materialno-tehnicheskogo-obespecheniya?ysclid=lwyxatmibb513299857",
+                "children": [
+                  {
+                    "type": "subitem",
+                    "title": "Центр закупочной и контрактной деятельности",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-zakupochnoy-deyatelnosti-i-materialno-tehnicheskogo-obespecheniya/tsentr-zakupochnoy-i-kontraktnoy-deyatelnosti",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел планирования и мониторинга закупок",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-zakupochnoy-deyatelnosti-i-materialno-tehnicheskogo-obespecheniya/tsentr-zakupochnoy-i-kontraktnoy-deyatelnosti/otdel-planirovaniya-i-monitoringa-zakupok",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел проведения закупок",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-zakupochnoy-deyatelnosti-i-materialno-tehnicheskogo-obespecheniya/tsentr-zakupochnoy-i-kontraktnoy-deyatelnosti/otdel-provedeniya-zakupok",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел контроля закупочной деятельности",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-zakupochnoy-deyatelnosti-i-materialno-tehnicheskogo-obespecheniya/tsentr-zakupochnoy-i-kontraktnoy-deyatelnosti/otdel-kontrolya-zakupochnoy-deyatelnosti",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "Служба материально-технического обеспечения",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-zakupochnoy-deyatelnosti-i-materialno-tehnicheskogo-obespecheniya/slujba-materialno-tehnicheskogo-obespecheniya",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел материально-технического снабжения",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Склад",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Склад продуктов питания",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "title": "Штаб по делам ГО и ЧС",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/shtab-po-delam-go-i-chs?ysclid=lwyxhnwwcg881011771",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "Отдел по безопасности и противодействию коррупции",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/otdel-po-profilaktike-pravonarusheniy-i-protivodeystviyu-korruptsii?ysclid=lwyxhyqn29745267593",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "Отдел пожарной безопасности",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/otdel-pojarnoy-bezopasnosti?ysclid=lwyxlbxsd7280611419",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "Центр транспортного обеспечения",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/tsentr-transportnogo-obespecheniya?ysclid=lwyxm0202g768751288",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "Центр «Студенческий спортивный клуб РЭУ им. Г.В. Плеханова»",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/tsentr-studencheskiy-sportivnyiy-klub-reu-im-gv-plehanova?ysclid=lwyxmdqga540013386",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "Единая дирекция общежитий",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/edinaya-direktsiya-obschejitiy?ysclid=lwyxmpaxf7666762523",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "Здравпункт",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/zdravpunkt?ysclid=lwyxn2rb4x321897946",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "column-skyblue",
+            "items": [
+              {
+                "type": "basic",
+                "title": "проректор",
+                "name": "Малкарова Светлана Магометовна",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/~person/d02bbe12f26eeb666173a7d15ea5f148",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "Центр по реализации проектов развития третьей миссии университета",
+                "name": "",
+                "link": "",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "column-lightgrey",
+            "items": [
+              {
+                "type": "basic",
+                "title": "проректор",
+                "name": "Нечаева Светлана Михайловна",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/rektorat/nechaeva-svetlana-mihaylovna?ysclid=lwyxrz2ejm9602724",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Управление по связям с общественностью",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-po-svyazyam-s-obschestvennostyu?ysclid=lwyxsocehp238891942",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Центр информационных коммуникаций",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел по корпоративной культуре и связям с общественностью",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Медиа студия «Плеханов»",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Институт бизнеса и управленческого образования",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/institut-biznesa-i-upravlencheskogo-obrazovaniya?ysclid=lwyxwjly29851521137",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Факультет дополнительного профессионального образования",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/institut-biznesa-i-upravlencheskogo-obrazovaniya/fakultet-dopolnitelnogo-professionalnogo-obrazovaniya",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Деканат факультета дополнительного профессионального образования",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр специализированных программ",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр развития профессиональных компетенций",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Бизнес школа маркетинга и предпринимательства",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/institut-biznesa-i-upravlencheskogo-obrazovaniya/biznes-shkola-marketinga-i-predprinimatelstva",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр компетенций цифровой экономики",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/institut-biznesa-i-upravlencheskogo-obrazovaniya/tsentr-kompetentsiy-tsifrovoy-ekonomiki",
+                    "children": []
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "Управление развития дополнительного образования",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/institut-biznesa-i-upravlencheskogo-obrazovaniya/upravlenie-razvitiya-dopolnitelnogo-obrazovaniya",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел сопровождения проектов",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел учебно-методического обеспечения программ",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр социально-экономических инноваций",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/institut-biznesa-i-upravlencheskogo-obrazovaniya/сentr-socialno-ekonomicheskih-innovacij?ysclid=lwyy3qtxvj439335933",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Медиа-центр ДПО",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/institut-biznesa-i-upravlencheskogo-obrazovaniya/mediacentr-dpo?ysclid=lwyy43nyuy994784873",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Плехановский HR-клуб",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "column-white",
+            "items": [
+              {
+                "type": "subitem",
+                "title": "Ученый секретарь",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/~person/5bdaffee02ed236dd45c533014af6fd0?ysclid=lwyy7lkuj69089370",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Отдел аттестации педагогических кадров",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Административный департамент",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament?ysclid=lwyy9dg61a485903995",
+                "children": [
+                  {
+                    "type": "subitem",
+                    "title": "Управление персонала",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/upravlenie-personala",
+                    "children": [
+                      {
+                        "type": "subitem",
+                        "title": "Центр по работе с персоналом",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/upravlenie-personala/tsentr-po-rabote-s-personalom",
+                        "children": [
+                          {
+                            "type": "basic",
+                            "title": "Отдел по работе с научно-педагогическими работниками",
+                            "name": "",
+                            "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/upravlenie-personala/tsentr-po-rabote-s-personalom/otdel-po-rabote-s-nauchno-pedagogicheskimi-rabotnikami?ysclid=lwyyag0dst348337032",
+                            "children": []
+                          },
+                          {
+                            "type": "basic",
+                            "title": "Отдел по работе с сотрудниками",
+                            "name": "",
+                            "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/upravlenie-personala/tsentr-po-rabote-s-personalom/otdel-po-rabote-s-sotrudnikami",
+                            "children": []
+                          },
+                          {
+                            "type": "basic",
+                            "title": "Отдел по работе со структурами СПО",
+                            "name": "",
+                            "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/upravlenie-personala/tsentr-po-rabote-s-personalom/otdel-po-rabote-so-strukturami-spo",
+                            "children": []
+                          },
+                          {
+                            "type": "basic",
+                            "title": "Многофункциональный центр",
+                            "name": "",
+                            "link": "",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "subitem",
+                        "title": "Центр развития и оценки персонала",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/upravlenie-personala/tsentr-razvitiya-i-otsenki-personala?ysclid=lwyycaz0zd275513896",
+                        "children": [
+                          {
+                            "type": "basic",
+                            "title": "Отдел оценки персонала",
+                            "name": "",
+                            "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/upravlenie-personala/tsentr-razvitiya-i-otsenki-personala/otdel-otsenki-personala",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "Управление правового и архивного обеспечения",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/upravlenie-pravovogo-i-arhivnogo-obespecheniya?ysclid=lwyyd1n1c6437213936",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Архив",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/upravlenie-pravovogo-i-arhivnogo-obespecheniya/arhiv",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "Канцелярия",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/upravlenie-pravovogo-i-arhivnogo-obespecheniya/arhiv",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел документационного обеспечения",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/kantselyariya/otdel-dokumentatsionnogo-obespecheniya?ysclid=lwyye0f1wk587350359",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Секретариат",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/kantselyariya/sekretariat",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел охраны труда",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/otdel-ohranyi-truda",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел мобилизационной подготовки",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/administrativnyiy-departament/otdel-mobilizatsionnoy-podgotovki?ysclid=lwyyfp6b3x913559382",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "title": "Центр по работе с филиалами",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/tsentr-po-rabote-s-filialami?ysclid=lwyyg0v0fe560319828",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Филиалы",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials?ysclid=lwyyghid8v888829875",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Брянский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/bryansk",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Волгоградский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/volgogradskiy-filial-reu-im-gv-plehanova",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Воронежский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/voronezh",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Ивановский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/ivanovskiy-filial-reu-im-g-v-plehanova",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Краснодарский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/krasnodarskiy-filial-reu-im-gv-plehanova",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Оренбургский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/orenburgskiy-filial-reu-im-gv-plehanova",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Пермский институт (филиал) РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/permskiy-institut-filial-reu-im-gv-plehanova?ysclid=lwyykwzohp153326109",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Филиал РЭУ им. Г.В. Плеханова в г. Пятигорске Ставропольского края",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/pyatigorsk?ysclid=lwyylab7bi962959593",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Смоленский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/smolensk?ysclid=lwyyllkdv9255553080",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Тульский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/tula-reu?ysclid=lwyylvs49u155044771",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Севастопольский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/sevastopolskiy-filial-reu-im-gv-plehanova?ysclid=lwyymic983862374389",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Улан-Баторский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/ulanbator?ysclid=lwyymst9eo90658682",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Ташкентский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/tashkentskiy-filial-reu-im-gv-plehanova?ysclid=lwyyn3dmii509768238",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Ереванский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/yerevan?ysclid=lwyynghwax553905553",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Минский филиал РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/filials/minsk?ysclid=lwyynqyu5r417399028",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Филиал РЭУ им. Г.В. Плеханова в г. Дубае (ОАЭ)",
+                    "name": "",
+                    "link": "https://ae.reu.tech/ru",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "title": "Научный центр стратегического планирования",
+                "name": "",
+                "link": "",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Департамент информационных технологий",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-informatsionnyih-tehnologiy?ysclid=lwyytuux6f901614384",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Отдел договорного обеспечения и делопроизводства",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-informatsionnyih-tehnologiy/otdel-dogovornogo-obespecheniya-i-deloproizvodstva",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел эксплуатации комплекса технических средств безопасности",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Склад вычислительной техники",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-informatsionnyih-tehnologiy/sklad-vyichislitelnoy-tehniki?ysclid=lwyyvuq2tq44863527",
+                    "children": []
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "Управление по информатизации",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-informatsionnyih-tehnologiy/upravlenie-po-informatizatsii?ysclid=lwyyw6pn2d963882720",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел администрирования",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-informatsionnyih-tehnologiy/upravlenie-po-informatizatsii/otdel-administrirovaniya",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел сервисной поддержки",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-informatsionnyih-tehnologiy/upravlenie-po-informatizatsii/otdel-servisnoy-podderjki",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел мультимедийных систем",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-informatsionnyih-tehnologiy/upravlenie-po-informatizatsii/otdel-multimediynyih-sistem",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел сопровождения и разработки информационных систем",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-informatsionnyih-tehnologiy/upravlenie-po-informatizatsii/otdel-soprovojdeniya-i-razrabotki-informatsionnyih-sistem",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "Издательско-полиграфический центр",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-informatsionnyih-tehnologiy/izdatelsko-poligraficheskiy-tsentr?ysclid=lwyyxkuzpr478857823",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Редакционно-издательский отдел",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/departament-informatsionnyih-tehnologiy/izdatelsko-poligraficheskiy-tsentr/podchinennyie-podrazdeleniya/redaktsionno-izdatelskiy-otdel?ysclid=lwyyysnerf975841344",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел полиграфических работ и услуг",
+                        "name": "",
+                        "link": "https://xn--p1ag3a.xn--p1ai/structure/departments/departament-informatsionnyih-tehnologiy/izdatelsko-poligraficheskiy-tsentr/podchinennyie-podrazdeleniya/otdel-poligraficheskih-rabot-i-uslug?ysclid=lwyyz6lmf14798612",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "title": "Отдел внутреннего контроля",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/otdel-vnutrennego-kontrolya?ysclid=lwyyzq0nu2609183038",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Отдел контроля учебного процесса",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/Otdel-kontrolya-uchebnogo-processa?ysclid=lwyz00y2h959646510",
+                "children": [
+                  {
+                    "type": "subitem",
+                    "title": "Военный учебный центр при федеральном государственном бюджетном образовательном учреждении высшего образования «Российский экономический университет имени Г.В. Плеханова»",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/departments/vuts?ysclid=m1ymz8nbxf539968620",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел по общим вопросам",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел методической работы и технических средств обучения",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "column-dust-school",
+            "items": [
+              {
+                "type": "school",
+                "title": "Высшая школа Экономики и бизнеса",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa?ysclid=lwyy8lcf5k965231098",
+                "children": []
+              },
+              {
+                "type": "management",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Совет индустриальных партнеров*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Директор высшей школы",
+                    "name": "Завьялов Дмитрий Вадимович",
+                    "link": "https://xn--p1ag3a.xn--p1ai/~person/b29ce9ba512ba218105bdeae06dd59ac?ysclid=m1ao8xbc9m35084032",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Cовет выпускников*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра торговой политики",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/bazovaya-kafedra-torgovoy-politiki?ysclid=lwyyd1wz72466625417",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра мировой экономики",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/kafedra-mirovoy-ekonomiki",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Лаборатория международных экономических отношений им. Р.И. Хасбулатова",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/kafedra-mirovoy-ekonomiki/strukturnyie-podrazdeleniya",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Лаборатория «Устойчивое развитие международной транспортной инфраструктуры ООО «Автодор-Девелопмент»»",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра международного бизнеса",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/ib",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра предпринимательства и логистики",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/kafedra-predprinimatelstva-i-logistiki",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Научная лаборатория интеллектуальных систем управления в предпринимательстве и логистики",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/kafedra-predprinimatelstva-i-logistiki/nauchnaya-laboratoriya-intellektualnyih-sistem-upravleniya-v-predprinimatelstve-i-logistike",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра экономической теории",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/kafedra-ekonomicheskoy-teorii",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра политической экономии и истории экономической науки",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/kafedra-politicheskoy-ekonomii-i-istorii-ekonomicheskoy-nauki",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра национальной и региональной экономики",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/kafedra-natsionalnoy-i-regionalnoy-ekonomiki",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Лаборатория экспериментального и практического маркетинга",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/laboratoriya-eksperimentalnogo-i-prakticheskogo-marketinga",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра экономического анализа и корпоративного управления производством и экспортом высокотехнологичной продукции Государственной корпорации «Ростех»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/rosteh",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Лаборатория Центра открытых инноваций ГК «Ростех» и промышленного моделирования",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/rosteh/laboratoriya",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра Торгово-промышленной палаты РФ «Управление человеческими ресурсами»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/bazovaya-kafedra-torgovo-promyishlennoy-palatyi-rf-upravlenie-chelovecheskimi-resursami",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра «Управление проектами и программами Капитал Груп»",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/bazovaya-kafedra-upravlenie-proektami-i-programmami-Capital-Group?ysclid=m1yoewl5b9312626393",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр по реализации образовательных программ",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/crop",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел по воспитательной работе",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел по учебной, воспитательной и методической работе",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел по международной деятельности, дополнительному образованию и НИР",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "school",
+                "title": "Высшая школа Финансов",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/HSF?ysclid=lwyypg23u9746955430",
+                "children": []
+              },
+              {
+                "type": "management",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Совет индустриальных партнеров*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Директор высшей школы",
+                    "name": "Ордов Константин Васильевич",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/~person/b909bba593b3bd1dc472a27e089e3b8a?ysclid=lx0179rrzf756062595",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Cовет выпускников*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра финансового контроля, анализа и аудита Главного контрольного управления г. Москвы",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/HSF/subordinateunit/bazovaya-kafedra-finansovogo-kontrolya-analiza-i-audita-glavnogo-kontrolnogo-upravleniya-goroda-moskvyi?ysclid=lwyyudlgcu44741162",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Лаборатория электронного тренинга",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Экспериментальная лаборатория налогового контроля",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Лаборатория Департамента природопользования и охраны окружающей среды города Москвы",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Лаборатория Комитета государственного строительного надзора города Москвы",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра финансовой и экономической безопасности",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/HSF/subordinateunit/bazovaya-kafedra-finansovoy-i-ekonomicheskoy-bezopasnosti",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра бюджета и казначейства",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/HSF/subordinateunit/Bazovaja-kafedra-bjudzheta-i-kaznachejjstva",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра финансов устойчивого развития",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/HSF/subordinateunit/kafedra-finansov-ustoychivogo-razvitiya",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра государственных и муниципальных финансов",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/HSF/subordinateunit/kafedra-gosudarstvennyih-i-munitsipalnyih-finansov-/o-kafedre?ysclid=lx012pz43s727013140",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра мировых финансовых рынков и финтеха",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/HSF/subordinateunit/kafedra-mirovyih-finansovyih-ryinkov-i-finteha?ysclid=lx013aqutj40354708",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Учебный центр «Современных финансовых технологий»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/HSF/subordinateunit/uchebnyiy-tsentr-sovremennyih-finansovyih-tehnologiy?ysclid=lx013qbz6i978294291",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Студенческий научный центр финансовых исследований",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/hs/HSF/subordinateunit/studencheskiy-nauchnyiy-tsentr-finansovyih-issledovaniy?ysclid=lx01441j3s636591268",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научная лаборатория «ВТБ Цифровые финансы»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskie-podrazdeleniya-universiteta/nauchnaya-laboratoriya-vtb-tsifrovyie-finansyi?ysclid=lx014fjzpz729839810",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Федеральный методический центр финансовой грамотности населения",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра АО «Газпромбанк»",
+                    "name": "",
+                    "link": "",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Лаборатория «Исследовательская лаборатория АО «Газпромбанк»",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр по реализации образовательных программ",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/crop",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел по учебной работе",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Методический отдел",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Международный отдел",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "school",
+                "title": "Высшая школа Менеджмента",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-menedjmenta?ysclid=lx016df3fv320574412",
+                "children": []
+              },
+              {
+                "type": "management",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Совет индустриальных партнеров*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Директор высшей школы",
+                    "name": "Калинина Ирина Анатольевна",
+                    "link": "https://xn--p1ag3a.xn--p1ai/~person/3a0083e66249ecb5b34bd0d26c58ab30?ysclid=m1ao9fvhe0618544287",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Cовет выпускников*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Кафедра теории менеджмента и бизнес-технологий",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-menedjmenta/departments/kafedra-teorii-menedjmenta-i-biznes-tehnologiy",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра управления инновационной и промышленной политикой",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-menedjmenta/departments/bazovaya-kafedra-upravleniya-innovacionnoj-i-promyshlennoj-politikoj",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра гостиничного и туристического менеджмента",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-menedjmenta/departments/kafedra-gostinichnogo-i-turisticheskogo-menedjmenta",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра менеджмента спорта и активного досуга",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-menedjmenta/departments/kafedra-menedjmenta-sporta-i-aktivnogo-dosuga",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра Федеральной антимонопольной службы России",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-menedjmenta/departments/bazovaya-kafedra-federalnoy-antimonopolnoy-slujbyi-rossii",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научно-методический центр «Высшая школа тарифного регулирования»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-menedjmenta/departments/nauchno-metodicheskiy-tsentr-vyisshaya-shkola-tarifnogo-regulirovaniya?ysclid=lx04k4j755860981880",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Научная лаборатория «Цифровые технологии тарифного регулирования»",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-menedjmenta/departments/nauchno-metodicheskiy-tsentr-vyisshaya-shkola-tarifnogo-regulirovaniya/podchinennyie-podrazdeleniya/nauchnaya-laboratoriya-tsifrovyie-tehnologii-tarifnogo-regulirovaniya?ysclid=lx04kghd0921165561",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Научно-исследовательский институт «Зеленая экономика»",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-menedjmenta/departments/nauchno-metodicheskiy-tsentr-vyisshaya-shkola-tarifnogo-regulirovaniya/podchinennyie-podrazdeleniya/nauchno-issledovatelskiy-institut-innovatsionnaya-ekonomika?ysclid=lx04kqszwl3036753",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научно-исследовательская лаборатория «Виртуальные цифровые продукты»",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tsifrovyih-obrazovatelnyih-tehnologiy/nauchno-issledovatelskaya-laboratoriya-virtualnyie-tsifrovyie-produktyi?ysclid=m1yohoi9bx706602755",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Учебно-проектная лаборатория «Управление развитием бизнеса» АО «АЛЬФА-БАНК»",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр по реализации образовательных программ",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/crop",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел сопровождения образовательных программ",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел продвижения образовательных программ и международного сотрудничества",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "school",
+                "title": "Высшая школа кибертехнологий, математики и статистики",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki?ysclid=lx01b4wfes42769147",
+                "children": []
+              },
+              {
+                "type": "management",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Научный совет*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Совет индустриальных партнеров*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Директор высшей школы",
+                    "name": "Титов Валерий Александрович",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/~person/874180f998ddcf6e75cb3f348a29a70b?ysclid=lx01bgjaue371062660",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Cовет выпускников*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Кафедра информатики",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/kafedra-informatiki?ysclid=lx01d587c5258231166",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра прикладной информатики и информационной безопасности",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/kafedra-prikladnoy-informatiki-i-informatsionnoy-bezopasnosti?ysclid=lx01drns1a389796688",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Учебная лаборатория информационной безопасности",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра математических методов в экономике",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/kafedra-matematicheskih-metodov-v-ekonomike?ysclid=lx01klvbe8296013317",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра цифровой экономики института развития информационного общества",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/bkteirio-?ysclid=lx01l7m75m758843013",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Учебно-проектная лаборатория междисциплинарного развития ИТ-компетенций",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/uchebno-proektnaya-laboratoriya-mejdistsiplinarnogo-razvitiya-it-kompetentsiy?ysclid=lx01li8x3g145759280",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра высшей математики",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/kafedra-vyisshey-matematiki?ysclid=lx01yqkdpd686187237",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра компании 1С",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/bazovaya-kafedra-kompanii-1s?ysclid=lx01z0r925950391244",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр компетенций по когнитивным наукам",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/tsentr-kompetentsiy-po-kognitivnyim-naukam?ysclid=lx01zbs2cz99988840",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Учебно-научная лаборатория искусственного интеллекта, нейротехнологий и бизнес аналитики",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/uchebno-nauchnaya-laboratoriya-iskusstvennogo-intellekta-neyrotehnologiy-i-biznes-analitiki?ysclid=lx01znjm3l805796957",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Учебно-проектная лаборатория робототехники и программирования сервисных роботов",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/uchebno-proektnaya-laboratoriya-robototehniki-i-programmirovaniya-servisnyih-robotov?ysclid=lx01zxymwi801016324",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Международный экономико-статистический институт",
+                    "name": "",
+                    "link": "",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Кафедра статистики",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/kafedra-statistiki?ysclid=lx0213ws95357123972",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Центр статистики и науки о данных",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/tsentr-statistiki-i-nauki-o-dannyih",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Математическая учебно-проектная лаборатория «Аналитические методы исследования прикладных задач",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kibertehnologiy-matematiki-i-statistiki/subordinateunits/matematicheskaya-uchebno-proektnaya-laboratoriya-analiticheskie-metodyi-issledovaniya-prikladnyih-zadach",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр по реализации образовательных программ",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/crop",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел программ бакалавриата",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел программ магистратуры",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "school",
+                "title": "Высшая инженерная школа «Новые материалы и технологии»",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii",
+                "children": []
+              },
+              {
+                "type": "management",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Научный совет*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Совет индустриальных партнеров*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Директор высшей школы",
+                    "name": "Дианова Валентина Юрьевна",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/~person/5ec1a8386b39b4d24edd7a9a1bec2f83?ysclid=lx023n6sks962119109",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Cовет выпускников*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Кафедра товарной экспертизы и таможенного дела",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/kafedra-tovarovedeniya-i-tovarnoy-ekspertizyi?ysclid=lx02435hfz251659222",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Учебно-научная лаборатория «Таможенное дело»",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/kafedra-tovarovedeniya-i-tovarnoy-ekspertizyi/uchebno-nauchnaya-laboratoriya-tamojennoe-delo",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Лаборатория перспективных агро- и аквабиотехнологий",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра химии инновационных материалов и технологий",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/bazovaya-kafedra-himii-innovatsionnyih-materialov-i-tehnologiy?ysclid=lx024v78zx45036108",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Научная лаборатория «Перспективные композиционные материалы и технологии»",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskie-podrazdeleniya-universiteta/-nauchnaya-laboratoriya-perspektivnyie-kompozitsionnyie-materialyi-i-tehnologii",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра пищевых технологий и биоинженерии",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/kafedra-biotechnologi-i-bioinzhenerii?ysclid=lx02c5jg10131258145",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Научно-исследовательская лаборатория «Биотехнологии пищевых систем»",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/nauchno-issledovatelskaya-laboratoriya-biotehnologii-pischevyih-sistem?ysclid=lx02cix5vq973592631",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра АО «Почта России»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/bazovaya-kafedra-ao-pochta-rossii-?ysclid=lx02d5ark4433659466",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научная школа «Химия и технология полимерных материалов»",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/nauchnaya-shkola-himiya-i-tehnologiya-polimernyih-materialov?ysclid=lx02deul3c826878710",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научно-исследовательский институт качества, безопасности и технологий специализированных пищевых продуктов",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/nii-kachestva-bezopasnosti-i-tehnologiy-spetsializirovannyih-pischevyih-produktov?ysclid=lx02dphuzj226802552",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра индустрии детского питания",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/bazovaya-kafedra-industrii-detskogo-pitaniya?ysclid=lx02e0gsbp721043577",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра ППК «Российский экологический оператор»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/bazovaya-kafedra-ppk-rossiyskiy-ekologicheskiy-operator?ysclid=lx02eam2te463781493",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра экономики промышленности",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/kafedra-ekonomiki-promyishlennosti?ysclid=lx02ekj0p1303792049",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Центр исследования проблем реальной экономики",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр по реализации образовательных программ",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-ekonomiki-i-biznesa/deansoffice/crop",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел по координации учебной деятельности",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел по координации и коммерциализации научных исследований",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Московский технологический колледж питания (МТКП)",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/kolledji-i-tehnikum/moskovskiy-tehnologicheskiy-kolledj-pitaniya?ysclid=lwyxgesfjx685202970",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Учебно-методический отдел",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Канцелярия",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Учебно-производственный тренинговый центр",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "school",
+                "title": "Высшая школа Социально – гуманитарных наук",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk?ysclid=lx02i621k16775272",
+                "children": []
+              },
+              {
+                "type": "management",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Научный совет*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Совет индустриальных партнеров*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Директор высшей школы",
+                    "name": "Яблочкина Ирина Валерьевна",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/~person/7677a4b10b0643a9477d83458c625e08?ysclid=lx02iv34x1815636184",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Cовет выпускников*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Кафедра политического анализа и социально-психологических процессов",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/subordinateunits/kafedra-politicheskogo-analiza-i-sotsialno-psihologicheskih-protsessov?ysclid=lx02j97wly10486959",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Центр социально-политических исследований",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/subordinateunits/kafedra-politicheskogo-analiza-i-sotsialno-psihologicheskih-protsessov/analiticheskiy-tsentr-sotsialno-politicheskih-issledovaniy-i-prognozirovaniya?ysclid=lx02jqmbw194932976",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра истории и философии",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/subordinateunits/kafedra-istorii-i-filosofii",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра русского языка и культуры речи",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/subordinateunits/ruskaf",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра иностранных языков №1",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/subordinateunits/kafedra-inostrannyih-yazyikov-1",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра иностранных языков №2",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/kafedra-inostrannyih-yazyikov-2",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Учебно-научная лаборатория «Педагогические исследования и инновационные разработки»",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/subordinateunits/uchebno-nauchnaya-laboratoriya-pedagogicheskie-issledovaniya-i-innovatsionnyie-razrabotki?ysclid=lx02mo7l7c980522094",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра иностранных языков №3",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/kafedra-inostrannyih-yazyikov-3?ysclid=lx02n07w9x434033642",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Учебно-научная лаборатория «Прикладная лингвистика и коммуникационные технологии»",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/kafedra-inostrannyih-yazyikov-3/uchebno-nauchnaya-laboratoriya-prikladnaya-lingvistika-i-kommunikatsionnyie-tehnologii?ysclid=lx02nblme491337485",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра физического воспитания",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/subordinateunits/kafedra-fizicheskogo-vospitaniya?ysclid=lx02no7cr0168068328",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр «Русич»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/subordinateunits/centrrusich?ysclid=lx02nxuna3157393594",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр фиджитал-образования и инновационных спортивных технологий",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-sotsialno-gumanitarnyih-nauk/subordinateunits/tsentr-fidjital-obrazovaniya-i-innovatsionnyih-sportivnyih-tehnologiy?ysclid=lx02o74ybi467022025",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр по реализации образовательных программ",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-menedjmenta/departments/tsentr-po-realizatsii-obrazovatelnyih-programm?ysclid=lx02owcyrg594186042",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "school",
+                "title": "Высшая школа права",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-prava?ysclid=lx02p8iqhe745804199",
+                "children": []
+              },
+              {
+                "type": "management",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Совет индустриальных партнеров*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Директор высшей школы",
+                    "name": "Зинчук Галина Михайловна",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/~person/6e5564079203122f0a43b51fb45f5534?ysclid=lx02phpufh509201479",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Cовет выпускников*",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Кафедра государственно-правовых и уголовно-правовых дисциплин",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-prava/kaf-gpupd?ysclid=lx02pwduf2656516765",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Лаборатория «Криминалистика и специальная техника»",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра гражданско-правовых дисциплин",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-prava/kaf-gpd?ysclid=lx02qr4hhr541411863",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "НИИ «Институт правовых исследований и региональной интеграции» *",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-prava/kaf-gpd/nii-ipiri",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Научная школа «Экономико-правовые основы евразийской интеграции» *",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-prava/kaf-gpd/nsh-epoei",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра «Экономические и правовые экспертизы» Союза судебных экспертов «Экспертный совет»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-prava/bk-ekspertnyiy-sovet?ysclid=lx02rz56nf760941298",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Базовая кафедра экономики и права Роспатента",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-prava/bk-rospatent?ysclid=lx02sem1bj853157005",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра государственного и муниципального управления",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-prava/kaf-gmu?ysclid=lx02sof6tw481304269",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Юридическая клиника",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-prava/kaf-gpd/yk?ysclid=lx02sysa8c83548622",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Третейский суд при ФГБОУ ВО «РЭУ им. Г.В. Плеханова» *",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научная лаборатория комплексных правовых исследований",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр по реализации образовательных программ",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-menedjmenta/departments/tsentr-po-realizatsii-obrazovatelnyih-programm?ysclid=lx02owcyrg594186042",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел по программам бакалавриата",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Отдел по программам магистратуры и ДПО",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "school",
+                "title": "Высшая школа креативных индустрий РЭУ им. Г.В. Плеханова",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kreativnyih-industriy?ysclid=lx02wxcyx980201065",
+                "children": []
+              },
+              {
+                "type": "management",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Директор высшей школы",
+                    "name": "Котов Дмитрий Александрович",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/~person/4c746999f5e0dbfc1069564d265e3c96?ysclid=lx02xi6xhw5642015",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Кафедра рекламы, связей с общественностью и дизайна",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kreativnyih-industriy/strukturnyie-podrazdeleniya/kafedra-reklamyi-svyazey-s-obschestvennostyu-i-dizayna?ysclid=lx02xvxjbx55956641",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Кафедра маркетинга",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kreativnyih-industriy/strukturnyie-podrazdeleniya/kafedra-marketinga?ysclid=lx02y8eh8r499071404",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Научно-исследовательская лаборатория «Маркетинговые исследования транспортного комплекса»",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр развития компетенций в индустрии моды",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-shkola-kreativnyih-industriy/strukturnyie-podrazdeleniya/tsentr-razvitiya-kompetentsiy-v-industrii-modyi",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Учебно-методический отдел",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "column-dust",
+            "items": [
+              {
+                "type": "basic",
+                "title": "проректор",
+                "name": "Екимова Ксения Валерьевна",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/rektorat/ekimova-kseniya-valerevna?ysclid=lwyz74aikk447107578",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "экспертно-аналитический центр",
+                "name": "",
+                "link": "",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Отдел информационного обеспечения и сопровождения проектов",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел анализа и контроля отчетности",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел оценки финансово-хозяйственной деятельности",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Управление цифровой трансформации",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tsifrovoy-transformatsii?ysclid=lx00nptrvf928934728",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Отдел технического сопровождения",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tsifrovoy-transformatsii/otdel-tehnicheskogo-soprovojdeniya-",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел стратегических коммуникаций",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tsifrovoy-transformatsii/otdel-strategicheskih-kommunikatsiy",
+                    "children": []
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "Бизнес-инкубатор:",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tsifrovoy-transformatsii/biznes-inkubator",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Отдел коммерциализации инноваций",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "Центр развития цифровой экосистемы:",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tsifrovoy-transformatsii/tsentr-razvitiya-tsifrovoy-ekosistemyi?ysclid=lx00qjh4yk941730796",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Проектно-учебная лаборатория Rigour Tech",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Проектно-учебная лаборатория TECHNORED",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр междисциплинарных социогуманитарных исследований новых технологий",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научный центр искусственного интеллекта и семантического анализа",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр разработки и развития беспилотных систем",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Точка кипения РЭУ им. Г.В. Плеханова",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Управление цифровых образовательных технологий",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tsifrovyih-obrazovatelnyih-tehnologiy?ysclid=lwyz9qlsa192388218",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Центр развития электронного обучения",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tsifrovyih-obrazovatelnyih-tehnologiy/tsentr-razvitiya-elektronnogo-obucheniya?ysclid=lwyza6uwwp510503981",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Центр развития образовательных онлайн ресурсов",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-tsifrovyih-obrazovatelnyih-tehnologiy/tsentr-razvitiya-obrazovatelnyih-onlayn-resursov?ysclid=lx00a3uzc9112237287",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Научно-исследовательское объединение (НИО)",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskoe-obyedinenie-nauchnyiy-rukovoditel-universiteta?ysclid=lx00bkz6p7461176823",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Научно-исследовательские институты:",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "НИИ «Продовольственной безопасности»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskoe-obyedinenie-nauchnyiy-rukovoditel-universiteta/podchinennyie-podrazdeleniya/nii-novaya-ekonomika-i-biznes---kopiya?ysclid=lx00clkq69688956837",
+                    "children": []
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "НИИ «Институт современных экономических исследований»:",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskoe-obyedinenie-nauchnyiy-rukovoditel-universiteta/podchinennyie-podrazdeleniya/nii-prodovolstvennoy-bezopasnosti---kopiya?ysclid=lx00d2g9id587312678",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Научная лаборатория «Облачные технологии и аналитика больших данных»",
+                        "name": "",
+                        "link": "https://xn--p1ag3a.xn--p1ai/science/tsifrovyie-initsiativyi-reu/nauchnyie-laboratorii-/-nauchnaya-laboratoriya-oblachnyie-tehnologii-i-analitika-bolshih-dannyih?ysclid=lx00dgngeo619863043",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Научная лаборатория «Исследования денежно-кредитной системы и анализа финансовых рынков»",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskoe-obyedinenie-nauchnyiy-rukovoditel-universiteta/podchinennyie-podrazdeleniya/nii-prodovolstvennoy-bezopasnosti---kopiya/nauchnaya-laboratoriya-sotsialno-demograficheskoy-statistiki---kopiya?ysclid=lx00e72iro467914204",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Научная лаборатория «Социально-демографической статистики»",
+                        "name": "",
+                        "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskoe-obyedinenie-nauchnyiy-rukovoditel-universiteta/podchinennyie-podrazdeleniya/nii-prodovolstvennoy-bezopasnosti---kopiya/nauchnaya-laboratoriya-sotsialno-demograficheskoy-statistiki---kopiya?ysclid=lx00e72iro467914204",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научная лаборатория РЭУ им. Г.В. Плеханова «Количественные методы исследования регионального развития»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskoe-obyedinenie-nauchnyiy-rukovoditel-universiteta/podchinennyie-podrazdeleniya/nl-issledovaniya-denejno-kreditnoy-sistemyi-i-analiza-finansovyih-ryinkov---kopiya?ysclid=lx00f0q26u868220689",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научная лаборатория «Прикладного моделирования»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskoe-obyedinenie-nauchnyiy-rukovoditel-universiteta/podchinennyie-podrazdeleniya/nauchnaya-laboratoriya-sistemnoe-programmirovanie---kopiya",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научная лаборатория «Гетерогенных компьютерных систем»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskoe-obyedinenie-nauchnyiy-rukovoditel-universiteta/podchinennyie-podrazdeleniya/nauchnaya-laboratoriya-regionalnaya-politika-i-regionalnyie-investitsionnyie-protsessyi---kopiya",
+                    "children": []
+                  },
+                  {
+                    "type": "subitem",
+                    "title": "Специальный факультет талантливой молодежи «Высшая школа «Форсайт»»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/fforsait?ysclid=lx00hjf556152907682",
+                    "children": [
+                      {
+                        "type": "basic",
+                        "title": "Междисциплинарная кафедра",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "«Современная экономика и экономическая теория»",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      },
+                      {
+                        "type": "basic",
+                        "title": "Междисциплинарная кафедра «Моделирование больших систем»",
+                        "name": "",
+                        "link": "",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Научная лаборатория «Медицинская информатика и экономика здравоохранения»",
+                    "name": "",
+                    "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskoe-obyedinenie-nauchnyiy-rukovoditel-universiteta/podchinennyie-podrazdeleniya/nauchnaya-laboratoriya-meditsinskaya-informatika?ysclid=lx00kajfgw540343635",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "subitem",
+                "title": "Институт «Первая Академия медиа»",
+                "name": "",
+                "link": "https://xn--p1ag3a.xn--p1ai/structure/hs/first-academy-media",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Медиацентр",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/structure/hs/first-academy-media/mediatsentr",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "title": "Ситуационный центр социально-экономического развития регионов российской федерации",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/science/tsifrovyie-initsiativyi-reu/-situatsionnyiy-tsentr-sotsialno-ekonomicheskogo-razvitiya-regionov-rossiyskoy-federatsii",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "Базовая кафедра Общероссийской общественной организации «Деловая Россия»",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/hs/vyisshaya-injenernaya-shkola-novyie-materialyi-i-tehnologii/podchinennie/bazovaya-kafedra-obscherossiyskoy-obschestvennoy-organizatsii-delovaya-rossiya?ysclid=lx02cv68ms352329677",
+                "children": []
+              },
+              {
+                "type": "basic",
+                "title": "Центр перспективных исследований в искусственном интеллекте",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/science/nauchno-issledovatelskie-podrazdeleniya-universiteta/tsentr-perspektivnyih-issledovaniy-v-iskusstvennom-intellekte?ysclid=lx00x13m81197293068",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Управление аттестации и подготовки научных кадров",
+                "name": "",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/structure/departments/upravlenie-attestatsii-i-podgotovki-nauchnyih-kadrov?ysclid=lx00kpm1iv736023277",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Отдел документационного и информационно-технического сопровождения аттестационного процесса",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел подготовки кадров высшей квалификации",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел по работе с диссертационными советами",
+                    "name": "",
+                    "link": "",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "column-grey",
+            "items": [
+              {
+                "type": "basic",
+                "title": "проректор",
+                "name": "Володина Светлана Вячеславовна",
+                "link": "https://www.xn--p1ag3a.xn--p1ai/mejdunarodnaya-deyatelnost/kuriruyuschiy-prorektor",
+                "children": []
+              },
+              {
+                "type": "subitem",
+                "title": "Управление международной деятельности",
+                "name": "",
+                "link": "https://xn--p1ag3a.xn--p1ai/mejdunarodnaya-deyatelnost",
+                "children": [
+                  {
+                    "type": "basic",
+                    "title": "Отдел стран СНГ, Балтии и Грузии",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/mejdunarodnaya-deyatelnost/otdel-stran-sng-baltii-i-gruzii",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел стран Европы, Америки, Африки и Ближнего Востока",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/mejdunarodnaya-deyatelnost/otdel-stran-evropyi-ameriki-afriki-i-blijnego-vostoka",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел стран Азиатско-Тихоокеанского региона",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/mejdunarodnaya-deyatelnost/otdel-stran-aziatsko-tihookeanskogo-regiona",
+                    "children": []
+                  },
+                  {
+                    "type": "basic",
+                    "title": "Отдел продвижения университета в международном научно-образовательном пространстве",
+                    "name": "",
+                    "link": "https://xn--p1ag3a.xn--p1ai/mejdunarodnaya-deyatelnost/otdel-prodvijeniya-universiteta-v-mejdunarodnom-nauchno-obrazovatelnom-prostranstve------------",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+            
+        ]
+      }
+  }
