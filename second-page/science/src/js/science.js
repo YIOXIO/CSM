@@ -2,20 +2,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scienceServerData = {
         date: '04.02.2024',
-        currentPlan: 0 ,
-        currentReceipts: 0,
+        currentPlan: 13,
+        currentReceipts: 12,
         expectedReceipts: {
             date: '31.12.2024',
-            sum: 0
+            sum: 32
         },
         //Добавлены данные для НИР и научно-техническим услугам
-        currentPlanTechnical:101749.4,
+        currentPlanTechnical: 101749.4,
         currentReceiptsTechnicals: 75310.7,
         expectedReceiptsTechnicals: {
             sum: 101749.4,
         },
         //______________________________________________________
-        
+
         publications: {
             scopus: {
                 scopusTotal: 694,
@@ -128,8 +128,63 @@ document.addEventListener('DOMContentLoaded', () => {
                         value: 17
                     },
                 ]
+            },
+            egpniBs: {
+                total: 250,
+                q1q2Total: 120,
+                dataInSixMonths: [
+                    {
+                        month: 'Май',
+                        value: 40
+                    },
+                    {
+                        month: 'Июнь',
+                        value: 35
+                    },
+                    {
+                        month: 'Июль',
+                        value: 45
+                    },
+                    {
+                        month: 'Август',
+                        value: 50
+                    },
+                    {
+                        month: 'Сентябрь',
+                        value: 55
+                    },
+                    {
+                        month: 'Октябрь',
+                        value: 25
+                    },
+                ],
+                q1q2InSixMonths: [
+                    {
+                        month: 'Май',
+                        value: 20
+                    },
+                    {
+                        month: 'Июнь',
+                        value: 15
+                    },
+                    {
+                        month: 'Июль',
+                        value: 25
+                    },
+                    {
+                        month: 'Август',
+                        value: 30
+                    },
+                    {
+                        month: 'Сентябрь',
+                        value: 35
+                    },
+                    {
+                        month: 'Октябрь',
+                        value: 10
+                    },
+                ]
             }
-            
         },
 
     }
@@ -154,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else {
                 out = intPart.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
             }
-    
+
             out += '.' + decimalPart;
         }
         else {
@@ -164,10 +219,10 @@ document.addEventListener('DOMContentLoaded', () => {
             else {
                 out = str.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
             }
-        }    
+        }
 
         return out;
-    } 
+    }
 
 
     function progressLength(progressBar, data) {
@@ -179,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentValue = Math.round((progressBar.length / 100) * data);
         }
 
-        return currentValue; 
+        return currentValue;
     }
 
 
@@ -187,16 +242,16 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < length; i++) {
             progressBar[i].style.fill = val;
         }
-    } 
+    }
 
     function science(data) {
 
 
         // Проверка на 0 или NaN
-        
+
         const isInvalid = (value) => value === 0 || isNaN(value);
 
-        if(isInvalid(data.currentPlan) || isInvalid(data.currentReceipts) || isInvalid(data.expectedReceipts.sum)){
+        if (isInvalid(data.currentPlan) || isInvalid(data.currentReceipts) || isInvalid(data.expectedReceipts.sum)) {
             document.querySelector('.science__data-plan').style.display = 'none'
             document.querySelector('.science__inner').style.display = 'none'
             document.querySelector('.science__separator').style.margin = "0 0 1.5vh"
@@ -232,19 +287,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const sciencePlanProgressbarLength = progressLength(sciencePlanProgressbar, planProgress);
 
-        setProgressBar(sciencePlanProgressbar,  sciencePlanProgressbarLength, '#217Aff');
+        setProgressBar(sciencePlanProgressbar, sciencePlanProgressbarLength, '#217Aff');
 
         insertToPage('science__data-plan__info-ratio_fact', planProgress + '%');
         insertToPage('science__data-plan__info-value_fact', numDataOutput(data.currentReceipts));
         insertToPage('science__data-plan__info-value_planned', numDataOutput(data.currentPlan));
-      
+        insertToPage('science__info-block-value_egpni-bs', numDataOutput(data.publications.egpniBs.total));
+        insertToPage('science__info-block-value_egpni-bs_q1-q2', numDataOutput(data.publications.egpniBs.q1q2Total));
         //Прогрессбар для НИР и научно-техническим услугам
         const technicalPlanProgressbar = Array.from(document.querySelectorAll('.science-technical__data-plan__progressbar path'));
         const technicalPlanProgress = ((data.currentReceiptsTechnicals / data.currentPlanTechnical) * 100).toFixed(2);
 
         const technicalPlanProgressbarLength = progressLength(technicalPlanProgressbar, technicalPlanProgress);
 
-        setProgressBar(technicalPlanProgressbar,  technicalPlanProgressbarLength, '#FB9B2B');
+        setProgressBar(technicalPlanProgressbar, technicalPlanProgressbarLength, '#FB9B2B');
 
         insertToPage('science-technical__data-plan__info-ratio_fact', technicalPlanProgress + '%');
         insertToPage('science-technical__data-plan__info-value_fact', numDataOutput(data.currentReceiptsTechnicals));
@@ -270,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // инициализация селекторов и данных wos.
 
-        const wosInSixMonths = data.publications.wos.wosInSixMonths ;
+        const wosInSixMonths = data.publications.wos.wosInSixMonths;
         const wosInSixMonthsQ1Q2 = data.publications.wos.q1q2InSixMonths;
 
         const diagramWos = Array.from(document.querySelectorAll('.science__data-diagram__item-wos'));
@@ -281,9 +337,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const diagramWosMonths = Array.from(document.querySelectorAll('.science__data-diagram__months-wos span'));
 
+        // Для ЕГПНИ-БС
+        const egpniBsInSixMonths = data.publications.egpniBs.dataInSixMonths;
+        const egpniBsInSixMonthsQ1Q2 = data.publications.egpniBs.q1q2InSixMonths;
 
-       // ф-ия для рендера диаграмм.
-        
+        const diagramEgpnibs = Array.from(document.querySelectorAll('.science__data-diagram__item-egpni-bs'));
+        const diagramEgpnibsQ1Q2 = Array.from(document.querySelectorAll('.science__data-diagram__item-egpni-bs-q1-q2'));
+
+        const diagramEgpnibsValues = Array.from(document.querySelectorAll('.science__data-diagram__item-value-egpni-bs'));
+        const diagramEgpnibsValuesQ1Q2 = Array.from(document.querySelectorAll('.science__data-diagram__item-value-egpni-bs-q1-q2'));
+
+        const diagramEgpnibsMonths = Array.from(document.querySelectorAll('.science__data-diagram__months-egpni-bs span'));
+        // ф-ия для рендера диаграмм.
+
         function setDiagram(originData, q1q2Data, originValues, q1q2Values, originCols, q1q2Cols, months, colors) {
 
             // ф-ия для инициализаци массива значений исходного объекта.
@@ -304,29 +370,31 @@ document.addEventListener('DOMContentLoaded', () => {
             const max = Math.max(...result);
 
             // ф-ия для вывода данных.
-            
+
             function dataOutput(data, values, cols, max, color) {
                 data.map((i, index) => {
                     values[index].textContent = i.value;
-                    
+
                     let value = (i.value / max) * 100;
-                    
+
                     cols[index].setAttribute('height', `${value}%`);
                     cols[index].setAttribute('y', `${100 - value}%`);
                     cols[index].querySelector('rect').setAttribute('fill', color);
                 })
             }
-            
+
             originData.map((i, index) => months[index].textContent = i.month);
 
             dataOutput(originData, originValues, originCols, max, colors[0]);
             dataOutput(q1q2Data, q1q2Values, q1q2Cols, max, colors[1]);
-            
+
         }
 
         setDiagram(scopusInSixMonths, scopusInSixMonthsQ1Q2, diagramScoupsValues, diagramScoupsValuesQ1Q2, diagramScoups, diagramScoupsQ1Q2, diagramScoupsMonths, ['#217AFF', '#44BCFF']);
         setDiagram(wosInSixMonths, wosInSixMonthsQ1Q2, diagramWosValues, diagramWosValuesQ1Q2, diagramWos, diagramWosQ1Q2, diagramWosMonths, ['#FB9B2B', '#FFDD85']);
+        setDiagram(egpniBsInSixMonths, egpniBsInSixMonthsQ1Q2, diagramEgpnibsValues, diagramEgpnibsValuesQ1Q2, diagramEgpnibs, diagramEgpnibsQ1Q2, diagramEgpnibsMonths, ['#03C544', '#7BE9A0']);
     }
 
     science(scienceServerData);
+
 });
