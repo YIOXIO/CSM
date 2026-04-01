@@ -1,14 +1,14 @@
 /** reset **/
-@import "./base/__reset.scss";
+@use "./base/__reset.scss";
 
 /** variables **/
-@import "./base/__var.scss";
+@use "./base/__var.scss";
 
 /** base **/
-@import "./base/__base.scss";
+@use "./base/__base.scss";
 
 /** helpers **/
-@import "./base/__helpers.scss";
+@use "./base/__helpers.scss";
 
 /** form **/
-@import "./base/__form.scss";
+@use "./base/__form.scss";

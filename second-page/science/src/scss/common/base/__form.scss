@@ -2,7 +2,7 @@
 input,
 textarea,
 select {
-  font-family: "Montserrat", $bv-helvetica;
+  font-family: "Montserrat", ;
   font-size: 0.625vw;
   color: #fff;
   font-weight: 600;
@@ -27,7 +27,7 @@ textarea {
 /** placeholders **/
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  font-family: "Montserrat", $bv-helvetica;
+  font-family: "Montserrat", ;
   font-size: 0.625vw;
   font-weight: 600;
   opacity: 1;
@@ -36,7 +36,7 @@ textarea::-moz-placeholder {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  font-family: "Montserrat", $bv-helvetica;
+  font-family: "Montserrat", ;
   font-size: 0.625vw;
   font-weight: 600;
   opacity: 1;
@@ -85,7 +85,7 @@ input[type="submit"]::-moz-focus-inner {
 
 /** button **/
 button {
-  // font-family: "Roboto", $bv-helvetica;
+  // font-family: "Roboto", ;
   // font-weight: 500;
   padding: 0;
   border: 0;
