@@ -38,49 +38,49 @@ function renderPage(data) {
 
     renderNavigation(sections);
 
-    var columns = data && Array.isArray(data.columns) ? data.columns : [];
-    var headers = columns.length ? columns : [
+    var defaultColumns = data && Array.isArray(data.columns) ? data.columns : [
+        '№',
+        'ФИО',
+        'Награда',
+        'В Департамент образования и науки г. Москвы',
+        'Поддержка Минобрнауки',
+        'Мэрия',
+        'ЦФО',
+        'Минобрнауки РФ',
         '',
-        'Фамилия, Имя Отчество, должность, подразделение',
-        'Стаж в РЭУ',
-        'Какие награды имеются (точная дата)',
-        'Решение Ученого совета (протокол №___ от ___ 2026 г.)',
-        'Исходящее письмо',
-        'Где находится на рассмотрении',
-        'Указ, приказ № _____ от __________'
+        ''
     ];
-
-    var colgroup = '<colgroup>' +
-        '<col style="width:28%">' +
-        '<col style="width:19%">' +
-        '<col style="width:8%">' +
-        '<col style="width:12%">' +
-        '<col style="width:13%">' +
-        '<col style="width:8%">' +
-        '<col style="width:6%">' +
-        '<col style="width:6%">' +
-        '</colgroup>';
-
-    var headHtml = '<thead><tr>';
-    headers.forEach(function (h) {
-        headHtml += '<th>' + escapeHTML(h || '') + '</th>';
-    });
-    headHtml += '</tr></thead>';
 
     var html = '';
     sections.forEach(function (section) {
         var sectionId = getSectionId(section.id || section.title);
+        var headers = Array.isArray(section.columns) && section.columns.length ? section.columns : defaultColumns;
+        var colCount = headers.length;
+
+        var colWidths = Array.isArray(section.colWidths) ? section.colWidths : [];
+        var colgroup = '<colgroup>';
+        for (var ci = 0; ci < colCount; ci++) {
+            colgroup += '<col' + (colWidths[ci] ? ' style="width:' + colWidths[ci] + '"' : '') + '>';
+        }
+        colgroup += '</colgroup>';
+
+        var headHtml = '<thead><tr>';
+        headers.forEach(function (h) {
+            headHtml += '<th>' + escapeHTML(h || '') + '</th>';
+        });
+        headHtml += '</tr></thead>';
+
         html += '<section class="award-section" id="' + sectionId + '">';
         html += '<div class="section-title">' + escapeHTML(section.title || '') + '</div>';
         html += '<table>' + colgroup + headHtml + '<tbody>';
 
         (section.rows || []).forEach(function (row) {
-            var cells = Array.isArray(row.cells) ? row.cells.slice(0, headers.length) : [];
-            while (cells.length < headers.length) cells.push('');
+            var cells = Array.isArray(row.cells) ? row.cells.slice(0, colCount) : [];
+            while (cells.length < colCount) cells.push('');
 
             if (row.fullRow) {
                 html += '<tr class="full-row">' +
-                    '<td class="name-cell full-row-cell" colspan="' + headers.length + '">' +
+                    '<td class="name-cell full-row-cell" colspan="' + colCount + '">' +
                     renderOrganizationCell(row, cells[0]) +
                     '</td></tr>';
                 return;
@@ -101,6 +101,7 @@ function renderPage(data) {
     });
 
     container.innerHTML = html;
+    document.dispatchEvent(new CustomEvent('awards:rendered'));
 }
 
 function renderOrganizationCell(row, firstCellValue) {

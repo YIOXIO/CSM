@@ -20,10 +20,10 @@
 
 		.main-title {
 			font-family: 'Montserrat', sans-serif;
-			font-size: 1.7vw;
+			font-size: 2.4vw;
 			font-weight: 700;
 			text-align: center;
-			margin-bottom: 0.6vw;
+			margin-bottom: 3.6vw;
 		}
 
 
@@ -309,4 +309,273 @@
             }
         }
     }
+}
+
+.container.community-projects {
+	display: block;
+}
+
+.community-projects {
+	width: 100%;
+}
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.15vw;
+}
+
+.project-card {
+	position: relative;
+	display: block;
+	padding: 0;
+	min-height: 23vw;
+	border: 0.1vw solid rgba(133, 184, 235, 0.45);
+	border-radius: 0.7vw;
+	background: rgba(15, 43, 90, 0.45);
+	color: #ffffff;
+	cursor: pointer;
+	text-align: left;
+	transition: var(--transition);
+	overflow: hidden;
+
+	&:hover {
+		border-color: rgba(133, 184, 235, 0.82);
+		transform: translateY(-0.2vw);
+		box-shadow: 0 1.2vw 2.4vw rgba(3, 11, 30, 0.26);
+	}
+
+	&.active {
+		border-color: #217aff;
+		box-shadow: 0 0 0 0.15vw rgba(33, 122, 255, 0.22) inset;
+	}
+}
+
+.project-card__media {
+	position: absolute;
+	inset: 0;
+	display: block;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(7, 14, 34, 0.12) 0%, rgba(5, 12, 31, 0.82) 100%);
+	}
+}
+
+.project-card__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	object-position: top;
+}
+
+.project-card__content {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100%;
+	padding: 1.4vw;
+}
+
+.project-card__name {
+	font-family: Oswald, sans-serif;
+	font-size: 1.55vw;
+	line-height: 1.2;
+	letter-spacing: 0.04em;
+	margin-bottom: 0.4vw;
+	text-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.3);
+}
+
+.project-card__hint {
+	font-family: Rubik, sans-serif;
+	font-size: 0.72vw;
+	text-transform: uppercase;
+	letter-spacing: 0.09em;
+	color: #d6e9ff;
+}
+
+body.modal-open {
+	overflow: hidden;
+}
+
+.project-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 1200;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2vw;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.25s ease;
+}
+
+.project-modal.is-open {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.project-modal__backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(2, 7, 20, 0.72);
+	backdrop-filter: blur(6px);
+}
+
+.project-modal__dialog {
+	position: relative;
+	z-index: 1;
+	width: 90vw;
+	height: 85vh;
+	max-width: 90vw;
+	background: rgba(8, 19, 48, 0.98);
+	border: 0.1vw solid rgba(33, 122, 255, 0.45);
+	border-radius: 0.8vw;
+	overflow: hidden;
+	box-shadow: 0 1.5vw 4vw rgba(0, 0, 0, 0.35);
+}
+
+.project-modal__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1vw;
+	padding: 1vw 1.2vw;
+	border-bottom: 0.1vw solid rgba(133, 184, 235, 0.22);
+}
+
+.project-modal__title {
+	font-family: Oswald, sans-serif;
+	font-size: 1.2vw;
+	font-weight: 400;
+	margin: 0;
+	color: #cfe6ff;
+}
+
+.project-modal__actions {
+	display: flex;
+	align-items: center;
+	gap: 0.8vw;
+}
+
+.project-modal__external,
+.project-modal__close {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 2.2vw;
+	padding: 0.5vw 0.9vw;
+	border-radius: 0.35vw;
+	font-family: Rubik, sans-serif;
+	font-size: 0.68vw;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	transition: var(--transition);
+}
+
+.project-modal__external {
+	border: 0.1vw solid rgba(251, 155, 43, 0.5);
+	color: #fb9b2b;
+
+	&:hover {
+		color: #ffd29d;
+		border-color: rgba(255, 210, 157, 0.7);
+	}
+}
+
+.project-modal__close {
+	border: 0.1vw solid rgba(133, 184, 235, 0.42);
+	background: rgba(14, 41, 86, 0.7);
+	color: #d7eaff;
+	cursor: pointer;
+
+	&:hover {
+		border-color: rgba(133, 184, 235, 0.78);
+		background: rgba(20, 59, 123, 0.82);
+	}
+}
+
+.project-modal__body {
+	height: calc(100% - 4.6vw);
+}
+
+.project-modal__frame {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background-color: #fff;
+}
+
+@media (max-width: 900px) {
+	.container.community-projects {
+		padding: 20px;
+		margin: 130px auto 20px;
+	}
+
+	.projects-grid {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
+	.project-card {
+		min-height: 240px;
+		border-radius: 6px;
+	}
+
+	.project-card__content {
+		padding: 18px;
+	}
+
+	.project-card__name {
+		font-size: 24px;
+		margin-bottom: 6px;
+	}
+
+	.project-card__hint,
+	.project-modal__external,
+	.project-modal__close {
+		font-size: 10px;
+	}
+
+	.project-modal {
+		padding: 12px;
+	}
+
+	.project-modal__dialog {
+		width: 90vw;
+		height: 85vh;
+		border-radius: 6px;
+	}
+
+	.project-modal__head {
+		padding: 12px;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.project-modal__title {
+		font-size: 14px;
+	}
+
+	.project-modal__actions {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.project-modal__external,
+	.project-modal__close {
+		min-height: 36px;
+		padding: 8px 12px;
+		border-radius: 6px;
+	}
+
+	.project-modal__body {
+		height: calc(100% - 85px);
+	}
 }

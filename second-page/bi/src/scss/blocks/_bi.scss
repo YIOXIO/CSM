@@ -312,3 +312,31 @@
     block-size: 0.521vw;
     transform: rotate(-45deg);
 }
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    gap: 0.6vw;
+    & button{
+        background-image: url('../../assets/img/button-border.svg');
+        color: #FFF;
+        text-align: center;
+        font-family: 'Oswald';
+        font-size: 0.854vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 25.6px; /* 98.462% */
+        letter-spacing: 2.6px;
+        text-transform: uppercase;
+        padding: 1vw;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: .5;
+        transition: opacity .3s linear;
+
+    }
+    &_active{
+        
+    }
+}
