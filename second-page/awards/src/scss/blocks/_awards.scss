@@ -496,7 +496,21 @@ tr.awards-row-highlight td {
 	background: rgba(33, 122, 255, 0.35);
 	transition: background 0.25s ease;
 }
+.date-text{
+	font-family: Oswald;
+    font-style: normal;
+    font-weight: 500;
+    font-size: .85vw;
+    letter-spacing: .05em;
+    text-align: right;
+    color: #f79a2d;
+	text-align: center;
+    transform: translateY(-3.6vw);
+	span{
+    font-weight: 500;
 
+	}
+}
 @media (max-width: 900px) {
 	.awards-fio-header::after {
 		font-size: 10px;
