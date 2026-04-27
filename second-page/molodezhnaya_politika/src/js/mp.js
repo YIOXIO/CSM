@@ -57,9 +57,9 @@ document.addEventListener('keydown', function (e) {
 });
 
 support.addEventListener('click', () => {
-    openModal('assets/page/support.svg');
+    openModal('/assets/awards/dist/assets/page/support.svg');
 });
 
-scholar.addEventListener('click', () => {
-    openModal('assets/page/scholar.svg');
-});
+// scholar.addEventListener('click', () => {
+//     openModal('assets/page/scholar.svg');
+// });
