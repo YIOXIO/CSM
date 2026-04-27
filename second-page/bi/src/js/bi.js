@@ -10,24 +10,24 @@ function openPopup(popupElement) {
     popupElement.classList.add('popup_is_active');
     popupElement.addEventListener('click', handleOverlayClosePopup);
     document.addEventListener('keydown', handleEscClosePopup);
-  }
-  
+}
+
 function closePopup(popupElement) {
-popupElement.classList.remove('popup_is_active');
-popupElement.removeEventListener('click', handleOverlayClosePopup);
-document.removeEventListener('keydown', handleEscClosePopup);
+    popupElement.classList.remove('popup_is_active');
+    popupElement.removeEventListener('click', handleOverlayClosePopup);
+    document.removeEventListener('keydown', handleEscClosePopup);
 }
 
 function handleOverlayClosePopup(evt) {
-if (evt.target === evt.currentTarget) {
-    closePopup(evt.currentTarget);
-}
+    if (evt.target === evt.currentTarget) {
+        closePopup(evt.currentTarget);
+    }
 }
 
 function handleEscClosePopup(evt) {
-if (evt.key === 'Escape') {
-    closePopup(document.querySelector('.popup_is_active'));
-}
+    if (evt.key === 'Escape') {
+        closePopup(document.querySelector('.popup_is_active'));
+    }
 }
 function switchTab(index) {
     tabsButtons.forEach(btn => btn.classList.remove('bi-tabs-button_active'));
@@ -41,14 +41,14 @@ function switchTab(index) {
 if (moscowBtn) {
     moscowBtn.addEventListener('click', () => {
         openPopup(popup);
-        switchTab(0); 
+        switchTab(0);
     });
 }
 
 if (branchBtn) {
     branchBtn.addEventListener('click', () => {
         openPopup(popup);
-        switchTab(1); 
+        switchTab(1);
     });
 }
 
@@ -59,5 +59,22 @@ tabsButtons.forEach((button, index) => {
 });
 
 
-moscowBtn.style.cursor="pointer"
-branchBtn.style.cursor="pointer"
+moscowBtn.style.cursor = "pointer"
+branchBtn.style.cursor = "pointer"
+
+const yearButtons = document.querySelectorAll('.btn-container button');
+const yearImage = document.getElementById('year-image');
+const yearImages = [
+    '/assets/img/block-1-22.svg',
+    '/assets/img/block-1-23.svg',
+    '/assets/img/block-1-24.svg',
+    '/assets/img/block-1-25.svg'
+];
+
+yearButtons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        yearButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        yearImage.src = yearImages[index];
+    });
+});
