@@ -16,7 +16,7 @@ const MAIN_SUBSECTIONS = {
 
 
 
-fetch('../data/data.json')
+fetch('../assets/costOfEducation/dist/data/data.json')
     .then(function (response) {
         if (!response.ok) throw new Error('Network error');
         return response.json();
@@ -55,7 +55,7 @@ function renderMainTable(data) {
         mainTitleItalic.textContent = 'обучения по программам бакалавриата, специалитета, магистратуры, аспирантуры';
     }
     if (subtitle) {
-        subtitle.textContent = '(для поступающих на первый курс в 2025/26 учебном году)';
+        subtitle.textContent = '(для поступающих на первый курс в 2026/27 учебном году)';
     }
 
     let html = '';
@@ -174,7 +174,7 @@ function renderDopAnglTable(data) {
         mainTitleItalic.textContent = 'дополнительных образовательных услуг по основным образовательным программам бакалавриата и магистратуры, реализация которых осуществляется на английском языке';
     }
     if (subtitle) {
-        subtitle.textContent = '(для поступающих на первый курс на места за счет федерального бюджета в 2024/25 учебном году)';
+        subtitle.textContent = '(для поступающих на первый курс на места за счет федерального бюджета в 2026/27 учебном году)';
     }
 
     let html = '<div class="faculty-title">Оплата обучения на английском языке для лиц, обучающихся на местах за счет средств федерального бюджета</div>';
@@ -269,17 +269,17 @@ function updateTitlesForTab(tabName) {
         case 'main':
             mainTitle.textContent = 'СТОИМОСТЬ';
             mainTitleItalic.textContent = 'обучения по программам бакалавриата, специалитета, магистратуры, аспирантуры';
-            subtitle.textContent = '(для поступающих на первый курс в 2025/26 учебном году)';
+            subtitle.textContent = '(для поступающих на первый курс в 2026/27 учебном году)';
             break;
         case 'spo':
             mainTitle.textContent = 'СТОИМОСТЬ';
             mainTitleItalic.textContent = 'обучения по программам среднего профессионального образования';
-            subtitle.textContent = '(для поступающих на первый курс в 2025/26 учебном году)';
+            subtitle.textContent = '(для поступающих на первый курс в 2026/27 учебном году)';
             break;
         case 'dop_angl':
             mainTitle.textContent = 'СТОИМОСТЬ';
             mainTitleItalic.textContent = 'дополнительных образовательных услуг по основным образовательным программам бакалавриата и магистратуры, реализация которых осуществляется на английском языке';
-            subtitle.textContent = '(для поступающих на первый курс на места за счет федерального бюджета в 2024/25 учебном году)';
+            subtitle.textContent = '(для поступающих на первый курс на места за счет федерального бюджета в 2026/27 учебном году)';
             break;
     }
 }
