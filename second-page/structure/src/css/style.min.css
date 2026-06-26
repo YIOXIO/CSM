@@ -799,6 +799,7 @@ a {
     display: block;
     cursor: pointer;
     position: relative;
+    background-image: linear-gradient(45deg, #0b3e76 , #112054) !important;
 }
 .s-card a.link-available {
     pointer-events: auto;
@@ -872,41 +873,41 @@ a {
     font-size: 0.24vw;
 }
 .s-card_peach {
-    background-color: #fdbeba;
+    /* background-color: #fdbeba; */
     border-radius: 0.199vw;
 }
 .s-card_green {
-    background-color: #c1ffbf;
+    /* background-color: #c1ffbf; */
     border-radius: 0.199vw;
 }
 
 .s-card_lightdust {
-    background-color: #feffd3;
+    /* background-color: #feffd3; */
     border-radius: 0.199vw;
 }
 
 .s-card_purple {
-    background-color: #ccbfff;
+    /* background-color: #ccbfff; */
     border-radius: 0.199vw;
 }
 
 .s-card_skyblue {
+    /* background-color: #cefff9; */
     border-radius: 0.199vw;
-    background-color: #cefff9;
 }
 
 .s-card_lightgrey {
+    /* background-color: #cee5ff; */
     border-radius: 0.199vw;
-    background-color: #cee5ff;
 }
 
 .s-card_white {
+    /* background-color: #fff; */
     border-radius: 0.199vw;
-    background-color: #fff;
 }
 .s-card_dust {
     border-radius: 0.199vw;
-    background-color: #ffdba5;
+    /* background-color: #ffdba5; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -931,7 +932,7 @@ a {
 }
 .s-card_grey {
     border-radius: 0.199vw;
-    background-color: #e3e3e3;
+    /* background-color: #e3e3e3; */
 }
 .s-card_grey::before {
     block-size: 130%;

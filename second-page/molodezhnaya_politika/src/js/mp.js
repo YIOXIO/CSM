@@ -57,7 +57,7 @@ document.addEventListener('keydown', function (e) {
 });
 
 support.addEventListener('click', () => {
-    openModal('/assets/awards/dist/assets/page/support.svg');
+    openModal('/assets/youthPolicy/dist/assets/page/support.svg');
 });
 
 // scholar.addEventListener('click', () => {

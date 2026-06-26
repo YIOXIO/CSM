@@ -309,7 +309,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // ________________________________________________________________________________________________________
         // ====================== вертикальные диаграммы =======================
 
+        // Для ЕГПНИ-БС
+        const egpniBsInSixMonths = data.publications.egpniBs.dataInSixMonths;
+        const egpniBsInSixMonthsQ1Q2 = data.publications.egpniBs.q1q2InSixMonths;
 
+        const diagramEgpnibs = Array.from(document.querySelectorAll('.science__data-diagram__item-egpni-bs'));
+        const diagramEgpnibsQ1Q2 = Array.from(document.querySelectorAll('.science__data-diagram__item-egpni-bs-q1-q2'));
+
+        const diagramEgpnibsValues = Array.from(document.querySelectorAll('.science__data-diagram__item-value-egpni-bs'));
+        const diagramEgpnibsValuesQ1Q2 = Array.from(document.querySelectorAll('.science__data-diagram__item-value-egpni-bs-q1-q2'));
+
+        const diagramEgpnibsMonths = Array.from(document.querySelectorAll('.science__data-diagram__months-egpni-bs span'));
         // инициализация селекторов и данных scopus.
 
         const scopusInSixMonths = data.publications.scopus.scopusInSixMonths;
@@ -337,17 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const diagramWosMonths = Array.from(document.querySelectorAll('.science__data-diagram__months-wos span'));
 
-        // Для ЕГПНИ-БС
-        const egpniBsInSixMonths = data.publications.egpniBs.dataInSixMonths;
-        const egpniBsInSixMonthsQ1Q2 = data.publications.egpniBs.q1q2InSixMonths;
 
-        const diagramEgpnibs = Array.from(document.querySelectorAll('.science__data-diagram__item-egpni-bs'));
-        const diagramEgpnibsQ1Q2 = Array.from(document.querySelectorAll('.science__data-diagram__item-egpni-bs-q1-q2'));
-
-        const diagramEgpnibsValues = Array.from(document.querySelectorAll('.science__data-diagram__item-value-egpni-bs'));
-        const diagramEgpnibsValuesQ1Q2 = Array.from(document.querySelectorAll('.science__data-diagram__item-value-egpni-bs-q1-q2'));
-
-        const diagramEgpnibsMonths = Array.from(document.querySelectorAll('.science__data-diagram__months-egpni-bs span'));
         // ф-ия для рендера диаграмм.
 
         function setDiagram(originData, q1q2Data, originValues, q1q2Values, originCols, q1q2Cols, months, colors) {
